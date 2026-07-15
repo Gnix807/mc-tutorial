@@ -1,0 +1,7 @@
+{{- $text := .Get "text" -}}
+{{- $link := .Get "link" | default "" -}}
+{{- $img := .Get "img" | default "" -}}
+{{- if $link }}<a href="{{ $link }}" class="badge" target="_blank" rel="noopener">{{ else }}<span class="badge">{{ end -}}
+  {{- if $img }}<img class="badge-icon" src="{{ $img }}" alt="" />{{ end }}
+  <span class="badge-text">{{ $text }}</span>
+{{- if $link }}</a>{{ else }}</span>{{ end -}}

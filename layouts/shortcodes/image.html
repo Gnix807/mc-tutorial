@@ -1,0 +1,18 @@
+{{- $destination := partial "docs/links/portable-image" (dict "Page" .Page "Destination" (.Get "src")) -}}
+{{- $attributes := partial "docs/text/mapper" (dict
+  "attributes" (cond .IsNamedParams .Params dict)
+  "keep" (slice "id" "class" "tabindex" "alt" "title" "loading" "width")
+) -}}
+{{- $id := partial "docs/text/shortcode-id" . -}}
+{{- $caption := .Get "title" -}}
+<figure class="book-image-figure">
+  <img
+    src="{{ $destination | safeURL }}"
+    {{ partial "docs/html-attrs" $attributes | safeHTMLAttr }}
+    data-lightbox
+    {{- with $caption }} data-lightbox-caption="{{ . }}"{{ end }}
+  />
+  {{- if $caption }}
+  <figcaption>{{ $caption }}</figcaption>
+  {{- end }}
+</figure>

@@ -1,0 +1,7 @@
+{{- $title := .Get "title" | default "" -}}
+{{- $author := .Get "author" | default "" -}}
+<div class="poetry">
+  {{- if $title }}<div class="poetry-title">{{ $title }}</div>{{- end }}
+  {{- if $author }}<div class="poetry-author">{{ $author }}</div>{{- end }}
+  <div class="poetry-body">{{ .Inner | markdownify }}</div>
+</div>

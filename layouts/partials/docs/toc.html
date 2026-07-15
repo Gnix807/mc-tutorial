@@ -1,0 +1,11 @@
+{{ partial "docs/inject/toc-before" . }}
+{{ .TableOfContents }}
+{{ partial "docs/inject/toc-after" . }}
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="{{ "svg/light_mode.svg" | relURL }}" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="{{ "svg/auto_mode.svg" | relURL }}" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="{{ "svg/dark_mode.svg" | relURL }}" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>

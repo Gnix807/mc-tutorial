@@ -1,0 +1,19 @@
+{{- $title := .Get "title" -}}
+{{- $desc := .Get "desc" | default "" -}}
+{{- $link := .Get "link" | default "" -}}
+{{- $count := .Get "count" | default "" -}}
+{{- $covers := .Get "covers" | default "" -}}
+<a href="{{ $link }}" class="series-group card">
+  {{- if $covers }}
+  <div class="series-covers">
+    {{- range split $covers "," }}
+    <img class="series-cover" src="{{ trim . " " }}" alt="" loading="lazy" />
+    {{- end }}
+  </div>
+  {{- end }}
+  <div class="series-info">
+    <div class="series-title">{{ $title }}</div>
+    {{- if $desc }}<div class="series-desc">{{ $desc }}</div>{{- end }}
+    {{- if $count }}<div class="series-count">{{ $count }} 篇</div>{{- end }}
+  </div>
+</a>

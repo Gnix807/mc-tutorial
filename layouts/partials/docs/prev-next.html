@@ -1,0 +1,44 @@
+{{- with (partialCached "docs/menu-section" .Site) -}}
+  {{- $allPages := partialCached "docs/menu-section-pages" . -}}
+  {{- $pages := slice -}}
+  {{- range $allPages -}}
+    {{- if not .IsSection -}}
+      {{- $pages = $pages | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $prev := false -}}
+  {{- $next := false -}}
+  {{- $currentIndex := -1 -}}
+  {{- range $i, $p := $pages -}}
+    {{- if eq $p.RelPermalink $.RelPermalink -}}
+      {{- $currentIndex = $i -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if gt $currentIndex 0 -}}
+    {{- $prev = index $pages (sub $currentIndex 1) -}}
+  {{- end -}}
+  {{- if lt $currentIndex (sub (len $pages) 1) -}}
+    {{- $next = index $pages (add $currentIndex 1) -}}
+  {{- end -}}
+
+  {{- if or $prev $next -}}
+  <div class="flex flex-wrap justify-between">
+    <span>
+    {{ with $prev }}
+      <a href="{{ .RelPermalink }}" class="flex align-center">
+        <img src="{{ partial "docs/icon" "backward" }}" class="book-icon" alt="上一页" />
+        <span>{{ partial "docs/title" . }}</span>
+      </a>
+    {{ end }}
+    </span>
+    <span>
+    {{ with $next }}
+      <a href="{{ .RelPermalink }}" class="flex align-center">
+        <span>{{ partial "docs/title" . }}</span>
+        <img src="{{ partial "docs/icon" "forward" }}" class="book-icon" alt="下一页" />
+      </a>
+    {{ end }}
+    </span>
+  </div>
+  {{- end -}}
+{{- end -}}

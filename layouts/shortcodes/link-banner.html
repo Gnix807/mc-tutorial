@@ -1,0 +1,15 @@
+{{- $link := .Get "link" -}}
+{{- $title := .Get "title" -}}
+{{- $desc := .Get "desc" | default "" -}}
+{{- $banner := .Get "banner" | default "" -}}
+<a href="{{ $link }}" class="link-banner card" target="_blank" rel="noopener" title="{{ $title }}">
+  {{- if $banner }}
+  <img class="link-banner-bg" src="{{ $banner }}" alt="" loading="lazy" />
+  {{- end }}
+  <div class="link-banner-info">
+    <div class="link-banner-title">{{ $title }}</div>
+    {{- if $desc }}
+    <div class="link-banner-desc">{{ $desc }}</div>
+    {{- end }}
+  </div>
+</a>

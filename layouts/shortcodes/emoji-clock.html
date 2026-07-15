@@ -1,0 +1,18 @@
+{{- $hour := .Get "hour" | default "" -}}
+{{- $minute := .Get "minute" | default "" -}}
+{{- $time := .Get "time" | default "" -}}
+{{- $h := 0 -}}{{- $m := 0 -}}
+{{- if $time -}}
+  {{- $parts := split $time ":" -}}
+  {{- $h = int (index $parts 0) -}}
+  {{- if gt (len $parts) 1 }}{{ $m = int (index $parts 1) }}{{ end -}}
+{{- else -}}
+  {{- $h = int $hour -}}
+  {{- $m = int $minute -}}
+{{- end -}}
+
+{{- $emojis := slice "🕛" "🕐" "🕑" "🕒" "🕓" "🕔" "🕕" "🕖" "🕗" "🕘" "🕙" "🕚" -}}
+{{- $idx := mod (add (div $m 5) (mul (mod $h 12) 12)) 12 -}}
+{{- $idx = add $idx 1 -}}
+{{- if ge $idx 12 }}{{ $idx = 0 }}{{ end -}}
+<span class="emoji-clock">{{ index $emojis $idx }}</span>

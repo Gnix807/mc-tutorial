@@ -1,0 +1,17 @@
+{{- $name := .Get "name" -}}
+{{- $desc := .Get "desc" | default "" -}}
+{{- $icon := .Get "icon" | default "" -}}
+{{- $link := .Get "link" | default "" -}}
+{{- if $link }}<a href="{{ $link }}" class="project-card card" target="_blank" rel="noopener">{{- else }}<div class="project-card card">{{- end }}
+  {{- if $icon }}
+  <div class="project-card-icon">
+    <img src="{{ $icon }}" alt="" loading="lazy" />
+  </div>
+  {{- end }}
+  <div class="project-card-info">
+    <div class="project-card-name">{{ $name }}</div>
+    {{- if $desc }}
+    <div class="project-card-desc">{{ $desc }}</div>
+    {{- end }}
+  </div>
+{{- if $link -}}</a>{{- else -}}</div>{{- end -}}

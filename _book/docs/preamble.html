@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme · MC 教程
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="序#Minecraft 简史#2009 年 5 月 17 日，瑞典程序员 Markus “Notch” Persson 发布了一个用 Java 编写的简陋方块游戏——这就是 Minecraft 最早的版本（Classic）。在随后的两年里，Notch 几乎以一己之力推动游戏经历了 Indev、Infdev、Alpha、Beta 多个开发阶段，一边写代码一边根据社区反馈不断调整方向。
+2011 年 11 月 18 日，Minecraft 1.0 正式版在 MineCon 上发布。此时延斯·伯根斯坦（Jeb）已接任开发负责人，游戏从一个人的业余项目变成了一支团队的持续事业。
+2014 年 11 月 6 日，微软以 25 亿美元收购 Mojang 及 Minecraft 全部资产，Notch 从 Mojang 离职。此后 Minecraft 进入了持续扩张的时代：基岩版覆盖了移动设备和游戏主机，Java 版保持着每年一次大更新的节奏，教育版走进了全球课堂。
+截至 2026 年 6 月，Minecraft 全球销量已突破 4 亿份，是历史上销量最高的电子游戏。从 C418 的舒缓钢琴到 Lena Raine 的空灵氛围，它的原声音乐也已成为一代玩家的集体记忆。
+为什么要写这份教程？#红石电路可以搭建出一台计算机，命令方块能创造全新的游戏机制，模组生态更是层出不穷。然而，新手面对这些内容时往往会感到迷茫：该从哪开始？Java 版和基岩版有什么区别？红石到底怎么玩？
+这份教程正是为解答这些问题而写。
+如何使用本教程#本教程按照由浅入深的顺序编排，每一章都建立在前一章的基础之上。
+如果你是完全的新手，建议从第一章开始按顺序阅读。 如果你已经有一定基础，可以直接跳转到你感兴趣的章节。 教程中穿插了大量截图与示例，强烈建议在阅读时打开游戏跟着操作。 适用版本#本教程主要基于 Minecraft Java 版 编写。截止本教程撰写时，最新正式版为 26.2（2026 年 6 月发布）。
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#5c9a3a">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#3a6622">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/preamble.html">
+	<meta property="og:site_name" content="Minecraft 从入门到精通">
+	<meta property="og:title" content="序">
+	<meta property="og:description" content="序#Minecraft 简史#2009 年 5 月 17 日，瑞典程序员 Markus “Notch” Persson 发布了一个用 Java 编写的简陋方块游戏——这就是 Minecraft 最早的版本（Classic）。在随后的两年里，Notch 几乎以一己之力推动游戏经历了 Indev、Infdev、Alpha、Beta 多个开发阶段，一边写代码一边根据社区反馈不断调整方向。
+2011 年 11 月 18 日，Minecraft 1.0 正式版在 MineCon 上发布。此时延斯·伯根斯坦（Jeb）已接任开发负责人，游戏从一个人的业余项目变成了一支团队的持续事业。
+2014 年 11 月 6 日，微软以 25 亿美元收购 Mojang 及 Minecraft 全部资产，Notch 从 Mojang 离职。此后 Minecraft 进入了持续扩张的时代：基岩版覆盖了移动设备和游戏主机，Java 版保持着每年一次大更新的节奏，教育版走进了全球课堂。
+截至 2026 年 6 月，Minecraft 全球销量已突破 4 亿份，是历史上销量最高的电子游戏。从 C418 的舒缓钢琴到 Lena Raine 的空灵氛围，它的原声音乐也已成为一代玩家的集体记忆。
+为什么要写这份教程？#红石电路可以搭建出一台计算机，命令方块能创造全新的游戏机制，模组生态更是层出不穷。然而，新手面对这些内容时往往会感到迷茫：该从哪开始？Java 版和基岩版有什么区别？红石到底怎么玩？
+这份教程正是为解答这些问题而写。
+如何使用本教程#本教程按照由浅入深的顺序编排，每一章都建立在前一章的基础之上。
+如果你是完全的新手，建议从第一章开始按顺序阅读。 如果你已经有一定基础，可以直接跳转到你感兴趣的章节。 教程中穿插了大量截图与示例，强烈建议在阅读时打开游戏跟着操作。 适用版本#本教程主要基于 Minecraft Java 版 编写。截止本教程撰写时，最新正式版为 26.2（2026 年 6 月发布）。">
+	<meta property="og:locale" content="zh">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="docs">
+
+
+	<meta itemprop="name" content="序">
+	<meta itemprop="description" content="序#Minecraft 简史#2009 年 5 月 17 日，瑞典程序员 Markus “Notch” Persson 发布了一个用 Java 编写的简陋方块游戏——这就是 Minecraft 最早的版本（Classic）。在随后的两年里，Notch 几乎以一己之力推动游戏经历了 Indev、Infdev、Alpha、Beta 多个开发阶段，一边写代码一边根据社区反馈不断调整方向。
+2011 年 11 月 18 日，Minecraft 1.0 正式版在 MineCon 上发布。此时延斯·伯根斯坦（Jeb）已接任开发负责人，游戏从一个人的业余项目变成了一支团队的持续事业。
+2014 年 11 月 6 日，微软以 25 亿美元收购 Mojang 及 Minecraft 全部资产，Notch 从 Mojang 离职。此后 Minecraft 进入了持续扩张的时代：基岩版覆盖了移动设备和游戏主机，Java 版保持着每年一次大更新的节奏，教育版走进了全球课堂。
+截至 2026 年 6 月，Minecraft 全球销量已突破 4 亿份，是历史上销量最高的电子游戏。从 C418 的舒缓钢琴到 Lena Raine 的空灵氛围，它的原声音乐也已成为一代玩家的集体记忆。
+为什么要写这份教程？#红石电路可以搭建出一台计算机，命令方块能创造全新的游戏机制，模组生态更是层出不穷。然而，新手面对这些内容时往往会感到迷茫：该从哪开始？Java 版和基岩版有什么区别？红石到底怎么玩？
+这份教程正是为解答这些问题而写。
+如何使用本教程#本教程按照由浅入深的顺序编排，每一章都建立在前一章的基础之上。
+如果你是完全的新手，建议从第一章开始按顺序阅读。 如果你已经有一定基础，可以直接跳转到你感兴趣的章节。 教程中穿插了大量截图与示例，强烈建议在阅读时打开游戏跟着操作。 适用版本#本教程主要基于 Minecraft Java 版 编写。截止本教程撰写时，最新正式版为 26.2（2026 年 6 月发布）。">
+	<meta itemprop="wordCount" content="97">
+
+<title>序 • Minecraft 从入门到精通</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/preamble.html">
+<link rel="stylesheet" href="/book.min.64ab3279514b7f9a7b1ec50a47d8bc6f9bed31454a6363d9f98214862cb1a617.css" integrity="sha256-ZKsyeVFLf5p7HsUKR9i8b5vtMUVKY2PZ&#43;YIUhiyxphc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/custom.min.dde251e13343686983a107a3c06c0a813372d57b6c8f685f33a72094d9ab82c4.css" integrity="sha256-3eJR4TNDaGmDoQejwGwKgTNy1Xtsj2hfM6cglNmrgsQ=" crossorigin="anonymous">
+  <script defer type="module" src="/zh.search.min.0fb05395a8deae6739063f4936af2ec1b852a5df8b4331ee722b7a4d492d0c3d.js" integrity="sha256-D7BTlajermc5Bj9JNq8uwbhSpd&#43;LQzHucit6TUktDD0=" crossorigin="anonymous"></script>
+
+<script defer src="/lightbox.min.b995837a582ada0a114699e58df354f5feb5267b8ba089b2a2c8ac21783242ad.js" integrity="sha256-uZWDelgq2goRRpnljfNU9f61JnuLoImyosisIXgyQq0=" crossorigin="anonymous"></script>
+<script defer src="/theme-toggle.min.17d2b0e14e3e210244ce5d5afaa4b7603c579da4c11f197c77f156465295c14a.js" integrity="sha256-F9Kw4U4&#43;IQJEzl1a&#43;qS3YDxXnaTBHxl8d/FWRlKVwUo=" crossorigin="anonymous"></script>
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/index.html"><span>Minecraft 从入门到精通</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="搜索"
+    aria-label="搜索"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/preamble.html" class="active">
+      序</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第一章 · 基础入门</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/01-buy-and-install.html" class="">
+      1.1 购买与安装</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/02-launcher-and-versions.html" class="">
+      1.2 启动器与版本</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/03-game-settings.html" class="">
+      1.3 游戏设置</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第二章 · 生存指南</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/01-first-day.html" class="">
+      2.1 第一天</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/02-gathering-and-crafting.html" class="">
+      2.2 采集与合成</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第三章 · 建造美学</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/01-basics.html" class="">
+      3.1 建筑基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/02-styles.html" class="">
+      3.2 风格与设计</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/03-terraforming.html" class="">
+      3.3 地形改造</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/04-furniture.html" class="">
+      3.4 实用家具</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第四章 · 红石工程</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/01-basics.html" class="">
+      4.1 红石基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/02-logic-circuits.html" class="">
+      4.2 逻辑电路</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/03-auto-farms.html" class="">
+      4.3 自动化农场</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/04-timers-and-clocks.html" class="">
+      4.4 计时器与时钟</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第五章 · 服务器与联机</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/01-ways-to-connect.html" class="">
+      5.1 联机方式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/02-server-setup.html" class="">
+      5.2 服务器搭建</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/03-realms.html" class="">
+      5.3 领域服</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/04-server-management.html" class="">
+      5.4 服务器维护与管理</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第六章 · 模组与资源包</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/01-mod-loaders.html" class="">
+      6.1 模组加载器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/02-shaders-and-textures.html" class="">
+      6.2 光影与材质</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/03-recommended-mods.html" class="">
+      6.3 推荐模组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/04-optimization-and-qol.html" class="">
+      6.4 优化与辅助模组</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第七章 · 命令与指令方块</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/01-basic-commands.html" class="">
+      7.1 基础命令</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/02-command-blocks.html" class="">
+      7.2 指令方块</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/03-datapacks.html" class="">
+      7.3 数据包</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/04-command-reference.html" class="">
+      7.4 常用命令速查表</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/appendix.html" class="">
+      附录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/afterwords.html" class="">
+      后记</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>序</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#序">序</a>
+      <ul>
+        <li><a href="#minecraft-简史">Minecraft 简史</a></li>
+        <li><a href="#为什么要写这份教程">为什么要写这份教程？</a></li>
+        <li><a href="#如何使用本教程">如何使用本教程</a></li>
+        <li><a href="#适用版本">适用版本</a></li>
+        <li><a href="#致谢">致谢</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="序">序<a class="anchor" href="#%e5%ba%8f">#</a></h1>
+<h2 id="minecraft-简史">Minecraft 简史<a class="anchor" href="#minecraft-%e7%ae%80%e5%8f%b2">#</a></h2>
+<p>2009 年 5 月 17 日，瑞典程序员 Markus &ldquo;Notch&rdquo; Persson 发布了一个用 Java 编写的简陋方块游戏——这就是 Minecraft 最早的版本（Classic）。在随后的两年里，Notch 几乎以一己之力推动游戏经历了 Indev、Infdev、Alpha、Beta 多个开发阶段，一边写代码一边根据社区反馈不断调整方向。</p>
+<p>2011 年 11 月 18 日，Minecraft 1.0 正式版在 MineCon 上发布。此时延斯·伯根斯坦（Jeb）已接任开发负责人，游戏从一个人的业余项目变成了一支团队的持续事业。</p>
+<p>2014 年 11 月 6 日，微软以 25 亿美元收购 Mojang 及 Minecraft 全部资产，Notch 从 Mojang 离职。此后 Minecraft 进入了持续扩张的时代：基岩版覆盖了移动设备和游戏主机，Java 版保持着每年一次大更新的节奏，教育版走进了全球课堂。</p>
+<p>截至 2026 年 6 月，Minecraft 全球销量已突破 <strong>4 亿份</strong>，是历史上销量最高的电子游戏。从 C418 的舒缓钢琴到 Lena Raine 的空灵氛围，它的原声音乐也已成为一代玩家的集体记忆。</p>
+<h2 id="为什么要写这份教程">为什么要写这份教程？<a class="anchor" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%86%99%e8%bf%99%e4%bb%bd%e6%95%99%e7%a8%8b">#</a></h2>
+<p>红石电路可以搭建出一台计算机，命令方块能创造全新的游戏机制，模组生态更是层出不穷。然而，新手面对这些内容时往往会感到迷茫：该从哪开始？Java 版和基岩版有什么区别？红石到底怎么玩？</p>
+<p>这份教程正是为解答这些问题而写。</p>
+<h2 id="如何使用本教程">如何使用本教程<a class="anchor" href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8%e6%9c%ac%e6%95%99%e7%a8%8b">#</a></h2>
+<p>本教程按照由浅入深的顺序编排，每一章都建立在前一章的基础之上。</p>
+<ul>
+<li>如果你是<strong>完全的新手</strong>，建议从第一章开始按顺序阅读。</li>
+<li>如果你已经有一定基础，可以直接跳转到你感兴趣的章节。</li>
+<li>教程中穿插了大量截图与示例，强烈建议在阅读时<strong>打开游戏跟着操作</strong>。</li>
+</ul>
+<h2 id="适用版本">适用版本<a class="anchor" href="#%e9%80%82%e7%94%a8%e7%89%88%e6%9c%ac">#</a></h2>
+<p>本教程主要基于 <strong>Minecraft Java 版</strong> 编写。截止本教程撰写时，最新正式版为 <strong>26.2</strong>（2026 年 6 月发布）。</p>
+<ul>
+<li><strong>Java 版</strong>是本教程的核心讲解对象。教程中的操作步骤、按键对照、游戏机制等，除非特别说明，均以 Java 版为准。</li>
+<li><strong>基岩版</strong>仅在部分章节涉及（如购买安装、联机方式、版本差异对比等），会单独标注。</li>
+<li>如果某部分内容依赖于特定版本（例如某个版本才加入的功能），会在相应位置注明。</li>
+</ul>
+<p>Minecraft 更新频繁，教程尽量跟进最新版本，但也可能滞后。如有发现，欢迎反馈。</p>
+<h2 id="致谢">致谢<a class="anchor" href="#%e8%87%b4%e8%b0%a2">#</a></h2>
+<p>感谢 Mojang Studios 创造了这款伟大的游戏。</p>
+<p>感谢 Minecraft 中文社区中无数贡献教程、攻略、模组的玩家们。</p>
+<hr>
+<p>准备好了吗？让我们开始吧。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/ch01-getting-started/01-buy-and-install.html" class="flex align-center">
+        <span>1.1 购买与安装</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="下一页" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#序">序</a>
+      <ul>
+        <li><a href="#minecraft-简史">Minecraft 简史</a></li>
+        <li><a href="#为什么要写这份教程">为什么要写这份教程？</a></li>
+        <li><a href="#如何使用本教程">如何使用本教程</a></li>
+        <li><a href="#适用版本">适用版本</a></li>
+        <li><a href="#致谢">致谢</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

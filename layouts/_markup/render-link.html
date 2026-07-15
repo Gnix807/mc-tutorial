@@ -1,0 +1,45 @@
+{{- $destination := .Destination -}}
+{{- if .Page.Site.Params.BookPortableLinks -}}
+  {{- $destination = partial "docs/links/portable-link" . -}}
+{{- end -}}
+{{- $isExternal := or (hasPrefix $destination "http://") (hasPrefix $destination "https://") -}}
+{{- $iconSrc := "" -}}
+{{- if $isExternal -}}
+  {{- $u := urls.Parse $destination -}}
+  {{- $domain := $u.Host | lower -}}
+  {{- $iconSet := "" -}}
+  {{- $iconName := "" -}}
+  {{- if or (hasSuffix $domain "github.com") (hasSuffix $domain "github.io") -}}
+    {{- $iconSet = "ri" -}}{{- $iconName = "github-fill" -}}
+  {{- else if hasSuffix $domain "bilibili.com" -}}
+    {{- $iconSet = "simple-icons" -}}{{- $iconName = "bilibili" -}}
+  {{- else if or (hasSuffix $domain "youtube.com") (hasSuffix $domain "youtu.be") -}}
+    {{- $iconSet = "ri" -}}{{- $iconName = "youtube-fill" -}}
+  {{- else if hasSuffix $domain "google.com" -}}
+    {{- $iconSet = "ri" -}}{{- $iconName = "google-fill" -}}
+  {{- else if hasSuffix $domain "microsoft.com" -}}
+    {{- $iconSet = "ri" -}}{{- $iconName = "microsoft-fill" -}}
+  {{- else if hasSuffix $domain "twitter.com" -}}
+    {{- $iconSet = "ri" -}}{{- $iconName = "twitter-x-fill" -}}
+  {{- else if hasSuffix $domain "discord.com" -}}
+    {{- $iconSet = "ri" -}}{{- $iconName = "discord-fill" -}}
+  {{- else if hasSuffix $domain "wikipedia.org" -}}
+    {{- $iconSet = "ri" -}}{{- $iconName = "wikipedia-fill" -}}
+  {{- else if hasSuffix $domain "reddit.com" -}}
+    {{- $iconSet = "ri" -}}{{- $iconName = "reddit-fill" -}}
+  {{- end -}}
+  {{- if and $iconSet $iconName -}}
+    {{- $iconSrc = printf "https://api.iconify.design/%s/%s.svg?height=1em" $iconSet $iconName -}}
+  {{- else if hasSuffix $domain "minecraft.net" -}}
+    {{- $iconSrc = "https://www.minecraft.net/favicon.ico" -}}
+  {{- else -}}
+    {{- $iconSrc = printf "https://icons.duckduckgo.com/ip3/%s.ico" $domain -}}
+  {{- end -}}
+{{- end -}}
+<a href="{{ $destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if $isExternal }} target="_blank" rel="noopener noreferrer" class="ext-link"{{ end }}>
+  {{- if $isExternal }}
+  <img class="ext-link-icon" src="{{ $iconSrc | safeURL }}" alt="" loading="lazy" onerror="this.style.display='none'" />
+  {{- end }}
+  {{ .Text | safeHTML }}
+</a>
+{{- /**/ -}}

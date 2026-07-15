@@ -1,0 +1,27 @@
+{{- $type := .Get "type" | default "bilibili" -}}
+{{- $id := .Get "id" -}}
+{{- $ratio := .Get "ratio" -}}
+{{- $maxWidth := .Get "max-width" | default "720px" -}}
+{{- $src := "" -}}
+
+{{- if eq $type "bilibili" -}}
+  {{- $src = printf "https://player.bilibili.com/player.html?bvid=%s" $id -}}
+{{- else if eq $type "youtube" -}}
+  {{- $src = printf "https://www.youtube.com/embed/%s?rel=0" $id -}}
+{{- else if eq $type "raw" -}}
+  {{- $src = $id -}}
+{{- end -}}
+
+{{- if not $ratio -}}
+  {{- $ratio = "16 / 9" -}}
+{{- end -}}
+
+<div class="video-embed" style="max-width: {{ $maxWidth }}; aspect-ratio: {{ $ratio }};">
+  <iframe
+    src="{{ $src | safeURL }}"
+    scrolling="no"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
