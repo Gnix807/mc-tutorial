@@ -7,7 +7,7 @@ defaultContentLanguage: zh
 
 disablePathToLower: true
 enableGitInfo: false
-publishDir: _book
+publishDir: public
 uglyURLs: true
 
 markup:
