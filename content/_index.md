@@ -69,7 +69,7 @@ type: docs
 
 如果您对本教程有任何意见或建议，欢迎通过以下方式联系：
 
--   在 [GitHub 仓库]() 提交 Issue
+-   在 [GitHub 仓库](https://github.com/Gnix807/mc-tutorial) 提交 Issue
 -   发送邮件到教程维护邮箱
 
 ---
