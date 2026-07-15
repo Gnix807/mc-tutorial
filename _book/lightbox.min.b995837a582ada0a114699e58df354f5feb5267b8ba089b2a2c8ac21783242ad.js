@@ -1,8 +1,0 @@
-(function(){const e=document.createElement("div");e.className="lightbox",e.innerHTML=`
-    <div class="lightbox-backdrop"></div>
-    <div class="lightbox-image-wrap">
-      <img class="lightbox-image" src="" alt="" />
-      <div class="lightbox-caption"></div>
-    </div>
-    <button class="lightbox-close" aria-label="关闭">&times;</button>
-  `,document.body.appendChild(e);const s=e.querySelector(".lightbox-backdrop"),t=e.querySelector(".lightbox-image-wrap"),o=e.querySelector(".lightbox-image"),i=e.querySelector(".lightbox-caption"),c=e.querySelector(".lightbox-close");let n=!1,r=null;function l(a){if(n)return;n=!0,r=a;const c=a.getBoundingClientRect(),l=a.dataset.lightboxCaption||"";o.src=a.src,o.alt=a.alt,i.textContent=l,t.style.transformOrigin=`${c.left+c.width/2}px ${c.top+c.height/2}px`,t.style.setProperty("--from-x",c.left+"px"),t.style.setProperty("--from-y",c.top+"px"),t.style.setProperty("--from-w",c.width+"px"),t.style.setProperty("--from-h",c.height+"px"),document.body.style.overflow="hidden",e.classList.add("open"),requestAnimationFrame(()=>{t.classList.add("active"),s.classList.add("active"),l&&i.classList.add("active")})}function a(){if(!n)return;t.classList.remove("active"),s.classList.remove("active"),i.classList.remove("active"),setTimeout(()=>{e.classList.remove("open"),document.body.style.overflow="",o.src="",n=!1,r=null},350)}document.addEventListener("click",e=>{const t=e.target.closest("img[data-lightbox]");t&&(e.preventDefault(),l(t))}),s.addEventListener("click",a),c.addEventListener("click",a),document.addEventListener("keydown",e=>{e.key==="Escape"&&n&&a()})})()
