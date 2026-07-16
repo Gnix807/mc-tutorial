@@ -292,7 +292,7 @@ img[data-lightbox] { cursor: zoom-in; }
 // ---- CardList ----
 .card-list {
   margin: 1.5rem 0;
-  :where(ol, ul) {
+  > :where(ol, ul) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(calc(240px * 3 / var(--card-columns, 3)), 1fr));
     gap: .75em; margin: 0; padding: 0; list-style: none;
