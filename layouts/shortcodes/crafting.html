@@ -1,4 +1,167 @@
-<div class="crafting-grid">
-  <div class="crafting-title">合成配方：{{ .Get 0 }}</div>
-  <div class="crafting-recipe">{{ .Inner | markdownify }}</div>
+{{- $id := printf "mc-crafting-%d" .Ordinal -}}
+<div class="mc-crafting-wrapper" id="{{ $id }}">
+  <div class="mc-crafting-container">
+    <div class="mc-crafting-grid">
+      {{- range $i := seq 9 -}}
+        {{- $val := $.Get (printf "%d" $i) -}}
+        {{- if $val -}}
+          <div class="mc-crafting-slot" data-items="{{ $val }}">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div>
+        {{- else -}}
+          <div class="mc-crafting-slot empty"></div>
+        {{- end -}}
+      {{- end -}}
+    </div>
+    
+    <div class="mc-crafting-arrow"></div>
+    
+    {{- $result := .Get "result" -}}
+    {{- $count := .Get "count" | default 1 -}}
+    <div class="mc-crafting-result-slot" data-items="{{ $result }}">
+      <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+      {{- if gt (int $count) 1 -}}
+        <span class="mc-crafting-count">{{ $count }}</span>
+      {{- end -}}
+    </div>
+  </div>
 </div>
+
+<script>
+(function() {
+  // 翻译词典
+  const mcTooltips = {
+    // 木板与基础材料
+    "oak_planks": { title: "橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "spruce_planks": { title: "云杉木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "birch_planks": { title: "白桦木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "jungle_planks": { title: "丛林木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "acacia_planks": { title: "金合欢木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "dark_oak_planks": { title: "深色橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "mangrove_planks": { title: "红树木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "cherry_planks": { title: "樱花木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "bamboo_planks": { title: "竹板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "crimson_planks": { title: "绯红木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "warped_planks": { title: "诡异木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "stick": { title: "木棍", subtitle: "材料 - 制作工具手柄、火把与梯子的基础必需品" },
+    "coal": { title: "煤炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 用于制作火把" },
+    "charcoal": { title: "木炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 通过在熔炉中烧炼木头获得" },
+    "cobblestone": { title: "圆石", subtitle: "方块 - 石器时代的核心建筑与合成材料" },
+    "raw_iron": { title: "粗铁", subtitle: "材料 - 铁矿石开采产物，可冶炼成铁锭" },
+    "iron_ingot": { title: "铁锭", subtitle: "材料 - 金属时代的核心工业与工具合成材料" },
+    "diamond": { title: "钻石", subtitle: "材料 - 极其坚硬且珍贵的高级合成材料" },
+    "netherite_ingot": { title: "下界合金锭", subtitle: "材料 - 极高强度的下界金属，具备防火防熔岩特性" },
+    "netherite_upgrade_smithing_template": { title: "下界合金升级锻造模板", subtitle: "模板 - 仅在下界荒地遗迹中发现，用于升级钻石装备" },
+
+    // 木质工具
+    "wooden_pickaxe": { title: "木镐", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2 | 耐久度: 59" },
+    "wooden_shovel": { title: "木铲", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2.5 | 耐久度: 59" },
+    "wooden_axe": { title: "木斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +7 | 耐久度: 59" },
+    "wooden_sword": { title: "木剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +4 | 耐久度: 59" },
+    "wooden_hoe": { title: "木锄", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +1 | 耐久度: 59" },
+
+    // 石质工具
+    "stone_pickaxe": { title: "石镐", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3 | 耐久度: 131" },
+    "stone_shovel": { title: "石铲", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3.5 | 耐久度: 131" },
+    "stone_axe": { title: "石斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +9 | 耐久度: 131" },
+    "stone_sword": { title: "石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +5 | 耐久度: 131" },
+    "stone_hoe": { title: "石锄", subtitle: "工具 - 攻击速度: 2.0 | 攻击伤害: +1 | 耐久度: 131" },
+
+    // 铁质工具
+    "iron_pickaxe": { title: "铁镐", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4 | 耐久度: 250" },
+    "iron_shovel": { title: "铁铲", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4.5 | 耐久度: 250" },
+    "iron_axe": { title: "铁斧", subtitle: "工具 - 攻击速度: 0.9 | 攻击伤害: +9 | 耐久度: 250" },
+    "iron_sword": { title: "铁剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +6 | 耐久度: 250" },
+    "iron_hoe": { title: "铁锄", subtitle: "工具 - 攻击速度: 3.0 | 攻击伤害: +1 | 耐久度: 250" },
+
+    // 钻石工具
+    "diamond_pickaxe": { title: "钻石镐", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5 | 耐久度: 1561" },
+    "diamond_shovel": { title: "钻石铲", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5.5 | 耐久度: 1561" },
+    "diamond_axe": { title: "钻石斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +9 | 耐久度: 1561" },
+    "diamond_sword": { title: "钻石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +7 | 耐久度: 1561" },
+    "diamond_hoe": { title: "钻石锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 | 耐久度: 1561" },
+
+    // 下界合金工具
+    "netherite_pickaxe": { title: "下界合金镐", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_shovel": { title: "下界合金铲", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6.5 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_axe": { title: "下界合金斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +10 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_sword": { title: "下界合金剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +8 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_hoe": { title: "下界合金锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 (防火防熔岩) | 耐久度: 2031" },
+
+    // 功能性方块
+    "furnace": { title: "熔炉", subtitle: "方块 - 用于冶炼矿石与烹饪食物的传统加热方块" },
+    "crafting_table": { title: "工作台", subtitle: "方块 - 提供 3x3 网格的合成核心方块" },
+    "smithing_table": { title: "锻造台", subtitle: "方块 - 配合锻造模板升级高级武器装备的工作方块" }
+  };
+
+  // 全局共享的提示悬浮框
+  let tooltip = document.querySelector(".mc-crafting-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "mc-crafting-tooltip";
+    tooltip.innerHTML = '<span class="mc-tooltip-title"></span><span class="mc-tooltip-subtitle"></span>';
+    document.body.appendChild(tooltip);
+  }
+
+  const container = document.getElementById("{{ $id }}");
+  const slots = container.querySelectorAll(".mc-crafting-slot, .mc-crafting-result-slot");
+
+  slots.forEach(slot => {
+    if (slot.classList.contains("empty")) return;
+    
+    const itemsData = slot.getAttribute("data-items");
+    if (!itemsData) return;
+    
+    const items = itemsData.split(",").map(i => i.trim());
+    let currentIndex = 0;
+    const img = slot.querySelector("img");
+
+    // 初始化显示
+    function updateSlot() {
+      const itemKey = items[currentIndex];
+      if (itemKey === "empty" || !itemKey) {
+        img.style.opacity = 0;
+        img.src = "";
+        slot.setAttribute("data-active-item", "");
+      } else {
+        img.src = "/images/items/" + itemKey + ".png";
+        img.style.opacity = 1;
+        slot.setAttribute("data-active-item", itemKey);
+      }
+    }
+    updateSlot();
+
+    // 2 秒一次轮播
+    if (items.length > 1) {
+      setInterval(() => {
+        img.style.opacity = 0;
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % items.length;
+          updateSlot();
+        }, 150);
+      }, 2000);
+    }
+
+    // 鼠标移入与跟随逻辑
+    slot.addEventListener("mouseenter", (e) => {
+      const activeItem = slot.getAttribute("data-active-item");
+      if (!activeItem) return;
+
+      const translation = mcTooltips[activeItem] || { title: activeItem, subtitle: "物品" };
+      tooltip.querySelector(".mc-tooltip-title").textContent = translation.title;
+      tooltip.querySelector(".mc-tooltip-subtitle").textContent = translation.subtitle;
+      tooltip.style.display = "block";
+    });
+
+    slot.addEventListener("mousemove", (e) => {
+      // 维基风格：跟随鼠标的相对坐标
+      tooltip.style.left = (e.clientX + 12) + "px";
+      tooltip.style.top = (e.clientY - 12) + "px";
+    });
+
+    slot.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+})();
+</script>
