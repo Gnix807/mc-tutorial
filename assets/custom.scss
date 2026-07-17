@@ -503,6 +503,7 @@ img[data-lightbox] { cursor: zoom-in; }
 /* 3x3 物品网格 */
 .mc-crafting-grid {
   display: grid;
+  flex-shrink: 0;
   grid-template-columns: repeat(3, 88px);
   grid-template-rows: repeat(3, 88px);
   gap: 8px;
@@ -511,6 +512,7 @@ img[data-lightbox] { cursor: zoom-in; }
 /* GUI 槽位 */
 .mc-crafting-slot {
   position: relative;
+  flex-shrink: 0;
   width: 88px;
   height: 88px;
   background-color: #8b8b8b;
@@ -534,6 +536,9 @@ img[data-lightbox] { cursor: zoom-in; }
   img {
     width: 80px;
     height: 80px;
+    max-width: none;
+    max-height: none;
+    flex-shrink: 0;
     object-fit: contain;
     image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-optimize-contrast;
@@ -546,6 +551,7 @@ img[data-lightbox] { cursor: zoom-in; }
 /* 合成箭头 */
 .mc-crafting-arrow {
   width: 66px;
+  flex-shrink: 0;
   height: 44px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -560,6 +566,7 @@ img[data-lightbox] { cursor: zoom-in; }
 /* 结果槽（尺寸更大） */
 .mc-crafting-result-slot {
   width: 140px;
+  flex-shrink: 0;
   height: 140px;
   background-color: #8b8b8b;
   border: 6px solid;
@@ -578,6 +585,9 @@ img[data-lightbox] { cursor: zoom-in; }
   img {
     width: 128px;
     height: 128px;
+    max-width: none;
+    max-height: none;
+    flex-shrink: 0;
     object-fit: contain;
     image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-optimize-contrast;
