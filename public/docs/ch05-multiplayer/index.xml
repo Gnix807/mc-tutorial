@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>第五章 · 服务器与联机 on Minecraft 从入门到精通</title>
+		<title>服务器与联机 on Minecraft 从入门到精通</title>
 		<link>http://localhost:1313/docs/ch05-multiplayer/index.html</link>
-		<description>Recent content in 第五章 · 服务器与联机 on Minecraft 从入门到精通</description>
+		<description>Recent content in 服务器与联机 on Minecraft 从入门到精通</description>
 		<generator>Hugo</generator>
 		<language>zh</language>
 		
@@ -16,35 +16,35 @@
 				<link>http://localhost:1313/docs/ch05-multiplayer/01-ways-to-connect.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch05-multiplayer/01-ways-to-connect.html</guid>
-				<description>&lt;h1 id=&#34;51-联机方式&#34;&gt;5.1 联机方式&lt;a class=&#34;anchor&#34; href=&#34;#51-%e8%81%94%e6%9c%ba%e6%96%b9%e5%bc%8f&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;局域网联机、虚拟局域网与服务器简介。&lt;/p&gt;</description>
+				<description>&lt;h1 id=&#34;联机方式&#34;&gt;联机方式&lt;a class=&#34;anchor&#34; href=&#34;#%e8%81%94%e6%9c%ba%e6%96%b9%e5%bc%8f&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;局域网联机、虚拟局域网与服务器简介。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>服务器搭建</title>
 				<link>http://localhost:1313/docs/ch05-multiplayer/02-server-setup.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch05-multiplayer/02-server-setup.html</guid>
-				<description>&lt;h1 id=&#34;52-服务器搭建&#34;&gt;5.2 服务器搭建&lt;a class=&#34;anchor&#34; href=&#34;#52-%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%90%ad%e5%bb%ba&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;从零开始搭建自己的 Minecraft 服务器。&lt;/p&gt;</description>
+				<description>&lt;h1 id=&#34;服务器搭建&#34;&gt;服务器搭建&lt;a class=&#34;anchor&#34; href=&#34;#%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%90%ad%e5%bb%ba&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;从零开始搭建自己的 Minecraft 服务器。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Realms 领域</title>
 				<link>http://localhost:1313/docs/ch05-multiplayer/03-realms.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch05-multiplayer/03-realms.html</guid>
-				<description>&lt;h1 id=&#34;53-领域服&#34;&gt;5.3 领域服&lt;a class=&#34;anchor&#34; href=&#34;#53-%e9%a2%86%e5%9f%9f%e6%9c%8d&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;Minecraft Realms 官方服务器介绍与使用。&lt;/p&gt;</description>
+				<description>&lt;h1 id=&#34;领域服&#34;&gt;领域服&lt;a class=&#34;anchor&#34; href=&#34;#%e9%a2%86%e5%9f%9f%e6%9c%8d&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;Minecraft Realms 官方服务器介绍与使用。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>服务器管理与指令</title>
 				<link>http://localhost:1313/docs/ch05-multiplayer/04-server-management.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch05-multiplayer/04-server-management.html</guid>
-				<description>&lt;h1 id=&#34;54-服务器维护与管理&#34;&gt;5.4 服务器维护与管理&lt;a class=&#34;anchor&#34; href=&#34;#54-%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%bb%b4%e6%8a%a4%e4%b8%8e%e7%ae%a1%e7%90%86&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+				<description>&lt;h1 id=&#34;服务器维护与管理&#34;&gt;服务器维护与管理&lt;a class=&#34;anchor&#34; href=&#34;#%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%bb%b4%e6%8a%a4%e4%b8%8e%e7%ae%a1%e7%90%86&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>PvP 技巧与战术</title>
 				<link>http://localhost:1313/docs/ch05-multiplayer/05-pvp.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch05-multiplayer/05-pvp.html</guid>
-				<description>&lt;h1 id=&#34;55-pvp-入门&#34;&gt;5.5 PvP 入门&lt;a class=&#34;anchor&#34; href=&#34;#55-pvp-%e5%85%a5%e9%97%a8&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+				<description>&lt;h1 id=&#34;pvp-入门&#34;&gt;PvP 入门&lt;a class=&#34;anchor&#34; href=&#34;#pvp-%e5%85%a5%e9%97%a8&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>防破坏与权限管理</title>

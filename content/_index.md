@@ -17,13 +17,13 @@ type: docs
 
 -   [**序**]({{< relref "/docs/preamble" >}})——关于这份教程的由来与使用建议
 
-### 第一章 · 基础入门
+### 基础入门
 
 -   [购买与安装]({{< relref "/docs/ch01-getting-started/01-buy-and-install" >}})——Java 版与基岩版的区别、购买渠道与安装方法
 -   [启动器与版本]({{< relref "/docs/ch01-getting-started/02-launcher-and-versions" >}})——官方启动器、第三方启动器与各版本特性
 -   [游戏设置]({{< relref "/docs/ch01-getting-started/03-game-settings" >}})——画质、控制、音效等游戏内设置详解
 
-### 第二章 · 生存指南
+### 生存指南
 
 -   [资源收集与合成]({{< relref "/docs/ch02-survival/01-gathering-and-crafting" >}})——资源采集、工具制作与合成系统
 -   [饥饿与生命值管理]({{< relref "/docs/ch02-survival/02-hunger-and-health" >}})——保持生存的基础状态
@@ -36,7 +36,7 @@ type: docs
 -   [附魔与铁砧指南]({{< relref "/docs/ch02-survival/09-enchanting" >}})——附魔系统、经验获取与装备修复
 -   [下界探险与快速旅行]({{< relref "/docs/ch02-survival/10-nether" >}})——下界维度的生存与交通
 -   [完成冒险：击败末影龙]({{< relref "/docs/ch02-survival/11-the-end" >}})——进入末地，通关游戏
-### 第三章 · 建造美学
+### 建造美学
 
 -   [建筑基础]({{< relref "/docs/ch03-building/01-basics" >}})——配色、比例、层次等核心建筑原则
 -   [风格与设计]({{< relref "/docs/ch03-building/03-styles" >}})——中世纪、现代、东方等建筑风格入门
@@ -46,7 +46,7 @@ type: docs
 -   [调色板与材料]({{< relref "/docs/ch03-building/02-palette-and-materials" >}})——方块配色理论与材料选择指南
 -   [水下与特殊环境建筑]({{< relref "/docs/ch03-building/07-underwater-and-special" >}})——水下、下界、末地等特殊环境建造
 
-### 第四章 · 红石工程
+### 红石工程
 
 -   [红石基础]({{< relref "/docs/ch04-redstone/01-basics" >}})——红石元件的种类与基本用法
 -   [逻辑电路]({{< relref "/docs/ch04-redstone/02-logic-circuits" >}})——用红石搭建逻辑门与简单计算器
@@ -56,7 +56,7 @@ type: docs
 -   [存储与分类系统]({{< relref "/docs/ch04-redstone/05-storage-and-sorting" >}})——自动物品分类与仓库管理
 -   [红石进阶项目]({{< relref "/docs/ch04-redstone/08-advanced-projects" >}})——计算器、密码门等综合项目实战
 
-### 第五章 · 服务器与联机
+### 服务器与联机
 
 -   [联机方式]({{< relref "/docs/ch05-multiplayer/01-ways-to-connect" >}})——局域网、虚拟局域网与公共服务器
 -   [服务器搭建]({{< relref "/docs/ch05-multiplayer/02-server-setup" >}})——从零搭建自己的 Minecraft 服务器
@@ -64,7 +64,7 @@ type: docs
 -   [服务器维护与管理]({{< relref "/docs/ch05-multiplayer/04-server-management" >}})——插件安装、权限管理与性能优化
 -   [PvP 入门]({{< relref "/docs/ch05-multiplayer/05-pvp" >}})——玩家对战基础技巧与练习方法
 
-### 第六章 · 模组与资源包
+### 模组与资源包
 
 -   [模组加载器]({{< relref "/docs/ch06-mods/01-mod-loaders" >}})——Forge、Fabric、NeoForge 对比与安装
 -   [光影与材质]({{< relref "/docs/ch06-mods/02-shaders-and-textures" >}})——OptiFine、Iris 光影与材质包
@@ -72,7 +72,7 @@ type: docs
 -   [优化与辅助模组]({{< relref "/docs/ch06-mods/04-optimization-and-qol" >}})——性能优化、地图与信息辅助工具
 -   [整合包入门]({{< relref "/docs/ch06-mods/05-modpacks" >}})——整合包的概念、安装与推荐
 
-### 第七章 · 命令与指令方块
+### 命令与指令方块
 
 -   [基础命令]({{< relref "/docs/ch07-commands/01-basic-commands" >}})——常用命令的语法与实用案例
 -   [指令方块]({{< relref "/docs/ch07-commands/02-command-blocks" >}})——指令方块的使用与进阶技巧

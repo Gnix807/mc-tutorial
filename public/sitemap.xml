@@ -18,13 +18,13 @@
   </url><url>
     <loc>http://localhost:1313/docs/ch02-survival/01-gathering-and-crafting.html</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ch01-getting-started/index.html</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/ch05-multiplayer/02-server-setup.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch06-mods/02-shaders-and-textures.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch02-survival/02-hunger-and-health.html</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/ch01-getting-started/index.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch04-redstone/02-logic-circuits.html</loc>
   </url><url>
@@ -40,23 +40,23 @@
   </url><url>
     <loc>http://localhost:1313/docs/ch01-getting-started/03-game-settings.html</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ch02-survival/index.html</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/ch03-building/03-styles.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch04-redstone/03-piston-machines.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch06-mods/03-recommended-mods.html</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/ch02-survival/index.html</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/ch07-commands/03-datapacks.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch07-commands/04-command-reference.html</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ch03-building/index.html</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/ch05-multiplayer/04-server-management.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch03-building/04-roofs-and-details.html</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/ch03-building/index.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch04-redstone/04-minecarts-and-transport.html</loc>
   </url><url>
@@ -70,9 +70,9 @@
   </url><url>
     <loc>http://localhost:1313/docs/ch02-survival/05-mining.html</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ch04-redstone/index.html</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/ch07-commands/05-functions-and-advanced.html</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/ch04-redstone/index.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch03-building/05-furniture.html</loc>
   </url><url>
@@ -84,9 +84,9 @@
   </url><url>
     <loc>http://localhost:1313/docs/ch03-building/06-terraforming.html</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ch05-multiplayer/index.html</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/ch05-multiplayer/06-anti-griefing.html</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/ch05-multiplayer/index.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch06-mods/06-bedrock-addons.html</loc>
   </url><url>
@@ -96,9 +96,9 @@
   </url><url>
     <loc>http://localhost:1313/docs/ch04-redstone/06-auto-farms.html</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ch06-mods/index.html</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/ch02-survival/07-farming.html</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/ch06-mods/index.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch03-building/07-underwater-and-special.html</loc>
   </url><url>
@@ -106,11 +106,11 @@
   </url><url>
     <loc>http://localhost:1313/docs/ch02-survival/08-villagers.html</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ch07-commands/index.html</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/ch04-redstone/08-advanced-projects.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch03-building/08-megaprojects.html</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/ch07-commands/index.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/appendix.html</loc>
   </url><url>
@@ -127,8 +127,6 @@
     <loc>http://localhost:1313/index.html</loc>
   </url><url>
     <loc>http://localhost:1313/tags/index.html</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/test.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/index.html</loc>
   </url>
