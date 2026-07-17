@@ -544,10 +544,10 @@ img[data-lightbox] { cursor: zoom-in; }
     max-height: none !important;
     flex-shrink: 0 !important;
     object-fit: fill !important;
-    
-    
-    
-    image-rendering: auto !important;
+    image-rendering: -moz-crisp-edges !important;
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: crisp-edges !important;
+    image-rendering: pixelated !important;
     transition: opacity 0.15s ease-in-out;
   }
 }
@@ -597,10 +597,10 @@ img[data-lightbox] { cursor: zoom-in; }
     max-height: none !important;
     flex-shrink: 0 !important;
     object-fit: fill !important;
-    
-    
-    
-    image-rendering: auto !important;
+    image-rendering: -moz-crisp-edges !important;
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: crisp-edges !important;
+    image-rendering: pixelated !important;
     transition: opacity 0.15s ease-in-out;
   }
 
