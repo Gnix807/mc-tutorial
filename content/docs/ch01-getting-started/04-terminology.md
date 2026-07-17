@@ -35,31 +35,31 @@ type: docs
 | --- | --- | --- |
 | 我的世界 | 游戏名称“Minecraft”的官方译名。 | 官方名称 |
 | 特性 | 通常指游戏中存在的一些未被修复的漏洞或不符合常理的现象，例如大部分方块不受重力影响； 铁桶 装 熔岩 不会被烧毁，但丢进熔岩会被烧毁等。 | 专业术语 |
-| 小黑 | 对 <img src="/images/items/enderman_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 末影人 的称呼，因末影人颜色而得名。 | 别称 |
-| 小白 | 对 <img src="/images/items/skeleton_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 骷髅 的称呼，因骷髅颜色而得名。 | 别称 |
-| 白色僵尸 | 对 <img src="/images/items/iron_golem_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 铁傀儡 的称呼，因玩家可以以杀死铁傀儡作为前期获得 铁锭 的方式，并诙谐地称其为“帮 村民 击杀白色僵尸”而得名。 | 别称 |
-| 毒蜘蛛 | 对 <img src="/images/items/cave_spider_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 洞穴蜘蛛 的称呼，因它会使玩家获得 中毒 效果而得名。 | 别称 |
-| 猪人 | 对 <img src="/images/items/zombified_piglin_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 僵尸猪人 或 <img src="/images/items/zombified_piglin_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 僵尸猪灵 的称呼，因它们在 20w09a 前被称为僵尸猪人而得名。 | 别称 |
-| 绿袍尊者 | 对 <img src="/images/items/villager_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 傻子村民 的戏谑性称呼，因其无法获得职业、无法交易且身穿绿袍而得名。 | 别称 |
-| 辣条 | 对 <img src="/images/items/rotten_flesh.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 腐肉 的称呼，因其外观而得名。 | 别称 |
-| 地狱轰炸机 | 对 <img src="/images/items/ghast_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 恶魂 的称呼，因它生成于 下界 ，且发射的火球会 爆炸 而得名。 | 别称 |
-| 气球 | 对 <img src="/images/items/ghast_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 恶魂 的称呼，因对其使用 望远镜 会获得“ 那是气球吗？ ”进度而得名。 | 别称 |
-| 循声守卫 | <img src="/images/items/warden_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 监守者 早期的社区译名，因Mojang介绍它能检测 振动 （实际加入前被误认为检测声音）而得名。 | 别称 |
-| 典狱长 | 对 <img src="/images/items/warden_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 监守者 的称呼，因其实体ID“Warden”翻译成中文意为“典狱长”而得名。 | 别称 |
+| 小黑 | 对 <img src="https://zh.minecraft.wiki/images/EntitySprite_enderman.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 末影人 的称呼，因末影人颜色而得名。 | 别称 |
+| 小白 | 对 <img src="https://zh.minecraft.wiki/images/EntitySprite_skeleton.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 骷髅 的称呼，因骷髅颜色而得名。 | 别称 |
+| 白色僵尸 | 对 <img src="https://zh.minecraft.wiki/images/EntitySprite_iron-golem.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 铁傀儡 的称呼，因玩家可以以杀死铁傀儡作为前期获得 铁锭 的方式，并诙谐地称其为“帮 村民 击杀白色僵尸”而得名。 | 别称 |
+| 毒蜘蛛 | 对 <img src="https://zh.minecraft.wiki/images/EntitySprite_cave-spider.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 洞穴蜘蛛 的称呼，因它会使玩家获得 中毒 效果而得名。 | 别称 |
+| 猪人 | 对 <img src="https://zh.minecraft.wiki/images/EntitySprite_zombie-pigman.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 僵尸猪人 或 <img src="https://zh.minecraft.wiki/images/EntitySprite_zombified-piglin.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 僵尸猪灵 的称呼，因它们在 20w09a 前被称为僵尸猪人而得名。 | 别称 |
+| 绿袍尊者 | 对 <img src="https://zh.minecraft.wiki/images/EntitySprite_leatherworker.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 傻子村民 的戏谑性称呼，因其无法获得职业、无法交易且身穿绿袍而得名。 | 别称 |
+| 辣条 | 对 <img src="https://zh.minecraft.wiki/images/ItemSprite_rotten-flesh.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 腐肉 的称呼，因其外观而得名。 | 别称 |
+| 地狱轰炸机 | 对 <img src="https://zh.minecraft.wiki/images/EntitySprite_ghast.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 恶魂 的称呼，因它生成于 下界 ，且发射的火球会 爆炸 而得名。 | 别称 |
+| 气球 | 对 <img src="https://zh.minecraft.wiki/images/EntitySprite_ghast.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 恶魂 的称呼，因对其使用 望远镜 会获得“ 那是气球吗？ ”进度而得名。 | 别称 |
+| 循声守卫 | <img src="https://zh.minecraft.wiki/images/EntitySprite_warden.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 监守者 早期的社区译名，因Mojang介绍它能检测 振动 （实际加入前被误认为检测声音）而得名。 | 别称 |
+| 典狱长 | 对 <img src="https://zh.minecraft.wiki/images/EntitySprite_warden.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 监守者 的称呼，因其实体ID“Warden”翻译成中文意为“典狱长”而得名。 | 别称 |
 | 刌民 | 对 灾厄村民 的别称，也是其旧译名。 | 别称 |
 | 腐竹 | “服主”的谐音。 | 别称 |
 | 生电 | “ 生存模式 红石电路 ”的简称。 | 缩写 |
 | 创电 | “ 创造模式 红石电路 ”的简称。 | 缩写 |
 | 活塞虫 | 一种可自动单向或多向飞行，主要由 活塞 、 黏性活塞 、 侦测器 和 黏液块 组成的 飞行器 。 | 专业术语 |
 | 地狱 | 对 下界 的常用称呼，因下界形象酷似地狱而得名；且 Java版1.16 前的下界物品译名中“地狱”“下界”混杂。 | 别称 |
-| 地狱堡垒 | <img src="/images/items/nether_bricks.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;">下界要塞的别称，因为下界形象酷似地狱；，有时也用于指<img src="/images/items/polished_blackstone_bricks.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;">堡垒遗迹。 | 别称 |
+| 地狱堡垒 | <img src="https://zh.minecraft.wiki/images/EnvSprite_fortress.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;">下界要塞的别称，因为下界形象酷似地狱；，有时也用于指<img src="https://zh.minecraft.wiki/images/EnvSprite_bastion-remnant.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;">堡垒遗迹。 | 别称 |
 | 末影（前缀） | 常代替一些生成在 末地 的建筑的名称前缀“末地”，因玩家们通常将“末影”和“末地”混为一谈。实际上“末影”对应英文“Ender”，“末地”对应英文“End”。 | 别称 |
 | 紫影（前缀） | 前缀“紫颂”的旧译名，有时会被当作术语使用。 | 别称 |
 | 火柴盒 | 指方形的房子，因外形酷似火柴盒而得名。 | 专业术语 |
-| 观察者 | <img src="/images/items/observer_front.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 侦测器 的别称，因基岩版旧译而得名。 | 别称 |
-| 南瓜头 | <img src="/images/items/carved_pumpkin.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 雕刻南瓜 的别称，因其形象与可被 生物 或 玩家 装备在头上的特性而得名。 | 别称 |
-| 牛爷爷 | <img src="/images/items/crafter_top.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 合成器 的别称，因酷似《大耳朵图图》中的牛爷爷而得名。 | 别称 |
-| 干草块 | <img src="/images/items/hay_block_side.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 干草捆 的别称，也是Java版曾用译名。 | 别称 |
+| 观察者 | <img src="https://zh.minecraft.wiki/images/BlockSprite_observer.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 侦测器 的别称，因基岩版旧译而得名。 | 别称 |
+| 南瓜头 | <img src="https://zh.minecraft.wiki/images/BlockSprite_carved-pumpkin.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 雕刻南瓜 的别称，因其形象与可被 生物 或 玩家 装备在头上的特性而得名。 | 别称 |
+| 牛爷爷 | <img src="https://zh.minecraft.wiki/images/BlockSprite_crafter.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 合成器 的别称，因酷似《大耳朵图图》中的牛爷爷而得名。 | 别称 |
+| 干草块 | <img src="https://zh.minecraft.wiki/images/BlockSprite_hay-bale.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 干草捆 的别称，也是Java版曾用译名。 | 别称 |
 | 床炸 | 指“用床炸”，由于 床 在 下界 与 末地 使用时会爆炸，对周围 实体 造成伤害、破坏部分方块，因此常被玩家用于攻击其他玩家或生物、快速破坏方块（常用于攻击 末影龙 或大范围寻找 远古残骸 ）。 | 专业术语 |
 | 山顶洞人 | 指在 生存模式 中于 山 上挖凿洞穴居住或在天然 洞穴 居住的玩家，是一种玩笑说法。 | 专业术语 |
 | 世吞 | “世界吞噬者”的简称，指红石技术领域中用于清理大范围地形区域的大型机器。详见 此教程 。 | 缩写 |
@@ -68,18 +68,18 @@ type: docs
 | 挖三填一 | 往地下挖掘3格深的洞再将顶部一格填上的操作，通常用于逃避怪物追击。详见 此教程 。 | 专业术语 |
 | 鱼骨挖矿 | 指玩家为挖掘 矿物 而开凿的一种形状类似鱼骨的矿道。详见 此教程 。 | 专业术语 |
 | 熊孩子 | 指在联机地图或 服务器 中恶意破坏的玩家。 | 专业术语 |
-| 猪灵堡垒 | 对 <img src="/images/items/polished_blackstone_bricks.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 堡垒遗迹 的称呼，因主要生成 猪灵 而得名。 | 别称 |
+| 猪灵堡垒 | 对 <img src="https://zh.minecraft.wiki/images/EnvSprite_bastion-remnant.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 堡垒遗迹 的称呼，因主要生成 猪灵 而得名。 | 别称 |
 | 铲子/铲 | 锹 的别称，如木铲、钻石铲子等。 | 别称 |
 | 跑图 | 玩家通过不断向 出生点 以外移动使世界持续加载的行为。 | 专业术语 |
 | 真男人挖矿 | 指玩家为挖掘矿物，在不移动X轴和Z轴坐标的情况下直接向下挖掘，因这种方法易掉进 熔岩 或 峡谷 导致危险而得名。 | 专业术语 |
 | （三叉戟）搅拌机 [仅 基岩版 ] | 指一种生物处死装置，运作原理是 玩家 投掷的 三叉戟 被 活塞 等不断推动，从而对生物造成伤害。详见 此教程 。 | 专业术语 |
 | 星跳水立方（一说心跳水立方） | 指让玩家从高空无伤坠落至地表水面的一类挑战地图，坠落路径上常设计迷惑视线的元素以增加难度。 | 专业术语 |
 | 饱食度 | 饥饿值 的别称。 | 别称 |
-| 黏土山 | <img src="/images/items/terracotta.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 恶地 的别称。 | 别称 |
-| 嘎吱怪 | <img src="/images/items/creaking_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 嘎枝 的别称。 | 别称 |
-| 苍白花园 | <img src="/images/items/pale_oak_sapling.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 苍白之园 的别称。 | 别称 |
-| 乐魂/善魂 | <img src="/images/items/ghast_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 快乐恶魂 的别称。 | 别称 |
+| 黏土山 | <img src="https://zh.minecraft.wiki/images/BiomeSprite_badlands.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 恶地 的别称。 | 别称 |
+| 嘎吱怪 | <img src="https://zh.minecraft.wiki/images/EntitySprite_creaking.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 嘎枝 的别称。 | 别称 |
+| 苍白花园 | <img src="https://zh.minecraft.wiki/images/BiomeSprite_pale-garden.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 苍白之园 的别称。 | 别称 |
+| 乐魂/善魂 | <img src="https://zh.minecraft.wiki/images/EntitySprite_happy-ghast.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 快乐恶魂 的别称。 | 别称 |
 | 触屏 | 指通过触摸屏幕来控制游戏的一种模式。 | 专业术语 |
-| 僵尸骆驼 | <img src="/images/items/husk_spawn_egg.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 骆驼尸壳 的别称。 | 别称 |
+| 僵尸骆驼 | <img src="https://zh.minecraft.wiki/images/EntitySprite_camel-husk.png" width="16" style="vertical-align: middle; display: inline-block; image-rendering: pixelated; margin-right: 4px;"> 骆驼尸壳 的别称。 | 别称 |
 
 > **提示**：随着游戏版本的更新和社区的发展，术语表也在不断扩充。如果在游戏中遇到了不懂的词，随时可以查阅此表或向其他老玩家请教！
