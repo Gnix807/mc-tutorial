@@ -1,8 +1,9 @@
 ---
-title: 6.1 模组加载器
+title: 模组加载器安装
 weight: 1
 type: docs
 ---
+
 
 # 6.1 模组加载器
 

@@ -1,8 +1,9 @@
 ---
-title: 4.1 红石基础
+title: 基础红石元件
 weight: 1
 type: docs
 ---
+
 
 # 4.1 红石基础
 

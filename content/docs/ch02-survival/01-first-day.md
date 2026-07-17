@@ -1,8 +1,9 @@
 ---
-title: 2.1 第一天
+title: 生存第一天
 weight: 1
 type: docs
 ---
+
 
 # 2.1 第一天
 

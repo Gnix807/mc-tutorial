@@ -1,8 +1,9 @@
 ---
-title: 5.2 服务器搭建
+title: 服务器搭建
 weight: 2
 type: docs
 ---
+
 
 # 5.2 服务器搭建
 

@@ -12,53 +12,53 @@
 		
 			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>1.1 购买与安装</title>
+				<title>购买与安装</title>
 				<link>http://localhost:1313/docs/ch01-getting-started/01-buy-and-install.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch01-getting-started/01-buy-and-install.html</guid>
 				<description>&lt;h1 id=&#34;11-购买与安装&#34;&gt;1.1 购买与安装&lt;a class=&#34;anchor&#34; href=&#34;#11-%e8%b4%ad%e4%b9%b0%e4%b8%8e%e5%ae%89%e8%a3%85&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.x / 基岩版 · 本节内容适用于所有版本。&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;在开始游戏之前，首先需要获得 Minecraft 的正版账号。本节将介绍 Minecraft 国际版的版本区别，以及通过官网和微软商店两种方式购买与安装游戏。&lt;/p&gt;&#xA;&lt;h2 id=&#34;minecraft-国际版是什么&#34;&gt;Minecraft 国际版是什么？&lt;a class=&#34;anchor&#34; href=&#34;#minecraft-%e5%9b%bd%e9%99%85%e7%89%88%e6%98%af%e4%bb%80%e4%b9%88&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Minecraft 目前主要分为两个版本体系：&lt;/p&gt;&#xA;&lt;div class=&#34;card-list&#34; style=&#34;--card-columns: 2;&#34;&gt;&#xA;  &lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Java 版&lt;/strong&gt; &lt;span class=&#34;badge&#34;&gt;&#xA;&lt;span class=&#34;badge-text&#34;&gt;推荐&lt;/span&gt;&lt;/span&gt;&#xA;最早的 Minecraft 版本，使用 Java 语言编写。模组生态丰富、社区活跃，支持 Windows / macOS / Linux。本教程的主要讲解对象。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;基岩版&lt;/strong&gt;&#xA;使用 C++ 重写，运行效率更高，跨平台联机方便（Windows / 主机 / 手机），但模组支持相对有限。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;两个版本各自需要&lt;strong&gt;单独购买&lt;/strong&gt;，互不包含。如果你主要用电脑玩，并且对模组、红石、命令等深度内容感兴趣，&lt;strong&gt;推荐优先购买 Java 版&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;什么是「国际版」？&lt;/strong&gt;&#xA;由于历史原因，Minecraft 在中国大陆由网易代理运营&lt;span class=&#34;inline-tip&#34; data-tip=&#34;免费但更新慢，和国际版数据不互通&#34;&gt;我的世界中国版&lt;/span&gt;&#xA;，与国际版是&lt;strong&gt;两个不同的游戏&lt;/strong&gt;。本教程所述内容全部基于&lt;strong&gt;国际版&lt;/strong&gt;，请购买时注意区分。&lt;/p&gt;&lt;/blockquote&gt;&lt;h2 id=&#34;账号体系说明&#34;&gt;账号体系说明&lt;a class=&#34;anchor&#34; href=&#34;#%e8%b4%a6%e5%8f%b7%e4%bd%93%e7%b3%bb%e8%af%b4%e6%98%8e&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;自 2021 年起，Mojang 账号已全面迁移至 &lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;Microsoft 账户&lt;/span&gt;&lt;/span&gt;。现在购买 Minecraft 需要拥有一个 Microsoft 账户（如果没有，可以在购买过程中免费注册）。&lt;/p&gt;&#xA;&lt;p&gt;一个 Microsoft 账户可以同时拥有 Java 版和基岩版的许可，且可以跨设备登录。&lt;/p&gt;&#xA;&lt;h2 id=&#34;方式一官网购买&#34;&gt;方式一：官网购买&lt;a class=&#34;anchor&#34; href=&#34;#%e6%96%b9%e5%bc%8f%e4%b8%80%e5%ae%98%e7%bd%91%e8%b4%ad%e4%b9%b0&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;推荐方式&lt;/span&gt;&lt;/span&gt; 最简单直接的购买渠道。&lt;/p&gt;&#xA;&lt;h3 id=&#34;操作步骤&#34;&gt;操作步骤&lt;a class=&#34;anchor&#34; href=&#34;#%e6%93%8d%e4%bd%9c%e6%ad%a5%e9%aa%a4&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;dl class=&#34;timeline&#34;&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;dt class=&#34;timeline-caption&#34;&gt;步骤 1&lt;/dt&gt;&#xA;&lt;dd class=&#34;timeline-body card&#34;&gt;打开 &lt;a href=&#34;https://www.minecraft.net&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://www.minecraft.net/favicon.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  Minecraft 官方网站&#xA;&lt;/a&gt; ，点击页面右上角的「&lt;strong&gt;立即购买&lt;/strong&gt;」按钮。&lt;/dd&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;dt class=&#34;timeline-caption&#34;&gt;步骤 2&lt;/dt&gt;&#xA;&lt;dd class=&#34;timeline-body card&#34;&gt;&lt;p&gt;在「选择你的游戏」页面，你会看到四个游戏选项：&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>2.1 第一天</title>
-				<link>http://localhost:1313/docs/ch02-survival/01-first-day.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch02-survival/01-first-day.html</guid>
-				<description>&lt;h1 id=&#34;21-第一天&#34;&gt;2.1 第一天&lt;a class=&#34;anchor&#34; href=&#34;#21-%e7%ac%ac%e4%b8%80%e5%a4%a9&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 生存模式 · 默认难度&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;几乎每个 Minecraft 老玩家都记得自己的第一个夜晚——缩在徒手挖出的土洞里，听着外面僵尸的呻吟和蜘蛛的脚步声，手里只有可怜的两三根火把。&lt;/p&gt;&#xA;&lt;p&gt;这篇教程的目的，是让你不必重蹈这种「硬核体验」的覆辙。我们将从容地度过第一个昼夜，天亮时拥有一套完整的石器装备、充足的食物，以及一个安全的临时居所。&lt;/p&gt;&#xA;&lt;h2 id=&#34;创建你的第一个世界&#34;&gt;创建你的第一个世界&lt;a class=&#34;anchor&#34; href=&#34;#%e5%88%9b%e5%bb%ba%e4%bd%a0%e7%9a%84%e7%ac%ac%e4%b8%80%e4%b8%aa%e4%b8%96%e7%95%8c&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;启动游戏，在主菜单依次点击：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;单人游戏 → 创建新的世界&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;世界名称随便填，叫「生存之旅」或「MC 第一档」都可以&lt;/li&gt;&#xA;&lt;li&gt;游戏模式选&lt;strong&gt;生存&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;难度保持默认的&lt;strong&gt;普通&lt;/strong&gt;即可&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure class=&#34;book-image-figure&#34;&gt;&#xA;  &lt;img&#xA;    src=&#34;http://localhost:1313/images/ch02/1.png&#34;&#xA;    alt=&#34;创建世界&#34; title=&#34;创建新世界&#34; width=&#34;750&#34; &#xA;    data-lightbox data-lightbox-caption=&#34;创建新世界&#34;&#xA;  /&gt;&#xA;  &lt;figcaption&gt;创建新世界&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;blockquote class=&#39;book-hint tip&#39;&gt;&#xD;&#xA;&lt;p&gt;如果这是你第一次玩 Minecraft，建议用默认设置直接开始。等熟悉了基本操作之后，再去研究种子、超平坦这些高级选项也不迟。&lt;/p&gt;&lt;/blockquote&gt;&lt;h2 id=&#34;认识你的-hud&#34;&gt;认识你的 HUD&lt;a class=&#34;anchor&#34; href=&#34;#%e8%ae%a4%e8%af%86%e4%bd%a0%e7%9a%84-hud&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;进入世界后，屏幕上贴着的各种信息统称为 &lt;strong&gt;HUD（平视显示器）&lt;/strong&gt;。它们是你在游戏中最重要的信息来源。&lt;/p&gt;&#xA;&lt;figure class=&#34;book-image-figure&#34;&gt;&#xA;  &lt;img&#xA;    src=&#34;http://localhost:1313/images/ch02/2.png&#34;&#xA;    alt=&#34;HUD 界面&#34; title=&#34;Minecraft 的 HUD 界面&#34; width=&#34;750&#34; &#xA;    data-lightbox data-lightbox-caption=&#34;Minecraft 的 HUD 界面&#34;&#xA;  /&gt;&#xA;  &lt;figcaption&gt;Minecraft 的 HUD 界面&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;生命饥饿以及那个你看不到的饱和度&#34;&gt;生命、饥饿，以及那个你看不到的饱和度&lt;a class=&#34;anchor&#34; href=&#34;#%e7%94%9f%e5%91%bd%e9%a5%a5%e9%a5%bf%e4%bb%a5%e5%8f%8a%e9%82%a3%e4%b8%aa%e4%bd%a0%e7%9c%8b%e4%b8%8d%e5%88%b0%e7%9a%84%e9%a5%b1%e5%92%8c%e5%ba%a6&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;Minecraft 中有三条与生存直接相关的数值：&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;数值&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;显示&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;上限&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;说明&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;生命值&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;红心 &lt;img src=&#34;https://zh.minecraft.wiki/images/Heart_%28icon%29.png?16571&#34; style=&#34;zoom:150%;&#34; /&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;20 点（10 颗）&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;归零即死亡&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;饥饿值&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;鸡腿 &lt;img src=&#34;https://zh.minecraft.wiki/images/Hunger.svg?5c3ee&#34; style=&#34;zoom:150%;&#34; /&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;20 点（10 根）&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;耗尽后持续扣血；低于 6 点时无法疾跑&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;饱和度&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;不可见&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;≤ 饥饿值&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;饥饿值的「缓冲层」，消耗完才会轮到饥饿值&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;饱和度是一个隐藏数值，你可以把它理解为你吃下去但还没来得及完全消化的那部分。牛排比面包「撑得久」，是缘于它提供了更高的饱和度。当饱和度彻底耗尽时，饥饿值图标会轻微抖动——这是你唯一能察觉到的信号。&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>3.1 建筑基础</title>
-				<link>http://localhost:1313/docs/ch03-building/01-basics.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch03-building/01-basics.html</guid>
-				<description>&lt;h1 id=&#34;31-建筑基础&#34;&gt;3.1 建筑基础&lt;a class=&#34;anchor&#34; href=&#34;#31-%e5%bb%ba%e7%ad%91%e5%9f%ba%e7%a1%80&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;建筑的基本技巧与核心原则。&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>4.1 红石基础</title>
+				<title>基础红石元件</title>
 				<link>http://localhost:1313/docs/ch04-redstone/01-basics.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch04-redstone/01-basics.html</guid>
 				<description>&lt;h1 id=&#34;41-红石基础&#34;&gt;4.1 红石基础&lt;a class=&#34;anchor&#34; href=&#34;#41-%e7%ba%a2%e7%9f%b3%e5%9f%ba%e7%a1%80&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;红石元件的种类与基本用法。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>5.1 联机方式</title>
+				<title>基础命令语法</title>
+				<link>http://localhost:1313/docs/ch07-commands/01-basic-commands.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch07-commands/01-basic-commands.html</guid>
+				<description>&lt;h1 id=&#34;71-基础命令&#34;&gt;7.1 基础命令&lt;a class=&#34;anchor&#34; href=&#34;#71-%e5%9f%ba%e7%a1%80%e5%91%bd%e4%bb%a4&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;常用命令的语法与用法。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>建筑术语与基础</title>
+				<link>http://localhost:1313/docs/ch03-building/01-basics.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch03-building/01-basics.html</guid>
+				<description>&lt;h1 id=&#34;31-建筑基础&#34;&gt;3.1 建筑基础&lt;a class=&#34;anchor&#34; href=&#34;#31-%e5%bb%ba%e7%ad%91%e5%9f%ba%e7%a1%80&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;建筑的基本技巧与核心原则。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>联机方式概述</title>
 				<link>http://localhost:1313/docs/ch05-multiplayer/01-ways-to-connect.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch05-multiplayer/01-ways-to-connect.html</guid>
 				<description>&lt;h1 id=&#34;51-联机方式&#34;&gt;5.1 联机方式&lt;a class=&#34;anchor&#34; href=&#34;#51-%e8%81%94%e6%9c%ba%e6%96%b9%e5%bc%8f&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;局域网联机、虚拟局域网与服务器简介。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>6.1 模组加载器</title>
+				<title>模组加载器安装</title>
 				<link>http://localhost:1313/docs/ch06-mods/01-mod-loaders.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch06-mods/01-mod-loaders.html</guid>
 				<description>&lt;h1 id=&#34;61-模组加载器&#34;&gt;6.1 模组加载器&lt;a class=&#34;anchor&#34; href=&#34;#61-%e6%a8%a1%e7%bb%84%e5%8a%a0%e8%bd%bd%e5%99%a8&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;Forge、Fabric、NeoForge 等加载器介绍与安装。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>7.1 基础命令</title>
-				<link>http://localhost:1313/docs/ch07-commands/01-basic-commands.html</link>
+				<title>生存第一天</title>
+				<link>http://localhost:1313/docs/ch02-survival/01-first-day.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch07-commands/01-basic-commands.html</guid>
-				<description>&lt;h1 id=&#34;71-基础命令&#34;&gt;7.1 基础命令&lt;a class=&#34;anchor&#34; href=&#34;#71-%e5%9f%ba%e7%a1%80%e5%91%bd%e4%bb%a4&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;常用命令的语法与用法。&lt;/p&gt;</description>
+				<guid>http://localhost:1313/docs/ch02-survival/01-first-day.html</guid>
+				<description>&lt;h1 id=&#34;21-第一天&#34;&gt;2.1 第一天&lt;a class=&#34;anchor&#34; href=&#34;#21-%e7%ac%ac%e4%b8%80%e5%a4%a9&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 生存模式 · 默认难度&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;几乎每个 Minecraft 老玩家都记得自己的第一个夜晚——缩在徒手挖出的土洞里，听着外面僵尸的呻吟和蜘蛛的脚步声，手里只有可怜的两三根火把。&lt;/p&gt;&#xA;&lt;p&gt;这篇教程的目的，是让你不必重蹈这种「硬核体验」的覆辙。我们将从容地度过第一个昼夜，天亮时拥有一套完整的石器装备、充足的食物，以及一个安全的临时居所。&lt;/p&gt;&#xA;&lt;h2 id=&#34;创建你的第一个世界&#34;&gt;创建你的第一个世界&lt;a class=&#34;anchor&#34; href=&#34;#%e5%88%9b%e5%bb%ba%e4%bd%a0%e7%9a%84%e7%ac%ac%e4%b8%80%e4%b8%aa%e4%b8%96%e7%95%8c&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;启动游戏，在主菜单依次点击：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;单人游戏 → 创建新的世界&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;世界名称随便填，叫「生存之旅」或「MC 第一档」都可以&lt;/li&gt;&#xA;&lt;li&gt;游戏模式选&lt;strong&gt;生存&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;难度保持默认的&lt;strong&gt;普通&lt;/strong&gt;即可&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure class=&#34;book-image-figure&#34;&gt;&#xA;  &lt;img&#xA;    src=&#34;http://localhost:1313/images/ch02/1.png&#34;&#xA;    alt=&#34;创建世界&#34; title=&#34;创建新世界&#34; width=&#34;750&#34; &#xA;    data-lightbox data-lightbox-caption=&#34;创建新世界&#34;&#xA;  /&gt;&#xA;  &lt;figcaption&gt;创建新世界&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;blockquote class=&#39;book-hint tip&#39;&gt;&#xD;&#xA;&lt;p&gt;如果这是你第一次玩 Minecraft，建议用默认设置直接开始。等熟悉了基本操作之后，再去研究种子、超平坦这些高级选项也不迟。&lt;/p&gt;&lt;/blockquote&gt;&lt;h2 id=&#34;认识你的-hud&#34;&gt;认识你的 HUD&lt;a class=&#34;anchor&#34; href=&#34;#%e8%ae%a4%e8%af%86%e4%bd%a0%e7%9a%84-hud&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;进入世界后，屏幕上贴着的各种信息统称为 &lt;strong&gt;HUD（平视显示器）&lt;/strong&gt;。它们是你在游戏中最重要的信息来源。&lt;/p&gt;&#xA;&lt;figure class=&#34;book-image-figure&#34;&gt;&#xA;  &lt;img&#xA;    src=&#34;http://localhost:1313/images/ch02/2.png&#34;&#xA;    alt=&#34;HUD 界面&#34; title=&#34;Minecraft 的 HUD 界面&#34; width=&#34;750&#34; &#xA;    data-lightbox data-lightbox-caption=&#34;Minecraft 的 HUD 界面&#34;&#xA;  /&gt;&#xA;  &lt;figcaption&gt;Minecraft 的 HUD 界面&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;生命饥饿以及那个你看不到的饱和度&#34;&gt;生命、饥饿，以及那个你看不到的饱和度&lt;a class=&#34;anchor&#34; href=&#34;#%e7%94%9f%e5%91%bd%e9%a5%a5%e9%a5%bf%e4%bb%a5%e5%8f%8a%e9%82%a3%e4%b8%aa%e4%bd%a0%e7%9c%8b%e4%b8%8d%e5%88%b0%e7%9a%84%e9%a5%b1%e5%92%8c%e5%ba%a6&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;Minecraft 中有三条与生存直接相关的数值：&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;数值&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;显示&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;上限&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;说明&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;生命值&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;红心 &lt;img src=&#34;https://zh.minecraft.wiki/images/Heart_%28icon%29.png?16571&#34; style=&#34;zoom:150%;&#34; /&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;20 点（10 颗）&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;归零即死亡&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;饥饿值&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;鸡腿 &lt;img src=&#34;https://zh.minecraft.wiki/images/Hunger.svg?5c3ee&#34; style=&#34;zoom:150%;&#34; /&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;20 点（10 根）&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;耗尽后持续扣血；低于 6 点时无法疾跑&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;饱和度&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;不可见&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;≤ 饥饿值&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;饥饿值的「缓冲层」，消耗完才会轮到饥饿值&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;饱和度是一个隐藏数值，你可以把它理解为你吃下去但还没来得及完全消化的那部分。牛排比面包「撑得久」，是缘于它提供了更高的饱和度。当饱和度彻底耗尽时，饥饿值图标会轻微抖动——这是你唯一能察觉到的信号。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>序</title>
@@ -68,235 +68,284 @@
 				<description>&lt;h1 id=&#34;序&#34;&gt;序&lt;a class=&#34;anchor&#34; href=&#34;#%e5%ba%8f&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;h2 id=&#34;minecraft-简史&#34;&gt;Minecraft 简史&lt;a class=&#34;anchor&#34; href=&#34;#minecraft-%e7%ae%80%e5%8f%b2&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;2009 年 5 月 17 日，瑞典程序员 Markus &amp;ldquo;Notch&amp;rdquo; Persson 发布了一个用 Java 编写的简陋方块游戏——这就是 Minecraft 最早的版本（Classic）。在随后的两年里，Notch 几乎以一己之力推动游戏经历了 Indev、Infdev、Alpha、Beta 多个开发阶段，一边写代码一边根据社区反馈不断调整方向。&lt;/p&gt;&#xA;&lt;p&gt;2011 年 11 月 18 日，Minecraft 1.0 正式版在 MineCon 上发布。此时延斯·伯根斯坦（Jeb）已接任开发负责人，游戏从一个人的业余项目变成了一支团队的持续事业。&lt;/p&gt;&#xA;&lt;p&gt;2014 年 11 月 6 日，微软以 25 亿美元收购 Mojang 及 Minecraft 全部资产，Notch 从 Mojang 离职。此后 Minecraft 进入了持续扩张的时代：基岩版覆盖了移动设备和游戏主机，Java 版保持着每年一次大更新的节奏，教育版走进了全球课堂。&lt;/p&gt;&#xA;&lt;p&gt;截至 2026 年 6 月，Minecraft 全球销量已突破 &lt;strong&gt;4 亿份&lt;/strong&gt;，是历史上销量最高的电子游戏。从 C418 的舒缓钢琴到 Lena Raine 的空灵氛围，它的原声音乐也已成为一代玩家的集体记忆。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么要写这份教程&#34;&gt;为什么要写这份教程？&lt;a class=&#34;anchor&#34; href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%86%99%e8%bf%99%e4%bb%bd%e6%95%99%e7%a8%8b&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;红石电路可以搭建出一台计算机，命令方块能创造全新的游戏机制，模组生态更是层出不穷。然而，新手面对这些内容时往往会感到迷茫：该从哪开始？Java 版和基岩版有什么区别？红石到底怎么玩？&lt;/p&gt;&#xA;&lt;p&gt;这份教程正是为解答这些问题而写。&lt;/p&gt;&#xA;&lt;h2 id=&#34;如何使用本教程&#34;&gt;如何使用本教程&lt;a class=&#34;anchor&#34; href=&#34;#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8%e6%9c%ac%e6%95%99%e7%a8%8b&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;本教程按照由浅入深的顺序编排，每一章都建立在前一章的基础之上。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;如果你是&lt;strong&gt;完全的新手&lt;/strong&gt;，建议从第一章开始按顺序阅读。&lt;/li&gt;&#xA;&lt;li&gt;如果你已经有一定基础，可以直接跳转到你感兴趣的章节。&lt;/li&gt;&#xA;&lt;li&gt;教程中穿插了大量截图与示例，强烈建议在阅读时&lt;strong&gt;打开游戏跟着操作&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;适用版本&#34;&gt;适用版本&lt;a class=&#34;anchor&#34; href=&#34;#%e9%80%82%e7%94%a8%e7%89%88%e6%9c%ac&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;本教程主要基于 &lt;strong&gt;Minecraft Java 版&lt;/strong&gt; 编写。截止本教程撰写时，最新正式版为 &lt;strong&gt;26.2&lt;/strong&gt;（2026 年 6 月发布）。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>1.2 启动器与版本</title>
-				<link>http://localhost:1313/docs/ch01-getting-started/02-launcher-and-versions.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch01-getting-started/02-launcher-and-versions.html</guid>
-				<description>&lt;h1 id=&#34;12-启动器与版本&#34;&gt;1.2 启动器与版本&lt;a class=&#34;anchor&#34; href=&#34;#12-%e5%90%af%e5%8a%a8%e5%99%a8%e4%b8%8e%e7%89%88%e6%9c%ac&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.x · 启动器说明覆盖官方和第三方 · 版本表截至 2026 年 7 月&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;购买游戏之后，你需要通过&lt;strong&gt;启动器&lt;/strong&gt;来下载和运行 Minecraft。启动器不仅是游戏的入口，还负责版本管理、模组加载、资源包切换等核心功能。本节将介绍官方启动器以及国内主流的几款第三方启动器。&lt;/p&gt;&#xA;&lt;h2 id=&#34;什么是启动器&#34;&gt;什么是启动器？&lt;a class=&#34;anchor&#34; href=&#34;#%e4%bb%80%e4%b9%88%e6%98%af%e5%90%af%e5%8a%a8%e5%99%a8&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;启动器（Launcher）是 Minecraft 的客户端管理程序，它的主要功能包括：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;下载与安装&lt;/strong&gt;：从 Mojang 服务器获取游戏文件，自动安装对应版本&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;版本管理&lt;/strong&gt;：在同一台电脑上保留多个游戏版本，随时切换&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;账号登录&lt;/strong&gt;：通过 Microsoft 账户认证，验证游戏许可&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;游戏配置&lt;/strong&gt;：调节内存分配、JVM 参数、游戏分辨率等&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;模组与整合包&lt;/strong&gt;：方便地安装 Forge、Fabric 等模组加载器，导入整合包&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;简单来说，启动器就是你进入方块世界的「大门」。&lt;/p&gt;&#xA;&lt;h2 id=&#34;官方启动器&#34;&gt;官方启动器&lt;a class=&#34;anchor&#34; href=&#34;#%e5%ae%98%e6%96%b9%e5%90%af%e5%8a%a8%e5%99%a8&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;minecraft-launcher&#34;&gt;Minecraft Launcher&lt;a class=&#34;anchor&#34; href=&#34;#minecraft-launcher&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;Minecraft Launcher 是 Mojang 官方出品的启动器，也是购买游戏后最先接触的启动器。&lt;/p&gt;&#xA;&lt;div class=&#34;card-list&#34; style=&#34;--card-columns: 2;&#34;&gt;&#xA;  &lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;优点&lt;/strong&gt; &lt;span class=&#34;badge&#34;&gt;&#xA;&lt;span class=&#34;badge-text&#34;&gt;官方出品&lt;/span&gt;&lt;/span&gt;&#xA;最安全可靠，自动更新，支持 Java 版和基岩版一站式管理。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;不足&lt;/strong&gt;&#xA;功能相对简单，无法直接安装第三方模组加载器，界面不够灵活。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;官方启动器适合以下玩家：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;主打原版生存，不需要频繁切换版本和模组&lt;/li&gt;&#xA;&lt;li&gt;对安全性要求高，不想折腾第三方工具&lt;/li&gt;&#xA;&lt;li&gt;需要同时管理 Java 版和基岩版&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;下载与安装&#34;&gt;下载与安装&lt;a class=&#34;anchor&#34; href=&#34;#%e4%b8%8b%e8%bd%bd%e4%b8%8e%e5%ae%89%e8%a3%85&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;访问 &lt;a href=&#34;https://www.minecraft.net/download&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://www.minecraft.net/favicon.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  Minecraft 下载页面&#xA;&lt;/a&gt; 。&lt;/li&gt;&#xA;&lt;li&gt;根据你的操作系统选择对应版本，下载安装程序。&lt;/li&gt;&#xA;&lt;li&gt;运行安装程序，按照提示完成安装。&lt;/li&gt;&#xA;&lt;li&gt;启动后登录你的 Microsoft 账户，即可在左侧看到已购买的游戏版本。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;初次启动时，启动器会自动下载对应版本的 Minecraft 游戏文件。这个过程可能需要几分钟，具体时间取决于网络速度。&lt;/p&gt;&#xA;&lt;h2 id=&#34;第三方启动器&#34;&gt;第三方启动器&lt;a class=&#34;anchor&#34; href=&#34;#%e7%ac%ac%e4%b8%89%e6%96%b9%e5%90%af%e5%8a%a8%e5%99%a8&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;对于想要深入游玩 Minecraft 的玩家来说，第三方启动器几乎是必选项。它们提供了更丰富的版本管理、模组安装和个性化功能。下面介绍国内最主流的几款。&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>2.2 采集与合成</title>
-				<link>http://localhost:1313/docs/ch02-survival/02-gathering-and-crafting.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch02-survival/02-gathering-and-crafting.html</guid>
-				<description>&lt;h1 id=&#34;22-采集与合成&#34;&gt;2.2 采集与合成&lt;a class=&#34;anchor&#34; href=&#34;#22-%e9%87%87%e9%9b%86%e4%b8%8e%e5%90%88%e6%88%90&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 生存模式核心机制&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;在度过了惊心动魄的第一天后，你已经建立了一个临时的庇护所。接下来，你需要正式迈入 Minecraft 的核心体验——&lt;strong&gt;采集（Mine）&lt;/strong&gt;与&lt;strong&gt;合成（Craft）&lt;/strong&gt;。这两大系统环环相扣，构成了游戏最基础的进度循环。&lt;/p&gt;&#xA;&lt;p&gt;本节将事无巨细地为你拆解物品管理、工具制作、材质等级、方块采集以及熔炉烧炼的所有细节，带你轻松度过生存前期。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;物品栏与背包管理微操指南&#34;&gt;物品栏与背包管理微操指南&lt;a class=&#34;anchor&#34; href=&#34;#%e7%89%a9%e5%93%81%e6%a0%8f%e4%b8%8e%e8%83%8c%e5%8c%85%e7%ae%a1%e7%90%86%e5%be%ae%e6%93%8d%e6%8c%87%e5%8d%97&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;在游戏中按下 &lt;kbd&gt;E&lt;/kbd&gt;&#xA; 键可以打开你的个人物品栏（背包）。作为一名合格的冒险家，熟练掌握以下鼠标和键盘的快捷交互技巧，能为你节省大量的整理时间：&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-鼠标点击与拖拽技巧&#34;&gt;1. 鼠标点击与拖拽技巧&lt;a class=&#34;anchor&#34; href=&#34;#1-%e9%bc%a0%e6%a0%87%e7%82%b9%e5%87%bb%e4%b8%8e%e6%8b%96%e6%8b%bd%e6%8a%80%e5%b7%a7&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;左键单击物品&lt;/strong&gt;：拿起这格物品的&lt;strong&gt;全部&lt;/strong&gt;数量。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;右键单击物品&lt;/strong&gt;：拿起这格物品的&lt;strong&gt;一半&lt;/strong&gt;数量（如果是奇数，则拿起多的一半。例如 5 个物品，右键会拿起 3 个，留下 2 个）。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;手持物品时在空白格点右键&lt;/strong&gt;：只在目标空格中&lt;strong&gt;放下 1 个&lt;/strong&gt;物品。这在手动摆放合成配方时非常实用。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;快速均分（左键拖拽）&lt;/strong&gt;：手持一叠物品（如 64 个木板）时，&lt;strong&gt;按住左键并在多个空格上拖动&lt;/strong&gt;，物品会被&lt;strong&gt;平均分配&lt;/strong&gt;到你扫过的每一个格子里。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;各放一个（右键拖拽）&lt;/strong&gt;：手持一叠物品时，&lt;strong&gt;按住右键并在多个空格上拖动&lt;/strong&gt;，则会在每个格子里&lt;strong&gt;各留下 1 个&lt;/strong&gt;物品。这是制作工作台、熔炉或箱子等空心配方时的「神技」。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;合并同类（双击）&lt;/strong&gt;：双击任意一个物品，可以将散落在背包各个格子里相同的物品&lt;strong&gt;瞬间吸附并堆叠到这一格中&lt;/strong&gt;（最高达到 64 个）。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-键盘快捷键事半功倍&#34;&gt;2. 键盘快捷键（事半功倍）&lt;a class=&#34;anchor&#34; href=&#34;#2-%e9%94%ae%e7%9b%98%e5%bf%ab%e6%8d%b7%e9%94%ae%e4%ba%8b%e5%8d%8a%e5%8a%9f%e5%80%8d&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Shift + 左键单击&lt;/strong&gt;：&lt;strong&gt;快速转移&lt;/strong&gt;。如果打开了箱子或工作台，这会把物品在「背包」与「容器/工作台」之间瞬间传送；如果只是单独打开背包，这会在「快捷栏（屏幕最下方 9 格）」与「背包上方 27 格」之间快速切换。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;数字键 1 - 9&lt;/strong&gt;：鼠标悬停在背包内任意物品上，按下键盘上的数字键，该物品会&lt;strong&gt;瞬间与你快捷栏对应槽位的物品对调&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Q 键（丢弃）&lt;/strong&gt;：鼠标悬停在物品上按 Q 键，可&lt;strong&gt;丢弃 1 个&lt;/strong&gt;物品；按住 &lt;strong&gt;Ctrl + Q 键&lt;/strong&gt;，则可&lt;strong&gt;一次性丢弃该格的所有物品&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;F 键（副手）&lt;/strong&gt;：鼠标悬停在任意物品上按下 F 键，该物品会放置到你的&lt;strong&gt;副手槽&lt;/strong&gt;中。在主手拿着盾牌或火把时，副手可以拿着食物，极大方便地底探险。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;什么是堆叠上限（Stack Size）？&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;背包中的方格不能无限装东西。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;64 个堆叠&lt;/strong&gt;：绝大多数方块（如泥土、石头、原木、木板）和材料（如煤炭、铁锭）的堆叠上限是 64 个。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;16 个堆叠&lt;/strong&gt;：部分特殊的抛射物或工具（如末影珍珠、雪球、鸡蛋、桶）上限是 16 个。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;不堆叠&lt;/strong&gt;：所有的武器、工具、防具（如镐、剑、胸甲）以及药水，一格只能放 1 个。&lt;/li&gt;&#xA;&lt;/ul&gt;&lt;/blockquote&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;3x3-工作台与合成逻辑&#34;&gt;3x3 工作台与合成逻辑&lt;a class=&#34;anchor&#34; href=&#34;#3x3-%e5%b7%a5%e4%bd%9c%e5%8f%b0%e4%b8%8e%e5%90%88%e6%88%90%e9%80%bb%e8%be%91&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;背包自带的合成格是 2x2（4 格）的，仅能合成木板、木棍、火把等基础物资。一旦做出了&lt;strong&gt;工作台&lt;/strong&gt;并将其放置在地上右键打开，你就能使用 3x3（9 格）的合成栏。&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>3.2 风格与设计</title>
-				<link>http://localhost:1313/docs/ch03-building/02-styles.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch03-building/02-styles.html</guid>
-				<description>&lt;h1 id=&#34;32-风格与设计&#34;&gt;3.2 风格与设计&lt;a class=&#34;anchor&#34; href=&#34;#32-%e9%a3%8e%e6%a0%bc%e4%b8%8e%e8%ae%be%e8%ae%a1&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;不同建筑风格介绍与设计思路。&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>4.2 逻辑电路</title>
-				<link>http://localhost:1313/docs/ch04-redstone/02-logic-circuits.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch04-redstone/02-logic-circuits.html</guid>
-				<description>&lt;h1 id=&#34;42-逻辑电路&#34;&gt;4.2 逻辑电路&lt;a class=&#34;anchor&#34; href=&#34;#42-%e9%80%bb%e8%be%91%e7%94%b5%e8%b7%af&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;用红石实现逻辑门与简单计算。&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>5.2 服务器搭建</title>
+				<title>服务器搭建</title>
 				<link>http://localhost:1313/docs/ch05-multiplayer/02-server-setup.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch05-multiplayer/02-server-setup.html</guid>
 				<description>&lt;h1 id=&#34;52-服务器搭建&#34;&gt;5.2 服务器搭建&lt;a class=&#34;anchor&#34; href=&#34;#52-%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%90%ad%e5%bb%ba&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;从零开始搭建自己的 Minecraft 服务器。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>6.2 光影与材质</title>
+				<title>光影与资源包</title>
 				<link>http://localhost:1313/docs/ch06-mods/02-shaders-and-textures.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch06-mods/02-shaders-and-textures.html</guid>
 				<description>&lt;h1 id=&#34;62-光影与材质&#34;&gt;6.2 光影与材质&lt;a class=&#34;anchor&#34; href=&#34;#62-%e5%85%89%e5%bd%b1%e4%b8%8e%e6%9d%90%e8%b4%a8&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;OptiFine、Iris 光影与材质包安装教程。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>7.2 指令方块</title>
+				<title>饥饿与生命值管理</title>
+				<link>http://localhost:1313/docs/ch02-survival/02-hunger-and-health.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch02-survival/02-hunger-and-health.html</guid>
+				<description>&lt;h1 id=&#34;饥饿与生命值管理&#34;&gt;饥饿与生命值管理&lt;a class=&#34;anchor&#34; href=&#34;#%e9%a5%a5%e9%a5%bf%e4%b8%8e%e7%94%9f%e5%91%bd%e5%80%bc%e7%ae%a1%e7%90%86&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（此处为占位内容，待后续完善）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>逻辑门与时钟电路</title>
+				<link>http://localhost:1313/docs/ch04-redstone/02-logic-circuits.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch04-redstone/02-logic-circuits.html</guid>
+				<description>&lt;h1 id=&#34;42-逻辑电路&#34;&gt;4.2 逻辑电路&lt;a class=&#34;anchor&#34; href=&#34;#42-%e9%80%bb%e8%be%91%e7%94%b5%e8%b7%af&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;用红石实现逻辑门与简单计算。&lt;/p&gt;&#xA;&lt;h1 id=&#34;44-计时器与时钟&#34;&gt;4.4 计时器与时钟&lt;a class=&#34;anchor&#34; href=&#34;#44-%e8%ae%a1%e6%97%b6%e5%99%a8%e4%b8%8e%e6%97%b6%e9%92%9f&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>命令方块进阶</title>
 				<link>http://localhost:1313/docs/ch07-commands/02-command-blocks.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch07-commands/02-command-blocks.html</guid>
 				<description>&lt;h1 id=&#34;72-指令方块&#34;&gt;7.2 指令方块&lt;a class=&#34;anchor&#34; href=&#34;#72-%e6%8c%87%e4%bb%a4%e6%96%b9%e5%9d%97&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;指令方块的使用方法与实战案例。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>1.3 游戏设置</title>
-				<link>http://localhost:1313/docs/ch01-getting-started/03-game-settings.html</link>
+				<title>启动器与版本选择</title>
+				<link>http://localhost:1313/docs/ch01-getting-started/02-launcher-and-versions.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch01-getting-started/03-game-settings.html</guid>
-				<description>&lt;h1 id=&#34;13-游戏设置&#34;&gt;1.3 游戏设置&lt;a class=&#34;anchor&#34; href=&#34;#13-%e6%b8%b8%e6%88%8f%e8%ae%be%e7%bd%ae&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.1 ~ 26.2 · 选项界面在 25w41a（1.21.11 快照）后有过较大调整，本教程反映最新布局 · 按键绑定和调试快捷键适用于 Java 版&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;安装好启动器、下载完游戏之后，在开始冒险之前，建议先花几分钟调整一下游戏设置。合适的设置能大幅提升游戏体验——画面更流畅、操作更顺手、声音更舒适。&lt;/p&gt;&#xA;&lt;p&gt;本节内容参考 &lt;a href=&#34;https://zh.minecraft.wiki/w/%E9%80%89%E9%A1%B9&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://icons.duckduckgo.com/ip3/zh.minecraft.wiki.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  Minecraft Wiki&#xA;&lt;/a&gt; 编写，聚焦于新手最需要关注的选项。为照顾纯正的新人，本节已大幅简化了内容，如对设置内容感兴趣，欢迎前往维基查看。&lt;/p&gt;&#xA;&lt;h2 id=&#34;打开设置菜单&#34;&gt;打开设置菜单&lt;a class=&#34;anchor&#34; href=&#34;#%e6%89%93%e5%bc%80%e8%ae%be%e7%bd%ae%e8%8f%9c%e5%8d%95&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;进入游戏主菜单后，点击「&lt;strong&gt;选项…&lt;/strong&gt;」即可进入设置界面。主要包含以下几个子菜单：&lt;/p&gt;&#xA;&lt;div class=&#34;card-list&#34; style=&#34;--card-columns: 2;&#34;&gt;&#xA;  &lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;视频设置&lt;/strong&gt;&#xA;画面品质、帧率、渲染距离、全屏等&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;音乐和声音&lt;/strong&gt;&#xA;主音量、各类音效独立调节&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;按键控制&lt;/strong&gt;&#xA;键盘和鼠标按键绑定&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;语言&lt;/strong&gt;&#xA;游戏界面显示语言&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;辅助功能设置&lt;/strong&gt;&#xA;字幕、高对比度、视角摇晃等&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;聊天设置&lt;/strong&gt;&#xA;聊天显示方式和样式&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;视频设置&#34;&gt;视频设置&lt;a class=&#34;anchor&#34; href=&#34;#%e8%a7%86%e9%a2%91%e8%ae%be%e7%bd%ae&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;视频设置直接影响游戏的画面质量和流畅度，是最重要的一组选项。&lt;/p&gt;&#xA;&lt;h3 id=&#34;显示类&#34;&gt;显示类&lt;a class=&#34;anchor&#34; href=&#34;#%e6%98%be%e7%a4%ba%e7%b1%bb&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;关键设置&lt;/span&gt;&lt;/span&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;选项&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;推荐值&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;说明&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;全屏&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;开&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;获得沉浸式体验，按 &lt;code&gt;F11&lt;/code&gt; 快速切换&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;界面尺寸&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;自动&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;数值越大 UI 越大，高分辨率屏幕可适当调大&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;亮度&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;50 ~ 100&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;调高可以让洞穴和夜间更亮，纯视觉效果&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;最大帧率&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;120fps 或无限制&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;性能足够就选无限制，笔记本建议限制到 60~120&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;垂直同步&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;开&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;消除画面撕裂，但可能增加延迟&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h3 id=&#34;品质与性能&#34;&gt;品质与性能&lt;a class=&#34;anchor&#34; href=&#34;#%e5%93%81%e8%b4%a8%e4%b8%8e%e6%80%a7%e8%83%bd&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;重点&lt;/span&gt;&lt;/span&gt; 这组选项直接影响游戏帧率。&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;选项&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;推荐值&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;说明&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;渲染距离&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;12~16 区块&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;越大看得越远，但更吃性能。中低配电脑建议 12&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;模拟距离&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;8~12 区块&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;影响实体更新范围，对性能影响比渲染距离更大&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;平滑光照&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;开&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;光照过渡更自然，性能影响很小&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;云&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;流畅/高品质&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;「高品质」是立体云，「流畅」是平面，性能差别不大&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;粒子效果&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;全部/减少&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;中低配建议「减少」，不影响游戏玩法&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;实体阴影&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;开&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;生物脚下出现阴影，画面更真实&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;实体渲染距离&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;100%&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;控制生物在多远可见，调低可提升性能&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;可透视树叶&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;开&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;树叶透明显示，方便在树林中观察&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;区块构建器&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;线程化&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;减少放置方块时的卡顿，推荐&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;blockquote class=&#39;book-hint tip&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;中低配电脑优化方案&lt;/strong&gt;：渲染距离 8~10、模拟距离 8、粒子效果「减少」、实体渲染距离 75%。这几个选项对帧率影响最大。&lt;/p&gt;</description>
+				<guid>http://localhost:1313/docs/ch01-getting-started/02-launcher-and-versions.html</guid>
+				<description>&lt;h1 id=&#34;12-启动器与版本&#34;&gt;1.2 启动器与版本&lt;a class=&#34;anchor&#34; href=&#34;#12-%e5%90%af%e5%8a%a8%e5%99%a8%e4%b8%8e%e7%89%88%e6%9c%ac&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.x · 启动器说明覆盖官方和第三方 · 版本表截至 2026 年 7 月&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;购买游戏之后，你需要通过&lt;strong&gt;启动器&lt;/strong&gt;来下载和运行 Minecraft。启动器不仅是游戏的入口，还负责版本管理、模组加载、资源包切换等核心功能。本节将介绍官方启动器以及国内主流的几款第三方启动器。&lt;/p&gt;&#xA;&lt;h2 id=&#34;什么是启动器&#34;&gt;什么是启动器？&lt;a class=&#34;anchor&#34; href=&#34;#%e4%bb%80%e4%b9%88%e6%98%af%e5%90%af%e5%8a%a8%e5%99%a8&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;启动器（Launcher）是 Minecraft 的客户端管理程序，它的主要功能包括：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;下载与安装&lt;/strong&gt;：从 Mojang 服务器获取游戏文件，自动安装对应版本&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;版本管理&lt;/strong&gt;：在同一台电脑上保留多个游戏版本，随时切换&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;账号登录&lt;/strong&gt;：通过 Microsoft 账户认证，验证游戏许可&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;游戏配置&lt;/strong&gt;：调节内存分配、JVM 参数、游戏分辨率等&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;模组与整合包&lt;/strong&gt;：方便地安装 Forge、Fabric 等模组加载器，导入整合包&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;简单来说，启动器就是你进入方块世界的「大门」。&lt;/p&gt;&#xA;&lt;h2 id=&#34;官方启动器&#34;&gt;官方启动器&lt;a class=&#34;anchor&#34; href=&#34;#%e5%ae%98%e6%96%b9%e5%90%af%e5%8a%a8%e5%99%a8&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;minecraft-launcher&#34;&gt;Minecraft Launcher&lt;a class=&#34;anchor&#34; href=&#34;#minecraft-launcher&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;Minecraft Launcher 是 Mojang 官方出品的启动器，也是购买游戏后最先接触的启动器。&lt;/p&gt;&#xA;&lt;div class=&#34;card-list&#34; style=&#34;--card-columns: 2;&#34;&gt;&#xA;  &lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;优点&lt;/strong&gt; &lt;span class=&#34;badge&#34;&gt;&#xA;&lt;span class=&#34;badge-text&#34;&gt;官方出品&lt;/span&gt;&lt;/span&gt;&#xA;最安全可靠，自动更新，支持 Java 版和基岩版一站式管理。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;不足&lt;/strong&gt;&#xA;功能相对简单，无法直接安装第三方模组加载器，界面不够灵活。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;官方启动器适合以下玩家：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;主打原版生存，不需要频繁切换版本和模组&lt;/li&gt;&#xA;&lt;li&gt;对安全性要求高，不想折腾第三方工具&lt;/li&gt;&#xA;&lt;li&gt;需要同时管理 Java 版和基岩版&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;下载与安装&#34;&gt;下载与安装&lt;a class=&#34;anchor&#34; href=&#34;#%e4%b8%8b%e8%bd%bd%e4%b8%8e%e5%ae%89%e8%a3%85&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;访问 &lt;a href=&#34;https://www.minecraft.net/download&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://www.minecraft.net/favicon.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  Minecraft 下载页面&#xA;&lt;/a&gt; 。&lt;/li&gt;&#xA;&lt;li&gt;根据你的操作系统选择对应版本，下载安装程序。&lt;/li&gt;&#xA;&lt;li&gt;运行安装程序，按照提示完成安装。&lt;/li&gt;&#xA;&lt;li&gt;启动后登录你的 Microsoft 账户，即可在左侧看到已购买的游戏版本。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;初次启动时，启动器会自动下载对应版本的 Minecraft 游戏文件。这个过程可能需要几分钟，具体时间取决于网络速度。&lt;/p&gt;&#xA;&lt;h2 id=&#34;第三方启动器&#34;&gt;第三方启动器&lt;a class=&#34;anchor&#34; href=&#34;#%e7%ac%ac%e4%b8%89%e6%96%b9%e5%90%af%e5%8a%a8%e5%99%a8&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;对于想要深入游玩 Minecraft 的玩家来说，第三方启动器几乎是必选项。它们提供了更丰富的版本管理、模组安装和个性化功能。下面介绍国内最主流的几款。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>2.3 采矿技术</title>
-				<link>http://localhost:1313/docs/ch02-survival/03-mining.html</link>
+				<title>最佳建筑材料与调色</title>
+				<link>http://localhost:1313/docs/ch03-building/02-palette-and-materials.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch02-survival/03-mining.html</guid>
-				<description>&lt;h1 id=&#34;23-采矿技术&#34;&gt;2.3 采矿技术&lt;a class=&#34;anchor&#34; href=&#34;#23-%e9%87%87%e7%9f%bf%e6%8a%80%e6%9c%af&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 主世界矿石开采策略&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+				<guid>http://localhost:1313/docs/ch03-building/02-palette-and-materials.html</guid>
+				<description>&lt;h1 id=&#34;36-调色板与材料&#34;&gt;3.6 调色板与材料&lt;a class=&#34;anchor&#34; href=&#34;#36-%e8%b0%83%e8%89%b2%e6%9d%bf%e4%b8%8e%e6%9d%90%e6%96%99&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>3.3 地形改造</title>
-				<link>http://localhost:1313/docs/ch03-building/03-terraforming.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch03-building/03-terraforming.html</guid>
-				<description>&lt;h1 id=&#34;33-地形改造&#34;&gt;3.3 地形改造&lt;a class=&#34;anchor&#34; href=&#34;#33-%e5%9c%b0%e5%bd%a2%e6%94%b9%e9%80%a0&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;地形改造与环境美化技巧。&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>4.3 自动化农场</title>
-				<link>http://localhost:1313/docs/ch04-redstone/03-auto-farms.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch04-redstone/03-auto-farms.html</guid>
-				<description>&lt;h1 id=&#34;43-自动化农场&#34;&gt;4.3 自动化农场&lt;a class=&#34;anchor&#34; href=&#34;#43-%e8%87%aa%e5%8a%a8%e5%8c%96%e5%86%9c%e5%9c%ba&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;用红石搭建自动化农场，解放双手。&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>5.3 领域服</title>
+				<title>Realms 领域</title>
 				<link>http://localhost:1313/docs/ch05-multiplayer/03-realms.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch05-multiplayer/03-realms.html</guid>
 				<description>&lt;h1 id=&#34;53-领域服&#34;&gt;5.3 领域服&lt;a class=&#34;anchor&#34; href=&#34;#53-%e9%a2%86%e5%9f%9f%e6%9c%8d&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;Minecraft Realms 官方服务器介绍与使用。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>6.3 推荐模组</title>
+				<title>庇护所选址与基础建造</title>
+				<link>http://localhost:1313/docs/ch02-survival/03-shelter-basics.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch02-survival/03-shelter-basics.html</guid>
+				<description>&lt;h1 id=&#34;庇护所选址与基础建造&#34;&gt;庇护所选址与基础建造&lt;a class=&#34;anchor&#34; href=&#34;#%e5%ba%87%e6%8a%a4%e6%89%80%e9%80%89%e5%9d%80%e4%b8%8e%e5%9f%ba%e7%a1%80%e5%bb%ba%e9%80%a0&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（此处为占位内容，待后续完善）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>菜单与游戏设置</title>
+				<link>http://localhost:1313/docs/ch01-getting-started/03-game-settings.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch01-getting-started/03-game-settings.html</guid>
+				<description>&lt;h1 id=&#34;13-游戏设置&#34;&gt;1.3 游戏设置&lt;a class=&#34;anchor&#34; href=&#34;#13-%e6%b8%b8%e6%88%8f%e8%ae%be%e7%bd%ae&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.1 ~ 26.2 · 选项界面在 25w41a（1.21.11 快照）后有过较大调整，本教程反映最新布局 · 按键绑定和调试快捷键适用于 Java 版&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;安装好启动器、下载完游戏之后，在开始冒险之前，建议先花几分钟调整一下游戏设置。合适的设置能大幅提升游戏体验——画面更流畅、操作更顺手、声音更舒适。&lt;/p&gt;&#xA;&lt;p&gt;本节内容参考 &lt;a href=&#34;https://zh.minecraft.wiki/w/%E9%80%89%E9%A1%B9&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://icons.duckduckgo.com/ip3/zh.minecraft.wiki.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  Minecraft Wiki&#xA;&lt;/a&gt; 编写，聚焦于新手最需要关注的选项。为照顾纯正的新人，本节已大幅简化了内容，如对设置内容感兴趣，欢迎前往维基查看。&lt;/p&gt;&#xA;&lt;h2 id=&#34;打开设置菜单&#34;&gt;打开设置菜单&lt;a class=&#34;anchor&#34; href=&#34;#%e6%89%93%e5%bc%80%e8%ae%be%e7%bd%ae%e8%8f%9c%e5%8d%95&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;进入游戏主菜单后，点击「&lt;strong&gt;选项…&lt;/strong&gt;」即可进入设置界面。主要包含以下几个子菜单：&lt;/p&gt;&#xA;&lt;div class=&#34;card-list&#34; style=&#34;--card-columns: 2;&#34;&gt;&#xA;  &lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;视频设置&lt;/strong&gt;&#xA;画面品质、帧率、渲染距离、全屏等&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;音乐和声音&lt;/strong&gt;&#xA;主音量、各类音效独立调节&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;按键控制&lt;/strong&gt;&#xA;键盘和鼠标按键绑定&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;语言&lt;/strong&gt;&#xA;游戏界面显示语言&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;辅助功能设置&lt;/strong&gt;&#xA;字幕、高对比度、视角摇晃等&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;聊天设置&lt;/strong&gt;&#xA;聊天显示方式和样式&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;视频设置&#34;&gt;视频设置&lt;a class=&#34;anchor&#34; href=&#34;#%e8%a7%86%e9%a2%91%e8%ae%be%e7%bd%ae&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;视频设置直接影响游戏的画面质量和流畅度，是最重要的一组选项。&lt;/p&gt;&#xA;&lt;h3 id=&#34;显示类&#34;&gt;显示类&lt;a class=&#34;anchor&#34; href=&#34;#%e6%98%be%e7%a4%ba%e7%b1%bb&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;关键设置&lt;/span&gt;&lt;/span&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;选项&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;推荐值&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;说明&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;全屏&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;开&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;获得沉浸式体验，按 &lt;code&gt;F11&lt;/code&gt; 快速切换&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;界面尺寸&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;自动&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;数值越大 UI 越大，高分辨率屏幕可适当调大&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;亮度&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;50 ~ 100&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;调高可以让洞穴和夜间更亮，纯视觉效果&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;最大帧率&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;120fps 或无限制&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;性能足够就选无限制，笔记本建议限制到 60~120&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;垂直同步&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;开&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;消除画面撕裂，但可能增加延迟&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h3 id=&#34;品质与性能&#34;&gt;品质与性能&lt;a class=&#34;anchor&#34; href=&#34;#%e5%93%81%e8%b4%a8%e4%b8%8e%e6%80%a7%e8%83%bd&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;重点&lt;/span&gt;&lt;/span&gt; 这组选项直接影响游戏帧率。&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;选项&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;推荐值&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;说明&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;渲染距离&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;12~16 区块&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;越大看得越远，但更吃性能。中低配电脑建议 12&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;模拟距离&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;8~12 区块&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;影响实体更新范围，对性能影响比渲染距离更大&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;平滑光照&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;开&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;光照过渡更自然，性能影响很小&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;云&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;流畅/高品质&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;「高品质」是立体云，「流畅」是平面，性能差别不大&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;粒子效果&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;全部/减少&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;中低配建议「减少」，不影响游戏玩法&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;实体阴影&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;开&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;生物脚下出现阴影，画面更真实&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;实体渲染距离&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;100%&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;控制生物在多远可见，调低可提升性能&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;可透视树叶&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;span class=&#34;badge&#34;&gt;&#xA;  &lt;span class=&#34;badge-text&#34;&gt;开&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;树叶透明显示，方便在树林中观察&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;区块构建器&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;线程化&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;减少放置方块时的卡顿，推荐&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;blockquote class=&#39;book-hint tip&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;中低配电脑优化方案&lt;/strong&gt;：渲染距离 8~10、模拟距离 8、粒子效果「减少」、实体渲染距离 75%。这几个选项对帧率影响最大。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>房屋类型与建筑风格</title>
+				<link>http://localhost:1313/docs/ch03-building/03-styles.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch03-building/03-styles.html</guid>
+				<description>&lt;h1 id=&#34;32-风格与设计&#34;&gt;3.2 风格与设计&lt;a class=&#34;anchor&#34; href=&#34;#32-%e9%a3%8e%e6%a0%bc%e4%b8%8e%e8%ae%be%e8%ae%a1&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;不同建筑风格介绍与设计思路。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>活塞机械与隐藏门</title>
+				<link>http://localhost:1313/docs/ch04-redstone/03-piston-machines.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch04-redstone/03-piston-machines.html</guid>
+				<description>&lt;h1 id=&#34;45-活塞机械&#34;&gt;4.5 活塞机械&lt;a class=&#34;anchor&#34; href=&#34;#45-%e6%b4%bb%e5%a1%9e%e6%9c%ba%e6%a2%b0&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>精品模组推荐</title>
 				<link>http://localhost:1313/docs/ch06-mods/03-recommended-mods.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch06-mods/03-recommended-mods.html</guid>
 				<description>&lt;h1 id=&#34;63-推荐模组&#34;&gt;6.3 推荐模组&lt;a class=&#34;anchor&#34; href=&#34;#63-%e6%8e%a8%e8%8d%90%e6%a8%a1%e7%bb%84&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;各类实用与趣味模组推荐。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>7.3 数据包</title>
+				<title>数据包 (Data Packs)</title>
 				<link>http://localhost:1313/docs/ch07-commands/03-datapacks.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch07-commands/03-datapacks.html</guid>
 				<description>&lt;h1 id=&#34;73-数据包&#34;&gt;7.3 数据包&lt;a class=&#34;anchor&#34; href=&#34;#73-%e6%95%b0%e6%8d%ae%e5%8c%85&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;数据包制作入门，自定义合成与进度。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>2.4 农牧养殖</title>
-				<link>http://localhost:1313/docs/ch02-survival/04-farming.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch02-survival/04-farming.html</guid>
-				<description>&lt;h1 id=&#34;24-农牧养殖&#34;&gt;2.4 农牧养殖&lt;a class=&#34;anchor&#34; href=&#34;#24-%e5%86%9c%e7%89%a7%e5%85%bb%e6%ae%96&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 食物生产与资源再生&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;（待填充）&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>3.4 实用家具</title>
-				<link>http://localhost:1313/docs/ch03-building/04-furniture.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch03-building/04-furniture.html</guid>
-				<description>&lt;h1 id=&#34;34-实用家具&#34;&gt;3.4 实用家具&lt;a class=&#34;anchor&#34; href=&#34;#34-%e5%ae%9e%e7%94%a8%e5%ae%b6%e5%85%b7&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>4.4 计时器与时钟</title>
-				<link>http://localhost:1313/docs/ch04-redstone/04-timers-and-clocks.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch04-redstone/04-timers-and-clocks.html</guid>
-				<description>&lt;h1 id=&#34;44-计时器与时钟&#34;&gt;4.4 计时器与时钟&lt;a class=&#34;anchor&#34; href=&#34;#44-%e8%ae%a1%e6%97%b6%e5%99%a8%e4%b8%8e%e6%97%b6%e9%92%9f&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>5.4 服务器维护与管理</title>
-				<link>http://localhost:1313/docs/ch05-multiplayer/04-server-management.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch05-multiplayer/04-server-management.html</guid>
-				<description>&lt;h1 id=&#34;54-服务器维护与管理&#34;&gt;5.4 服务器维护与管理&lt;a class=&#34;anchor&#34; href=&#34;#54-%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%bb%b4%e6%8a%a4%e4%b8%8e%e7%ae%a1%e7%90%86&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>6.4 优化与辅助模组</title>
-				<link>http://localhost:1313/docs/ch06-mods/04-optimization-and-qol.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch06-mods/04-optimization-and-qol.html</guid>
-				<description>&lt;h1 id=&#34;64-优化与辅助模组&#34;&gt;6.4 优化与辅助模组&lt;a class=&#34;anchor&#34; href=&#34;#64-%e4%bc%98%e5%8c%96%e4%b8%8e%e8%be%85%e5%8a%a9%e6%a8%a1%e7%bb%84&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>7.4 常用命令速查表</title>
+				<title>常用实用命令参考</title>
 				<link>http://localhost:1313/docs/ch07-commands/04-command-reference.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch07-commands/04-command-reference.html</guid>
 				<description>&lt;h1 id=&#34;74-常用命令速查表&#34;&gt;7.4 常用命令速查表&lt;a class=&#34;anchor&#34; href=&#34;#74-%e5%b8%b8%e7%94%a8%e5%91%bd%e4%bb%a4%e9%80%9f%e6%9f%a5%e8%a1%a8&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>2.5 村民与交易</title>
-				<link>http://localhost:1313/docs/ch02-survival/05-villagers.html</link>
+				<title>服务器管理与指令</title>
+				<link>http://localhost:1313/docs/ch05-multiplayer/04-server-management.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch02-survival/05-villagers.html</guid>
-				<description>&lt;h1 id=&#34;25-村民与交易&#34;&gt;2.5 村民与交易&lt;a class=&#34;anchor&#34; href=&#34;#25-%e6%9d%91%e6%b0%91%e4%b8%8e%e4%ba%a4%e6%98%93&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 村民机制与交易系统&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+				<guid>http://localhost:1313/docs/ch05-multiplayer/04-server-management.html</guid>
+				<description>&lt;h1 id=&#34;54-服务器维护与管理&#34;&gt;5.4 服务器维护与管理&lt;a class=&#34;anchor&#34; href=&#34;#54-%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%bb%b4%e6%8a%a4%e4%b8%8e%e7%ae%a1%e7%90%86&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>3.5 屋顶与细节</title>
-				<link>http://localhost:1313/docs/ch03-building/05-roofs-and-details.html</link>
+				<title>弧形屋顶与细节美化</title>
+				<link>http://localhost:1313/docs/ch03-building/04-roofs-and-details.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch03-building/05-roofs-and-details.html</guid>
+				<guid>http://localhost:1313/docs/ch03-building/04-roofs-and-details.html</guid>
 				<description>&lt;h1 id=&#34;35-屋顶与细节&#34;&gt;3.5 屋顶与细节&lt;a class=&#34;anchor&#34; href=&#34;#35-%e5%b1%8b%e9%a1%b6%e4%b8%8e%e7%bb%86%e8%8a%82&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>4.5 活塞机械</title>
-				<link>http://localhost:1313/docs/ch04-redstone/05-piston-machines.html</link>
+				<title>矿车与物流系统</title>
+				<link>http://localhost:1313/docs/ch04-redstone/04-minecarts-and-transport.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch04-redstone/05-piston-machines.html</guid>
-				<description>&lt;h1 id=&#34;45-活塞机械&#34;&gt;4.5 活塞机械&lt;a class=&#34;anchor&#34; href=&#34;#45-%e6%b4%bb%e5%a1%9e%e6%9c%ba%e6%a2%b0&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+				<guid>http://localhost:1313/docs/ch04-redstone/04-minecarts-and-transport.html</guid>
+				<description>&lt;h1 id=&#34;矿车与物流系统&#34;&gt;矿车与物流系统&lt;a class=&#34;anchor&#34; href=&#34;#%e7%9f%bf%e8%bd%a6%e4%b8%8e%e7%89%a9%e6%b5%81%e7%b3%bb%e7%bb%9f&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（此处为占位内容，待后续完善）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>5.5 PvP 入门</title>
+				<title>性能优化与辅助功能</title>
+				<link>http://localhost:1313/docs/ch06-mods/04-optimization-and-qol.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch06-mods/04-optimization-and-qol.html</guid>
+				<description>&lt;h1 id=&#34;64-优化与辅助模组&#34;&gt;6.4 优化与辅助模组&lt;a class=&#34;anchor&#34; href=&#34;#64-%e4%bc%98%e5%8c%96%e4%b8%8e%e8%be%85%e5%8a%a9%e6%a8%a1%e7%bb%84&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>游戏术语与计量单位</title>
+				<link>http://localhost:1313/docs/ch01-getting-started/04-terminology.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch01-getting-started/04-terminology.html</guid>
+				<description>&lt;h1 id=&#34;游戏术语与计量单位&#34;&gt;游戏术语与计量单位&lt;a class=&#34;anchor&#34; href=&#34;#%e6%b8%b8%e6%88%8f%e6%9c%af%e8%af%ad%e4%b8%8e%e8%ae%a1%e9%87%8f%e5%8d%95%e4%bd%8d&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（此处为占位内容，待后续完善）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>资源收集与合成</title>
+				<link>http://localhost:1313/docs/ch02-survival/04-gathering-and-crafting.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch02-survival/04-gathering-and-crafting.html</guid>
+				<description>&lt;h1 id=&#34;22-采集与合成&#34;&gt;2.2 采集与合成&lt;a class=&#34;anchor&#34; href=&#34;#22-%e9%87%87%e9%9b%86%e4%b8%8e%e5%90%88%e6%88%90&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 生存模式核心机制&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;在度过了惊心动魄的第一天后，你已经建立了一个临时的庇护所。接下来，你需要正式迈入 Minecraft 的核心体验——&lt;strong&gt;采集（Mine）&lt;/strong&gt;与&lt;strong&gt;合成（Craft）&lt;/strong&gt;。这两大系统环环相扣，构成了游戏最基础的进度循环。&lt;/p&gt;&#xA;&lt;p&gt;本节将事无巨细地为你拆解物品管理、工具制作、材质等级、方块采集以及熔炉烧炼的所有细节，带你轻松度过生存前期。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;物品栏与背包管理微操指南&#34;&gt;物品栏与背包管理微操指南&lt;a class=&#34;anchor&#34; href=&#34;#%e7%89%a9%e5%93%81%e6%a0%8f%e4%b8%8e%e8%83%8c%e5%8c%85%e7%ae%a1%e7%90%86%e5%be%ae%e6%93%8d%e6%8c%87%e5%8d%97&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;在游戏中按下 &lt;kbd&gt;E&lt;/kbd&gt;&#xA; 键可以打开你的个人物品栏（背包）。作为一名合格的冒险家，熟练掌握以下鼠标和键盘的快捷交互技巧，能为你节省大量的整理时间：&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-鼠标点击与拖拽技巧&#34;&gt;1. 鼠标点击与拖拽技巧&lt;a class=&#34;anchor&#34; href=&#34;#1-%e9%bc%a0%e6%a0%87%e7%82%b9%e5%87%bb%e4%b8%8e%e6%8b%96%e6%8b%bd%e6%8a%80%e5%b7%a7&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;左键单击物品&lt;/strong&gt;：拿起这格物品的&lt;strong&gt;全部&lt;/strong&gt;数量。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;右键单击物品&lt;/strong&gt;：拿起这格物品的&lt;strong&gt;一半&lt;/strong&gt;数量（如果是奇数，则拿起多的一半。例如 5 个物品，右键会拿起 3 个，留下 2 个）。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;手持物品时在空白格点右键&lt;/strong&gt;：只在目标空格中&lt;strong&gt;放下 1 个&lt;/strong&gt;物品。这在手动摆放合成配方时非常实用。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;快速均分（左键拖拽）&lt;/strong&gt;：手持一叠物品（如 64 个木板）时，&lt;strong&gt;按住左键并在多个空格上拖动&lt;/strong&gt;，物品会被&lt;strong&gt;平均分配&lt;/strong&gt;到你扫过的每一个格子里。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;各放一个（右键拖拽）&lt;/strong&gt;：手持一叠物品时，&lt;strong&gt;按住右键并在多个空格上拖动&lt;/strong&gt;，则会在每个格子里&lt;strong&gt;各留下 1 个&lt;/strong&gt;物品。这是制作工作台、熔炉或箱子等空心配方时的「神技」。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;合并同类（双击）&lt;/strong&gt;：双击任意一个物品，可以将散落在背包各个格子里相同的物品&lt;strong&gt;瞬间吸附并堆叠到这一格中&lt;/strong&gt;（最高达到 64 个）。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-键盘快捷键事半功倍&#34;&gt;2. 键盘快捷键（事半功倍）&lt;a class=&#34;anchor&#34; href=&#34;#2-%e9%94%ae%e7%9b%98%e5%bf%ab%e6%8d%b7%e9%94%ae%e4%ba%8b%e5%8d%8a%e5%8a%9f%e5%80%8d&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Shift + 左键单击&lt;/strong&gt;：&lt;strong&gt;快速转移&lt;/strong&gt;。如果打开了箱子或工作台，这会把物品在「背包」与「容器/工作台」之间瞬间传送；如果只是单独打开背包，这会在「快捷栏（屏幕最下方 9 格）」与「背包上方 27 格」之间快速切换。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;数字键 1 - 9&lt;/strong&gt;：鼠标悬停在背包内任意物品上，按下键盘上的数字键，该物品会&lt;strong&gt;瞬间与你快捷栏对应槽位的物品对调&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Q 键（丢弃）&lt;/strong&gt;：鼠标悬停在物品上按 Q 键，可&lt;strong&gt;丢弃 1 个&lt;/strong&gt;物品；按住 &lt;strong&gt;Ctrl + Q 键&lt;/strong&gt;，则可&lt;strong&gt;一次性丢弃该格的所有物品&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;F 键（副手）&lt;/strong&gt;：鼠标悬停在任意物品上按下 F 键，该物品会放置到你的&lt;strong&gt;副手槽&lt;/strong&gt;中。在主手拿着盾牌或火把时，副手可以拿着食物，极大方便地底探险。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;什么是堆叠上限（Stack Size）？&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;背包中的方格不能无限装东西。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;64 个堆叠&lt;/strong&gt;：绝大多数方块（如泥土、石头、原木、木板）和材料（如煤炭、铁锭）的堆叠上限是 64 个。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;16 个堆叠&lt;/strong&gt;：部分特殊的抛射物或工具（如末影珍珠、雪球、鸡蛋、桶）上限是 16 个。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;不堆叠&lt;/strong&gt;：所有的武器、工具、防具（如镐、剑、胸甲）以及药水，一格只能放 1 个。&lt;/li&gt;&#xA;&lt;/ul&gt;&lt;/blockquote&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;3x3-工作台与合成逻辑&#34;&gt;3x3 工作台与合成逻辑&lt;a class=&#34;anchor&#34; href=&#34;#3x3-%e5%b7%a5%e4%bd%9c%e5%8f%b0%e4%b8%8e%e5%90%88%e6%88%90%e9%80%bb%e8%be%91&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;背包自带的合成格是 2x2（4 格）的，仅能合成木板、木棍、火把等基础物资。一旦做出了&lt;strong&gt;工作台&lt;/strong&gt;并将其放置在地上右键打开，你就能使用 3x3（9 格）的合成栏。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>PvP 技巧与战术</title>
 				<link>http://localhost:1313/docs/ch05-multiplayer/05-pvp.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch05-multiplayer/05-pvp.html</guid>
 				<description>&lt;h1 id=&#34;55-pvp-入门&#34;&gt;5.5 PvP 入门&lt;a class=&#34;anchor&#34; href=&#34;#55-pvp-%e5%85%a5%e9%97%a8&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>6.5 整合包入门</title>
-				<link>http://localhost:1313/docs/ch06-mods/05-modpacks.html</link>
+				<title>采矿技术与洞穴探索</title>
+				<link>http://localhost:1313/docs/ch02-survival/05-mining.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch06-mods/05-modpacks.html</guid>
-				<description>&lt;h1 id=&#34;65-整合包入门&#34;&gt;6.5 整合包入门&lt;a class=&#34;anchor&#34; href=&#34;#65-%e6%95%b4%e5%90%88%e5%8c%85%e5%85%a5%e9%97%a8&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+				<guid>http://localhost:1313/docs/ch02-survival/05-mining.html</guid>
+				<description>&lt;h1 id=&#34;23-采矿技术&#34;&gt;2.3 采矿技术&lt;a class=&#34;anchor&#34; href=&#34;#23-%e9%87%87%e7%9f%bf%e6%8a%80%e6%9c%af&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 主世界矿石开采策略&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>7.5 函数与数据包进阶</title>
+				<title>函数与高级应用</title>
 				<link>http://localhost:1313/docs/ch07-commands/05-functions-and-advanced.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch07-commands/05-functions-and-advanced.html</guid>
 				<description>&lt;h1 id=&#34;75-函数与数据包进阶&#34;&gt;7.5 函数与数据包进阶&lt;a class=&#34;anchor&#34; href=&#34;#75-%e5%87%bd%e6%95%b0%e4%b8%8e%e6%95%b0%e6%8d%ae%e5%8c%85%e8%bf%9b%e9%98%b6&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>2.6 战斗与探索</title>
-				<link>http://localhost:1313/docs/ch02-survival/03-combat-and-exploration.html</link>
+				<title>家具与内饰</title>
+				<link>http://localhost:1313/docs/ch03-building/05-furniture.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch02-survival/03-combat-and-exploration.html</guid>
-				<description>&lt;h1 id=&#34;26-战斗与探索&#34;&gt;2.6 战斗与探索&lt;a class=&#34;anchor&#34; href=&#34;#26-%e6%88%98%e6%96%97%e4%b8%8e%e6%8e%a2%e7%b4%a2&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 生存模式&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+				<guid>http://localhost:1313/docs/ch03-building/05-furniture.html</guid>
+				<description>&lt;h1 id=&#34;34-实用家具&#34;&gt;3.4 实用家具&lt;a class=&#34;anchor&#34; href=&#34;#34-%e5%ae%9e%e7%94%a8%e5%ae%b6%e5%85%b7&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>3.6 调色板与材料</title>
-				<link>http://localhost:1313/docs/ch03-building/06-palette-and-materials.html</link>
+				<title>物品分类与储存系统</title>
+				<link>http://localhost:1313/docs/ch04-redstone/05-storage-and-sorting.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch03-building/06-palette-and-materials.html</guid>
-				<description>&lt;h1 id=&#34;36-调色板与材料&#34;&gt;3.6 调色板与材料&lt;a class=&#34;anchor&#34; href=&#34;#36-%e8%b0%83%e8%89%b2%e6%9d%bf%e4%b8%8e%e6%9d%90%e6%96%99&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>4.6 存储与分类系统</title>
-				<link>http://localhost:1313/docs/ch04-redstone/06-storage-and-sorting.html</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch04-redstone/06-storage-and-sorting.html</guid>
+				<guid>http://localhost:1313/docs/ch04-redstone/05-storage-and-sorting.html</guid>
 				<description>&lt;h1 id=&#34;46-存储与分类系统&#34;&gt;4.6 存储与分类系统&lt;a class=&#34;anchor&#34; href=&#34;#46-%e5%ad%98%e5%82%a8%e4%b8%8e%e5%88%86%e7%b1%bb%e7%b3%bb%e7%bb%9f&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>2.7 附魔与药水</title>
-				<link>http://localhost:1313/docs/ch02-survival/07-enchanting.html</link>
+				<title>新手不该做的事</title>
+				<link>http://localhost:1313/docs/ch01-getting-started/05-dos-and-donts.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch02-survival/07-enchanting.html</guid>
-				<description>&lt;h1 id=&#34;27-附魔与药水&#34;&gt;2.7 附魔与药水&lt;a class=&#34;anchor&#34; href=&#34;#27-%e9%99%84%e9%ad%94%e4%b8%8e%e8%8d%af%e6%b0%b4&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 附魔系统与药水酿造&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+				<guid>http://localhost:1313/docs/ch01-getting-started/05-dos-and-donts.html</guid>
+				<description>&lt;h1 id=&#34;新手不该做的事&#34;&gt;新手不该做的事&lt;a class=&#34;anchor&#34; href=&#34;#%e6%96%b0%e6%89%8b%e4%b8%8d%e8%af%a5%e5%81%9a%e7%9a%84%e4%ba%8b&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（此处为占位内容，待后续完善）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>3.7 水下与特殊环境建筑</title>
+				<title>整合包游玩指南</title>
+				<link>http://localhost:1313/docs/ch06-mods/05-modpacks.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch06-mods/05-modpacks.html</guid>
+				<description>&lt;h1 id=&#34;65-整合包入门&#34;&gt;6.5 整合包入门&lt;a class=&#34;anchor&#34; href=&#34;#65-%e6%95%b4%e5%90%88%e5%8c%85%e5%85%a5%e9%97%a8&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>地形改造与自然景观</title>
+				<link>http://localhost:1313/docs/ch03-building/06-terraforming.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch03-building/06-terraforming.html</guid>
+				<description>&lt;h1 id=&#34;33-地形改造&#34;&gt;3.3 地形改造&lt;a class=&#34;anchor&#34; href=&#34;#33-%e5%9c%b0%e5%bd%a2%e6%94%b9%e9%80%a0&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;地形改造与环境美化技巧。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>防破坏与权限管理</title>
+				<link>http://localhost:1313/docs/ch05-multiplayer/06-anti-griefing.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch05-multiplayer/06-anti-griefing.html</guid>
+				<description>&lt;h1 id=&#34;防破坏与权限管理&#34;&gt;防破坏与权限管理&lt;a class=&#34;anchor&#34; href=&#34;#%e9%98%b2%e7%a0%b4%e5%9d%8f%e4%b8%8e%e6%9d%83%e9%99%90%e7%ae%a1%e7%90%86&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（此处为占位内容，待后续完善）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>基岩版附加包 (Add-ons)</title>
+				<link>http://localhost:1313/docs/ch06-mods/06-bedrock-addons.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch06-mods/06-bedrock-addons.html</guid>
+				<description>&lt;h1 id=&#34;基岩版附加包-add-ons&#34;&gt;基岩版附加包 (Add-ons)&lt;a class=&#34;anchor&#34; href=&#34;#%e5%9f%ba%e5%b2%a9%e7%89%88%e9%99%84%e5%8a%a0%e5%8c%85-add-ons&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（此处为占位内容，待后续完善）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>战斗与外出探险</title>
+				<link>http://localhost:1313/docs/ch02-survival/06-combat-and-exploration.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch02-survival/06-combat-and-exploration.html</guid>
+				<description>&lt;h1 id=&#34;26-战斗与探索&#34;&gt;2.6 战斗与探索&lt;a class=&#34;anchor&#34; href=&#34;#26-%e6%88%98%e6%96%97%e4%b8%8e%e6%8e%a2%e7%b4%a2&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 生存模式&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>自定义地图制作与发布</title>
+				<link>http://localhost:1313/docs/ch07-commands/06-map-making.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch07-commands/06-map-making.html</guid>
+				<description>&lt;h1 id=&#34;自定义地图制作与发布&#34;&gt;自定义地图制作与发布&lt;a class=&#34;anchor&#34; href=&#34;#%e8%87%aa%e5%ae%9a%e4%b9%89%e5%9c%b0%e5%9b%be%e5%88%b6%e4%bd%9c%e4%b8%8e%e5%8f%91%e5%b8%83&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（此处为占位内容，待后续完善）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>自动化农场与刷怪塔</title>
+				<link>http://localhost:1313/docs/ch04-redstone/06-auto-farms.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch04-redstone/06-auto-farms.html</guid>
+				<description>&lt;h1 id=&#34;43-自动化农场&#34;&gt;4.3 自动化农场&lt;a class=&#34;anchor&#34; href=&#34;#43-%e8%87%aa%e5%8a%a8%e5%8c%96%e5%86%9c%e5%9c%ba&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;用红石搭建自动化农场，解放双手。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>基础农业与畜牧</title>
+				<link>http://localhost:1313/docs/ch02-survival/07-farming.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch02-survival/07-farming.html</guid>
+				<description>&lt;h1 id=&#34;24-农牧养殖&#34;&gt;2.4 农牧养殖&lt;a class=&#34;anchor&#34; href=&#34;#24-%e5%86%9c%e7%89%a7%e5%85%bb%e6%ae%96&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 食物生产与资源再生&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>水下建筑与特殊设计</title>
 				<link>http://localhost:1313/docs/ch03-building/07-underwater-and-special.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch03-building/07-underwater-and-special.html</guid>
 				<description>&lt;h1 id=&#34;37-水下与特殊环境建筑&#34;&gt;3.7 水下与特殊环境建筑&lt;a class=&#34;anchor&#34; href=&#34;#37-%e6%b0%b4%e4%b8%8b%e4%b8%8e%e7%89%b9%e6%ae%8a%e7%8e%af%e5%a2%83%e5%bb%ba%e7%ad%91&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>4.7 红石进阶项目</title>
-				<link>http://localhost:1313/docs/ch04-redstone/07-advanced-projects.html</link>
+				<title>陷阱与防御工程</title>
+				<link>http://localhost:1313/docs/ch04-redstone/07-traps-and-defense.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch04-redstone/07-advanced-projects.html</guid>
+				<guid>http://localhost:1313/docs/ch04-redstone/07-traps-and-defense.html</guid>
+				<description>&lt;h1 id=&#34;陷阱与防御工程&#34;&gt;陷阱与防御工程&lt;a class=&#34;anchor&#34; href=&#34;#%e9%99%b7%e9%98%b1%e4%b8%8e%e9%98%b2%e5%be%a1%e5%b7%a5%e7%a8%8b&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（此处为占位内容，待后续完善）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>村庄机制与村民交易</title>
+				<link>http://localhost:1313/docs/ch02-survival/08-villagers.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch02-survival/08-villagers.html</guid>
+				<description>&lt;h1 id=&#34;25-村民与交易&#34;&gt;2.5 村民与交易&lt;a class=&#34;anchor&#34; href=&#34;#25-%e6%9d%91%e6%b0%91%e4%b8%8e%e4%ba%a4%e6%98%93&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 村民机制与交易系统&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>高级红石项目</title>
+				<link>http://localhost:1313/docs/ch04-redstone/08-advanced-projects.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch04-redstone/08-advanced-projects.html</guid>
 				<description>&lt;h1 id=&#34;47-红石进阶项目&#34;&gt;4.7 红石进阶项目&lt;a class=&#34;anchor&#34; href=&#34;#47-%e7%ba%a2%e7%9f%b3%e8%bf%9b%e9%98%b6%e9%a1%b9%e7%9b%ae&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>2.8 下界与末地</title>
-				<link>http://localhost:1313/docs/ch02-survival/04-nether-and-end.html</link>
+				<title>巨型工程：大都市与过山车</title>
+				<link>http://localhost:1313/docs/ch03-building/08-megaprojects.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch02-survival/04-nether-and-end.html</guid>
-				<description>&lt;h1 id=&#34;28-下界与末地&#34;&gt;2.8 下界与末地&lt;a class=&#34;anchor&#34; href=&#34;#28-%e4%b8%8b%e7%95%8c%e4%b8%8e%e6%9c%ab%e5%9c%b0&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 两个额外维度的完整指南&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+				<guid>http://localhost:1313/docs/ch03-building/08-megaprojects.html</guid>
+				<description>&lt;h1 id=&#34;巨型工程大都市与过山车&#34;&gt;巨型工程：大都市与过山车&lt;a class=&#34;anchor&#34; href=&#34;#%e5%b7%a8%e5%9e%8b%e5%b7%a5%e7%a8%8b%e5%a4%a7%e9%83%bd%e5%b8%82%e4%b8%8e%e8%bf%87%e5%b1%b1%e8%bd%a6&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（此处为占位内容，待后续完善）&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>附录</title>
@@ -306,11 +355,11 @@
 				<description>&lt;h1 id=&#34;附录&#34;&gt;附录&lt;a class=&#34;anchor&#34; href=&#34;#%e9%99%84%e5%bd%95&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;h2 id=&#34;参考来源&#34;&gt;参考来源&lt;a class=&#34;anchor&#34; href=&#34;#%e5%8f%82%e8%80%83%e6%9d%a5%e6%ba%90&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;本教程在撰写过程中参考了以下资料：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://zh.minecraft.wiki/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://icons.duckduckgo.com/ip3/zh.minecraft.wiki.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  Minecraft Wiki（中文）&#xA;&lt;/a&gt;——游戏机制、版本记录、合成配方、生物数据等&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.mcmod.cn/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://icons.duckduckgo.com/ip3/www.mcmod.cn.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  MC百科&#xA;&lt;/a&gt;——模组信息、社区教程&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.criwits.top/missing/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://icons.duckduckgo.com/ip3/www.criwits.top.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  《你缺失的那门计算机课》&#xA;&lt;/a&gt;——写作风格参考&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;本教程中所使用的游戏截图来源于 Minecraft 游戏内截图、Minecraft Wiki 以及 MC百科。所有截图中出现的 Minecraft 相关素材版权归 Mojang Studios / Microsoft 所有，仅用于教学与介绍目的。&lt;/p&gt;&#xA;&lt;h2 id=&#34;常用工具与链接&#34;&gt;常用工具与链接&lt;a class=&#34;anchor&#34; href=&#34;#%e5%b8%b8%e7%94%a8%e5%b7%a5%e5%85%b7%e4%b8%8e%e9%93%be%e6%8e%a5&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;工具&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;链接&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;用途&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Minecraft 官网&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://www.minecraft.net&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://www.minecraft.net/favicon.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  minecraft.net&#xA;&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;购买游戏、下载启动器&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Minecraft Wiki&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://zh.minecraft.wiki&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://icons.duckduckgo.com/ip3/zh.minecraft.wiki.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  zh.minecraft.wiki&#xA;&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;最全面的游戏资料库&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;MC百科&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://www.mcmod.cn&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://icons.duckduckgo.com/ip3/www.mcmod.cn.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  mcmod.cn&#xA;&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;模组查询、社区教程&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;PCL2 启动器&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://github.com/Hex-Dragon/PCL2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://api.iconify.design/ri/github-fill.svg?height=1em&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  GitHub&#xA;&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;国内最流行的第三方启动器&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;HMCL 启动器&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://hmcl.huangyuhui.net&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://icons.duckduckgo.com/ip3/hmcl.huangyuhui.net.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  hmcl.huangyuhui.net&#xA;&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;开源跨平台启动器&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;BakaXL 启动器&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://www.bakaxl.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://icons.duckduckgo.com/ip3/www.bakaxl.com.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  bakaxl.com&#xA;&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;主打 UI 美学的启动器&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Chunkbase&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://www.chunkbase.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;ext-link&#34;&gt;&#xA;  &lt;img class=&#34;ext-link-icon&#34; src=&#34;https://icons.duckduckgo.com/ip3/www.chunkbase.com.ico&#34; alt=&#34;&#34; loading=&#34;lazy&#34; onerror=&#34;this.style.display=&#39;none&#39;&#34; /&gt;&#xA;  chunkbase.com&#xA;&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;种子地图查看工具&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
 			</item>
 			<item>
-				<title>2.1 战斗与探索</title>
-				<link>http://localhost:1313/docs/ch02-general/01-combat-and-exploration.html</link>
+				<title>附魔与铁砧指南</title>
+				<link>http://localhost:1313/docs/ch02-survival/09-enchanting.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/docs/ch02-general/01-combat-and-exploration.html</guid>
-				<description>&lt;h1 id=&#34;21-战斗与探索&#34;&gt;2.1 战斗与探索&lt;a class=&#34;anchor&#34; href=&#34;#21-%e6%88%98%e6%96%97%e4%b8%8e%e6%8e%a2%e7%b4%a2&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 生存模式&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote class=&#39;book-hint tip&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;关于 PvP 的说明&lt;/strong&gt;：本节专门针对 &lt;strong&gt;PvE（玩家对战环境 / 怪物）&lt;/strong&gt; 的生存战斗技巧。玩家之间的对战（PvP）进阶内容将在后续章节中深入探讨。&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;无论是为了在漆黑的矿洞中存活，还是为了保卫村庄、探索下界，战斗都是 Minecraft 生存中不可或缺的一环。掌握战斗技巧，你将不再惧怕黑夜。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-战斗机制基础&#34;&gt;1. 战斗机制基础&lt;a class=&#34;anchor&#34; href=&#34;#1-%e6%88%98%e6%96%97%e6%9c%ba%e5%88%b6%e5%9f%ba%e7%a1%80&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;如果你曾玩过早期 Minecraft（1.8 以前版本），你可能会习惯疯狂点击鼠标来输出伤害。但在现代 Java 版中，战斗系统已经彻底重做——不再是无脑连点的时代。&lt;/p&gt;&#xA;&lt;h3 id=&#34;攻击指示器冷却槽&#34;&gt;攻击指示器（冷却槽）&lt;a class=&#34;anchor&#34; href=&#34;#%e6%94%bb%e5%87%bb%e6%8c%87%e7%a4%ba%e5%99%a8%e5%86%b7%e5%8d%b4%e6%a7%bd&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;挥动武器后，屏幕准星下方（或快捷栏旁边）会出现一个&lt;strong&gt;剑形图标&lt;/strong&gt;，它代表武器的攻击冷却。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;满蓄力攻击&lt;/strong&gt;：等待图标完全充满后挥动武器，造成 100% 面板伤害，并可触发横扫等特殊效果。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;未蓄力攻击&lt;/strong&gt;：冷却未满时强行攻击，伤害大幅降低（俗称「刮痧」），对僵尸可能只有微弱的 1 点伤害。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote class=&#39;book-hint important&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;核心准则&lt;/strong&gt;：掌握攻击节奏。满蓄力砍一刀 → 后撤半步等待冷却 → 再砍第二刀。节奏感是生存战斗的第一课。&lt;/p&gt;&lt;/blockquote&gt;&lt;h3 id=&#34;暴击跳劈&#34;&gt;暴击（跳劈）&lt;a class=&#34;anchor&#34; href=&#34;#%e6%9a%b4%e5%87%bb%e8%b7%b3%e5%8a%88&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;当你&lt;strong&gt;在跳跃下落过程中&lt;/strong&gt;击中目标时，会触发暴击（Critical Hit），造成 &lt;strong&gt;150%&lt;/strong&gt; 的巨额伤害。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;标志&lt;/strong&gt;：怪物身上爆出「星星」状魔法粒子，伴随沉闷的打击音效。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;连招&lt;/strong&gt;：疾跑接近 → 跳起 → 下落时挥砍 → 迅速后退。石斧跳劈可直接秒杀大部分无甲生物。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote class=&#39;book-hint tip&#39;&gt;&#xD;&#xA;&lt;p&gt;如果攻击速度低于 1.5（如斧），第二次跳起时冷却来不及恢复，因此跳劈更适合剑。&lt;/p&gt;&lt;/blockquote&gt;&lt;h3 id=&#34;疾跑击退&#34;&gt;疾跑击退&lt;a class=&#34;anchor&#34; href=&#34;#%e7%96%be%e8%b7%91%e5%87%bb%e9%80%80&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;处于&lt;strong&gt;疾跑状态&lt;/strong&gt;（双击 W 或按住 Ctrl）时击中怪物，会产生极强击退效果，将目标打飞数格远。苦力怕靠近时，若来不及秒杀，疾跑一剑将其击飞可打断自爆倒计时。&lt;/p&gt;&#xA;&lt;h3 id=&#34;受击无敌帧&#34;&gt;受击无敌帧&lt;a class=&#34;anchor&#34; href=&#34;#%e5%8f%97%e5%87%bb%e6%97%a0%e6%95%8c%e5%b8%a7&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;怪物被击中后会全身发红约 0.5 秒，在此期间&lt;strong&gt;无敌&lt;/strong&gt;，任何攻击都不会造成额外伤害。不要在怪物发红时连点鼠标浪费武器耐久。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;2-武器与装备&#34;&gt;2. 武器与装备&lt;a class=&#34;anchor&#34; href=&#34;#2-%e6%ad%a6%e5%99%a8%e4%b8%8e%e8%a3%85%e5%a4%87&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;剑还是斧&#34;&gt;剑还是斧？&lt;a class=&#34;anchor&#34; href=&#34;#%e5%89%91%e8%bf%98%e6%98%af%e6%96%a7&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;剑（Sword）&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;斧（Axe）&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;攻速&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;快（1.6 次/秒）&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;慢（约 1 次/秒）&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;单次伤害&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;中等&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;高（同级最高）&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;特殊效果&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;横扫之刃（群体击退+伤害）&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;破盾（PvP）、剥皮原木、除锈&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;适合场景&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;被围攻、日常清怪&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;秒杀高威胁单体&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;推荐人群&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;新手首选&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;有一定走位基础后尝试&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h3 id=&#34;盾牌新手的免死金牌&#34;&gt;盾牌：新手的「免死金牌」&lt;a class=&#34;anchor&#34; href=&#34;#%e7%9b%be%e7%89%8c%e6%96%b0%e6%89%8b%e7%9a%84%e5%85%8d%e6%ad%bb%e9%87%91%e7%89%8c&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;只需要 1 块铁锭和 6 块木板即可合成盾牌。它的合成配方如下：&lt;/p&gt;</description>
+				<guid>http://localhost:1313/docs/ch02-survival/09-enchanting.html</guid>
+				<description>&lt;h1 id=&#34;27-附魔与药水&#34;&gt;2.7 附魔与药水&lt;a class=&#34;anchor&#34; href=&#34;#27-%e9%99%84%e9%ad%94%e4%b8%8e%e8%8d%af%e6%b0%b4&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 附魔系统与药水酿造&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>后记</title>
@@ -318,6 +367,27 @@
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/afterwords.html</guid>
 				<description>&lt;h1 id=&#34;后记&#34;&gt;后记&lt;a class=&#34;anchor&#34; href=&#34;#%e5%90%8e%e8%ae%b0&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;感谢阅读本教程！&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>下界探险与快速旅行</title>
+				<link>http://localhost:1313/docs/ch02-survival/10-nether.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch02-survival/10-nether.html</guid>
+				<description>&lt;h1 id=&#34;28-下界与末地&#34;&gt;2.8 下界与末地&lt;a class=&#34;anchor&#34; href=&#34;#28-%e4%b8%8b%e7%95%8c%e4%b8%8e%e6%9c%ab%e5%9c%b0&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 两个额外维度的完整指南&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>完成冒险：击败末影龙</title>
+				<link>http://localhost:1313/docs/ch02-survival/11-the-end.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch02-survival/11-the-end.html</guid>
+				<description>&lt;h1 id=&#34;完成冒险击败末影龙&#34;&gt;完成冒险：击败末影龙&lt;a class=&#34;anchor&#34; href=&#34;#%e5%ae%8c%e6%88%90%e5%86%92%e9%99%a9%e5%87%bb%e8%b4%a5%e6%9c%ab%e5%bd%b1%e9%be%99&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（此处为占位内容，待后续完善）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Test</title>
+				<link>http://localhost:1313/docs/test.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/test.html</guid>
+				<description>&lt;p&gt;&#xA;&#xA;&#xA;&lt;p&gt;Width: 512, Height: 512&lt;/p&gt;&#xD;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;Width: 16, Height: 16&lt;/p&gt;&#xD;&#xA;&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>

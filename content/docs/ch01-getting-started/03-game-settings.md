@@ -1,8 +1,9 @@
 ---
-title: 1.3 游戏设置
+title: 菜单与游戏设置
 weight: 3
 type: docs
 ---
+
 
 # 1.3 游戏设置
 

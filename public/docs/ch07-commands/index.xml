@@ -12,39 +12,46 @@
 		
 			<atom:link href="http://localhost:1313/docs/ch07-commands/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>7.1 基础命令</title>
+				<title>基础命令语法</title>
 				<link>http://localhost:1313/docs/ch07-commands/01-basic-commands.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch07-commands/01-basic-commands.html</guid>
 				<description>&lt;h1 id=&#34;71-基础命令&#34;&gt;7.1 基础命令&lt;a class=&#34;anchor&#34; href=&#34;#71-%e5%9f%ba%e7%a1%80%e5%91%bd%e4%bb%a4&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;常用命令的语法与用法。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>7.2 指令方块</title>
+				<title>命令方块进阶</title>
 				<link>http://localhost:1313/docs/ch07-commands/02-command-blocks.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch07-commands/02-command-blocks.html</guid>
 				<description>&lt;h1 id=&#34;72-指令方块&#34;&gt;7.2 指令方块&lt;a class=&#34;anchor&#34; href=&#34;#72-%e6%8c%87%e4%bb%a4%e6%96%b9%e5%9d%97&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;指令方块的使用方法与实战案例。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>7.3 数据包</title>
+				<title>数据包 (Data Packs)</title>
 				<link>http://localhost:1313/docs/ch07-commands/03-datapacks.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch07-commands/03-datapacks.html</guid>
 				<description>&lt;h1 id=&#34;73-数据包&#34;&gt;7.3 数据包&lt;a class=&#34;anchor&#34; href=&#34;#73-%e6%95%b0%e6%8d%ae%e5%8c%85&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;数据包制作入门，自定义合成与进度。&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>7.4 常用命令速查表</title>
+				<title>常用实用命令参考</title>
 				<link>http://localhost:1313/docs/ch07-commands/04-command-reference.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch07-commands/04-command-reference.html</guid>
 				<description>&lt;h1 id=&#34;74-常用命令速查表&#34;&gt;7.4 常用命令速查表&lt;a class=&#34;anchor&#34; href=&#34;#74-%e5%b8%b8%e7%94%a8%e5%91%bd%e4%bb%a4%e9%80%9f%e6%9f%a5%e8%a1%a8&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>7.5 函数与数据包进阶</title>
+				<title>函数与高级应用</title>
 				<link>http://localhost:1313/docs/ch07-commands/05-functions-and-advanced.html</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/docs/ch07-commands/05-functions-and-advanced.html</guid>
 				<description>&lt;h1 id=&#34;75-函数与数据包进阶&#34;&gt;7.5 函数与数据包进阶&lt;a class=&#34;anchor&#34; href=&#34;#75-%e5%87%bd%e6%95%b0%e4%b8%8e%e6%95%b0%e6%8d%ae%e5%8c%85%e8%bf%9b%e9%98%b6&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>自定义地图制作与发布</title>
+				<link>http://localhost:1313/docs/ch07-commands/06-map-making.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch07-commands/06-map-making.html</guid>
+				<description>&lt;h1 id=&#34;自定义地图制作与发布&#34;&gt;自定义地图制作与发布&lt;a class=&#34;anchor&#34; href=&#34;#%e8%87%aa%e5%ae%9a%e4%b9%89%e5%9c%b0%e5%9b%be%e5%88%b6%e4%bd%9c%e4%b8%8e%e5%8f%91%e5%b8%83&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;（此处为占位内容，待后续完善）&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>

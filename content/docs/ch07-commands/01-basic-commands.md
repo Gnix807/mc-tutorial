@@ -1,8 +1,9 @@
 ---
-title: 7.1 基础命令
+title: 基础命令语法
 weight: 1
 type: docs
 ---
+
 
 # 7.1 基础命令
 

@@ -26,33 +26,33 @@ type: docs
 ### 第二章 · 生存指南
 
 -   [2.1 第一天]({{< relref "/docs/ch02-survival/01-first-day" >}})——从零开始的生存模式入门
--   [2.2 采集与合成]({{< relref "/docs/ch02-survival/02-gathering-and-crafting" >}})——资源采集、工具制作与合成系统
--   [2.3 采矿技术]({{< relref "/docs/ch02-survival/03-mining" >}})——高效挖矿技巧与矿石分布规律
--   [2.4 农牧养殖]({{< relref "/docs/ch02-survival/04-farming" >}})——农作物种植与动物养殖系统
--   [2.5 村民与交易]({{< relref "/docs/ch02-survival/05-villagers" >}})——村民职业、交易系统与打折机制
--   [2.6 战斗与探索]({{< relref "/docs/ch02-survival/03-combat-and-exploration" >}})——战斗技巧、地图探索与结构寻宝
--   [2.7 附魔与药水]({{< relref "/docs/ch02-survival/07-enchanting" >}})——附魔系统、药水酿造与状态效果
--   [2.8 下界与末地]({{< relref "/docs/ch02-survival/04-nether-and-end" >}})——两个特殊维度的生存指南
+-   [2.2 采集与合成]({{< relref "/docs/ch02-survival/04-gathering-and-crafting" >}})——资源采集、工具制作与合成系统
+-   [2.3 采矿技术]({{< relref "/docs/ch02-survival/05-mining" >}})——高效挖矿技巧与矿石分布规律
+-   [2.4 农牧养殖]({{< relref "/docs/ch02-survival/07-farming" >}})——农作物种植与动物养殖系统
+-   [2.5 村民与交易]({{< relref "/docs/ch02-survival/08-villagers" >}})——村民职业、交易系统与打折机制
+-   [2.6 战斗与探索]({{< relref "/docs/ch02-survival/06-combat-and-exploration" >}})——战斗技巧、地图探索与结构寻宝
+-   [2.7 附魔与药水]({{< relref "/docs/ch02-survival/09-enchanting" >}})——附魔系统、药水酿造与状态效果
+-   [2.8 下界与末地]({{< relref "/docs/ch02-survival/10-nether" >}})——两个特殊维度的生存指南
 
 ### 第三章 · 建造美学
 
 -   [3.1 建筑基础]({{< relref "/docs/ch03-building/01-basics" >}})——配色、比例、层次等核心建筑原则
--   [3.2 风格与设计]({{< relref "/docs/ch03-building/02-styles" >}})——中世纪、现代、东方等建筑风格入门
--   [3.3 地形改造]({{< relref "/docs/ch03-building/03-terraforming" >}})——地形塑造与环境美化技巧
--   [3.4 实用家具]({{< relref "/docs/ch03-building/04-furniture" >}})——用原版方块制作桌椅、沙发等家具
--   [3.5 屋顶与细节]({{< relref "/docs/ch03-building/05-roofs-and-details" >}})——屋顶造型设计与建筑细节装饰
--   [3.6 调色板与材料]({{< relref "/docs/ch03-building/06-palette-and-materials" >}})——方块配色理论与材料选择指南
+-   [3.2 风格与设计]({{< relref "/docs/ch03-building/03-styles" >}})——中世纪、现代、东方等建筑风格入门
+-   [3.3 地形改造]({{< relref "/docs/ch03-building/06-terraforming" >}})——地形塑造与环境美化技巧
+-   [3.4 实用家具]({{< relref "/docs/ch03-building/05-furniture" >}})——用原版方块制作桌椅、沙发等家具
+-   [3.5 屋顶与细节]({{< relref "/docs/ch03-building/04-roofs-and-details" >}})——屋顶造型设计与建筑细节装饰
+-   [3.6 调色板与材料]({{< relref "/docs/ch03-building/02-palette-and-materials" >}})——方块配色理论与材料选择指南
 -   [3.7 水下与特殊环境建筑]({{< relref "/docs/ch03-building/07-underwater-and-special" >}})——水下、下界、末地等特殊环境建造
 
 ### 第四章 · 红石工程
 
 -   [4.1 红石基础]({{< relref "/docs/ch04-redstone/01-basics" >}})——红石元件的种类与基本用法
 -   [4.2 逻辑电路]({{< relref "/docs/ch04-redstone/02-logic-circuits" >}})——用红石搭建逻辑门与简单计算器
--   [4.3 自动化农场]({{< relref "/docs/ch04-redstone/03-auto-farms" >}})——各类资源的自动化生产方案
--   [4.4 计时器与时钟]({{< relref "/docs/ch04-redstone/04-timers-and-clocks" >}})——红石计时器、脉冲发生器与时钟电路
--   [4.5 活塞机械]({{< relref "/docs/ch04-redstone/05-piston-machines" >}})——活塞门、飞行器与方块推动技巧
--   [4.6 存储与分类系统]({{< relref "/docs/ch04-redstone/06-storage-and-sorting" >}})——自动物品分类与仓库管理
--   [4.7 红石进阶项目]({{< relref "/docs/ch04-redstone/07-advanced-projects" >}})——计算器、密码门等综合项目实战
+-   [4.3 自动化农场]({{< relref "/docs/ch04-redstone/06-auto-farms" >}})——各类资源的自动化生产方案
+-   [4.4 计时器与时钟]({{< relref "/docs/ch04-redstone/02-logic-circuits" >}})——红石计时器、脉冲发生器与时钟电路
+-   [4.5 活塞机械]({{< relref "/docs/ch04-redstone/03-piston-machines" >}})——活塞门、飞行器与方块推动技巧
+-   [4.6 存储与分类系统]({{< relref "/docs/ch04-redstone/05-storage-and-sorting" >}})——自动物品分类与仓库管理
+-   [4.7 红石进阶项目]({{< relref "/docs/ch04-redstone/08-advanced-projects" >}})——计算器、密码门等综合项目实战
 
 ### 第五章 · 服务器与联机
 

@@ -1,8 +1,9 @@
 ---
-title: 6.3 推荐模组
+title: 精品模组推荐
 weight: 3
 type: docs
 ---
+
 
 # 6.3 推荐模组
 

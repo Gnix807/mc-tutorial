@@ -1,8 +1,9 @@
 ---
-title: 1.2 启动器与版本
+title: 启动器与版本选择
 weight: 2
 type: docs
 ---
+
 
 # 1.2 启动器与版本
 

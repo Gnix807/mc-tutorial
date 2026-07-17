@@ -1,8 +1,9 @@
 ---
-title: 1.1 购买与安装
+title: 购买与安装
 weight: 1
 type: docs
 ---
+
 
 # 1.1 购买与安装
 

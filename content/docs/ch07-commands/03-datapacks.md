@@ -1,8 +1,9 @@
 ---
-title: 7.3 数据包
+title: 数据包 (Data Packs)
 weight: 3
 type: docs
 ---
+
 
 # 7.3 数据包
 
