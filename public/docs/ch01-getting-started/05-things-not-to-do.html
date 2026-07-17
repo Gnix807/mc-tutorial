@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme · MC 教程
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="新手不该做的事#在初次游玩 Minecraft 时，缺乏经验可能会让你遇到存档损坏、游戏崩溃或账号安全等问题。为了减少这些情况的发生，我们为你整理了一些强烈建议不要做的行为，帮助你更顺畅、安全地体验游戏。
+说明：本文内容参考自 Minecraft Wiki - 不该做的事 ，为了方便新手理解，我们对内容进行了精简，重点保留了最核心的生存与安全建议。
+1. 账号与游戏安全#❌ 轻易泄露账号敏感信息#切勿将自己的账号邮箱、密码、验证码等信息告知不受信任的陌生人。否则账号可能被盗，导致他人使用你的账号进行游戏、个人隐私泄露，甚至因违规行为被封禁。
+❌ 盲目相信「免费正版账号」#对于打着「免费正版账号」旗号的信息需要保持高度警惕。这类信息背后通常隐藏着来路不明的网站或恶意软件，极易导致你的设备感染病毒或隐私泄露。建议始终从官方渠道获取 Minecraft。
+❌ 使用来源不明的启动器#一些来路不明的第三方启动器可能暗藏安全威胁。如果想要安全游玩，请尽量使用官方启动器或知名的、开源受信任的第三方启动器。
+2. 避免游戏卡顿与崩溃#❌ 堆积海量实体与方块实体#游戏中的每一只动物、怪物、掉落物（实体）以及箱子、漏斗（方块实体）都会占用电脑的渲染资源。
+不要在一个极小的区域内繁殖几百只牛羊或鸡。 不要在同一个地方堆放成百上千个杂乱的箱子。 过度堆积会导致游戏帧率剧降，甚至直接崩溃。在规划农场和仓库时，请适度分散它们的位置。 ❌ 随意制造大规模爆炸#大规模的 TNT 爆炸（比如一次性点燃数百个 TNT）需要进行极其庞大的物理运算。这会导致游戏画面完全卡死，如果设备耐热性较差或配置较低，甚至可能对电脑硬件造成损伤。
+❌ 盲目制作高频红石装置#红石电路非常有趣，但高频率闪烁的红石线路（如没有限制的高频时钟电路）或不断激活大量发射器的装置会占用极大的系统资源。在多人服务器中，这种行为通常被称为「卡服」，严重时可能会导致你被管理员封禁。
+3. 游戏模组与版本管理#❌ 随意加载来路不明的模组 (Mod) 与资源包#模组和资源包能极大地丰富游戏体验，但包含恶意代码的模组会导致游戏崩溃、存档损坏，甚至威胁电脑安全。请务必从 CurseForge、Modrinth 等知名且可信赖的社区平台下载资源。
+❌ 用不同版本的游戏互相串开存档#Minecraft 的版本更新往往伴随着底层代码和方块数据的重写。
+不要用旧版本的游戏去打开新版本的存档（比如用 1.18 打开 1.20 的存档），这几乎一定会导致原有的方块和地形丢失或损坏。 在跨版本升级存档前，一定要先备份你的世界！ 4. 命令与作弊（进阶提示）#❌ 滥用循环型命令方块#紫色的「循环型命令方块」每秒会执行 20 次内部的命令。如果你在里面错误地输入了针对玩家的致死命令（例如 /kill @a），你将会陷入无限死亡的循环，甚至连打开聊天框自救的时间都没有！在使用这类方块前，一定要反复确认命令的正确性。
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#5c9a3a">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#3a6622">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/ch01-getting-started/05-things-not-to-do.html">
+	<meta property="og:site_name" content="Minecraft 从入门到精通">
+	<meta property="og:title" content="新手不该做的事">
+	<meta property="og:description" content="新手不该做的事#在初次游玩 Minecraft 时，缺乏经验可能会让你遇到存档损坏、游戏崩溃或账号安全等问题。为了减少这些情况的发生，我们为你整理了一些强烈建议不要做的行为，帮助你更顺畅、安全地体验游戏。
+说明：本文内容参考自 Minecraft Wiki - 不该做的事 ，为了方便新手理解，我们对内容进行了精简，重点保留了最核心的生存与安全建议。
+1. 账号与游戏安全#❌ 轻易泄露账号敏感信息#切勿将自己的账号邮箱、密码、验证码等信息告知不受信任的陌生人。否则账号可能被盗，导致他人使用你的账号进行游戏、个人隐私泄露，甚至因违规行为被封禁。
+❌ 盲目相信「免费正版账号」#对于打着「免费正版账号」旗号的信息需要保持高度警惕。这类信息背后通常隐藏着来路不明的网站或恶意软件，极易导致你的设备感染病毒或隐私泄露。建议始终从官方渠道获取 Minecraft。
+❌ 使用来源不明的启动器#一些来路不明的第三方启动器可能暗藏安全威胁。如果想要安全游玩，请尽量使用官方启动器或知名的、开源受信任的第三方启动器。
+2. 避免游戏卡顿与崩溃#❌ 堆积海量实体与方块实体#游戏中的每一只动物、怪物、掉落物（实体）以及箱子、漏斗（方块实体）都会占用电脑的渲染资源。
+不要在一个极小的区域内繁殖几百只牛羊或鸡。 不要在同一个地方堆放成百上千个杂乱的箱子。 过度堆积会导致游戏帧率剧降，甚至直接崩溃。在规划农场和仓库时，请适度分散它们的位置。 ❌ 随意制造大规模爆炸#大规模的 TNT 爆炸（比如一次性点燃数百个 TNT）需要进行极其庞大的物理运算。这会导致游戏画面完全卡死，如果设备耐热性较差或配置较低，甚至可能对电脑硬件造成损伤。
+❌ 盲目制作高频红石装置#红石电路非常有趣，但高频率闪烁的红石线路（如没有限制的高频时钟电路）或不断激活大量发射器的装置会占用极大的系统资源。在多人服务器中，这种行为通常被称为「卡服」，严重时可能会导致你被管理员封禁。
+3. 游戏模组与版本管理#❌ 随意加载来路不明的模组 (Mod) 与资源包#模组和资源包能极大地丰富游戏体验，但包含恶意代码的模组会导致游戏崩溃、存档损坏，甚至威胁电脑安全。请务必从 CurseForge、Modrinth 等知名且可信赖的社区平台下载资源。
+❌ 用不同版本的游戏互相串开存档#Minecraft 的版本更新往往伴随着底层代码和方块数据的重写。
+不要用旧版本的游戏去打开新版本的存档（比如用 1.18 打开 1.20 的存档），这几乎一定会导致原有的方块和地形丢失或损坏。 在跨版本升级存档前，一定要先备份你的世界！ 4. 命令与作弊（进阶提示）#❌ 滥用循环型命令方块#紫色的「循环型命令方块」每秒会执行 20 次内部的命令。如果你在里面错误地输入了针对玩家的致死命令（例如 /kill @a），你将会陷入无限死亡的循环，甚至连打开聊天框自救的时间都没有！在使用这类方块前，一定要反复确认命令的正确性。">
+	<meta property="og:locale" content="zh">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="docs">
+
+
+	<meta itemprop="name" content="新手不该做的事">
+	<meta itemprop="description" content="新手不该做的事#在初次游玩 Minecraft 时，缺乏经验可能会让你遇到存档损坏、游戏崩溃或账号安全等问题。为了减少这些情况的发生，我们为你整理了一些强烈建议不要做的行为，帮助你更顺畅、安全地体验游戏。
+说明：本文内容参考自 Minecraft Wiki - 不该做的事 ，为了方便新手理解，我们对内容进行了精简，重点保留了最核心的生存与安全建议。
+1. 账号与游戏安全#❌ 轻易泄露账号敏感信息#切勿将自己的账号邮箱、密码、验证码等信息告知不受信任的陌生人。否则账号可能被盗，导致他人使用你的账号进行游戏、个人隐私泄露，甚至因违规行为被封禁。
+❌ 盲目相信「免费正版账号」#对于打着「免费正版账号」旗号的信息需要保持高度警惕。这类信息背后通常隐藏着来路不明的网站或恶意软件，极易导致你的设备感染病毒或隐私泄露。建议始终从官方渠道获取 Minecraft。
+❌ 使用来源不明的启动器#一些来路不明的第三方启动器可能暗藏安全威胁。如果想要安全游玩，请尽量使用官方启动器或知名的、开源受信任的第三方启动器。
+2. 避免游戏卡顿与崩溃#❌ 堆积海量实体与方块实体#游戏中的每一只动物、怪物、掉落物（实体）以及箱子、漏斗（方块实体）都会占用电脑的渲染资源。
+不要在一个极小的区域内繁殖几百只牛羊或鸡。 不要在同一个地方堆放成百上千个杂乱的箱子。 过度堆积会导致游戏帧率剧降，甚至直接崩溃。在规划农场和仓库时，请适度分散它们的位置。 ❌ 随意制造大规模爆炸#大规模的 TNT 爆炸（比如一次性点燃数百个 TNT）需要进行极其庞大的物理运算。这会导致游戏画面完全卡死，如果设备耐热性较差或配置较低，甚至可能对电脑硬件造成损伤。
+❌ 盲目制作高频红石装置#红石电路非常有趣，但高频率闪烁的红石线路（如没有限制的高频时钟电路）或不断激活大量发射器的装置会占用极大的系统资源。在多人服务器中，这种行为通常被称为「卡服」，严重时可能会导致你被管理员封禁。
+3. 游戏模组与版本管理#❌ 随意加载来路不明的模组 (Mod) 与资源包#模组和资源包能极大地丰富游戏体验，但包含恶意代码的模组会导致游戏崩溃、存档损坏，甚至威胁电脑安全。请务必从 CurseForge、Modrinth 等知名且可信赖的社区平台下载资源。
+❌ 用不同版本的游戏互相串开存档#Minecraft 的版本更新往往伴随着底层代码和方块数据的重写。
+不要用旧版本的游戏去打开新版本的存档（比如用 1.18 打开 1.20 的存档），这几乎一定会导致原有的方块和地形丢失或损坏。 在跨版本升级存档前，一定要先备份你的世界！ 4. 命令与作弊（进阶提示）#❌ 滥用循环型命令方块#紫色的「循环型命令方块」每秒会执行 20 次内部的命令。如果你在里面错误地输入了针对玩家的致死命令（例如 /kill @a），你将会陷入无限死亡的循环，甚至连打开聊天框自救的时间都没有！在使用这类方块前，一定要反复确认命令的正确性。">
+	<meta itemprop="wordCount" content="72">
+
+<title>新手不该做的事 • Minecraft 从入门到精通</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/ch01-getting-started/05-things-not-to-do.html">
+<link rel="stylesheet" href="/book.min.64ab3279514b7f9a7b1ec50a47d8bc6f9bed31454a6363d9f98214862cb1a617.css" integrity="sha256-ZKsyeVFLf5p7HsUKR9i8b5vtMUVKY2PZ&#43;YIUhiyxphc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/custom.min.3f5cd638c1f32a12a56266d8c96d94495778d9f77367fca14c5be51dcec060b7.css" integrity="sha256-P1zWOMHzKhKlYmbYyW2USVd42fdzZ/yhTFvlHc7AYLc=" crossorigin="anonymous">
+  <script defer type="module" src="/zh.search.min.f3ba1fd5932e485971ee4ccadfa30ca061d154bce34cf8a63a020a0689fb22c6.js" integrity="sha256-87of1ZMuSFlx7kzK36MMoGHRVLzjTPimOgIKBon7IsY=" crossorigin="anonymous"></script>
+
+<script defer src="/lightbox.min.b995837a582ada0a114699e58df354f5feb5267b8ba089b2a2c8ac21783242ad.js" integrity="sha256-uZWDelgq2goRRpnljfNU9f61JnuLoImyosisIXgyQq0=" crossorigin="anonymous"></script>
+<script defer src="/theme-toggle.min.17d2b0e14e3e210244ce5d5afaa4b7603c579da4c11f197c77f156465295c14a.js" integrity="sha256-F9Kw4U4&#43;IQJEzl1a&#43;qS3YDxXnaTBHxl8d/FWRlKVwUo=" crossorigin="anonymous"></script>
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/index.html"><span>Minecraft 从入门到精通</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="搜索"
+    aria-label="搜索"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/preamble.html" class="">
+      序</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      基础入门</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/01-buy-and-install.html" class="">
+      购买与安装</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/02-launcher-and-versions.html" class="">
+      启动器与版本选择</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/03-game-settings.html" class="">
+      菜单与游戏设置</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/04-terminology.html" class="">
+      游戏术语与计量单位</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/05-things-not-to-do.html" class="active">
+      新手不该做的事</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      生存指南</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/01-gathering-and-crafting.html" class="">
+      资源收集与合成</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/02-hunger-and-health.html" class="">
+      饥饿与生命值管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/03-shelter-basics.html" class="">
+      庇护所选址与基础建造</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/04-first-day.html" class="">
+      生存第一天</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/05-mining.html" class="">
+      采矿技术与洞穴探索</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/06-combat-and-exploration.html" class="">
+      战斗与外出探险</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/07-farming.html" class="">
+      基础农业与畜牧</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/08-villagers.html" class="">
+      村庄机制与村民交易</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/09-enchanting.html" class="">
+      附魔与铁砧指南</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/10-nether.html" class="">
+      下界探险与快速旅行</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/11-the-end.html" class="">
+      完成冒险：击败末影龙</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      建造美学</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/01-basics.html" class="">
+      建筑术语与基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/02-palette-and-materials.html" class="">
+      最佳建筑材料与调色</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/03-styles.html" class="">
+      房屋类型与建筑风格</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/04-roofs-and-details.html" class="">
+      弧形屋顶与细节美化</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/05-furniture.html" class="">
+      家具与内饰</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/06-terraforming.html" class="">
+      地形改造与自然景观</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/07-underwater-and-special.html" class="">
+      水下建筑与特殊设计</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/08-megaprojects.html" class="">
+      巨型工程：大都市与过山车</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      红石工程</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/01-basics.html" class="">
+      基础红石元件</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/02-logic-circuits.html" class="">
+      逻辑门与时钟电路</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/03-piston-machines.html" class="">
+      活塞机械与隐藏门</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/04-minecarts-and-transport.html" class="">
+      矿车与物流系统</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/05-storage-and-sorting.html" class="">
+      物品分类与储存系统</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/06-auto-farms.html" class="">
+      自动化农场与刷怪塔</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/07-traps-and-defense.html" class="">
+      陷阱与防御工程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/08-advanced-projects.html" class="">
+      高级红石项目</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      服务器与联机</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/01-ways-to-connect.html" class="">
+      联机方式概述</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/02-server-setup.html" class="">
+      服务器搭建</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/03-realms.html" class="">
+      Realms 领域</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/04-server-management.html" class="">
+      服务器管理与指令</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/05-pvp.html" class="">
+      PvP 技巧与战术</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/06-anti-griefing.html" class="">
+      防破坏与权限管理</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      模组与资源包</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/01-mod-loaders.html" class="">
+      模组加载器安装</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/02-shaders-and-textures.html" class="">
+      光影与资源包</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/03-recommended-mods.html" class="">
+      精品模组推荐</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/04-optimization-and-qol.html" class="">
+      性能优化与辅助功能</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/05-modpacks.html" class="">
+      整合包游玩指南</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/06-bedrock-addons.html" class="">
+      基岩版附加包 (Add-ons)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      命令与指令方块</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/01-basic-commands.html" class="">
+      基础命令语法</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/02-command-blocks.html" class="">
+      命令方块进阶</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/03-datapacks.html" class="">
+      数据包 (Data Packs)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/04-command-reference.html" class="">
+      常用实用命令参考</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/05-functions-and-advanced.html" class="">
+      函数与高级应用</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/06-map-making.html" class="">
+      自定义地图制作与发布</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/appendix.html" class="">
+      附录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/afterwords.html" class="">
+      后记</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>新手不该做的事</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#新手不该做的事">新手不该做的事</a>
+      <ul>
+        <li><a href="#1-账号与游戏安全">1. 账号与游戏安全</a>
+          <ul>
+            <li><a href="#-轻易泄露账号敏感信息">❌ 轻易泄露账号敏感信息</a></li>
+            <li><a href="#-盲目相信免费正版账号">❌ 盲目相信「免费正版账号」</a></li>
+            <li><a href="#-使用来源不明的启动器">❌ 使用来源不明的启动器</a></li>
+          </ul>
+        </li>
+        <li><a href="#2-避免游戏卡顿与崩溃">2. 避免游戏卡顿与崩溃</a>
+          <ul>
+            <li><a href="#-堆积海量实体与方块实体">❌ 堆积海量实体与方块实体</a></li>
+            <li><a href="#-随意制造大规模爆炸">❌ 随意制造大规模爆炸</a></li>
+            <li><a href="#-盲目制作高频红石装置">❌ 盲目制作高频红石装置</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-游戏模组与版本管理">3. 游戏模组与版本管理</a>
+          <ul>
+            <li><a href="#-随意加载来路不明的模组-mod-与资源包">❌ 随意加载来路不明的模组 (Mod) 与资源包</a></li>
+            <li><a href="#-用不同版本的游戏互相串开存档">❌ 用不同版本的游戏互相串开存档</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-命令与作弊进阶提示">4. 命令与作弊（进阶提示）</a>
+          <ul>
+            <li><a href="#-滥用循环型命令方块">❌ 滥用循环型命令方块</a></li>
+            <li><a href="#-滥用超高等级魔咒">❌ 滥用超高等级魔咒</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="新手不该做的事">新手不该做的事<a class="anchor" href="#%e6%96%b0%e6%89%8b%e4%b8%8d%e8%af%a5%e5%81%9a%e7%9a%84%e4%ba%8b">#</a></h1>
+<p>在初次游玩 Minecraft 时，缺乏经验可能会让你遇到存档损坏、游戏崩溃或账号安全等问题。为了减少这些情况的发生，我们为你整理了一些<strong>强烈建议不要做</strong>的行为，帮助你更顺畅、安全地体验游戏。</p>
+<blockquote class='book-hint note'>
+<p><strong>说明</strong>：本文内容参考自 <a href="https://zh.minecraft.wiki/w/Tutorial:%E4%B8%8D%E8%AF%A5%E5%81%9A%E7%9A%84%E4%BA%8B" target="_blank" rel="noopener noreferrer" class="ext-link">
+  <img class="ext-link-icon" src="https://icons.duckduckgo.com/ip3/zh.minecraft.wiki.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
+  Minecraft Wiki - 不该做的事
+</a>，为了方便新手理解，我们对内容进行了精简，重点保留了最核心的生存与安全建议。</p></blockquote><hr>
+<h2 id="1-账号与游戏安全">1. 账号与游戏安全<a class="anchor" href="#1-%e8%b4%a6%e5%8f%b7%e4%b8%8e%e6%b8%b8%e6%88%8f%e5%ae%89%e5%85%a8">#</a></h2>
+<h3 id="-轻易泄露账号敏感信息">❌ 轻易泄露账号敏感信息<a class="anchor" href="#-%e8%bd%bb%e6%98%93%e6%b3%84%e9%9c%b2%e8%b4%a6%e5%8f%b7%e6%95%8f%e6%84%9f%e4%bf%a1%e6%81%af">#</a></h3>
+<p>切勿将自己的账号邮箱、密码、验证码等信息告知不受信任的陌生人。否则账号可能被盗，导致他人使用你的账号进行游戏、个人隐私泄露，甚至因违规行为被封禁。</p>
+<h3 id="-盲目相信免费正版账号">❌ 盲目相信「免费正版账号」<a class="anchor" href="#-%e7%9b%b2%e7%9b%ae%e7%9b%b8%e4%bf%a1%e5%85%8d%e8%b4%b9%e6%ad%a3%e7%89%88%e8%b4%a6%e5%8f%b7">#</a></h3>
+<p>对于打着「免费正版账号」旗号的信息需要保持高度警惕。这类信息背后通常隐藏着来路不明的网站或恶意软件，极易导致你的设备感染病毒或隐私泄露。建议始终从官方渠道获取 Minecraft。</p>
+<h3 id="-使用来源不明的启动器">❌ 使用来源不明的启动器<a class="anchor" href="#-%e4%bd%bf%e7%94%a8%e6%9d%a5%e6%ba%90%e4%b8%8d%e6%98%8e%e7%9a%84%e5%90%af%e5%8a%a8%e5%99%a8">#</a></h3>
+<p>一些来路不明的第三方启动器可能暗藏安全威胁。如果想要安全游玩，请尽量使用官方启动器或知名的、开源受信任的第三方启动器。</p>
+<hr>
+<h2 id="2-避免游戏卡顿与崩溃">2. 避免游戏卡顿与崩溃<a class="anchor" href="#2-%e9%81%bf%e5%85%8d%e6%b8%b8%e6%88%8f%e5%8d%a1%e9%a1%bf%e4%b8%8e%e5%b4%a9%e6%ba%83">#</a></h2>
+<h3 id="-堆积海量实体与方块实体">❌ 堆积海量实体与方块实体<a class="anchor" href="#-%e5%a0%86%e7%a7%af%e6%b5%b7%e9%87%8f%e5%ae%9e%e4%bd%93%e4%b8%8e%e6%96%b9%e5%9d%97%e5%ae%9e%e4%bd%93">#</a></h3>
+<p>游戏中的每一只动物、怪物、掉落物（实体）以及箱子、漏斗（方块实体）都会占用电脑的渲染资源。</p>
+<ul>
+<li><strong>不要</strong>在一个极小的区域内繁殖几百只牛羊或鸡。</li>
+<li><strong>不要</strong>在同一个地方堆放成百上千个杂乱的箱子。
+过度堆积会导致游戏帧率剧降，甚至直接崩溃。在规划农场和仓库时，请适度分散它们的位置。</li>
+</ul>
+<h3 id="-随意制造大规模爆炸">❌ 随意制造大规模爆炸<a class="anchor" href="#-%e9%9a%8f%e6%84%8f%e5%88%b6%e9%80%a0%e5%a4%a7%e8%a7%84%e6%a8%a1%e7%88%86%e7%82%b8">#</a></h3>
+<p>大规模的 TNT 爆炸（比如一次性点燃数百个 TNT）需要进行极其庞大的物理运算。这会导致游戏画面完全卡死，如果设备耐热性较差或配置较低，甚至可能对电脑硬件造成损伤。</p>
+<h3 id="-盲目制作高频红石装置">❌ 盲目制作高频红石装置<a class="anchor" href="#-%e7%9b%b2%e7%9b%ae%e5%88%b6%e4%bd%9c%e9%ab%98%e9%a2%91%e7%ba%a2%e7%9f%b3%e8%a3%85%e7%bd%ae">#</a></h3>
+<p>红石电路非常有趣，但高频率闪烁的红石线路（如没有限制的高频时钟电路）或不断激活大量发射器的装置会占用极大的系统资源。在多人服务器中，这种行为通常被称为「卡服」，严重时可能会导致你被管理员封禁。</p>
+<hr>
+<h2 id="3-游戏模组与版本管理">3. 游戏模组与版本管理<a class="anchor" href="#3-%e6%b8%b8%e6%88%8f%e6%a8%a1%e7%bb%84%e4%b8%8e%e7%89%88%e6%9c%ac%e7%ae%a1%e7%90%86">#</a></h2>
+<h3 id="-随意加载来路不明的模组-mod-与资源包">❌ 随意加载来路不明的模组 (Mod) 与资源包<a class="anchor" href="#-%e9%9a%8f%e6%84%8f%e5%8a%a0%e8%bd%bd%e6%9d%a5%e8%b7%af%e4%b8%8d%e6%98%8e%e7%9a%84%e6%a8%a1%e7%bb%84-mod-%e4%b8%8e%e8%b5%84%e6%ba%90%e5%8c%85">#</a></h3>
+<p>模组和资源包能极大地丰富游戏体验，但包含恶意代码的模组会导致游戏崩溃、存档损坏，甚至威胁电脑安全。请务必从 <strong>CurseForge</strong>、<strong>Modrinth</strong> 等知名且可信赖的社区平台下载资源。</p>
+<h3 id="-用不同版本的游戏互相串开存档">❌ 用不同版本的游戏互相串开存档<a class="anchor" href="#-%e7%94%a8%e4%b8%8d%e5%90%8c%e7%89%88%e6%9c%ac%e7%9a%84%e6%b8%b8%e6%88%8f%e4%ba%92%e7%9b%b8%e4%b8%b2%e5%bc%80%e5%ad%98%e6%a1%a3">#</a></h3>
+<p>Minecraft 的版本更新往往伴随着底层代码和方块数据的重写。</p>
+<ul>
+<li><strong>不要</strong>用旧版本的游戏去打开新版本的存档（比如用 1.18 打开 1.20 的存档），这几乎一定会导致原有的方块和地形丢失或损坏。</li>
+<li>在跨版本升级存档前，<strong>一定要先备份你的世界</strong>！</li>
+</ul>
+<hr>
+<h2 id="4-命令与作弊进阶提示">4. 命令与作弊（进阶提示）<a class="anchor" href="#4-%e5%91%bd%e4%bb%a4%e4%b8%8e%e4%bd%9c%e5%bc%8a%e8%bf%9b%e9%98%b6%e6%8f%90%e7%a4%ba">#</a></h2>
+<h3 id="-滥用循环型命令方块">❌ 滥用循环型命令方块<a class="anchor" href="#-%e6%bb%a5%e7%94%a8%e5%be%aa%e7%8e%af%e5%9e%8b%e5%91%bd%e4%bb%a4%e6%96%b9%e5%9d%97">#</a></h3>
+<p>紫色的「循环型命令方块」每秒会执行 20 次内部的命令。如果你在里面错误地输入了针对玩家的致死命令（例如 <code>/kill @a</code>），你将会陷入无限死亡的循环，甚至连打开聊天框自救的时间都没有！在使用这类方块前，一定要反复确认命令的正确性。</p>
+<h3 id="-滥用超高等级魔咒">❌ 滥用超高等级魔咒<a class="anchor" href="#-%e6%bb%a5%e7%94%a8%e8%b6%85%e9%ab%98%e7%ad%89%e7%ba%a7%e9%ad%94%e5%92%92">#</a></h3>
+<p>通过命令获取等级高达 255 级的「抢夺」或「时运」魔咒看似很爽，但当你击杀一只僵尸或挖开一块钻石矿时，游戏瞬间生成的海量掉落物足以让你的游戏当场崩溃。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/ch01-getting-started/04-terminology.html" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="上一页" />
+        <span>游戏术语与计量单位</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/ch02-survival/01-gathering-and-crafting.html" class="flex align-center">
+        <span>资源收集与合成</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="下一页" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#新手不该做的事">新手不该做的事</a>
+      <ul>
+        <li><a href="#1-账号与游戏安全">1. 账号与游戏安全</a>
+          <ul>
+            <li><a href="#-轻易泄露账号敏感信息">❌ 轻易泄露账号敏感信息</a></li>
+            <li><a href="#-盲目相信免费正版账号">❌ 盲目相信「免费正版账号」</a></li>
+            <li><a href="#-使用来源不明的启动器">❌ 使用来源不明的启动器</a></li>
+          </ul>
+        </li>
+        <li><a href="#2-避免游戏卡顿与崩溃">2. 避免游戏卡顿与崩溃</a>
+          <ul>
+            <li><a href="#-堆积海量实体与方块实体">❌ 堆积海量实体与方块实体</a></li>
+            <li><a href="#-随意制造大规模爆炸">❌ 随意制造大规模爆炸</a></li>
+            <li><a href="#-盲目制作高频红石装置">❌ 盲目制作高频红石装置</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-游戏模组与版本管理">3. 游戏模组与版本管理</a>
+          <ul>
+            <li><a href="#-随意加载来路不明的模组-mod-与资源包">❌ 随意加载来路不明的模组 (Mod) 与资源包</a></li>
+            <li><a href="#-用不同版本的游戏互相串开存档">❌ 用不同版本的游戏互相串开存档</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-命令与作弊进阶提示">4. 命令与作弊（进阶提示）</a>
+          <ul>
+            <li><a href="#-滥用循环型命令方块">❌ 滥用循环型命令方块</a></li>
+            <li><a href="#-滥用超高等级魔咒">❌ 滥用超高等级魔咒</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

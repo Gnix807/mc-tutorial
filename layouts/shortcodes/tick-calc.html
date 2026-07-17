@@ -1,0 +1,54 @@
+<div class="tick-calc-container" style="background: var(--hugo-theme-color-panel, #f8f9fa); border-radius: 8px; padding: 20px; border: 1px solid var(--hugo-theme-color-border, #ddd); margin-bottom: 20px;">
+  <h4 style="margin-top: 0; margin-bottom: 15px;">互动小工具：游戏刻计算器</h4>
+  <p style="font-size: 0.9em; opacity: 0.8; margin-top: -10px;">在下方任意输入框输入数值，其他框会自动换算：</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
+    <div style="display: flex; flex-direction: column;">
+      <label for="ticks" style="font-size: 0.85em; font-weight: bold; margin-bottom: 5px;">游戏刻 (Ticks)</label>
+      <input type="number" id="ticks" oninput="calcTicks(this.value, 'ticks')" placeholder="例如: 20" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 120px; font-family: monospace;">
+    </div>
+    <span style="font-weight: bold; color: #888; align-self: flex-end; margin-bottom: 8px;">=</span>
+    <div style="display: flex; flex-direction: column;">
+      <label for="seconds" style="font-size: 0.85em; font-weight: bold; margin-bottom: 5px;">现实时间（秒）</label>
+      <input type="number" id="seconds" oninput="calcTicks(this.value, 'seconds')" placeholder="例如: 1" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 120px; font-family: monospace;">
+    </div>
+    <span style="font-weight: bold; color: #888; align-self: flex-end; margin-bottom: 8px;">=</span>
+    <div style="display: flex; flex-direction: column;">
+      <label for="minutes" style="font-size: 0.85em; font-weight: bold; margin-bottom: 5px;">现实时间（分钟）</label>
+      <input type="number" id="minutes" oninput="calcTicks(this.value, 'minutes')" placeholder="例如: 0.016" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 120px; font-family: monospace;">
+    </div>
+    <span style="font-weight: bold; color: #888; align-self: flex-end; margin-bottom: 8px;">=</span>
+    <div style="display: flex; flex-direction: column;">
+      <label for="mc_days" style="font-size: 0.85em; font-weight: bold; margin-bottom: 5px;">游戏内时间（天）</label>
+      <input type="number" id="mc_days" oninput="calcTicks(this.value, 'mc_days')" placeholder="例如: 0.0008" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 120px; font-family: monospace;">
+    </div>
+  </div>
+</div>
+
+<script>
+function calcTicks(value, source) {
+    const val = parseFloat(value);
+    if (isNaN(val)) {
+        document.getElementById('ticks').value = '';
+        document.getElementById('seconds').value = '';
+        document.getElementById('minutes').value = '';
+        document.getElementById('mc_days').value = '';
+        return;
+    }
+    
+    let ticks = 0;
+    if (source === 'ticks') {
+        ticks = val;
+    } else if (source === 'seconds') {
+        ticks = val * 20;
+    } else if (source === 'minutes') {
+        ticks = val * 1200;
+    } else if (source === 'mc_days') {
+        ticks = val * 24000;
+    }
+    
+    if (source !== 'ticks') document.getElementById('ticks').value = (Math.round(ticks * 100) / 100).toString();
+    if (source !== 'seconds') document.getElementById('seconds').value = (Math.round((ticks / 20) * 100) / 100).toString();
+    if (source !== 'minutes') document.getElementById('minutes').value = (Math.round((ticks / 1200) * 10000) / 10000).toString();
+    if (source !== 'mc_days') document.getElementById('mc_days').value = (Math.round((ticks / 24000) * 100000) / 100000).toString();
+}
+</script>

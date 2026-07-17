@@ -9,7 +9,7 @@ https://github.com/alex-shpak/hugo-book
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="采集与合成#基于版本：Java 版 26.2 · 生存模式核心机制
-在度过了惊心动魄的第一天后，你已经建立了一个临时的庇护所。接下来，你需要正式迈入 Minecraft 的核心体验——采集（Mine）与合成（Craft）。这两大系统环环相扣，构成了游戏最基础的进度循环。
+Minecraft 的核心体验就藏在名字里——采集（Mine）与合成（Craft）。所以 Minecraft 也可以翻译为合成天下这两大系统环环相扣，构成了游戏最基础的进度循环。
 本节将事无巨细地为你拆解物品管理、工具制作、材质等级、方块采集以及熔炉烧炼的所有细节，带你轻松度过生存前期。
 物品栏与背包管理微操指南#在游戏中按下 E 键可以打开你的个人物品栏（背包）。作为一名合格的冒险家，熟练掌握以下鼠标和键盘的快捷交互技巧，能为你节省大量的整理时间：
 1. 鼠标点击与拖拽技巧#左键单击物品：拿起这格物品的全部数量。 右键单击物品：拿起这格物品的一半数量（如果是奇数，则拿起多的一半。例如 5 个物品，右键会拿起 3 个，留下 2 个）。 手持物品时在空白格点右键：只在目标空格中放下 1 个物品。这在手动摆放合成配方时非常实用。 快速均分（左键拖拽）：手持一叠物品（如 64 个木板）时，按住左键并在多个空格上拖动，物品会被平均分配到你扫过的每一个格子里。 各放一个（右键拖拽）：手持一叠物品时，按住右键并在多个空格上拖动，则会在每个格子里各留下 1 个物品。这是制作工作台、熔炉或箱子等空心配方时的「神技」。 合并同类（双击）：双击任意一个物品，可以将散落在背包各个格子里相同的物品瞬间吸附并堆叠到这一格中（最高达到 64 个）。 2. 键盘快捷键（事半功倍）#Shift &#43; 左键单击：快速转移。如果打开了箱子或工作台，这会把物品在「背包」与「容器/工作台」之间瞬间传送；如果只是单独打开背包，这会在「快捷栏（屏幕最下方 9 格）」与「背包上方 27 格」之间快速切换。 数字键 1 - 9：鼠标悬停在背包内任意物品上，按下键盘上的数字键，该物品会瞬间与你快捷栏对应槽位的物品对调。 Q 键（丢弃）：鼠标悬停在物品上按 Q 键，可丢弃 1 个物品；按住 Ctrl &#43; Q 键，则可一次性丢弃该格的所有物品。 F 键（副手）：鼠标悬停在任意物品上按下 F 键，该物品会放置到你的副手槽中。在主手拿着盾牌或火把时，副手可以拿着食物，极大方便地底探险。 什么是堆叠上限（Stack Size）？
@@ -22,7 +22,7 @@ https://github.com/alex-shpak/hugo-book
 	<meta property="og:site_name" content="Minecraft 从入门到精通">
 	<meta property="og:title" content="资源收集与合成">
 	<meta property="og:description" content="采集与合成#基于版本：Java 版 26.2 · 生存模式核心机制
-在度过了惊心动魄的第一天后，你已经建立了一个临时的庇护所。接下来，你需要正式迈入 Minecraft 的核心体验——采集（Mine）与合成（Craft）。这两大系统环环相扣，构成了游戏最基础的进度循环。
+Minecraft 的核心体验就藏在名字里——采集（Mine）与合成（Craft）。所以 Minecraft 也可以翻译为合成天下这两大系统环环相扣，构成了游戏最基础的进度循环。
 本节将事无巨细地为你拆解物品管理、工具制作、材质等级、方块采集以及熔炉烧炼的所有细节，带你轻松度过生存前期。
 物品栏与背包管理微操指南#在游戏中按下 E 键可以打开你的个人物品栏（背包）。作为一名合格的冒险家，熟练掌握以下鼠标和键盘的快捷交互技巧，能为你节省大量的整理时间：
 1. 鼠标点击与拖拽技巧#左键单击物品：拿起这格物品的全部数量。 右键单击物品：拿起这格物品的一半数量（如果是奇数，则拿起多的一半。例如 5 个物品，右键会拿起 3 个，留下 2 个）。 手持物品时在空白格点右键：只在目标空格中放下 1 个物品。这在手动摆放合成配方时非常实用。 快速均分（左键拖拽）：手持一叠物品（如 64 个木板）时，按住左键并在多个空格上拖动，物品会被平均分配到你扫过的每一个格子里。 各放一个（右键拖拽）：手持一叠物品时，按住右键并在多个空格上拖动，则会在每个格子里各留下 1 个物品。这是制作工作台、熔炉或箱子等空心配方时的「神技」。 合并同类（双击）：双击任意一个物品，可以将散落在背包各个格子里相同的物品瞬间吸附并堆叠到这一格中（最高达到 64 个）。 2. 键盘快捷键（事半功倍）#Shift &#43; 左键单击：快速转移。如果打开了箱子或工作台，这会把物品在「背包」与「容器/工作台」之间瞬间传送；如果只是单独打开背包，这会在「快捷栏（屏幕最下方 9 格）」与「背包上方 27 格」之间快速切换。 数字键 1 - 9：鼠标悬停在背包内任意物品上，按下键盘上的数字键，该物品会瞬间与你快捷栏对应槽位的物品对调。 Q 键（丢弃）：鼠标悬停在物品上按 Q 键，可丢弃 1 个物品；按住 Ctrl &#43; Q 键，则可一次性丢弃该格的所有物品。 F 键（副手）：鼠标悬停在任意物品上按下 F 键，该物品会放置到你的副手槽中。在主手拿着盾牌或火把时，副手可以拿着食物，极大方便地底探险。 什么是堆叠上限（Stack Size）？
@@ -35,13 +35,13 @@ https://github.com/alex-shpak/hugo-book
 
 	<meta itemprop="name" content="资源收集与合成">
 	<meta itemprop="description" content="采集与合成#基于版本：Java 版 26.2 · 生存模式核心机制
-在度过了惊心动魄的第一天后，你已经建立了一个临时的庇护所。接下来，你需要正式迈入 Minecraft 的核心体验——采集（Mine）与合成（Craft）。这两大系统环环相扣，构成了游戏最基础的进度循环。
+Minecraft 的核心体验就藏在名字里——采集（Mine）与合成（Craft）。所以 Minecraft 也可以翻译为合成天下这两大系统环环相扣，构成了游戏最基础的进度循环。
 本节将事无巨细地为你拆解物品管理、工具制作、材质等级、方块采集以及熔炉烧炼的所有细节，带你轻松度过生存前期。
 物品栏与背包管理微操指南#在游戏中按下 E 键可以打开你的个人物品栏（背包）。作为一名合格的冒险家，熟练掌握以下鼠标和键盘的快捷交互技巧，能为你节省大量的整理时间：
 1. 鼠标点击与拖拽技巧#左键单击物品：拿起这格物品的全部数量。 右键单击物品：拿起这格物品的一半数量（如果是奇数，则拿起多的一半。例如 5 个物品，右键会拿起 3 个，留下 2 个）。 手持物品时在空白格点右键：只在目标空格中放下 1 个物品。这在手动摆放合成配方时非常实用。 快速均分（左键拖拽）：手持一叠物品（如 64 个木板）时，按住左键并在多个空格上拖动，物品会被平均分配到你扫过的每一个格子里。 各放一个（右键拖拽）：手持一叠物品时，按住右键并在多个空格上拖动，则会在每个格子里各留下 1 个物品。这是制作工作台、熔炉或箱子等空心配方时的「神技」。 合并同类（双击）：双击任意一个物品，可以将散落在背包各个格子里相同的物品瞬间吸附并堆叠到这一格中（最高达到 64 个）。 2. 键盘快捷键（事半功倍）#Shift &#43; 左键单击：快速转移。如果打开了箱子或工作台，这会把物品在「背包」与「容器/工作台」之间瞬间传送；如果只是单独打开背包，这会在「快捷栏（屏幕最下方 9 格）」与「背包上方 27 格」之间快速切换。 数字键 1 - 9：鼠标悬停在背包内任意物品上，按下键盘上的数字键，该物品会瞬间与你快捷栏对应槽位的物品对调。 Q 键（丢弃）：鼠标悬停在物品上按 Q 键，可丢弃 1 个物品；按住 Ctrl &#43; Q 键，则可一次性丢弃该格的所有物品。 F 键（副手）：鼠标悬停在任意物品上按下 F 键，该物品会放置到你的副手槽中。在主手拿着盾牌或火把时，副手可以拿着食物，极大方便地底探险。 什么是堆叠上限（Stack Size）？
 背包中的方格不能无限装东西。
 64 个堆叠：绝大多数方块（如泥土、石头、原木、木板）和材料（如煤炭、铁锭）的堆叠上限是 64 个。 16 个堆叠：部分特殊的抛射物或工具（如末影珍珠、雪球、鸡蛋、桶）上限是 16 个。 不堆叠：所有的武器、工具、防具（如镐、剑、胸甲）以及药水，一格只能放 1 个。 3x3 工作台与合成逻辑#背包自带的合成格是 2x2（4 格）的，仅能合成木板、木棍、火把等基础物资。一旦做出了工作台并将其放置在地上右键打开，你就能使用 3x3（9 格）的合成栏。">
-	<meta itemprop="wordCount" content="579">
+	<meta itemprop="wordCount" content="580">
 
 <title>资源收集与合成 • Minecraft 从入门到精通</title>
 <link rel="icon" href="/favicon.png" >
@@ -49,7 +49,7 @@ https://github.com/alex-shpak/hugo-book
 <link rel="canonical" href="http://localhost:1313/docs/ch02-survival/01-gathering-and-crafting.html">
 <link rel="stylesheet" href="/book.min.64ab3279514b7f9a7b1ec50a47d8bc6f9bed31454a6363d9f98214862cb1a617.css" integrity="sha256-ZKsyeVFLf5p7HsUKR9i8b5vtMUVKY2PZ&#43;YIUhiyxphc=" crossorigin="anonymous">
 <link rel="stylesheet" href="/custom.min.3f5cd638c1f32a12a56266d8c96d94495778d9f77367fca14c5be51dcec060b7.css" integrity="sha256-P1zWOMHzKhKlYmbYyW2USVd42fdzZ/yhTFvlHc7AYLc=" crossorigin="anonymous">
-  <script defer type="module" src="/zh.search.min.bf2a1c52d561824d4445810feda1a1ec76cb46b61439297928fd602c0bae5e1d.js" integrity="sha256-vyocUtVhgk1ERYEP7aGh7HbLRrYUOSl5KP1gLAuuXh0=" crossorigin="anonymous"></script>
+  <script defer type="module" src="/zh.search.min.f3ba1fd5932e485971ee4ccadfa30ca061d154bce34cf8a63a020a0689fb22c6.js" integrity="sha256-87of1ZMuSFlx7kzK36MMoGHRVLzjTPimOgIKBon7IsY=" crossorigin="anonymous"></script>
 
 <script defer src="/lightbox.min.b995837a582ada0a114699e58df354f5feb5267b8ba089b2a2c8ac21783242ad.js" integrity="sha256-uZWDelgq2goRRpnljfNU9f61JnuLoImyosisIXgyQq0=" crossorigin="anonymous"></script>
 <script defer src="/theme-toggle.min.17d2b0e14e3e210244ce5d5afaa4b7603c579da4c11f197c77f156465295c14a.js" integrity="sha256-F9Kw4U4&#43;IQJEzl1a&#43;qS3YDxXnaTBHxl8d/FWRlKVwUo=" crossorigin="anonymous"></script>
@@ -176,7 +176,7 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="/docs/ch01-getting-started/04-terminology.html" class="">
-      游戏术语</a>
+      游戏术语与计量单位</a>
   
 
         </li>
@@ -190,7 +190,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/ch01-getting-started/05-dos-and-donts.html" class="">
+    <a href="/docs/ch01-getting-started/05-things-not-to-do.html" class="">
       新手不该做的事</a>
   
 
@@ -1148,7 +1148,7 @@ https://github.com/alex-shpak/hugo-book
       
   <article class="markdown book-article"><h1 id="采集与合成">采集与合成<a class="anchor" href="#%e9%87%87%e9%9b%86%e4%b8%8e%e5%90%88%e6%88%90">#</a></h1>
 <blockquote class='book-hint note'>
-<p><strong>基于版本</strong>：Java 版 26.2 · 生存模式核心机制</p></blockquote><p>在度过了惊心动魄的第一天后，你已经建立了一个临时的庇护所。接下来，你需要正式迈入 Minecraft 的核心体验——<strong>采集（Mine）</strong>与<strong>合成（Craft）</strong>。这两大系统环环相扣，构成了游戏最基础的进度循环。</p>
+<p><strong>基于版本</strong>：Java 版 26.2 · 生存模式核心机制</p></blockquote><p>Minecraft 的核心体验就藏在名字里——<strong>采集（Mine）</strong>与<strong>合成（Craft）</strong>。<del>所以 Minecraft 也可以翻译为合成天下</del>这两大系统环环相扣，构成了游戏最基础的进度循环。</p>
 <p>本节将事无巨细地为你拆解物品管理、工具制作、材质等级、方块采集以及熔炉烧炼的所有细节，带你轻松度过生存前期。</p>
 <hr>
 <h2 id="物品栏与背包管理微操指南">物品栏与背包管理微操指南<a class="anchor" href="#%e7%89%a9%e5%93%81%e6%a0%8f%e4%b8%8e%e8%83%8c%e5%8c%85%e7%ae%a1%e7%90%86%e5%be%ae%e6%93%8d%e6%8c%87%e5%8d%97">#</a></h2>
@@ -2647,7 +2647,7 @@ https://github.com/alex-shpak/hugo-book
 <div class="flex flex-wrap justify-between">
     <span>
     
-      <a href="/docs/ch01-getting-started/05-dos-and-donts.html" class="flex align-center">
+      <a href="/docs/ch01-getting-started/05-things-not-to-do.html" class="flex align-center">
         <img src="/icons/backward.svg" class="book-icon" alt="上一页" />
         <span>新手不该做的事</span>
       </a>
