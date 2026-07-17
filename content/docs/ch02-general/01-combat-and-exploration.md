@@ -91,7 +91,7 @@ type: docs
 
 #### 1. 皮革盔甲 (Leather Armor)
 <div class="mc-gui-panel">
-<div class="mc-crafting-slot" data-tooltip-title="皮革帽子" data-tooltip-subtitle="护甲值: +1"><img src="/images/items/leather_helmet_default.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="皮革外套" data-tooltip-subtitle="护甲值: +3"><img src="/images/items/leather_chestplate_default.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="皮革裤子" data-tooltip-subtitle="护甲值: +2"><img src="/images/items/leather_leggings_default.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="皮革靴子" data-tooltip-subtitle="护甲值: +1"><img src="/images/items/leather_boots_default.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div>
+<div class="mc-crafting-slot" data-tooltip-title="皮革帽子" data-tooltip-subtitle="护甲值: +1"><img src="/images/items/leather_helmet_default.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="皮革外套" data-tooltip-subtitle="护甲值: +3"><img src="/images/items/leather_chestplate_default.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="皮革裤子" data-tooltip-subtitle="护甲值: +2"><img src="/images/items/leather_leggings_default.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="皮革靴子" data-tooltip-subtitle="护甲值: +1"><img src="/images/items/leather_boots_default.png"  /></div>
 </div>
 - **护甲值（全套）**：7 点（护甲条 3.5 格）
 - **获取难度**：低（杀牛或马获取皮革）
@@ -99,7 +99,7 @@ type: docs
 
 #### 2. 铁盔甲 (Iron Armor)
 <div class="mc-gui-panel">
-<div class="mc-crafting-slot" data-tooltip-title="铁头盔" data-tooltip-subtitle="护甲值: +2"><img src="/images/items/iron_helmet.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="铁胸甲" data-tooltip-subtitle="护甲值: +6"><img src="/images/items/iron_chestplate.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="铁护腿" data-tooltip-subtitle="护甲值: +5"><img src="/images/items/iron_leggings.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="铁靴子" data-tooltip-subtitle="护甲值: +2"><img src="/images/items/iron_boots.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div>
+<div class="mc-crafting-slot" data-tooltip-title="铁头盔" data-tooltip-subtitle="护甲值: +2"><img src="/images/items/iron_helmet.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="铁胸甲" data-tooltip-subtitle="护甲值: +6"><img src="/images/items/iron_chestplate.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="铁护腿" data-tooltip-subtitle="护甲值: +5"><img src="/images/items/iron_leggings.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="铁靴子" data-tooltip-subtitle="护甲值: +2"><img src="/images/items/iron_boots.png"  /></div>
 </div>
 - **护甲值（全套）**：15 点（护甲条 7.5 格）
 - **获取难度**：中等（挖铁矿并烧炼，需要 24 块铁锭）
@@ -107,7 +107,7 @@ type: docs
 
 #### 3. 钻石盔甲 (Diamond Armor)
 <div class="mc-gui-panel">
-<div class="mc-crafting-slot" data-tooltip-title="钻石头盔" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +2"><img src="/images/items/diamond_helmet.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="钻石胸甲" data-tooltip-subtitle="护甲值: +8 | 盔甲韧性: +2"><img src="/images/items/diamond_chestplate.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="钻石护腿" data-tooltip-subtitle="护甲值: +6 | 盔甲韧性: +2"><img src="/images/items/diamond_leggings.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="钻石靴子" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +2"><img src="/images/items/diamond_boots.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div>
+<div class="mc-crafting-slot" data-tooltip-title="钻石头盔" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +2"><img src="/images/items/diamond_helmet.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="钻石胸甲" data-tooltip-subtitle="护甲值: +8 | 盔甲韧性: +2"><img src="/images/items/diamond_chestplate.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="钻石护腿" data-tooltip-subtitle="护甲值: +6 | 盔甲韧性: +2"><img src="/images/items/diamond_leggings.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="钻石靴子" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +2"><img src="/images/items/diamond_boots.png"  /></div>
 </div>
 - **护甲值（全套）**：20 点（满格 10 格），并提供额外的“盔甲韧性”
 - **获取难度**：高（在深层地下 Y=-59 附近挖矿，或通过盔甲匠村民交易）
@@ -115,7 +115,7 @@ type: docs
 
 #### 4. 下界合金盔甲 (Netherite Armor)
 <div class="mc-gui-panel">
-<div class="mc-crafting-slot" data-tooltip-title="下界合金头盔" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_helmet.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="下界合金胸甲" data-tooltip-subtitle="护甲值: +8 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_chestplate.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="下界合金护腿" data-tooltip-subtitle="护甲值: +6 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_leggings.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="下界合金靴子" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_boots.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div>
+<div class="mc-crafting-slot" data-tooltip-title="下界合金头盔" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_helmet.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="下界合金胸甲" data-tooltip-subtitle="护甲值: +8 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_chestplate.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="下界合金护腿" data-tooltip-subtitle="护甲值: +6 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_leggings.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="下界合金靴子" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_boots.png"  /></div>
 </div>
 - **护甲值（全套）**：20 点，提供全游戏最高的韧性和独有的“击退抗性”
 - **获取难度**：极高（需要钻石甲作为底子，并在极度危险的下界深处寻找远古残骸，用锻造台升级）
