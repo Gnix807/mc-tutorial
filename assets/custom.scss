@@ -533,17 +533,21 @@ img[data-lightbox] { cursor: zoom-in; }
     background-color: rgba(255, 255, 255, 0.18); /* 槽位高亮 */
   }
 
-  img {
-    width: 80px;
-    height: 80px;
-    max-width: none;
-    max-height: none;
-    flex-shrink: 0;
-    object-fit: contain;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated; /* 像素图防模糊模糊渲染 */
+    img {
+    box-sizing: content-box !important;
+    width: 80px !important;
+    height: 80px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    max-width: none !important;
+    max-height: none !important;
+    flex-shrink: 0 !important;
+    object-fit: fill !important;
+    image-rendering: -moz-crisp-edges !important;
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: crisp-edges !important;
+    image-rendering: pixelated !important;
     transition: opacity 0.15s ease-in-out;
   }
 }
@@ -582,17 +586,21 @@ img[data-lightbox] { cursor: zoom-in; }
     border-color: #0c0c0c #4a4a4a #4a4a4a #0c0c0c;
   }
 
-  img {
-    width: 128px;
-    height: 128px;
-    max-width: none;
-    max-height: none;
-    flex-shrink: 0;
-    object-fit: contain;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
+    img {
+    box-sizing: content-box !important;
+    width: 128px !important;
+    height: 128px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    max-width: none !important;
+    max-height: none !important;
+    flex-shrink: 0 !important;
+    object-fit: fill !important;
+    image-rendering: -moz-crisp-edges !important;
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: crisp-edges !important;
+    image-rendering: pixelated !important;
     transition: opacity 0.15s ease-in-out;
   }
 
