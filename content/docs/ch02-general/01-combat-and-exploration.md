@@ -352,3 +352,6 @@ type: docs
 ### 快速定位（高级技巧）
 
 在允许使用命令的世界中，可用 `/locate structure <结构名>` 或 `/locate biome <生物群系名>` 直接获取最近目标的坐标。不过依赖命令可能会削弱探索本身的乐趣。
+
+
+{{< armor-tooltips >}}

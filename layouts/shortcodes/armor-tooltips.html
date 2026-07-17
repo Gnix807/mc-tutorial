@@ -1,0 +1,29 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  let tooltip = document.querySelector(".mc-crafting-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "mc-crafting-tooltip";
+    tooltip.innerHTML = '<span class="mc-tooltip-title"></span><span class="mc-tooltip-subtitle"></span>';
+    document.body.appendChild(tooltip);
+  }
+
+  const slots = document.querySelectorAll('.mc-crafting-slot[data-tooltip-title]');
+  slots.forEach(slot => {
+    slot.addEventListener("mouseenter", (e) => {
+      tooltip.querySelector(".mc-tooltip-title").textContent = slot.getAttribute("data-tooltip-title");
+      tooltip.querySelector(".mc-tooltip-subtitle").textContent = slot.getAttribute("data-tooltip-subtitle");
+      tooltip.style.display = "block";
+    });
+
+    slot.addEventListener("mousemove", (e) => {
+      tooltip.style.left = (e.clientX + 12) + "px";
+      tooltip.style.top = (e.clientY - 12) + "px";
+    });
+
+    slot.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+});
+</script>

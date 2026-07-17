@@ -503,18 +503,18 @@ img[data-lightbox] { cursor: zoom-in; }
 /* 3x3 物品网格 */
 .mc-crafting-grid {
   display: grid;
-  grid-template-columns: repeat(3, 44px);
-  grid-template-rows: repeat(3, 44px);
-  gap: 4px;
+  grid-template-columns: repeat(3, 72px);
+  grid-template-rows: repeat(3, 72px);
+  gap: 6px;
 }
 
 /* GUI 槽位 */
 .mc-crafting-slot {
   position: relative;
-  width: 44px;
-  height: 44px;
+  width: 72px;
+  height: 72px;
   background-color: #8b8b8b;
-  border: 3px solid;
+  border: 4px solid;
   border-color: #373737 #ffffff #ffffff #373737; /* 经典 3D 下沉格 */
   display: flex;
   align-items: center;
@@ -532,8 +532,8 @@ img[data-lightbox] { cursor: zoom-in; }
   }
 
   img {
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
     object-fit: contain;
     image-rendering: pixelated; /* 像素图防模糊模糊渲染 */
     transition: opacity 0.15s ease-in-out;
@@ -542,8 +542,8 @@ img[data-lightbox] { cursor: zoom-in; }
 
 /* 合成箭头 */
 .mc-crafting-arrow {
-  width: 36px;
-  height: 24px;
+  width: 54px;
+  height: 36px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -556,10 +556,10 @@ img[data-lightbox] { cursor: zoom-in; }
 
 /* 结果槽（尺寸更大） */
 .mc-crafting-result-slot {
-  width: 58px;
-  height: 58px;
+  width: 108px;
+  height: 108px;
   background-color: #8b8b8b;
-  border: 4px solid;
+  border: 6px solid;
   border-color: #373737 #ffffff #ffffff #373737;
   display: flex;
   align-items: center;
@@ -573,8 +573,8 @@ img[data-lightbox] { cursor: zoom-in; }
   }
 
   img {
-    width: 40px;
-    height: 40px;
+    width: 96px;
+    height: 96px;
     object-fit: contain;
     image-rendering: pixelated;
     transition: opacity 0.15s ease-in-out;
@@ -628,3 +628,19 @@ img[data-lightbox] { cursor: zoom-in; }
 // ---- 页面过渡 ----
 .book-page { animation: page-fade-in .35s ease; }
 @keyframes page-fade-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.mc-gui-panel {
+  background-color: #c6c6c6;
+  border: 4px solid;
+  border-color: #ffffff #555555 #555555 #ffffff;
+  padding: 12px;
+  display: inline-flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+
+  [data-theme="dark"] & {
+    background-color: #3a3a3a;
+    border-color: #555555 #111111 #111111 #555555;
+  }
+}
