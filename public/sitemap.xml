@@ -14,9 +14,9 @@
   </url><url>
     <loc>http://localhost:1313/docs/ch06-mods/01-mod-loaders.html</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ch02-survival/01-first-day.html</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/preamble.html</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/ch02-survival/01-gathering-and-crafting.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch01-getting-started/index.html</loc>
   </url><url>
@@ -60,11 +60,11 @@
   </url><url>
     <loc>http://localhost:1313/docs/ch04-redstone/04-minecarts-and-transport.html</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/ch02-survival/04-first-day.html</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/ch06-mods/04-optimization-and-qol.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch01-getting-started/04-terminology.html</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/ch02-survival/04-gathering-and-crafting.html</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ch05-multiplayer/05-pvp.html</loc>
   </url><url>

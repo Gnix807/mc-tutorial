@@ -1,6 +1,6 @@
 ---
 title: 生存第一天
-weight: 1
+weight: 4
 type: docs
 ---
 

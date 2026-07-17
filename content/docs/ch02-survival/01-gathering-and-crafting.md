@@ -1,6 +1,6 @@
 ---
 title: 资源收集与合成
-weight: 4
+weight: 1
 type: docs
 ---
 
