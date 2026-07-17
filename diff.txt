@@ -1,0 +1,10 @@
+diff --git a/content/docs/ch02-general/01-combat-and-exploration.md b/content/docs/ch02-general/01-combat-and-exploration.md
+index 3de8d9a..3bcee84 100644
+--- a/content/docs/ch02-general/01-combat-and-exploration.md
++++ b/content/docs/ch02-general/01-combat-and-exploration.md
+@@ -1,4 +1,4 @@
+-﻿---
++---
+ title: 2.1 战斗与探索
+ weight: 10
+ type: docs

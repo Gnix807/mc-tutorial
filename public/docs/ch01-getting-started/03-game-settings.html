@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme · MC 教程
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="1.3 游戏设置#基于版本：Java 版 26.1 ~ 26.2 · 选项界面在 25w41a（1.21.11 快照）后有过较大调整，本教程反映最新布局 · 按键绑定和调试快捷键适用于 Java 版
+安装好启动器、下载完游戏之后，在开始冒险之前，建议先花几分钟调整一下游戏设置。合适的设置能大幅提升游戏体验——画面更流畅、操作更顺手、声音更舒适。
+本节内容参考 Minecraft Wiki 编写，聚焦于新手最需要关注的选项。为照顾纯正的新人，本节已大幅简化了内容，如对设置内容感兴趣，欢迎前往维基查看。
+打开设置菜单#进入游戏主菜单后，点击「选项…」即可进入设置界面。主要包含以下几个子菜单：
+视频设置 画面品质、帧率、渲染距离、全屏等 音乐和声音 主音量、各类音效独立调节 按键控制 键盘和鼠标按键绑定 语言 游戏界面显示语言 辅助功能设置 字幕、高对比度、视角摇晃等 聊天设置 聊天显示方式和样式 视频设置#视频设置直接影响游戏的画面质量和流畅度，是最重要的一组选项。
+显示类#关键设置 选项 推荐值 说明 全屏 开 获得沉浸式体验，按 F11 快速切换 界面尺寸 自动 数值越大 UI 越大，高分辨率屏幕可适当调大 亮度 50 ~ 100 调高可以让洞穴和夜间更亮，纯视觉效果 最大帧率 120fps 或无限制 性能足够就选无限制，笔记本建议限制到 60~120 垂直同步 开 消除画面撕裂，但可能增加延迟 品质与性能#重点 这组选项直接影响游戏帧率。
+选项 推荐值 说明 渲染距离 12~16 区块 越大看得越远，但更吃性能。中低配电脑建议 12 模拟距离 8~12 区块 影响实体更新范围，对性能影响比渲染距离更大 平滑光照 开 光照过渡更自然，性能影响很小 云 流畅/高品质 「高品质」是立体云，「流畅」是平面，性能差别不大 粒子效果 全部/减少 中低配建议「减少」，不影响游戏玩法 实体阴影 开 生物脚下出现阴影，画面更真实 实体渲染距离 100% 控制生物在多远可见，调低可提升性能 可透视树叶 开 树叶透明显示，方便在树林中观察 区块构建器 线程化 减少放置方块时的卡顿，推荐 中低配电脑优化方案：渲染距离 8~10、模拟距离 8、粒子效果「减少」、实体渲染距离 75%。这几个选项对帧率影响最大。
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#5c9a3a">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#3a6622">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/ch01-getting-started/03-game-settings.html">
+	<meta property="og:site_name" content="Minecraft 从入门到精通">
+	<meta property="og:title" content="1.3 游戏设置">
+	<meta property="og:description" content="1.3 游戏设置#基于版本：Java 版 26.1 ~ 26.2 · 选项界面在 25w41a（1.21.11 快照）后有过较大调整，本教程反映最新布局 · 按键绑定和调试快捷键适用于 Java 版
+安装好启动器、下载完游戏之后，在开始冒险之前，建议先花几分钟调整一下游戏设置。合适的设置能大幅提升游戏体验——画面更流畅、操作更顺手、声音更舒适。
+本节内容参考 Minecraft Wiki 编写，聚焦于新手最需要关注的选项。为照顾纯正的新人，本节已大幅简化了内容，如对设置内容感兴趣，欢迎前往维基查看。
+打开设置菜单#进入游戏主菜单后，点击「选项…」即可进入设置界面。主要包含以下几个子菜单：
+视频设置 画面品质、帧率、渲染距离、全屏等 音乐和声音 主音量、各类音效独立调节 按键控制 键盘和鼠标按键绑定 语言 游戏界面显示语言 辅助功能设置 字幕、高对比度、视角摇晃等 聊天设置 聊天显示方式和样式 视频设置#视频设置直接影响游戏的画面质量和流畅度，是最重要的一组选项。
+显示类#关键设置 选项 推荐值 说明 全屏 开 获得沉浸式体验，按 F11 快速切换 界面尺寸 自动 数值越大 UI 越大，高分辨率屏幕可适当调大 亮度 50 ~ 100 调高可以让洞穴和夜间更亮，纯视觉效果 最大帧率 120fps 或无限制 性能足够就选无限制，笔记本建议限制到 60~120 垂直同步 开 消除画面撕裂，但可能增加延迟 品质与性能#重点 这组选项直接影响游戏帧率。
+选项 推荐值 说明 渲染距离 12~16 区块 越大看得越远，但更吃性能。中低配电脑建议 12 模拟距离 8~12 区块 影响实体更新范围，对性能影响比渲染距离更大 平滑光照 开 光照过渡更自然，性能影响很小 云 流畅/高品质 「高品质」是立体云，「流畅」是平面，性能差别不大 粒子效果 全部/减少 中低配建议「减少」，不影响游戏玩法 实体阴影 开 生物脚下出现阴影，画面更真实 实体渲染距离 100% 控制生物在多远可见，调低可提升性能 可透视树叶 开 树叶透明显示，方便在树林中观察 区块构建器 线程化 减少放置方块时的卡顿，推荐 中低配电脑优化方案：渲染距离 8~10、模拟距离 8、粒子效果「减少」、实体渲染距离 75%。这几个选项对帧率影响最大。">
+	<meta property="og:locale" content="zh">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="docs">
+
+
+	<meta itemprop="name" content="1.3 游戏设置">
+	<meta itemprop="description" content="1.3 游戏设置#基于版本：Java 版 26.1 ~ 26.2 · 选项界面在 25w41a（1.21.11 快照）后有过较大调整，本教程反映最新布局 · 按键绑定和调试快捷键适用于 Java 版
+安装好启动器、下载完游戏之后，在开始冒险之前，建议先花几分钟调整一下游戏设置。合适的设置能大幅提升游戏体验——画面更流畅、操作更顺手、声音更舒适。
+本节内容参考 Minecraft Wiki 编写，聚焦于新手最需要关注的选项。为照顾纯正的新人，本节已大幅简化了内容，如对设置内容感兴趣，欢迎前往维基查看。
+打开设置菜单#进入游戏主菜单后，点击「选项…」即可进入设置界面。主要包含以下几个子菜单：
+视频设置 画面品质、帧率、渲染距离、全屏等 音乐和声音 主音量、各类音效独立调节 按键控制 键盘和鼠标按键绑定 语言 游戏界面显示语言 辅助功能设置 字幕、高对比度、视角摇晃等 聊天设置 聊天显示方式和样式 视频设置#视频设置直接影响游戏的画面质量和流畅度，是最重要的一组选项。
+显示类#关键设置 选项 推荐值 说明 全屏 开 获得沉浸式体验，按 F11 快速切换 界面尺寸 自动 数值越大 UI 越大，高分辨率屏幕可适当调大 亮度 50 ~ 100 调高可以让洞穴和夜间更亮，纯视觉效果 最大帧率 120fps 或无限制 性能足够就选无限制，笔记本建议限制到 60~120 垂直同步 开 消除画面撕裂，但可能增加延迟 品质与性能#重点 这组选项直接影响游戏帧率。
+选项 推荐值 说明 渲染距离 12~16 区块 越大看得越远，但更吃性能。中低配电脑建议 12 模拟距离 8~12 区块 影响实体更新范围，对性能影响比渲染距离更大 平滑光照 开 光照过渡更自然，性能影响很小 云 流畅/高品质 「高品质」是立体云，「流畅」是平面，性能差别不大 粒子效果 全部/减少 中低配建议「减少」，不影响游戏玩法 实体阴影 开 生物脚下出现阴影，画面更真实 实体渲染距离 100% 控制生物在多远可见，调低可提升性能 可透视树叶 开 树叶透明显示，方便在树林中观察 区块构建器 线程化 减少放置方块时的卡顿，推荐 中低配电脑优化方案：渲染距离 8~10、模拟距离 8、粒子效果「减少」、实体渲染距离 75%。这几个选项对帧率影响最大。">
+	<meta itemprop="wordCount" content="474">
+
+<title>1.3 游戏设置 • Minecraft 从入门到精通</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/ch01-getting-started/03-game-settings.html">
+<link rel="stylesheet" href="/book.min.64ab3279514b7f9a7b1ec50a47d8bc6f9bed31454a6363d9f98214862cb1a617.css" integrity="sha256-ZKsyeVFLf5p7HsUKR9i8b5vtMUVKY2PZ&#43;YIUhiyxphc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/custom.min.3f5cd638c1f32a12a56266d8c96d94495778d9f77367fca14c5be51dcec060b7.css" integrity="sha256-P1zWOMHzKhKlYmbYyW2USVd42fdzZ/yhTFvlHc7AYLc=" crossorigin="anonymous">
+  <script defer type="module" src="/zh.search.min.6f7ff29a13ed67f6953cbd38ddbc62e9b7573e4092d3c8593c0bdf681417ef54.js" integrity="sha256-b3/ymhPtZ/aVPL043bxi6bdXPkCS08hZPAvfaBQX71Q=" crossorigin="anonymous"></script>
+
+<script defer src="/lightbox.min.b995837a582ada0a114699e58df354f5feb5267b8ba089b2a2c8ac21783242ad.js" integrity="sha256-uZWDelgq2goRRpnljfNU9f61JnuLoImyosisIXgyQq0=" crossorigin="anonymous"></script>
+<script defer src="/theme-toggle.min.17d2b0e14e3e210244ce5d5afaa4b7603c579da4c11f197c77f156465295c14a.js" integrity="sha256-F9Kw4U4&#43;IQJEzl1a&#43;qS3YDxXnaTBHxl8d/FWRlKVwUo=" crossorigin="anonymous"></script>
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/index.html"><span>Minecraft 从入门到精通</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="搜索"
+    aria-label="搜索"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/preamble.html" class="">
+      序</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第一章 · 基础入门</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/01-buy-and-install.html" class="">
+      1.1 购买与安装</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/02-launcher-and-versions.html" class="">
+      1.2 启动器与版本</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/03-game-settings.html" class="active">
+      1.3 游戏设置</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第二章 · 生存指南</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/01-first-day.html" class="">
+      2.1 第一天</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/02-gathering-and-crafting.html" class="">
+      2.2 采集与合成</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/03-mining.html" class="">
+      2.3 采矿技术</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/04-farming.html" class="">
+      2.4 农牧养殖</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/05-villagers.html" class="">
+      2.5 村民与交易</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/03-combat-and-exploration.html" class="">
+      2.6 战斗与探索</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/07-enchanting.html" class="">
+      2.7 附魔与药水</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/04-nether-and-end.html" class="">
+      2.8 下界与末地</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第三章 · 建造美学</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/01-basics.html" class="">
+      3.1 建筑基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/02-styles.html" class="">
+      3.2 风格与设计</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/03-terraforming.html" class="">
+      3.3 地形改造</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/04-furniture.html" class="">
+      3.4 实用家具</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/05-roofs-and-details.html" class="">
+      3.5 屋顶与细节</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/06-palette-and-materials.html" class="">
+      3.6 调色板与材料</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/07-underwater-and-special.html" class="">
+      3.7 水下与特殊环境建筑</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第四章 · 红石工程</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/01-basics.html" class="">
+      4.1 红石基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/02-logic-circuits.html" class="">
+      4.2 逻辑电路</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/03-auto-farms.html" class="">
+      4.3 自动化农场</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/04-timers-and-clocks.html" class="">
+      4.4 计时器与时钟</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/05-piston-machines.html" class="">
+      4.5 活塞机械</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/06-storage-and-sorting.html" class="">
+      4.6 存储与分类系统</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/07-advanced-projects.html" class="">
+      4.7 红石进阶项目</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第五章 · 服务器与联机</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/01-ways-to-connect.html" class="">
+      5.1 联机方式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/02-server-setup.html" class="">
+      5.2 服务器搭建</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/03-realms.html" class="">
+      5.3 领域服</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/04-server-management.html" class="">
+      5.4 服务器维护与管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/05-pvp.html" class="">
+      5.5 PvP 入门</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第六章 · 模组与资源包</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/01-mod-loaders.html" class="">
+      6.1 模组加载器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/02-shaders-and-textures.html" class="">
+      6.2 光影与材质</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/03-recommended-mods.html" class="">
+      6.3 推荐模组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/04-optimization-and-qol.html" class="">
+      6.4 优化与辅助模组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/05-modpacks.html" class="">
+      6.5 整合包入门</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第七章 · 命令与指令方块</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/01-basic-commands.html" class="">
+      7.1 基础命令</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/02-command-blocks.html" class="">
+      7.2 指令方块</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/03-datapacks.html" class="">
+      7.3 数据包</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/04-command-reference.html" class="">
+      7.4 常用命令速查表</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/05-functions-and-advanced.html" class="">
+      7.5 函数与数据包进阶</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/appendix.html" class="">
+      附录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/01-combat-and-exploration.html" class="">
+      2.1 战斗与探索</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/afterwords.html" class="">
+      后记</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>1.3 游戏设置</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#13-游戏设置">1.3 游戏设置</a>
+      <ul>
+        <li><a href="#打开设置菜单">打开设置菜单</a></li>
+        <li><a href="#视频设置">视频设置</a>
+          <ul>
+            <li><a href="#显示类">显示类</a></li>
+            <li><a href="#品质与性能">品质与性能</a></li>
+            <li><a href="#视场角fov">视场角（FOV）</a></li>
+          </ul>
+        </li>
+        <li><a href="#音乐和声音">音乐和声音</a></li>
+        <li><a href="#按键控制">按键控制</a>
+          <ul>
+            <li><a href="#移动与基础操作">移动与基础操作</a></li>
+            <li><a href="#物品栏与快捷栏">物品栏与快捷栏</a></li>
+            <li><a href="#截图与界面">截图与界面</a></li>
+            <li><a href="#多人联机快捷键">多人联机快捷键</a></li>
+            <li><a href="#调试快捷键f3-组合">调试快捷键（F3 组合）</a></li>
+            <li><a href="#创造模式专属">创造模式专属</a></li>
+            <li><a href="#建议修改的按键">建议修改的按键</a></li>
+            <li><a href="#新手优先记住的快捷键">新手优先记住的快捷键</a></li>
+          </ul>
+        </li>
+        <li><a href="#语言">语言</a></li>
+        <li><a href="#辅助功能设置">辅助功能设置</a></li>
+        <li><a href="#快捷设置建议">快捷设置建议</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="13-游戏设置">1.3 游戏设置<a class="anchor" href="#13-%e6%b8%b8%e6%88%8f%e8%ae%be%e7%bd%ae">#</a></h1>
+<blockquote class='book-hint note'>
+<p><strong>基于版本</strong>：Java 版 26.1 ~ 26.2 · 选项界面在 25w41a（1.21.11 快照）后有过较大调整，本教程反映最新布局 · 按键绑定和调试快捷键适用于 Java 版</p></blockquote><p>安装好启动器、下载完游戏之后，在开始冒险之前，建议先花几分钟调整一下游戏设置。合适的设置能大幅提升游戏体验——画面更流畅、操作更顺手、声音更舒适。</p>
+<p>本节内容参考 <a href="https://zh.minecraft.wiki/w/%E9%80%89%E9%A1%B9" target="_blank" rel="noopener noreferrer" class="ext-link">
+  <img class="ext-link-icon" src="https://icons.duckduckgo.com/ip3/zh.minecraft.wiki.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
+  Minecraft Wiki
+</a> 编写，聚焦于新手最需要关注的选项。为照顾纯正的新人，本节已大幅简化了内容，如对设置内容感兴趣，欢迎前往维基查看。</p>
+<h2 id="打开设置菜单">打开设置菜单<a class="anchor" href="#%e6%89%93%e5%bc%80%e8%ae%be%e7%bd%ae%e8%8f%9c%e5%8d%95">#</a></h2>
+<p>进入游戏主菜单后，点击「<strong>选项…</strong>」即可进入设置界面。主要包含以下几个子菜单：</p>
+<div class="card-list" style="--card-columns: 2;">
+  <ul>
+<li><strong>视频设置</strong>
+画面品质、帧率、渲染距离、全屏等</li>
+<li><strong>音乐和声音</strong>
+主音量、各类音效独立调节</li>
+<li><strong>按键控制</strong>
+键盘和鼠标按键绑定</li>
+<li><strong>语言</strong>
+游戏界面显示语言</li>
+<li><strong>辅助功能设置</strong>
+字幕、高对比度、视角摇晃等</li>
+<li><strong>聊天设置</strong>
+聊天显示方式和样式</li>
+</ul>
+
+</div>
+
+<h2 id="视频设置">视频设置<a class="anchor" href="#%e8%a7%86%e9%a2%91%e8%ae%be%e7%bd%ae">#</a></h2>
+<p>视频设置直接影响游戏的画面质量和流畅度，是最重要的一组选项。</p>
+<h3 id="显示类">显示类<a class="anchor" href="#%e6%98%be%e7%a4%ba%e7%b1%bb">#</a></h3>
+<span class="badge">
+  <span class="badge-text">关键设置</span></span>
+<table>
+	<thead>
+			<tr>
+					<th>选项</th>
+					<th>推荐值</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>全屏</strong></td>
+					<td><span class="badge">
+  <span class="badge-text">开</span></span></td>
+					<td>获得沉浸式体验，按 <code>F11</code> 快速切换</td>
+			</tr>
+			<tr>
+					<td><strong>界面尺寸</strong></td>
+					<td>自动</td>
+					<td>数值越大 UI 越大，高分辨率屏幕可适当调大</td>
+			</tr>
+			<tr>
+					<td><strong>亮度</strong></td>
+					<td>50 ~ 100</td>
+					<td>调高可以让洞穴和夜间更亮，纯视觉效果</td>
+			</tr>
+			<tr>
+					<td><strong>最大帧率</strong></td>
+					<td>120fps 或无限制</td>
+					<td>性能足够就选无限制，笔记本建议限制到 60~120</td>
+			</tr>
+			<tr>
+					<td><strong>垂直同步</strong></td>
+					<td><span class="badge">
+  <span class="badge-text">开</span></span></td>
+					<td>消除画面撕裂，但可能增加延迟</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="品质与性能">品质与性能<a class="anchor" href="#%e5%93%81%e8%b4%a8%e4%b8%8e%e6%80%a7%e8%83%bd">#</a></h3>
+<p><span class="badge">
+  <span class="badge-text">重点</span></span> 这组选项直接影响游戏帧率。</p>
+<table>
+	<thead>
+			<tr>
+					<th>选项</th>
+					<th>推荐值</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>渲染距离</strong></td>
+					<td>12~16 区块</td>
+					<td>越大看得越远，但更吃性能。中低配电脑建议 12</td>
+			</tr>
+			<tr>
+					<td><strong>模拟距离</strong></td>
+					<td>8~12 区块</td>
+					<td>影响实体更新范围，对性能影响比渲染距离更大</td>
+			</tr>
+			<tr>
+					<td><strong>平滑光照</strong></td>
+					<td><span class="badge">
+  <span class="badge-text">开</span></span></td>
+					<td>光照过渡更自然，性能影响很小</td>
+			</tr>
+			<tr>
+					<td><strong>云</strong></td>
+					<td>流畅/高品质</td>
+					<td>「高品质」是立体云，「流畅」是平面，性能差别不大</td>
+			</tr>
+			<tr>
+					<td><strong>粒子效果</strong></td>
+					<td>全部/减少</td>
+					<td>中低配建议「减少」，不影响游戏玩法</td>
+			</tr>
+			<tr>
+					<td><strong>实体阴影</strong></td>
+					<td><span class="badge">
+  <span class="badge-text">开</span></span></td>
+					<td>生物脚下出现阴影，画面更真实</td>
+			</tr>
+			<tr>
+					<td><strong>实体渲染距离</strong></td>
+					<td>100%</td>
+					<td>控制生物在多远可见，调低可提升性能</td>
+			</tr>
+			<tr>
+					<td><strong>可透视树叶</strong></td>
+					<td><span class="badge">
+  <span class="badge-text">开</span></span></td>
+					<td>树叶透明显示，方便在树林中观察</td>
+			</tr>
+			<tr>
+					<td><strong>区块构建器</strong></td>
+					<td>线程化</td>
+					<td>减少放置方块时的卡顿，推荐</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote class='book-hint tip'>
+<p><strong>中低配电脑优化方案</strong>：渲染距离 8~10、模拟距离 8、粒子效果「减少」、实体渲染距离 75%。这几个选项对帧率影响最大。</p></blockquote><h3 id="视场角fov">视场角（FOV）<a class="anchor" href="#%e8%a7%86%e5%9c%ba%e8%a7%92fov">#</a></h3>
+<p>视场角控制画面的视野范围。默认值是 <strong>70</strong>，这是一个比较舒适的值。</p>
+<ul>
+<li><strong>调低（50~60）</strong>：画面拉近，适合 PvP 或精细操作</li>
+<li><strong>调高（80~90）</strong>：画面更广，视野开阔，但边缘会略微变形</li>
+<li><strong>「广角」（110）</strong>：极限视野，类似运动相机效果</li>
+</ul>
+<p>一般玩家选 <strong>70~80</strong> 即可。</p>
+<h2 id="音乐和声音">音乐和声音<a class="anchor" href="#%e9%9f%b3%e4%b9%90%e5%92%8c%e5%a3%b0%e9%9f%b3">#</a></h2>
+<p>Minecraft 的音乐和音效是其氛围感的核心。建议按照以下方式调整：</p>
+<table>
+	<thead>
+			<tr>
+					<th>选项</th>
+					<th>推荐</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>主音量</td>
+					<td>80%</td>
+					<td>保留一些系统声音空间</td>
+			</tr>
+			<tr>
+					<td>音乐</td>
+					<td>60~80%</td>
+					<td>背景音乐音量</td>
+			</tr>
+			<tr>
+					<td>友好生物</td>
+					<td>80%</td>
+					<td>动物、村民等</td>
+			</tr>
+			<tr>
+					<td>敌对生物</td>
+					<td><span class="badge">
+  <span class="badge-text">100%</span></span></td>
+					<td>听到嘶嘶声能救命！</td>
+			</tr>
+			<tr>
+					<td>方块</td>
+					<td>60~80%</td>
+					<td>挖掘、放置等音效</td>
+			</tr>
+			<tr>
+					<td>环境</td>
+					<td>60~80%</td>
+					<td>水声、矿车等</td>
+			</tr>
+			<tr>
+					<td>玩家</td>
+					<td>80%</td>
+					<td>受伤、掉落等反馈</td>
+			</tr>
+			<tr>
+					<td><strong>隐藏式字幕</strong></td>
+					<td><span class="badge">
+  <span class="badge-text">开</span></span></td>
+					<td>以文字显示声音方向和来源，强烈推荐</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote class='book-hint note'>
+<p>打开「<strong>隐藏式字幕</strong>」后，屏幕右下角会以文字形式显示周围的声音（例如「&lt;僵尸：低吼 」「脚步声&gt;」）。这是新手的神器——能帮你提前发现威胁，也方便听障玩家游玩。</p></blockquote><p>另外，打开「<strong>音乐弹窗</strong>」可以在歌曲切换时在左上角看到曲目名称，方便收藏喜欢的音乐。</p>
+<h2 id="按键控制">按键控制<a class="anchor" href="#%e6%8c%89%e9%94%ae%e6%8e%a7%e5%88%b6">#</a></h2>
+<p>Minecraft 的按键控制分为「移动」「杂项」「多人游戏」「游戏内容」「物品栏」「创造模式」「旁观模式」「调试」等类别。下面按使用频率整理。</p>
+<h3 id="移动与基础操作">移动与基础操作<a class="anchor" href="#%e7%a7%bb%e5%8a%a8%e4%b8%8e%e5%9f%ba%e7%a1%80%e6%93%8d%e4%bd%9c">#</a></h3>
+<div class="card-list" style="--card-columns: 3;">
+  <ul>
+<li>
+<p><kbd>W A S D</kbd></p>
+<p>前后左右移动</p>
+</li>
+<li>
+<p><kbd>空格</kbd></p>
+<p>跳跃 / 双击飞行</p>
+</li>
+<li>
+<p><kbd>左 Shift</kbd></p>
+<p>潜行（搭桥必备）</p>
+</li>
+<li>
+<p><kbd>左 Ctrl</kbd></p>
+<p>疾跑 / 速泳</p>
+</li>
+<li>
+<p><kbd>鼠标左键</kbd></p>
+<p>攻击 / 长按挖掘</p>
+</li>
+<li>
+<p><kbd>鼠标右键</kbd></p>
+<p>使用物品（部分物品需长按使用） / 放置方块</p>
+</li>
+<li>
+<p><kbd>鼠标中键</kbd></p>
+<p>选取方块</p>
+</li>
+<li>
+<p><kbd>鼠标滚轮</kbd></p>
+<p>切换快捷栏物品</p>
+</li>
+<li>
+<p><kbd>F5</kbd></p>
+<p>切换第一/第三人称视角</p>
+</li>
+</ul>
+
+</div>
+
+<h3 id="物品栏与快捷栏">物品栏与快捷栏<a class="anchor" href="#%e7%89%a9%e5%93%81%e6%a0%8f%e4%b8%8e%e5%bf%ab%e6%8d%b7%e6%a0%8f">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>按键</th>
+					<th>功能</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><kbd>E</kbd>
+</td>
+					<td>打开 / 关闭物品栏</td>
+			</tr>
+			<tr>
+					<td><kbd>1 ~ 9</kbd>
+</td>
+					<td>选择快捷栏对应槽位</td>
+			</tr>
+			<tr>
+					<td><kbd>F</kbd>
+</td>
+					<td>交换主手和副手物品（火把 / 盾牌放副手）</td>
+			</tr>
+			<tr>
+					<td><kbd>Q</kbd>
+</td>
+					<td>丢弃 1 个物品</td>
+			</tr>
+			<tr>
+					<td><kbd>Ctrl + Q</kbd>
+</td>
+					<td>丢弃<strong>整组</strong>物品</td>
+			</tr>
+			<tr>
+					<td><kbd>鼠标中键</kbd>
+</td>
+					<td><strong>选取方块</strong>：准星对准方块，自动切换到对应物品</td>
+			</tr>
+			<tr>
+					<td><kbd>鼠标左键双击</kbd>
+</td>
+					<td>整理散落物品为一叠</td>
+			</tr>
+			<tr>
+					<td><kbd>鼠标左键拖拽</kbd>
+</td>
+					<td>均分一叠物品到多个槽位</td>
+			</tr>
+			<tr>
+					<td><kbd>鼠标右键拖拽</kbd>
+</td>
+					<td>在每个经过的槽位放 1 个物品</td>
+			</tr>
+			<tr>
+					<td><kbd>Shift + 点击</kbd>
+</td>
+					<td>快速转移物品（背包 ↔ 箱子 / 工作台 / 熔炉）</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote class='book-hint tip'>
+<p><strong>Shift + 点击</strong>是最常用的物品栏快捷键。无论是把矿放入熔炉、把材料放入工作台、还是整理箱子库存，熟练使用 Shift + 点击可以节省大量反复拖拽的时间。</p></blockquote><h3 id="截图与界面">截图与界面<a class="anchor" href="#%e6%88%aa%e5%9b%be%e4%b8%8e%e7%95%8c%e9%9d%a2">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>按键</th>
+					<th>功能</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><kbd>F1</kbd>
+</td>
+					<td>隐藏 HUD 界面（截图时干净画面）</td>
+			</tr>
+			<tr>
+					<td><kbd>F2</kbd>
+</td>
+					<td>截图（保存到 <code>.minecraft/screenshots/</code>）</td>
+			</tr>
+			<tr>
+					<td><kbd>F11</kbd>
+</td>
+					<td>切换全屏</td>
+			</tr>
+			<tr>
+					<td><kbd>L</kbd>
+</td>
+					<td>打开进度 / 成就页面</td>
+			</tr>
+			<tr>
+					<td><kbd>Esc</kbd>
+</td>
+					<td>打开菜单 / 释放鼠标</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="多人联机快捷键">多人联机快捷键<a class="anchor" href="#%e5%a4%9a%e4%ba%ba%e8%81%94%e6%9c%ba%e5%bf%ab%e6%8d%b7%e9%94%ae">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>按键</th>
+					<th>功能</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><kbd>T</kbd>
+</td>
+					<td>打开聊天栏</td>
+			</tr>
+			<tr>
+					<td><kbd>/</kbd>
+</td>
+					<td>打开聊天栏并自动输入 <code>/</code>（输入命令）</td>
+			</tr>
+			<tr>
+					<td><kbd>Tab</kbd>
+</td>
+					<td>按住显示在线玩家列表 / 在聊天中自动补全</td>
+			</tr>
+			<tr>
+					<td><kbd>P</kbd>
+</td>
+					<td>打开社交屏幕（管理好友 / 屏蔽）</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="调试快捷键f3-组合">调试快捷键（F3 组合）<a class="anchor" href="#%e8%b0%83%e8%af%95%e5%bf%ab%e6%8d%b7%e9%94%aef3-%e7%bb%84%e5%90%88">#</a></h3>
+<p>按下 <kbd>F3</kbd>
+ 打开调试屏幕后，配合以下按键实现各种功能：</p>
+<table>
+	<thead>
+			<tr>
+					<th>组合键</th>
+					<th>功能</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><kbd>F3</kbd>
+</td>
+					<td>切换调试屏幕（显示坐标、帧率、生物群系等）</td>
+			</tr>
+			<tr>
+					<td><kbd>F3 + G</kbd>
+</td>
+					<td><strong>显示区块边界</strong>（找史莱姆区块、做刷怪塔必备）</td>
+			</tr>
+			<tr>
+					<td><kbd>F3 + H</kbd>
+</td>
+					<td><strong>显示物品高级提示框</strong>（查看耐久度、物品 ID）</td>
+			</tr>
+			<tr>
+					<td><kbd>F3 + B</kbd>
+</td>
+					<td>显示实体碰撞箱（适合研究刷怪机制）</td>
+			</tr>
+			<tr>
+					<td><kbd>F3 + A</kbd>
+</td>
+					<td>重新加载所有区块（画面卡了就按这个）</td>
+			</tr>
+			<tr>
+					<td><kbd>F3 + T</kbd>
+</td>
+					<td>重新加载资源包和纹理</td>
+			</tr>
+			<tr>
+					<td><kbd>F3 + P</kbd>
+</td>
+					<td>切换失去焦点时是否暂停（切窗口不暂停）</td>
+			</tr>
+			<tr>
+					<td><kbd>F3 + F4</kbd>
+</td>
+					<td>游戏模式切换器（创造 / 生存快速切换，需管理员权限）</td>
+			</tr>
+			<tr>
+					<td><kbd>F3 + D</kbd>
+</td>
+					<td>清除聊天记录</td>
+			</tr>
+			<tr>
+					<td><kbd>F3 + C</kbd>
+</td>
+					<td>复制当前坐标（形如 <code>/execute in ... run tp x y z</code>）</td>
+			</tr>
+			<tr>
+					<td><kbd>F3 + I</kbd>
+</td>
+					<td>复制准星处方块的数据到剪贴板</td>
+			</tr>
+			<tr>
+					<td><kbd>F3 + Esc</kbd>
+</td>
+					<td>按住 10 秒可手动触发崩溃（调试用）</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote class='book-hint note'>
+<p>在笔记本上，F3 可能需要配合 <kbd>Fn</kbd>
+ 键使用。如果你按 F3 没反应，尝试按住 <kbd>Fn + F3</kbd>
+。也可以在系统设置中将功能键设为默认。</p></blockquote><h3 id="创造模式专属">创造模式专属<a class="anchor" href="#%e5%88%9b%e9%80%a0%e6%a8%a1%e5%bc%8f%e4%b8%93%e5%b1%9e">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>按键</th>
+					<th>功能</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><kbd>鼠标中键</kbd>
+</td>
+					<td>选取方块（含方块实体数据）</td>
+			</tr>
+			<tr>
+					<td><kbd>C + 数字键</kbd>
+</td>
+					<td>保存当前快捷栏配置</td>
+			</tr>
+			<tr>
+					<td><kbd>X + 数字键</kbd>
+</td>
+					<td>加载已保存的快捷栏配置</td>
+			</tr>
+			<tr>
+					<td><kbd>空格双击</kbd>
+</td>
+					<td>切换飞行模式</td>
+			</tr>
+			<tr>
+					<td><kbd>Ctrl + 空格</kbd>
+</td>
+					<td>飞行中加速（配合双击前进也能加速）</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="建议修改的按键">建议修改的按键<a class="anchor" href="#%e5%bb%ba%e8%ae%ae%e4%bf%ae%e6%94%b9%e7%9a%84%e6%8c%89%e9%94%ae">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>选项</th>
+					<th>推荐值</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>潜行</strong></td>
+					<td><span class="badge">
+  <span class="badge-text">切换</span></span></td>
+					<td>搭桥时不用一直按着 Shift</td>
+			</tr>
+			<tr>
+					<td><strong>疾跑</strong></td>
+					<td>按住（保持默认）</td>
+					<td>方便临时加速</td>
+			</tr>
+			<tr>
+					<td><strong>自动跳跃</strong></td>
+					<td><span class="badge">
+  <span class="badge-text">关</span></span></td>
+					<td>开启后走路会自动跳上方块，容易失控摔死</td>
+			</tr>
+			<tr>
+					<td><strong>鼠标灵敏度</strong></td>
+					<td>60 ~ 80%</td>
+					<td>根据个人习惯调整</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="新手优先记住的快捷键">新手优先记住的快捷键<a class="anchor" href="#%e6%96%b0%e6%89%8b%e4%bc%98%e5%85%88%e8%ae%b0%e4%bd%8f%e7%9a%84%e5%bf%ab%e6%8d%b7%e9%94%ae">#</a></h3>
+<p>如果你是第一次玩 Minecraft，不需要一下子记住所有快捷键。建议先把下面这 <strong>8 个</strong> 练熟：</p>
+<ol>
+<li><kbd>Shift</kbd>
+ 潜行——防止摔下悬崖</li>
+<li><kbd>E</kbd>
+ 物品栏——随时查看和管理物品</li>
+<li><kbd>鼠标中键</kbd>
+ 选取方块——瞄准就能切换，超方便</li>
+<li><kbd>Shift + 点击</kbd>
+ 快速转移——告别反复拖拽</li>
+<li><kbd>F</kbd>
+ 副手交换——左手火把照亮洞穴</li>
+<li><kbd>F3</kbd>
+ 调试屏幕——迷路了看 XYZ 坐标</li>
+<li><kbd>F3 + G</kbd>
+ 区块边界——盖建筑做刷怪塔都用得上</li>
+<li><kbd>F5</kbd>
+ 切换视角——第三人称截图更好看</li>
+</ol>
+<p>后续随着游戏深入，再慢慢掌握更多快捷键。</p>
+<h2 id="语言">语言<a class="anchor" href="#%e8%af%ad%e8%a8%80">#</a></h2>
+<p>在「语言」菜单中选择「<strong>简体中文</strong>」即可。如果需要更好的中文字体渲染，可以在「字体设置」中：</p>
+<ul>
+<li><strong>强制使用 Unicode 字体</strong>：建议保持关闭，使用默认字体即可正常显示中文</li>
+<li><strong>日本字形变体</strong>：保持默认</li>
+</ul>
+<blockquote class='book-hint warning'>
+<p>如果安装了一些旧版本的模组或资源包，可能会出现中文乱码。这通常是字体文件不完整，不是游戏本体的问题。后续章节会介绍如何解决。</p></blockquote><h2 id="辅助功能设置">辅助功能设置<a class="anchor" href="#%e8%be%85%e5%8a%a9%e5%8a%9f%e8%83%bd%e8%ae%be%e7%bd%ae">#</a></h2>
+<p>这组选项可以改善游戏的可玩性和舒适度：</p>
+<table>
+	<thead>
+			<tr>
+					<th>选项</th>
+					<th>推荐</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>视角摇晃</strong></td>
+					<td><span class="badge">
+  <span class="badge-text">开</span></span></td>
+					<td>走路时画面自然晃动，关了更流畅</td>
+			</tr>
+			<tr>
+					<td><strong>黑暗脉动效果</strong></td>
+					<td>降低到 50%</td>
+					<td>减弱监守者给予的黑暗特效强度</td>
+			</tr>
+			<tr>
+					<td><strong>附魔光效闪烁强度</strong></td>
+					<td>50~75%</td>
+					<td>默认的附魔光泽可能过亮</td>
+			</tr>
+			<tr>
+					<td><strong>高对比度</strong></td>
+					<td><span class="badge">
+  <span class="badge-text">关</span></span></td>
+					<td>一般不需要</td>
+			</tr>
+			<tr>
+					<td><strong>黑白徽标</strong></td>
+					<td>关</td>
+					<td>Mojang 加载界面的背景颜色</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote class='book-hint tip'>
+<p>如果晕 3D 或者在洞穴中感到不适，可以尝试：关闭「<strong>视角摇晃</strong>」、降低「<strong>视场角效果</strong>」、调高「<strong>亮度</strong>」到 100。</p></blockquote><h2 id="快捷设置建议">快捷设置建议<a class="anchor" href="#%e5%bf%ab%e6%8d%b7%e8%ae%be%e7%bd%ae%e5%bb%ba%e8%ae%ae">#</a></h2>
+<p>下面是不同使用场景的推荐设置组合：</p>
+<div class="card-list" style="--card-columns: 2;">
+  <ul>
+<li><strong>最佳画质</strong>（高端配置）
+渲染距离 24+、模拟距离 16、粒子效果 全部、云 高品质、平滑光照 开、FOV 80、最大帧率 无限制</li>
+<li><strong>流畅优先</strong>（中低配置）
+渲染距离 10、模拟距离 8、粒子效果 减少、云 关、实体渲染距离 75%、最大帧率 80、平滑光照 关</li>
+<li><strong>新手友好</strong>
+亮度 100、隐藏式字幕 开、自动跳跃 关、潜行 切换、音乐弹窗 暂停菜单</li>
+</ul>
+
+</div>
+
+<hr>
+<p>下一节将正式开始你在 Minecraft 中的冒险——第一天生存指南。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/ch01-getting-started/02-launcher-and-versions.html" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="上一页" />
+        <span>1.2 启动器与版本</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/ch02-survival/01-first-day.html" class="flex align-center">
+        <span>2.1 第一天</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="下一页" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#13-游戏设置">1.3 游戏设置</a>
+      <ul>
+        <li><a href="#打开设置菜单">打开设置菜单</a></li>
+        <li><a href="#视频设置">视频设置</a>
+          <ul>
+            <li><a href="#显示类">显示类</a></li>
+            <li><a href="#品质与性能">品质与性能</a></li>
+            <li><a href="#视场角fov">视场角（FOV）</a></li>
+          </ul>
+        </li>
+        <li><a href="#音乐和声音">音乐和声音</a></li>
+        <li><a href="#按键控制">按键控制</a>
+          <ul>
+            <li><a href="#移动与基础操作">移动与基础操作</a></li>
+            <li><a href="#物品栏与快捷栏">物品栏与快捷栏</a></li>
+            <li><a href="#截图与界面">截图与界面</a></li>
+            <li><a href="#多人联机快捷键">多人联机快捷键</a></li>
+            <li><a href="#调试快捷键f3-组合">调试快捷键（F3 组合）</a></li>
+            <li><a href="#创造模式专属">创造模式专属</a></li>
+            <li><a href="#建议修改的按键">建议修改的按键</a></li>
+            <li><a href="#新手优先记住的快捷键">新手优先记住的快捷键</a></li>
+          </ul>
+        </li>
+        <li><a href="#语言">语言</a></li>
+        <li><a href="#辅助功能设置">辅助功能设置</a></li>
+        <li><a href="#快捷设置建议">快捷设置建议</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

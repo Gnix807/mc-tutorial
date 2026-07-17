@@ -1,0 +1,4 @@
+{{ $src := .Get "src" }}
+{{ $path := printf "static%s" $src }}
+{{ $img := imageConfig $path }}
+<p>Width: {{ $img.Width }}, Height: {{ $img.Height }}</p>

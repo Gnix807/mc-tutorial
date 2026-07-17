@@ -1,0 +1,183 @@
+diff --git a/content/docs/ch02-general/01-combat-and-exploration.md b/content/docs/ch02-general/01-combat-and-exploration.md
+index 392e77b..3ffc706 100644
+--- a/content/docs/ch02-general/01-combat-and-exploration.md
++++ b/content/docs/ch02-general/01-combat-and-exploration.md
+@@ -64,7 +64,20 @@ type: docs
+ 
+ ### 盾牌：新手的「免死金牌」
+ 
+-只需要 1 块铁锭和 6 块木板即可合成盾牌。它能为你挡下：
++只需要 1 块铁锭和 6 块木板即可合成盾牌。它的合成配方如下：
++
++{{< crafting
++  1="oak_planks,spruce_planks,birch_planks,jungle_planks,acacia_planks,dark_oak_planks"
++  2="iron_ingot"
++  3="oak_planks,spruce_planks,birch_planks,jungle_planks,acacia_planks,dark_oak_planks"
++  4="oak_planks,spruce_planks,birch_planks,jungle_planks,acacia_planks,dark_oak_planks"
++  5="oak_planks,spruce_planks,birch_planks,jungle_planks,acacia_planks,dark_oak_planks"
++  6="oak_planks,spruce_planks,birch_planks,jungle_planks,acacia_planks,dark_oak_planks"
++  8="oak_planks,spruce_planks,birch_planks,jungle_planks,acacia_planks,dark_oak_planks"
++  result="shield"
++>}}
++
++它能为你挡下：
+ 
+ - 骷髅的箭矢（甚至可以弹反回去）
+ - 苦力怕的爆炸（100% 吸收正面爆炸伤害）
+@@ -74,15 +87,42 @@ type: docs
+ 
+ ### 盔甲速览
+ 
+-| 材质 | 护甲值（全套） | 耐久 | 获取难度 |
+-|---|---|---|---|
+-| 皮革 | 7 | 低 | 杀牛 |
+-| 铁 | 15 | 中 | 挖矿后烧炼 |
+-| 钻石 | 20 | 高 | 深层挖矿 |
+-| 下界合金 | 20（+击退抗性） | 极高 | 远古残骸+锻造台 |
++要想在战斗中存活，一套可靠的盔甲必不可少。以下是生存模式中最常用的四套盔甲：
++
++#### 1. 皮革盔甲 (Leather Armor)
++<div class="mc-gui-panel">
++<div class="mc-crafting-slot" data-tooltip-title="皮革帽子" data-tooltip-subtitle="护甲值: +1"><img src="/images/items/leather_helmet_default.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="皮革外套" data-tooltip-subtitle="护甲值: +3"><img src="/images/items/leather_chestplate_default.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="皮革裤子" data-tooltip-subtitle="护甲值: +2"><img src="/images/items/leather_leggings_default.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="皮革靴子" data-tooltip-subtitle="护甲值: +1"><img src="/images/items/leather_boots_default.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div>
++</div>
++- **护甲值（全套）**：7 点（护甲条 3.5 格）
++- **获取难度**：低（杀牛或马获取皮革）
++- **介绍**：防御力极低，主要用于前期过渡，或者通过炼药锅染色进行外观装饰。值得一提的是，穿戴皮革靴子可以防止你陷入雪山的细雪方块中。
++
++#### 2. 铁盔甲 (Iron Armor)
++<div class="mc-gui-panel">
++<div class="mc-crafting-slot" data-tooltip-title="铁头盔" data-tooltip-subtitle="护甲值: +2"><img src="/images/items/iron_helmet.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="铁胸甲" data-tooltip-subtitle="护甲值: +6"><img src="/images/items/iron_chestplate.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="铁护腿" data-tooltip-subtitle="护甲值: +5"><img src="/images/items/iron_leggings.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="铁靴子" data-tooltip-subtitle="护甲值: +2"><img src="/images/items/iron_boots.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div>
++</div>
++- **护甲值（全套）**：15 点（护甲条 7.5 格）
++- **获取难度**：中等（挖铁矿并烧炼，需要 24 块铁锭）
++- **介绍**：**新手最具性价比的防御保障！** 强烈建议在下大型深层矿洞之前先凑齐一套铁甲，它能大幅度降低僵尸、骷髅的普攻伤害，极大提高容错率。
++
++#### 3. 钻石盔甲 (Diamond Armor)
++<div class="mc-gui-panel">
++<div class="mc-crafting-slot" data-tooltip-title="钻石头盔" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +2"><img src="/images/items/diamond_helmet.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="钻石胸甲" data-tooltip-subtitle="护甲值: +8 | 盔甲韧性: +2"><img src="/images/items/diamond_chestplate.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="钻石护腿" data-tooltip-subtitle="护甲值: +6 | 盔甲韧性: +2"><img src="/images/items/diamond_leggings.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="钻石靴子" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +2"><img src="/images/items/diamond_boots.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div>
++</div>
++- **护甲值（全套）**：20 点（满格 10 格），并提供额外的“盔甲韧性”
++- **获取难度**：高（在深层地下 Y=-59 附近挖矿，或通过盔甲匠村民交易）
++- **介绍**：中后期的标准神装。配合附魔（例如“保护 IV”），即使苦力怕在你脸前爆炸也能强行保住一命。
++
++#### 4. 下界合金盔甲 (Netherite Armor)
++<div class="mc-gui-panel">
++<div class="mc-crafting-slot" data-tooltip-title="下界合金头盔" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_helmet.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="下界合金胸甲" data-tooltip-subtitle="护甲值: +8 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_chestplate.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="下界合金护腿" data-tooltip-subtitle="护甲值: +6 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_leggings.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div> <div class="mc-crafting-slot" data-tooltip-title="下界合金靴子" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_boots.png" style="image-rendering: pixelated; width: 64px; height: 64px;" /></div>
++</div>
++- **护甲值（全套）**：20 点，提供全游戏最高的韧性和独有的“击退抗性”
++- **获取难度**：极高（需要钻石甲作为底子，并在极度危险的下界深处寻找远古残骸，用锻造台升级）
++- **介绍**：Minecraft 中的终极盔甲。不仅坚不可摧，被攻击时极难被打飞（防岩浆击落神技）。更神奇的是，下界合金装备是不怕火烧的——如果不慎掉入岩浆死亡，装备会漂浮在岩浆表面不会被烧毁！
+ 
+ > [!NOTE]
+-> 前期至少凑齐**全套铁甲**再下大型矿洞，能大幅提高生存率。
++> 除了上述常规盔甲，游戏中还有一些具有特殊功能的防具，例如能提供水下呼吸的**海龟壳**（<span class="mc-crafting-slot" data-tooltip-title="海龟壳" data-tooltip-subtitle="护甲值: +2 | 赋予水下呼吸效果" style="display: inline-flex; vertical-align: middle; width: 48px; height: 48px; margin: 0 4px;"><img src="/images/items/turtle_helmet.png" style="image-rendering: pixelated; width: 40px; height: 40px;" /></span>），以及后期能用来在空中滑翔的**鞘翅**，我们将在后续章节详细讲解。
+ 
+ ### 后勤补给
+ 
+@@ -216,11 +256,99 @@ type: docs
+ 
+ ---
+ 
+-## 7. 探索提示
++## 7. 探索准备
++
++外出探险前，做好充分准备能极大提高生存率和效率。
++
++### 必备物品清单
++
++| 类别 | 物品 | 建议数量 | 说明 |
++|---|---|---|---|
++| 武器 | 剑 / 斧 | 1-2 把 | 铁质或以上；推荐副手配盾牌 |
++| 工具 | 镐、斧、锹 | 各 1 把 | 铁质即可，便宜高效 |
++| 光源 | 火把 | 至少 2 组（128 个） | 洞穴中边走边插，既防刷怪又标记来路 |
++| 食物 | 熟牛排 / 熟猪排 | 至少 1 组（64 个） | 高恢复量；初期可用面包或烤马铃薯代替 |
++| 方块 | 圆石 + 原木 | 各 1 组 | 搭桥、垫高、临时庇护所、补充工具 |
++| 水桶 | 水桶 | 1 个 | 灭岩浆、灭火、免摔伤、推怪——无数用途 |
++| 床 | 任意颜色 | 1 张 | 黄昏就地放置睡觉，跳过夜晚怪物潮；设置重生点 |
++
++### 离开基地前
++
++- **存放贵重物品**：把暂时不需要的贵重物品（如额外的钻石、绿宝石）存入基地箱子。外出时你总会需要更多背包空间。
++- **确保基地安全**：关好门，确保内部光线充足（防止怪物在内部生成），把驯服的狼、猫等安置在安全位置。
++- **记下基地坐标**：按 F3 查看 XYZ 坐标，用书与笔记下来，或用截图保存。迷路时这就是你的回家路。
++
++---
++
++## 8. 探险中的注意事项
++
++### 移动与旅行
++
++- **疾跑跳跃**：双击 W 或按住 Ctrl 疾跑，同时跳跃可移动得更快，但会额外消耗饥饿值。
++- **下界快速旅行**：下界坐标与主世界是 1:8 的比例，利用下界传送门可大幅缩短长途旅行时间。
++- **搭乘生物**：驯服马、驴或骆驼可快速在陆地移动且不消耗饥饿值。乘船是水面旅行最便捷的方式，运输船还能提供额外存储空间。
++- **末影珍珠**：可瞬间传送至远处，但每次使用造成 2.5 颗心的摔落伤害。建议配合摔落缓冲附魔的靴子使用。
++
++### 食物管理
++
++- 优先携带高饱和度食物（熟牛排 > 熟猪排 > 面包 > 烤马铃薯）。
++- 不建议吃蜘蛛眼或河豚——中毒效果会让你得不偿失。
++- **腐肉**：虽然可能带来饥饿效果，但打僵尸就能大量获取，是危急时刻的救急食品。
++- 用附带火焰附加魔咒的剑或火矢弓猎杀动物，直接掉落熟肉，省去烧炼。
++
++### 避免摔落
++
++- 在悬崖边缘按住 Shift **潜行**行进，绝不会主动摔落。
++- 不慎坠落时，迅速向脚下放置水桶（不在下界）或投掷末影珍珠，可免除摔落伤害。
++- 干草捆可将摔落伤害降低至 20%，紧急时在脚下放置可保命。
++
++### 亮度与视野
++
++- 怪物只在亮度为 0 的方块上生成。按 F3 查看调试屏幕中的 `light` 值，确认哪些区域亮度为 0。
++- 沿途每隔约 26 格放置一个火把（火把亮度为 14），确保整条路线不会刷怪。
++- 将游戏亮度设置调至「明亮」（默认 50%），既保护视力又减少对火把的依赖。
++
++### 下界探险特别提醒
++
++- 不要把最珍贵的装备带入下界——在熔岩中死亡会连物品一起烧毁。
++- 建造下界传送门时，推荐在主世界 Y≥20 的高度搭建，避免出现在熔岩海上。
++- **必带打火石**：恶魂的火球可能意外摧毁传送门方块，打火石可重新点燃传送门。
++- 下界无法倒水，但可用炼药锅盛水灭火，或用细雪桶替代水桶。
++- 穿一件金质装备（推荐靴子），防止猪灵主动攻击你。
++
++### 雷暴天气
++
++雷暴时即使白天也暗到会刷怪。闪电可点燃树木和建筑，还会将猪变为僵尸猪灵、村民变为女巫、苦力怕变为闪电苦力怕（爆炸威力翻倍）。遇到雷暴最好睡觉跳过，不要外出。
++
++---
++
++## 9. 紧急避难与夜间生存
++
++### 挖三填一
++
++最简单的紧急避难法——向下挖掘 3 格，在头顶放置 1 格方块。数秒内即可完成，足以安全等待天亮。
++
++### 支柱跳跃避难
++
++搭一根至少 12 格高的柱子，顶端建 3×3 平台。骷髅无法射击高度落差超过 12 格的目标，蜘蛛无法爬上 3×3 以上的平台边缘。
++
++### 单人暂停
++
++单人游戏中按 Esc 打开菜单可暂停时间流逝。遇到突发危险需要思考对策时，先暂停再决定。
++
++---
++
++## 10. 寻找结构与生物群系
++
++### 利用村民和地图
++
++- 制图师村民出售**林地探险家地图**和**海洋探险家地图**，可快速定位林地府邸和海底神殿。
++- 沉船中的**藏宝图**可引导你找到埋藏的宝藏。
++
++### 顺着方向探索
++
++如果不想寻找特定目标，选择一个方向一直走，沿途征服所有遇到的结构和生物群系。用火把或告示牌在岔路口做标记，防止迷路。
++
++### 快速定位（高级技巧）
+ 
+-- **带床出门**：远行时随身带一张床，黄昏时分就地放置睡觉，跳过夜晚的怪物潮。
+-- **做标记**：用火把、显眼方块或告示牌在矿洞岔路口做标记，防止迷路。
+-- **F3 调试屏幕**：按 F3 查看 XYZ 坐标，记下家的坐标以免找不到回路。
+-- **潜行保命**：在悬崖边缘或下界探索时，按住 Shift 潜行，防止失足坠落。
+-- **照明先行**：进入矿洞时边走边插火把，既防止刷怪，又标记来路。
+-- **随身带一桶水**：灭岩浆、灭火、免疫摔落伤害（落地前泼水）、推开怪物，一桶水有无数种救命用法。
++在允许使用命令的世界中，可用 `/locate structure <结构名>` 或 `/locate biome <生物群系名>` 直接获取最近目标的坐标。不过依赖命令可能会削弱探索本身的乐趣。

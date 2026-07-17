@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+  <!--
+Made with Book Theme · MC 教程
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="第一天#基于版本：Java 版 26.2 · 生存模式 · 默认难度
+几乎每个 Minecraft 老玩家都记得自己的第一个夜晚——缩在徒手挖出的土洞里，听着外面僵尸的呻吟和蜘蛛的脚步声，手里只有可怜的两三根火把。
+这篇教程的目的，是让你不必重蹈这种「硬核体验」的覆辙。我们将从容地度过第一个昼夜，天亮时拥有一套完整的石器装备、充足的食物，以及一个安全的临时居所。
+创建你的第一个世界#启动游戏，在主菜单依次点击：
+单人游戏 → 创建新的世界 世界名称随便填，叫「生存之旅」或「MC 第一档」都可以 游戏模式选生存 难度保持默认的普通即可 创建新世界 如果这是你第一次玩 Minecraft，建议用默认设置直接开始。等熟悉了基本操作之后，再去研究种子、超平坦这些高级选项也不迟。
+认识你的 HUD#进入世界后，屏幕上贴着的各种信息统称为 HUD（平视显示器）。它们是你在游戏中最重要的信息来源。
+Minecraft 的 HUD 界面 生命、饥饿，以及那个你看不到的饱和度#Minecraft 中有三条与生存直接相关的数值：
+数值 显示 上限 说明 生命值 红心 20 点（10 颗） 归零即死亡 饥饿值 鸡腿 20 点（10 根） 耗尽后持续扣血；低于 6 点时无法疾跑 饱和度 不可见 ≤ 饥饿值 饥饿值的「缓冲层」，消耗完才会轮到饥饿值 饱和度是一个隐藏数值，你可以把它理解为你吃下去但还没来得及完全消化的那部分。牛排比面包「撑得久」，是缘于它提供了更高的饱和度。当饱和度彻底耗尽时，饥饿值图标会轻微抖动——这是你唯一能察觉到的信号。
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#5c9a3a">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#3a6622">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/ch01-newcomer/04-first-day.html">
+	<meta property="og:site_name" content="Minecraft 从入门到精通">
+	<meta property="og:title" content="1.4 第一天">
+	<meta property="og:description" content="第一天#基于版本：Java 版 26.2 · 生存模式 · 默认难度
+几乎每个 Minecraft 老玩家都记得自己的第一个夜晚——缩在徒手挖出的土洞里，听着外面僵尸的呻吟和蜘蛛的脚步声，手里只有可怜的两三根火把。
+这篇教程的目的，是让你不必重蹈这种「硬核体验」的覆辙。我们将从容地度过第一个昼夜，天亮时拥有一套完整的石器装备、充足的食物，以及一个安全的临时居所。
+创建你的第一个世界#启动游戏，在主菜单依次点击：
+单人游戏 → 创建新的世界 世界名称随便填，叫「生存之旅」或「MC 第一档」都可以 游戏模式选生存 难度保持默认的普通即可 创建新世界 如果这是你第一次玩 Minecraft，建议用默认设置直接开始。等熟悉了基本操作之后，再去研究种子、超平坦这些高级选项也不迟。
+认识你的 HUD#进入世界后，屏幕上贴着的各种信息统称为 HUD（平视显示器）。它们是你在游戏中最重要的信息来源。
+Minecraft 的 HUD 界面 生命、饥饿，以及那个你看不到的饱和度#Minecraft 中有三条与生存直接相关的数值：
+数值 显示 上限 说明 生命值 红心 20 点（10 颗） 归零即死亡 饥饿值 鸡腿 20 点（10 根） 耗尽后持续扣血；低于 6 点时无法疾跑 饱和度 不可见 ≤ 饥饿值 饥饿值的「缓冲层」，消耗完才会轮到饥饿值 饱和度是一个隐藏数值，你可以把它理解为你吃下去但还没来得及完全消化的那部分。牛排比面包「撑得久」，是缘于它提供了更高的饱和度。当饱和度彻底耗尽时，饥饿值图标会轻微抖动——这是你唯一能察觉到的信号。">
+	<meta property="og:locale" content="zh">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="docs">
+
+
+	<meta itemprop="name" content="1.4 第一天">
+	<meta itemprop="description" content="第一天#基于版本：Java 版 26.2 · 生存模式 · 默认难度
+几乎每个 Minecraft 老玩家都记得自己的第一个夜晚——缩在徒手挖出的土洞里，听着外面僵尸的呻吟和蜘蛛的脚步声，手里只有可怜的两三根火把。
+这篇教程的目的，是让你不必重蹈这种「硬核体验」的覆辙。我们将从容地度过第一个昼夜，天亮时拥有一套完整的石器装备、充足的食物，以及一个安全的临时居所。
+创建你的第一个世界#启动游戏，在主菜单依次点击：
+单人游戏 → 创建新的世界 世界名称随便填，叫「生存之旅」或「MC 第一档」都可以 游戏模式选生存 难度保持默认的普通即可 创建新世界 如果这是你第一次玩 Minecraft，建议用默认设置直接开始。等熟悉了基本操作之后，再去研究种子、超平坦这些高级选项也不迟。
+认识你的 HUD#进入世界后，屏幕上贴着的各种信息统称为 HUD（平视显示器）。它们是你在游戏中最重要的信息来源。
+Minecraft 的 HUD 界面 生命、饥饿，以及那个你看不到的饱和度#Minecraft 中有三条与生存直接相关的数值：
+数值 显示 上限 说明 生命值 红心 20 点（10 颗） 归零即死亡 饥饿值 鸡腿 20 点（10 根） 耗尽后持续扣血；低于 6 点时无法疾跑 饱和度 不可见 ≤ 饥饿值 饥饿值的「缓冲层」，消耗完才会轮到饥饿值 饱和度是一个隐藏数值，你可以把它理解为你吃下去但还没来得及完全消化的那部分。牛排比面包「撑得久」，是缘于它提供了更高的饱和度。当饱和度彻底耗尽时，饥饿值图标会轻微抖动——这是你唯一能察觉到的信号。">
+	<meta itemprop="wordCount" content="378">
+
+<title>1.4 第一天 • Minecraft 从入门到精通</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/ch01-newcomer/04-first-day.html">
+<link rel="stylesheet" href="/book.min.64ab3279514b7f9a7b1ec50a47d8bc6f9bed31454a6363d9f98214862cb1a617.css" integrity="sha256-ZKsyeVFLf5p7HsUKR9i8b5vtMUVKY2PZ&#43;YIUhiyxphc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/custom.min.afb6f34d51ab1c081271592dd20eb5647c66d4df71bfdb63baa8fd266d0246c5.css" integrity="sha256-r7bzTVGrHAgScVkt0g61ZHxm1N9xv9tjuqj9Jm0CRsU=" crossorigin="anonymous">
+  <script defer type="module" src="/zh.search.min.75646ba7d8968ca3a465032b19a214a2dc7101b8fbf098fadeafbb27ed9494e5.js" integrity="sha256-dWRrp9iWjKOkZQMrGaIUotxxAbj78Jj63q&#43;7J&#43;2UlOU=" crossorigin="anonymous"></script>
+
+<script defer src="/lightbox.min.b995837a582ada0a114699e58df354f5feb5267b8ba089b2a2c8ac21783242ad.js" integrity="sha256-uZWDelgq2goRRpnljfNU9f61JnuLoImyosisIXgyQq0=" crossorigin="anonymous"></script>
+<script defer src="/theme-toggle.min.17d2b0e14e3e210244ce5d5afaa4b7603c579da4c11f197c77f156465295c14a.js" integrity="sha256-F9Kw4U4&#43;IQJEzl1a&#43;qS3YDxXnaTBHxl8d/FWRlKVwUo=" crossorigin="anonymous"></script>
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/index.html"><span>Minecraft 从入门到精通</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="搜索"
+    aria-label="搜索"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/preamble.html" class="">
+      序</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第一章 新手教程</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-newcomer/01-buy-and-install.html" class="">
+      1.1 购买与安装</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-newcomer/04-first-day.html" class="active">
+      1.4 第一天</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-newcomer/02-launcher-and-versions.html" class="">
+      1.2 启动器与版本</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-newcomer/05-gathering-and-crafting.html" class="">
+      1.5 采集与合成</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-newcomer/03-game-settings.html" class="">
+      1.3 游戏设置</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第三章 · 建造美学</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/01-basics.html" class="">
+      3.1 建筑基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/02-styles.html" class="">
+      3.2 风格与设计</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/03-terraforming.html" class="">
+      3.3 地形改造</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/04-furniture.html" class="">
+      3.4 实用家具</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/05-roofs-and-details.html" class="">
+      3.5 屋顶与细节</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/06-palette-and-materials.html" class="">
+      3.6 调色板与材料</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/07-underwater-and-special.html" class="">
+      3.7 水下与特殊环境建筑</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/04-villagers.html" class="">
+      2.5 村民与交易</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第四章 资源再生</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-farming/01-farming.html" class="">
+      2.4 农牧养殖</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第五章 红石电路</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/01-basics.html" class="">
+      4.1 红石基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/02-logic-circuits.html" class="">
+      4.2 逻辑电路</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/03-auto-farms.html" class="">
+      4.3 自动化农场</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/04-timers-and-clocks.html" class="">
+      5.4 计时器与时钟</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/05-piston-machines.html" class="">
+      5.5 活塞机械</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/06-storage-and-sorting.html" class="">
+      5.6 存储与分类系统</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/07-advanced-projects.html" class="">
+      5.7 红石进阶项目</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/05-enchanting.html" class="">
+      2.7 附魔与药水</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第六章 多人游戏</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-multiplayer/01-ways-to-connect.html" class="">
+      5.1 联机方式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-multiplayer/02-server-setup.html" class="">
+      5.2 服务器搭建</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-multiplayer/03-realms.html" class="">
+      5.3 领域服</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-multiplayer/04-server-management.html" class="">
+      6.4 服务器维护与管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-multiplayer/05-pvp.html" class="">
+      6.5 PvP 入门</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/03-nether-and-end.html" class="">
+      2.8 下界与末地</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第七章 技术性与模组</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/01-basic-commands.html" class="">
+      7.1 基础命令</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/02-command-blocks.html" class="">
+      7.2 指令方块</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/03-datapacks.html" class="">
+      7.3 数据包</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/04-command-reference.html" class="">
+      7.4 常用命令速查表</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/05-functions-and-advanced.html" class="">
+      7.5 函数与数据包进阶</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/06-recommended-mods.html" class="">
+      7.6 推荐模组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/07-command-reference.html" class="">
+      7.7 常用命令速查表</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/08-optimization-and-qol.html" class="">
+      7.8 优化与辅助模组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/09-functions-and-advanced.html" class="">
+      7.9 函数与数据包进阶</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/10-modpacks.html" class="">
+      7.10 整合包入门</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/appendix.html" class="">
+      附录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/01-combat-and-exploration.html" class="">
+      2.1 战斗与探索</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/afterwords.html" class="">
+      后记</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/02-mining.html" class="">
+      2.2 采矿技术</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>1.4 第一天</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#第一天">第一天</a>
+      <ul>
+        <li><a href="#创建你的第一个世界">创建你的第一个世界</a></li>
+        <li><a href="#认识你的-hud">认识你的 HUD</a>
+          <ul>
+            <li><a href="#生命饥饿以及那个你看不到的饱和度">生命、饥饿，以及那个你看不到的饱和度</a></li>
+            <li><a href="#屏幕上的其他信息">屏幕上的其他信息</a></li>
+          </ul>
+        </li>
+        <li><a href="#几种实用的移动技巧">几种实用的移动技巧</a></li>
+        <li><a href="#你在什么环境里出生">你在什么环境里出生？</a></li>
+        <li><a href="#第一步撸树0--2-分钟">第一步：撸树（0 ~ 2 分钟）</a></li>
+        <li><a href="#第二步打造第一批工具2--5-分钟">第二步：打造第一批工具（2 ~ 5 分钟）</a>
+          <ul>
+            <li><a href="#从原木到木板">从原木到木板</a></li>
+            <li><a href="#制作工作台">制作工作台</a></li>
+            <li><a href="#第一批木制工具">第一批木制工具</a></li>
+          </ul>
+        </li>
+        <li><a href="#第三步进入石器时代5--10-分钟">第三步：进入石器时代（5 ~ 10 分钟）</a>
+          <ul>
+            <li><a href="#寻找石头">寻找石头</a></li>
+            <li><a href="#升级装备">升级装备</a></li>
+          </ul>
+        </li>
+        <li><a href="#第四步解决温饱问题10--15-分钟">第四步：解决温饱问题（10 ~ 15 分钟）</a>
+          <ul>
+            <li><a href="#获取食物的三种途径">获取食物的三种途径</a></li>
+            <li><a href="#烧制食物">烧制食物</a></li>
+            <li><a href="#制作火把你的指路明灯">制作火把——你的指路明灯</a></li>
+          </ul>
+        </li>
+        <li><a href="#第五步天黑前建好你的避难所">第五步：天黑前，建好你的避难所</a>
+          <ul>
+            <li><a href="#紧急避难所一分钟版本">紧急避难所（一分钟版本）</a></li>
+            <li><a href="#标准小屋五分钟版本">标准小屋（五分钟版本）</a></li>
+            <li><a href="#庇护所的基本配置">庇护所的基本配置</a></li>
+          </ul>
+        </li>
+        <li><a href="#第六步在屋里度过第一夜夜晚约-7-分钟">第六步：在屋里度过第一夜（夜晚，约 7 分钟）</a></li>
+        <li><a href="#第二天早晨">第二天早晨</a></li>
+        <li><a href="#第一天总结">第一天总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="第一天">第一天<a class="anchor" href="#%e7%ac%ac%e4%b8%80%e5%a4%a9">#</a></h1>
+<blockquote class='book-hint note'>
+<p><strong>基于版本</strong>：Java 版 26.2 · 生存模式 · 默认难度</p></blockquote><p>几乎每个 Minecraft 老玩家都记得自己的第一个夜晚——缩在徒手挖出的土洞里，听着外面僵尸的呻吟和蜘蛛的脚步声，手里只有可怜的两三根火把。</p>
+<p>这篇教程的目的，是让你不必重蹈这种「硬核体验」的覆辙。我们将从容地度过第一个昼夜，天亮时拥有一套完整的石器装备、充足的食物，以及一个安全的临时居所。</p>
+<h2 id="创建你的第一个世界">创建你的第一个世界<a class="anchor" href="#%e5%88%9b%e5%bb%ba%e4%bd%a0%e7%9a%84%e7%ac%ac%e4%b8%80%e4%b8%aa%e4%b8%96%e7%95%8c">#</a></h2>
+<p>启动游戏，在主菜单依次点击：</p>
+<ol>
+<li><strong>单人游戏 → 创建新的世界</strong></li>
+<li>世界名称随便填，叫「生存之旅」或「MC 第一档」都可以</li>
+<li>游戏模式选<strong>生存</strong></li>
+<li>难度保持默认的<strong>普通</strong>即可</li>
+</ol>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/1.png"
+    alt="创建世界" title="创建新世界" width="750" 
+    data-lightbox data-lightbox-caption="创建新世界"
+  />
+  <figcaption>创建新世界</figcaption>
+</figure>
+
+<blockquote class='book-hint tip'>
+<p>如果这是你第一次玩 Minecraft，建议用默认设置直接开始。等熟悉了基本操作之后，再去研究种子、超平坦这些高级选项也不迟。</p></blockquote><h2 id="认识你的-hud">认识你的 HUD<a class="anchor" href="#%e8%ae%a4%e8%af%86%e4%bd%a0%e7%9a%84-hud">#</a></h2>
+<p>进入世界后，屏幕上贴着的各种信息统称为 <strong>HUD（平视显示器）</strong>。它们是你在游戏中最重要的信息来源。</p>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/2.png"
+    alt="HUD 界面" title="Minecraft 的 HUD 界面" width="750" 
+    data-lightbox data-lightbox-caption="Minecraft 的 HUD 界面"
+  />
+  <figcaption>Minecraft 的 HUD 界面</figcaption>
+</figure>
+
+<h3 id="生命饥饿以及那个你看不到的饱和度">生命、饥饿，以及那个你看不到的饱和度<a class="anchor" href="#%e7%94%9f%e5%91%bd%e9%a5%a5%e9%a5%bf%e4%bb%a5%e5%8f%8a%e9%82%a3%e4%b8%aa%e4%bd%a0%e7%9c%8b%e4%b8%8d%e5%88%b0%e7%9a%84%e9%a5%b1%e5%92%8c%e5%ba%a6">#</a></h3>
+<p>Minecraft 中有三条与生存直接相关的数值：</p>
+<table>
+	<thead>
+			<tr>
+					<th>数值</th>
+					<th>显示</th>
+					<th>上限</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>生命值</td>
+					<td>红心 <img src="https://zh.minecraft.wiki/images/Heart_%28icon%29.png?16571" style="zoom:150%;" /></td>
+					<td>20 点（10 颗）</td>
+					<td>归零即死亡</td>
+			</tr>
+			<tr>
+					<td>饥饿值</td>
+					<td>鸡腿 <img src="https://zh.minecraft.wiki/images/Hunger.svg?5c3ee" style="zoom:150%;" /></td>
+					<td>20 点（10 根）</td>
+					<td>耗尽后持续扣血；低于 6 点时无法疾跑</td>
+			</tr>
+			<tr>
+					<td>饱和度</td>
+					<td>不可见</td>
+					<td>≤ 饥饿值</td>
+					<td>饥饿值的「缓冲层」，消耗完才会轮到饥饿值</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote class='book-hint note'>
+<p>饱和度是一个隐藏数值，你可以把它理解为你吃下去但还没来得及完全消化的那部分。牛排比面包「撑得久」，是缘于它提供了更高的饱和度。当饱和度彻底耗尽时，饥饿值图标会轻微抖动——这是你唯一能察觉到的信号。</p></blockquote><p>饱和度还有一个关键作用：它直接影响你回血的速度。</p>
+<ul>
+<li>饥饿值满 + 有剩余饱和度 → 快速回血（每 0.5 秒最多 1 点）</li>
+<li>饥饿值 ≥ 18 → 缓慢回血（每 4 秒 1 点）</li>
+<li>饥饿值 &lt; 18 → <strong>不！会！回！血！</strong></li>
+</ul>
+<p>所以战斗中受伤后，别光站着等——先吃高饱和度的食物填饱肚子，回血效率差别很大。</p>
+<h3 id="屏幕上的其他信息">屏幕上的其他信息<a class="anchor" href="#%e5%b1%8f%e5%b9%95%e4%b8%8a%e7%9a%84%e5%85%b6%e4%bb%96%e4%bf%a1%e6%81%af">#</a></h3>
+<div class="card-list" style="--card-columns: 2;">
+  <ul>
+<li><strong>快捷栏（屏幕下方 9 格）</strong>
+你当前随身携带的物品。按 <kbd>1 ~ 9</kbd>
+切换，鼠标滚轮也可以。</li>
+<li><strong>经验条（绿色进度条）</strong>
+击杀生物、挖掘矿石、烧炼物品均可获得。经验用于附魔和修复，第一天可以先不管。</li>
+<li><strong>十字准星</strong>
+屏幕正中央。你对世界的所有交互——挖掘、攻击、放置、使用——都由它来瞄准。</li>
+</ul>
+
+</div>
+
+<h2 id="几种实用的移动技巧">几种实用的移动技巧<a class="anchor" href="#%e5%87%a0%e7%a7%8d%e5%ae%9e%e7%94%a8%e7%9a%84%e7%a7%bb%e5%8a%a8%e6%8a%80%e5%b7%a7">#</a></h2>
+<p>在开始冒险之前，先了解几个能让你跑得更快、更省力的技巧：</p>
+<div class="card-list" style="--card-columns: 2;">
+  <ul>
+<li><strong>顶头跳</strong>：在 2 格高的空间里疾跑并不断按跳跃键，角色会被天花板顶住，连续做出短促的跳跃。这种移动方式比平地疾跑更快，在矿道中赶路非常实用。不过它会大幅加速饥饿值的消耗。</li>
+<li><strong>疾跑中攻击可节省食物</strong>：疾跑消耗饥饿值很快，但如果在疾跑过程中攻击任意生物，「这段疾跑的消耗累积」会被重置。赶长路时顺手拍一下路过的动物，能省下不少粮食。</li>
+<li><strong>从 4 格高度开始摔伤</strong>：前 3 格以内安全落地，第 4 格起每多 1 格扣 1 点血。疾跑状态下最远可跳 4 格。</li>
+</ul>
+
+</div>
+
+<h2 id="你在什么环境里出生">你在什么环境里出生？<a class="anchor" href="#%e4%bd%a0%e5%9c%a8%e4%bb%80%e4%b9%88%e7%8e%af%e5%a2%83%e9%87%8c%e5%87%ba%e7%94%9f">#</a></h2>
+<p>不同生物群系的资源丰富程度差异很大。根据出生点周围的景色，大致可以分为三种情况：</p>
+<div class="card-list" style="--card-columns: 3;">
+  <ul>
+<li><strong>森林 / 针叶林 / 丛林等</strong>
+树木茂密，开局最舒适的类型。直接撸树，一路顺畅。</li>
+<li><strong>平原 / 草原 / 热带草原等</strong>
+树木稀疏但动物众多。多走几步就能找到树，顺便打猎囤肉。</li>
+<li><strong>沙漠 / 恶地 / 冰原等</strong>
+几乎找不到树木。留意河谷中的零星树木，或者寻找开着粉色花朵的杜鹃树（它下方一定连接着繁茂洞穴）。如果附近有沙漠村庄，直接利用村庄资源也是上策。什么都没有的话……建议果断跑图，移动到更适合生存的群系。</li>
+</ul>
+
+</div>
+
+<h2 id="第一步撸树0--2-分钟">第一步：撸树（0 ~ 2 分钟）<a class="anchor" href="#%e7%ac%ac%e4%b8%80%e6%ad%a5%e6%92%b8%e6%a0%910--2-%e5%88%86%e9%92%9f">#</a></h2>
+<p>Minecraft 有一条广为流传的格言：<strong>要想富，先撸树</strong>。进入世界后的第一件事，就是找到离你最近的那棵树。</p>
+<ol>
+<li>走到树旁，将十字准星对准树干。</li>
+<li>按住<strong>鼠标左键</strong>不放，徒手敲击树干。</li>
+<li>树干碎裂后掉出一块原木。走过去即可自动拾取。</li>
+<li>一棵树通常掉落 4 ~ 6 块原木。建议砍完整棵，收集 <strong>6 ~ 8 块</strong>。</li>
+</ol>
+<blockquote class='book-hint note'>
+<p>徒手撸树速度不快。另外，只有树干才会掉落原木——树叶不会，而且没有工具的话破坏树叶也相当费时。</p></blockquote><h2 id="第二步打造第一批工具2--5-分钟">第二步：打造第一批工具（2 ~ 5 分钟）<a class="anchor" href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5%e6%89%93%e9%80%a0%e7%ac%ac%e4%b8%80%e6%89%b9%e5%b7%a5%e5%85%b72--5-%e5%88%86%e9%92%9f">#</a></h2>
+<p>按下 <kbd>E</kbd>
+ 打开物品栏。右上角的 2×2 小方格就是你的合成栏，合成栏底部的绿色书本是<strong>配方书</strong>——它会列出你当前能够合成的所有物品。</p>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/3.png"
+    alt="物品栏界面" title="物品栏与合成栏" width="750" 
+    data-lightbox data-lightbox-caption="物品栏与合成栏"
+  />
+  <figcaption>物品栏与合成栏</figcaption>
+</figure>
+
+<h3 id="从原木到木板">从原木到木板<a class="anchor" href="#%e4%bb%8e%e5%8e%9f%e6%9c%a8%e5%88%b0%e6%9c%a8%e6%9d%bf">#</a></h3>
+<p>把原木放进合成栏的任意一格，右侧就会产出 4 个木板。1 原木 = 4 木板。先攒出 <strong>24 个左右</strong>的木板备用。</p>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/4.png"
+    alt="原木合成木板" title="原木合成木板" width="750" 
+    data-lightbox data-lightbox-caption="原木合成木板"
+  />
+  <figcaption>原木合成木板</figcaption>
+</figure>
+
+<h3 id="制作工作台">制作工作台<a class="anchor" href="#%e5%88%b6%e4%bd%9c%e5%b7%a5%e4%bd%9c%e5%8f%b0">#</a></h3>
+<p>用 4 块木板填满 2×2 合成栏，得到一个<strong>工作台</strong>。把它放到快捷栏，找个空地右键放置。</p>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/5.png"
+    alt="合成工作台" title="合成工作台" width="750" 
+    data-lightbox data-lightbox-caption="合成工作台"
+  />
+  <figcaption>合成工作台</figcaption>
+</figure>
+
+<h3 id="第一批木制工具">第一批木制工具<a class="anchor" href="#%e7%ac%ac%e4%b8%80%e6%89%b9%e6%9c%a8%e5%88%b6%e5%b7%a5%e5%85%b7">#</a></h3>
+<p>右键打开工作台，它提供 3×3 的合成空间——能合成的物品一下子多了不少。</p>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/6.png"
+    alt="工作台界面" title="工作台界面" width="750" 
+    data-lightbox data-lightbox-caption="工作台界面"
+  />
+  <figcaption>工作台界面</figcaption>
+</figure>
+
+<p>你需要制作以下物品：</p>
+<ul>
+<li><strong>木棍</strong>（工具手柄）：2 块木板上下排列 = 4 根木棍</li>
+</ul>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/7.png"
+    alt="合成木棍" title="合成木棍" width="750" 
+    data-lightbox data-lightbox-caption="合成木棍"
+  />
+  <figcaption>合成木棍</figcaption>
+</figure>
+
+<ul>
+<li><strong>木镐</strong>（用来挖石头）：3 块木板铺顶行，中间一列放 2 根木棍</li>
+</ul>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/8.png"
+    alt="合成木镐" title="合成木镐" width="750" 
+    data-lightbox data-lightbox-caption="合成木镐"
+  />
+  <figcaption>合成木镐</figcaption>
+</figure>
+
+<blockquote class='book-hint tip'>
+<p>配方书可以帮你自动摆放材料——点击你想要合成的物品，材料会自动填入正确的位置。不用死记配方。</p></blockquote><h2 id="第三步进入石器时代5--10-分钟">第三步：进入石器时代（5 ~ 10 分钟）<a class="anchor" href="#%e7%ac%ac%e4%b8%89%e6%ad%a5%e8%bf%9b%e5%85%a5%e7%9f%b3%e5%99%a8%e6%97%b6%e4%bb%a35--10-%e5%88%86%e9%92%9f">#</a></h2>
+<p>木制工具的效率实在不高。我们需要尽快升级到石制工具。</p>
+<h3 id="寻找石头">寻找石头<a class="anchor" href="#%e5%af%bb%e6%89%be%e7%9f%b3%e5%a4%b4">#</a></h3>
+<p>在出生点附近寻找裸露的灰色岩石——山坡断面是最常见的来源，河流岸边或地面凹陷处也常有石头露出。如果实在找不到，可以在水平方向挖几格再往下——但<strong>绝对不要竖直挖自己脚下的方块</strong>。</p>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/9.png"
+    alt="寻找石头" title="露天石头" width="750" 
+    data-lightbox data-lightbox-caption="露天石头"
+  />
+  <figcaption>露天石头</figcaption>
+</figure>
+
+<h3 id="升级装备">升级装备<a class="anchor" href="#%e5%8d%87%e7%ba%a7%e8%a3%85%e5%a4%87">#</a></h3>
+<p>用木镐挖掘至少 <strong>13 块圆石</strong>，然后在工作台中合成：</p>
+<ul>
+<li><strong>石镐</strong>（3 圆石 + 2 木棍）</li>
+</ul>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/10.png"
+    alt="合成石镐" title="合成石镐" width="750" 
+    data-lightbox data-lightbox-caption="合成石镐"
+  />
+  <figcaption>合成石镐</figcaption>
+</figure>
+
+<ul>
+<li><strong>石剑</strong>（2 圆石 + 1 木棍）</li>
+</ul>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/11.png"
+    alt="合成石剑" title="合成石剑" width="750" 
+    data-lightbox data-lightbox-caption="合成石剑"
+  />
+  <figcaption>合成石剑</figcaption>
+</figure>
+
+<ul>
+<li><strong>熔炉</strong>（8 块圆石围成圈——用来烧肉和矿石）</li>
+</ul>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/12.png"
+    alt="合成熔炉" title="合成熔炉" width="750" 
+    data-lightbox data-lightbox-caption="合成熔炉"
+  />
+  <figcaption>合成熔炉</figcaption>
+</figure>
+
+<blockquote class='book-hint warning'>
+<p>木镐只能挖石头和煤矿。看到铁矿石、青金石等，用木镐去敲只会白白浪费耐久——什么也挖不下来。工具的材质决定了你能挖掘的矿石等级，这是 Minecraft 最基础的规则。</p></blockquote><h2 id="第四步解决温饱问题10--15-分钟">第四步：解决温饱问题（10 ~ 15 分钟）<a class="anchor" href="#%e7%ac%ac%e5%9b%9b%e6%ad%a5%e8%a7%a3%e5%86%b3%e6%b8%a9%e9%a5%b1%e9%97%ae%e9%a2%9810--15-%e5%88%86%e9%92%9f">#</a></h2>
+<p>你会发现饥饿值在慢慢往下掉。在太阳落山前，你需要搞定食物。</p>
+<h3 id="获取食物的三种途径">获取食物的三种途径<a class="anchor" href="#%e8%8e%b7%e5%8f%96%e9%a3%9f%e7%89%a9%e7%9a%84%e4%b8%89%e7%a7%8d%e9%80%94%e5%be%84">#</a></h3>
+<div class="card-list" style="--card-columns: 3;">
+  <ul>
+<li><strong>狩猎动物</strong>
+攻击野外的猪、牛、羊、鸡，它们会掉落生肉。生肉放进熔炉烧熟后，恢复的饥饿值会翻好几倍。</li>
+<li><strong>捡苹果</strong>
+砍伐橡树或深色橡树时，树叶有概率掉落苹果。捡到就能直接吃。</li>
+<li><strong>采集种子</strong>
+破坏草地可获得小麦种子。今天来不及种了，先收着，等安顿下来再说。</li>
+</ul>
+
+</div>
+
+<h3 id="烧制食物">烧制食物<a class="anchor" href="#%e7%83%a7%e5%88%b6%e9%a3%9f%e7%89%a9">#</a></h3>
+<p>放下熔炉，打开界面：<strong>上层放生肉，下层放燃料</strong>（木板、原木、木炭都可以）。稍等片刻，熟肉就出炉了。</p>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/13.png"
+    alt="熔炉烧肉" title="熔炉烧制食物" width="750" 
+    data-lightbox data-lightbox-caption="熔炉烧制食物"
+  />
+  <figcaption>熔炉烧制食物</figcaption>
+</figure>
+
+<h3 id="制作火把你的指路明灯">制作火把——你的指路明灯<a class="anchor" href="#%e5%88%b6%e4%bd%9c%e7%81%ab%e6%8a%8a%e4%bd%a0%e7%9a%84%e6%8c%87%e8%b7%af%e6%98%8e%e7%81%af">#</a></h3>
+<p>火把不仅是光源，更是你<strong>防止迷路</strong>和<strong>阻止怪物生成</strong>的关键道具：</p>
+<ol>
+<li>在熔炉中将一块原木烧成<strong>木炭</strong></li>
+<li>1 木炭 + 1 木棍（上下排列）= <strong>4 根火把</strong></li>
+</ol>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/14.png"
+    alt="合成火把" title="合成火把" width="750" 
+    data-lightbox data-lightbox-caption="合成火把"
+  />
+  <figcaption>合成火把</figcaption>
+</figure>
+
+<p>出发探索前，先做 <strong>16 ~ 20 根</strong>火把。沿途在显眼的位置插上火把，回头时顺着光走，永远不会迷路。</p>
+<h2 id="第五步天黑前建好你的避难所">第五步：天黑前，建好你的避难所<a class="anchor" href="#%e7%ac%ac%e4%ba%94%e6%ad%a5%e5%a4%a9%e9%bb%91%e5%89%8d%e5%bb%ba%e5%a5%bd%e4%bd%a0%e7%9a%84%e9%81%bf%e9%9a%be%e6%89%80">#</a></h2>
+<p>太阳一落山，野外就会大量刷新僵尸、骷髅、蜘蛛和苦力怕。你需要在天空完全变橙色之前，找到一个能保护自己的空间。</p>
+<h3 id="紧急避难所一分钟版本">紧急避难所（一分钟版本）<a class="anchor" href="#%e7%b4%a7%e6%80%a5%e9%81%bf%e9%9a%be%e6%89%80%e4%b8%80%e5%88%86%e9%92%9f%e7%89%88%e6%9c%ac">#</a></h3>
+<ol>
+<li>找一面山壁或土坡</li>
+<li>水平挖入 3 ~ 5 格深、2 格高</li>
+<li>在洞内插一根火把</li>
+<li>用方块<strong>封死洞口</strong></li>
+</ol>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/15.png"
+    alt="紧急避难所" title="紧急避难所示例" width="750" 
+    data-lightbox data-lightbox-caption="紧急避难所示例"
+  />
+  <figcaption>紧急避难所示例</figcaption>
+</figure>
+
+<p>这就够了。一个能让你安全度过第一夜的微型避难所。</p>
+<h3 id="标准小屋五分钟版本">标准小屋（五分钟版本）<a class="anchor" href="#%e6%a0%87%e5%87%86%e5%b0%8f%e5%b1%8b%e4%ba%94%e5%88%86%e9%92%9f%e7%89%88%e6%9c%ac">#</a></h3>
+<p>如果你有充裕的时间，可以建得更舒适一些：</p>
+<dl class="timeline">
+
+<dt class="timeline-caption">步骤 1：平整地面</dt>
+<dd class="timeline-body card">找一块 5×5 左右的平坦地面，清除杂草。</dd>
+
+<dt class="timeline-caption">步骤 2：砌墙</dt>
+<dd class="timeline-body card">用木板或圆石围出四面墙壁，每面至少 3 格高。</dd>
+
+<dt class="timeline-caption">步骤 3：封顶</dt>
+<dd class="timeline-body card">用方块铺满天花板。蜘蛛能爬墙——没有屋顶的话它们会从天而降。</dd>
+
+<dt class="timeline-caption">步骤 4：安装门</dt>
+<dd class="timeline-body card">6 块木板 = 1 扇门。装在一面墙上，右键开合。</dd>
+
+<dt class="timeline-caption">步骤 5：内部照明</dt>
+<dd class="timeline-body card">插 2 ~ 3 根火把，确保屋内的每个角落都有充足光线。</dd>
+
+
+</dl>
+
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/16.webp"
+    alt="标准小屋" title="标准庇护所外观" width="750" 
+    data-lightbox data-lightbox-caption="标准庇护所外观"
+  />
+  <figcaption>标准庇护所外观</figcaption>
+</figure>
+
+<h3 id="庇护所的基本配置">庇护所的基本配置<a class="anchor" href="#%e5%ba%87%e6%8a%a4%e6%89%80%e7%9a%84%e5%9f%ba%e6%9c%ac%e9%85%8d%e7%bd%ae">#</a></h3>
+<p>一个好的第一天庇护所至少应该包括：</p>
+<ul>
+<li><strong>门</strong>：6 块木板合成。挡住外面的怪物，也给你一个进出世界的窗口</li>
+<li><strong>工作台 + 熔炉</strong>：放在屋里，晚上还能继续干活</li>
+<li><strong>箱子</strong>：8 块木板围成圈。清理杂物栏的必备家具</li>
+<li><strong>床</strong>（如果有材料的话）：3 块羊毛 + 3 块木板。右键睡觉即可跳过夜晚，同时设定重生点</li>
+</ul>
+<blockquote class='book-hint warning'>
+<p>不要在墙壁上留 1×1 的空隙——小僵尸刚好能钻进来。也不要在门边留下可以让怪物站上去翻墙的方块。</p></blockquote><h2 id="第六步在屋里度过第一夜夜晚约-7-分钟">第六步：在屋里度过第一夜（夜晚，约 7 分钟）<a class="anchor" href="#%e7%ac%ac%e5%85%ad%e6%ad%a5%e5%9c%a8%e5%b1%8b%e9%87%8c%e5%ba%a6%e8%bf%87%e7%ac%ac%e4%b8%80%e5%a4%9c%e5%a4%9c%e6%99%9a%e7%ba%a6-7-%e5%88%86%e9%92%9f">#</a></h2>
+<p>躲进庇护所后，你并不是无事可做：</p>
+<div class="card-list" style="--card-columns: 2;">
+  <ul>
+<li><strong>烧制食物</strong>：把白天收集的生肉放进熔炉，为明天备好干粮。</li>
+<li><strong>整理物品</strong>：将多余的物资存入箱子，腾出快捷栏空间。</li>
+<li><strong>制作备用工具</strong>：多备一把石镐和石剑，以防关键时刻工具损坏。</li>
+<li><strong>规划明天的行动</strong>：按 <kbd>F3</kbd>
+查看坐标并记下家的位置，或者观察家周围的地标特征。</li>
+</ul>
+
+</div>
+
+<p>如果你用羊毛和木板合成了床，右键睡觉就能直接跳到清晨，同时把重生点设在这里。</p>
+<p>没有床的话，就在屋里安心等到天亮。外面怪物的声音虽然吓人，但有墙和门挡着，它们是进不来的。</p>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch02/17.png"
+    alt="夜晚屋内" title="在庇护所里度过夜晚" width="750" 
+    data-lightbox data-lightbox-caption="在庇护所里度过夜晚"
+  />
+  <figcaption>在庇护所里度过夜晚</figcaption>
+</figure>
+
+<blockquote class='book-hint note'>
+<p><strong>关于死亡</strong>：如果生命值降为零，你的角色会死亡。所有携带的物品掉落在原地，而你会在出生点（或上一次睡过的床旁边）复活。你有大约 5 分钟的时间跑回死亡地点捡回物品。这也是第一天必须造庇护所的原因——活下去，你才有机会继续你的冒险。</p></blockquote><h2 id="第二天早晨">第二天早晨<a class="anchor" href="#%e7%ac%ac%e4%ba%8c%e5%a4%a9%e6%97%a9%e6%99%a8">#</a></h2>
+<p>太阳升起后，打开门，确认门外没有残留的怪物（僵尸和骷髅会被阳光灼烧，但蜘蛛和苦力怕不会消失）。</p>
+<p>第二天你应该做的事：</p>
+<ol>
+<li><strong>建立食物来源</strong>：猎杀更多动物，或开始垦荒种植小麦</li>
+<li><strong>继续采矿</strong>：寻找煤矿和铁矿，它们在地表的山坡和地下洞穴中很常见</li>
+<li><strong>标记你的家</strong>：用火把、高柱子或显眼的方块在家周围做路标</li>
+<li><strong>扩建居所</strong>：为工作台、熔炉和箱子腾出更宽敞的空间</li>
+</ol>
+<h2 id="第一天总结">第一天总结<a class="anchor" href="#%e7%ac%ac%e4%b8%80%e5%a4%a9%e6%80%bb%e7%bb%93">#</a></h2>
+<div class="card-list" style="--card-columns: 2;">
+  <ul>
+<li>撸树 → 造木板 → 做工作台</li>
+<li>造木镐 → 挖圆石 → 升级石器</li>
+<li>打猎采集 → 烧熟肉 → 解决饥饿</li>
+<li>木头变木炭 → 合成火把 → 照亮前路</li>
+<li>砌墙 + 封顶 + 装门 → 安全度过夜晚</li>
+<li>夜晚在屋里休整准备，天亮再出发探索</li>
+</ul>
+
+</div>
+
+<hr>
+<p>现在，你已经拥有了石器装备、一个遮风挡雨的小屋和足以支撑几天的食物。下一节，我们将系统地学习采集、合成与烧炼——了解 Minecraft 最基础也最重要的资源循环。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/ch01-newcomer/01-buy-and-install.html" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="上一页" />
+        <span>1.1 购买与安装</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/ch01-newcomer/02-launcher-and-versions.html" class="flex align-center">
+        <span>1.2 启动器与版本</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="下一页" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#第一天">第一天</a>
+      <ul>
+        <li><a href="#创建你的第一个世界">创建你的第一个世界</a></li>
+        <li><a href="#认识你的-hud">认识你的 HUD</a>
+          <ul>
+            <li><a href="#生命饥饿以及那个你看不到的饱和度">生命、饥饿，以及那个你看不到的饱和度</a></li>
+            <li><a href="#屏幕上的其他信息">屏幕上的其他信息</a></li>
+          </ul>
+        </li>
+        <li><a href="#几种实用的移动技巧">几种实用的移动技巧</a></li>
+        <li><a href="#你在什么环境里出生">你在什么环境里出生？</a></li>
+        <li><a href="#第一步撸树0--2-分钟">第一步：撸树（0 ~ 2 分钟）</a></li>
+        <li><a href="#第二步打造第一批工具2--5-分钟">第二步：打造第一批工具（2 ~ 5 分钟）</a>
+          <ul>
+            <li><a href="#从原木到木板">从原木到木板</a></li>
+            <li><a href="#制作工作台">制作工作台</a></li>
+            <li><a href="#第一批木制工具">第一批木制工具</a></li>
+          </ul>
+        </li>
+        <li><a href="#第三步进入石器时代5--10-分钟">第三步：进入石器时代（5 ~ 10 分钟）</a>
+          <ul>
+            <li><a href="#寻找石头">寻找石头</a></li>
+            <li><a href="#升级装备">升级装备</a></li>
+          </ul>
+        </li>
+        <li><a href="#第四步解决温饱问题10--15-分钟">第四步：解决温饱问题（10 ~ 15 分钟）</a>
+          <ul>
+            <li><a href="#获取食物的三种途径">获取食物的三种途径</a></li>
+            <li><a href="#烧制食物">烧制食物</a></li>
+            <li><a href="#制作火把你的指路明灯">制作火把——你的指路明灯</a></li>
+          </ul>
+        </li>
+        <li><a href="#第五步天黑前建好你的避难所">第五步：天黑前，建好你的避难所</a>
+          <ul>
+            <li><a href="#紧急避难所一分钟版本">紧急避难所（一分钟版本）</a></li>
+            <li><a href="#标准小屋五分钟版本">标准小屋（五分钟版本）</a></li>
+            <li><a href="#庇护所的基本配置">庇护所的基本配置</a></li>
+          </ul>
+        </li>
+        <li><a href="#第六步在屋里度过第一夜夜晚约-7-分钟">第六步：在屋里度过第一夜（夜晚，约 7 分钟）</a></li>
+        <li><a href="#第二天早晨">第二天早晨</a></li>
+        <li><a href="#第一天总结">第一天总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>第四章 资源再生 on Minecraft 从入门到精通</title>
+		<link>http://localhost:1313/docs/ch04-farming/index.html</link>
+		<description>Recent content in 第四章 资源再生 on Minecraft 从入门到精通</description>
+		<generator>Hugo</generator>
+		<language>zh</language>
+		
+		
+		
+		
+			<atom:link href="http://localhost:1313/docs/ch04-farming/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>2.4 农牧养殖</title>
+				<link>http://localhost:1313/docs/ch04-farming/01-farming.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/ch04-farming/01-farming.html</guid>
+				<description>&lt;h1 id=&#34;24-农牧养殖&#34;&gt;2.4 农牧养殖&lt;a class=&#34;anchor&#34; href=&#34;#24-%e5%86%9c%e7%89%a7%e5%85%bb%e6%ae%96&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote class=&#39;book-hint note&#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;基于版本&lt;/strong&gt;：Java 版 26.2 · 食物生产与资源再生&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;（待填充）&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

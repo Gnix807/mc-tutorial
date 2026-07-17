@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme · MC 教程
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="1.2 启动器与版本#基于版本：Java 版 26.x · 启动器说明覆盖官方和第三方 · 版本表截至 2026 年 7 月
+购买游戏之后，你需要通过启动器来下载和运行 Minecraft。启动器不仅是游戏的入口，还负责版本管理、模组加载、资源包切换等核心功能。本节将介绍官方启动器以及国内主流的几款第三方启动器。
+什么是启动器？#启动器（Launcher）是 Minecraft 的客户端管理程序，它的主要功能包括：
+下载与安装：从 Mojang 服务器获取游戏文件，自动安装对应版本 版本管理：在同一台电脑上保留多个游戏版本，随时切换 账号登录：通过 Microsoft 账户认证，验证游戏许可 游戏配置：调节内存分配、JVM 参数、游戏分辨率等 模组与整合包：方便地安装 Forge、Fabric 等模组加载器，导入整合包 简单来说，启动器就是你进入方块世界的「大门」。
+官方启动器#Minecraft Launcher#Minecraft Launcher 是 Mojang 官方出品的启动器，也是购买游戏后最先接触的启动器。
+优点 官方出品 最安全可靠，自动更新，支持 Java 版和基岩版一站式管理。 不足 功能相对简单，无法直接安装第三方模组加载器，界面不够灵活。 官方启动器适合以下玩家：
+主打原版生存，不需要频繁切换版本和模组 对安全性要求高，不想折腾第三方工具 需要同时管理 Java 版和基岩版 下载与安装#访问 Minecraft 下载页面 。 根据你的操作系统选择对应版本，下载安装程序。 运行安装程序，按照提示完成安装。 启动后登录你的 Microsoft 账户，即可在左侧看到已购买的游戏版本。 初次启动时，启动器会自动下载对应版本的 Minecraft 游戏文件。这个过程可能需要几分钟，具体时间取决于网络速度。
+第三方启动器#对于想要深入游玩 Minecraft 的玩家来说，第三方启动器几乎是必选项。它们提供了更丰富的版本管理、模组安装和个性化功能。下面介绍国内最主流的几款。
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#5c9a3a">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#3a6622">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/ch01-getting-started/02-launcher-and-versions.html">
+	<meta property="og:site_name" content="Minecraft 从入门到精通">
+	<meta property="og:title" content="1.2 启动器与版本">
+	<meta property="og:description" content="1.2 启动器与版本#基于版本：Java 版 26.x · 启动器说明覆盖官方和第三方 · 版本表截至 2026 年 7 月
+购买游戏之后，你需要通过启动器来下载和运行 Minecraft。启动器不仅是游戏的入口，还负责版本管理、模组加载、资源包切换等核心功能。本节将介绍官方启动器以及国内主流的几款第三方启动器。
+什么是启动器？#启动器（Launcher）是 Minecraft 的客户端管理程序，它的主要功能包括：
+下载与安装：从 Mojang 服务器获取游戏文件，自动安装对应版本 版本管理：在同一台电脑上保留多个游戏版本，随时切换 账号登录：通过 Microsoft 账户认证，验证游戏许可 游戏配置：调节内存分配、JVM 参数、游戏分辨率等 模组与整合包：方便地安装 Forge、Fabric 等模组加载器，导入整合包 简单来说，启动器就是你进入方块世界的「大门」。
+官方启动器#Minecraft Launcher#Minecraft Launcher 是 Mojang 官方出品的启动器，也是购买游戏后最先接触的启动器。
+优点 官方出品 最安全可靠，自动更新，支持 Java 版和基岩版一站式管理。 不足 功能相对简单，无法直接安装第三方模组加载器，界面不够灵活。 官方启动器适合以下玩家：
+主打原版生存，不需要频繁切换版本和模组 对安全性要求高，不想折腾第三方工具 需要同时管理 Java 版和基岩版 下载与安装#访问 Minecraft 下载页面 。 根据你的操作系统选择对应版本，下载安装程序。 运行安装程序，按照提示完成安装。 启动后登录你的 Microsoft 账户，即可在左侧看到已购买的游戏版本。 初次启动时，启动器会自动下载对应版本的 Minecraft 游戏文件。这个过程可能需要几分钟，具体时间取决于网络速度。
+第三方启动器#对于想要深入游玩 Minecraft 的玩家来说，第三方启动器几乎是必选项。它们提供了更丰富的版本管理、模组安装和个性化功能。下面介绍国内最主流的几款。">
+	<meta property="og:locale" content="zh">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="docs">
+
+
+	<meta itemprop="name" content="1.2 启动器与版本">
+	<meta itemprop="description" content="1.2 启动器与版本#基于版本：Java 版 26.x · 启动器说明覆盖官方和第三方 · 版本表截至 2026 年 7 月
+购买游戏之后，你需要通过启动器来下载和运行 Minecraft。启动器不仅是游戏的入口，还负责版本管理、模组加载、资源包切换等核心功能。本节将介绍官方启动器以及国内主流的几款第三方启动器。
+什么是启动器？#启动器（Launcher）是 Minecraft 的客户端管理程序，它的主要功能包括：
+下载与安装：从 Mojang 服务器获取游戏文件，自动安装对应版本 版本管理：在同一台电脑上保留多个游戏版本，随时切换 账号登录：通过 Microsoft 账户认证，验证游戏许可 游戏配置：调节内存分配、JVM 参数、游戏分辨率等 模组与整合包：方便地安装 Forge、Fabric 等模组加载器，导入整合包 简单来说，启动器就是你进入方块世界的「大门」。
+官方启动器#Minecraft Launcher#Minecraft Launcher 是 Mojang 官方出品的启动器，也是购买游戏后最先接触的启动器。
+优点 官方出品 最安全可靠，自动更新，支持 Java 版和基岩版一站式管理。 不足 功能相对简单，无法直接安装第三方模组加载器，界面不够灵活。 官方启动器适合以下玩家：
+主打原版生存，不需要频繁切换版本和模组 对安全性要求高，不想折腾第三方工具 需要同时管理 Java 版和基岩版 下载与安装#访问 Minecraft 下载页面 。 根据你的操作系统选择对应版本，下载安装程序。 运行安装程序，按照提示完成安装。 启动后登录你的 Microsoft 账户，即可在左侧看到已购买的游戏版本。 初次启动时，启动器会自动下载对应版本的 Minecraft 游戏文件。这个过程可能需要几分钟，具体时间取决于网络速度。
+第三方启动器#对于想要深入游玩 Minecraft 的玩家来说，第三方启动器几乎是必选项。它们提供了更丰富的版本管理、模组安装和个性化功能。下面介绍国内最主流的几款。">
+	<meta itemprop="wordCount" content="467">
+
+<title>1.2 启动器与版本 • Minecraft 从入门到精通</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/ch01-getting-started/02-launcher-and-versions.html">
+<link rel="stylesheet" href="/book.min.64ab3279514b7f9a7b1ec50a47d8bc6f9bed31454a6363d9f98214862cb1a617.css" integrity="sha256-ZKsyeVFLf5p7HsUKR9i8b5vtMUVKY2PZ&#43;YIUhiyxphc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/custom.min.3f5cd638c1f32a12a56266d8c96d94495778d9f77367fca14c5be51dcec060b7.css" integrity="sha256-P1zWOMHzKhKlYmbYyW2USVd42fdzZ/yhTFvlHc7AYLc=" crossorigin="anonymous">
+  <script defer type="module" src="/zh.search.min.6f7ff29a13ed67f6953cbd38ddbc62e9b7573e4092d3c8593c0bdf681417ef54.js" integrity="sha256-b3/ymhPtZ/aVPL043bxi6bdXPkCS08hZPAvfaBQX71Q=" crossorigin="anonymous"></script>
+
+<script defer src="/lightbox.min.b995837a582ada0a114699e58df354f5feb5267b8ba089b2a2c8ac21783242ad.js" integrity="sha256-uZWDelgq2goRRpnljfNU9f61JnuLoImyosisIXgyQq0=" crossorigin="anonymous"></script>
+<script defer src="/theme-toggle.min.17d2b0e14e3e210244ce5d5afaa4b7603c579da4c11f197c77f156465295c14a.js" integrity="sha256-F9Kw4U4&#43;IQJEzl1a&#43;qS3YDxXnaTBHxl8d/FWRlKVwUo=" crossorigin="anonymous"></script>
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/index.html"><span>Minecraft 从入门到精通</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="搜索"
+    aria-label="搜索"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/preamble.html" class="">
+      序</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第一章 · 基础入门</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/01-buy-and-install.html" class="">
+      1.1 购买与安装</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/02-launcher-and-versions.html" class="active">
+      1.2 启动器与版本</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/03-game-settings.html" class="">
+      1.3 游戏设置</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第二章 · 生存指南</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/01-first-day.html" class="">
+      2.1 第一天</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/02-gathering-and-crafting.html" class="">
+      2.2 采集与合成</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/03-mining.html" class="">
+      2.3 采矿技术</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/04-farming.html" class="">
+      2.4 农牧养殖</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/05-villagers.html" class="">
+      2.5 村民与交易</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/03-combat-and-exploration.html" class="">
+      2.6 战斗与探索</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/07-enchanting.html" class="">
+      2.7 附魔与药水</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/04-nether-and-end.html" class="">
+      2.8 下界与末地</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第三章 · 建造美学</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/01-basics.html" class="">
+      3.1 建筑基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/02-styles.html" class="">
+      3.2 风格与设计</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/03-terraforming.html" class="">
+      3.3 地形改造</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/04-furniture.html" class="">
+      3.4 实用家具</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/05-roofs-and-details.html" class="">
+      3.5 屋顶与细节</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/06-palette-and-materials.html" class="">
+      3.6 调色板与材料</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/07-underwater-and-special.html" class="">
+      3.7 水下与特殊环境建筑</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第四章 · 红石工程</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/01-basics.html" class="">
+      4.1 红石基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/02-logic-circuits.html" class="">
+      4.2 逻辑电路</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/03-auto-farms.html" class="">
+      4.3 自动化农场</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/04-timers-and-clocks.html" class="">
+      4.4 计时器与时钟</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/05-piston-machines.html" class="">
+      4.5 活塞机械</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/06-storage-and-sorting.html" class="">
+      4.6 存储与分类系统</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/07-advanced-projects.html" class="">
+      4.7 红石进阶项目</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第五章 · 服务器与联机</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/01-ways-to-connect.html" class="">
+      5.1 联机方式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/02-server-setup.html" class="">
+      5.2 服务器搭建</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/03-realms.html" class="">
+      5.3 领域服</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/04-server-management.html" class="">
+      5.4 服务器维护与管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/05-pvp.html" class="">
+      5.5 PvP 入门</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第六章 · 模组与资源包</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/01-mod-loaders.html" class="">
+      6.1 模组加载器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/02-shaders-and-textures.html" class="">
+      6.2 光影与材质</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/03-recommended-mods.html" class="">
+      6.3 推荐模组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/04-optimization-and-qol.html" class="">
+      6.4 优化与辅助模组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/05-modpacks.html" class="">
+      6.5 整合包入门</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第七章 · 命令与指令方块</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/01-basic-commands.html" class="">
+      7.1 基础命令</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/02-command-blocks.html" class="">
+      7.2 指令方块</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/03-datapacks.html" class="">
+      7.3 数据包</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/04-command-reference.html" class="">
+      7.4 常用命令速查表</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/05-functions-and-advanced.html" class="">
+      7.5 函数与数据包进阶</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/appendix.html" class="">
+      附录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/01-combat-and-exploration.html" class="">
+      2.1 战斗与探索</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/afterwords.html" class="">
+      后记</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>1.2 启动器与版本</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#12-启动器与版本">1.2 启动器与版本</a>
+      <ul>
+        <li><a href="#什么是启动器">什么是启动器？</a></li>
+        <li><a href="#官方启动器">官方启动器</a>
+          <ul>
+            <li><a href="#minecraft-launcher">Minecraft Launcher</a></li>
+            <li><a href="#下载与安装">下载与安装</a></li>
+          </ul>
+        </li>
+        <li><a href="#第三方启动器">第三方启动器</a>
+          <ul>
+            <li><a href="#pcl2plain-craft-launcher-2">PCL2（Plain Craft Launcher 2）</a></li>
+            <li><a href="#hmclhello-minecraft-launcher">HMCL（Hello Minecraft! Launcher）</a></li>
+            <li><a href="#bakaxl">BakaXL</a></li>
+            <li><a href="#启动器对比">启动器对比</a></li>
+          </ul>
+        </li>
+        <li><a href="#版本体系说明">版本体系说明</a>
+          <ul>
+            <li><a href="#大版本号">大版本号</a></li>
+            <li><a href="#版本类型">版本类型</a></li>
+            <li><a href="#版本的典型用途">版本的典型用途</a></li>
+          </ul>
+        </li>
+        <li><a href="#如何选择启动器与版本">如何选择启动器与版本？</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="12-启动器与版本">1.2 启动器与版本<a class="anchor" href="#12-%e5%90%af%e5%8a%a8%e5%99%a8%e4%b8%8e%e7%89%88%e6%9c%ac">#</a></h1>
+<blockquote class='book-hint note'>
+<p><strong>基于版本</strong>：Java 版 26.x · 启动器说明覆盖官方和第三方 · 版本表截至 2026 年 7 月</p></blockquote><p>购买游戏之后，你需要通过<strong>启动器</strong>来下载和运行 Minecraft。启动器不仅是游戏的入口，还负责版本管理、模组加载、资源包切换等核心功能。本节将介绍官方启动器以及国内主流的几款第三方启动器。</p>
+<h2 id="什么是启动器">什么是启动器？<a class="anchor" href="#%e4%bb%80%e4%b9%88%e6%98%af%e5%90%af%e5%8a%a8%e5%99%a8">#</a></h2>
+<p>启动器（Launcher）是 Minecraft 的客户端管理程序，它的主要功能包括：</p>
+<ul>
+<li><strong>下载与安装</strong>：从 Mojang 服务器获取游戏文件，自动安装对应版本</li>
+<li><strong>版本管理</strong>：在同一台电脑上保留多个游戏版本，随时切换</li>
+<li><strong>账号登录</strong>：通过 Microsoft 账户认证，验证游戏许可</li>
+<li><strong>游戏配置</strong>：调节内存分配、JVM 参数、游戏分辨率等</li>
+<li><strong>模组与整合包</strong>：方便地安装 Forge、Fabric 等模组加载器，导入整合包</li>
+</ul>
+<p>简单来说，启动器就是你进入方块世界的「大门」。</p>
+<h2 id="官方启动器">官方启动器<a class="anchor" href="#%e5%ae%98%e6%96%b9%e5%90%af%e5%8a%a8%e5%99%a8">#</a></h2>
+<h3 id="minecraft-launcher">Minecraft Launcher<a class="anchor" href="#minecraft-launcher">#</a></h3>
+<p>Minecraft Launcher 是 Mojang 官方出品的启动器，也是购买游戏后最先接触的启动器。</p>
+<div class="card-list" style="--card-columns: 2;">
+  <ul>
+<li><strong>优点</strong> <span class="badge">
+<span class="badge-text">官方出品</span></span>
+最安全可靠，自动更新，支持 Java 版和基岩版一站式管理。</li>
+<li><strong>不足</strong>
+功能相对简单，无法直接安装第三方模组加载器，界面不够灵活。</li>
+</ul>
+
+</div>
+
+<p>官方启动器适合以下玩家：</p>
+<ul>
+<li>主打原版生存，不需要频繁切换版本和模组</li>
+<li>对安全性要求高，不想折腾第三方工具</li>
+<li>需要同时管理 Java 版和基岩版</li>
+</ul>
+<h3 id="下载与安装">下载与安装<a class="anchor" href="#%e4%b8%8b%e8%bd%bd%e4%b8%8e%e5%ae%89%e8%a3%85">#</a></h3>
+<ol>
+<li>访问 <a href="https://www.minecraft.net/download" target="_blank" rel="noopener noreferrer" class="ext-link">
+  <img class="ext-link-icon" src="https://www.minecraft.net/favicon.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
+  Minecraft 下载页面
+</a> 。</li>
+<li>根据你的操作系统选择对应版本，下载安装程序。</li>
+<li>运行安装程序，按照提示完成安装。</li>
+<li>启动后登录你的 Microsoft 账户，即可在左侧看到已购买的游戏版本。</li>
+</ol>
+<p>初次启动时，启动器会自动下载对应版本的 Minecraft 游戏文件。这个过程可能需要几分钟，具体时间取决于网络速度。</p>
+<h2 id="第三方启动器">第三方启动器<a class="anchor" href="#%e7%ac%ac%e4%b8%89%e6%96%b9%e5%90%af%e5%8a%a8%e5%99%a8">#</a></h2>
+<p>对于想要深入游玩 Minecraft 的玩家来说，第三方启动器几乎是必选项。它们提供了更丰富的版本管理、模组安装和个性化功能。下面介绍国内最主流的几款。</p>
+<blockquote class='book-hint note'>
+<p><strong>所有第三方启动器都需要正版账号才能登录游玩</strong>。它们不会帮你绕过正版验证，只是提供了比官方启动器更好的使用体验。</p></blockquote><h3 id="pcl2plain-craft-launcher-2">PCL2（Plain Craft Launcher 2）<a class="anchor" href="#pcl2plain-craft-launcher-2">#</a></h3>
+<p><span class="badge">
+  <span class="badge-text">最推荐</span></span> 国内使用人数最多的第三方启动器，全名 <strong>Plain Craft Launcher 2</strong>，由个人开发者「龙腾猫跃」独立开发并持续维护，完全免费。</p>
+<p>与同类启动器相比，PCL2 的核心优势在于「速度 + 中文 + 精简」：</p>
+<div class="card-list" style="--card-columns: 2;">
+  <ul>
+<li><strong>下载速度快</strong>
+多线程下载针对国内网络优化，10M 宽带能跑满。内置多个镜像源自动选最快。</li>
+<li><strong>全中文体验</strong>
+崩溃报告、Mod 冲突提示、Java 路径全部是中文，不用猜哪里出了问题。</li>
+<li><strong>功能全面</strong>
+一键安装 Forge / Fabric / OptiFine 等模组加载器，支持整合包导入，内置帮助系统。</li>
+<li><strong>零安装无广告</strong>
+下载 EXE 双击即用，所有功能可关闭，不附带任何广告或捆绑软件。</li>
+</ul>
+
+</div>
+
+<p><strong>下载方式</strong>：在 <a href="https://afdian.com/a/LTCat" target="_blank" rel="noopener noreferrer" class="ext-link">
+  <img class="ext-link-icon" src="https://icons.duckduckgo.com/ip3/afdian.com.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
+  PCL2 官方爱发电页面
+</a> 或 <a href="https://github.com/Hex-Dragon/PCL2" target="_blank" rel="noopener noreferrer" class="ext-link">
+  <img class="ext-link-icon" src="https://api.iconify.design/ri/github-fill.svg?height=1em" alt="" loading="lazy" onerror="this.style.display='none'" />
+  GitHub 仓库
+</a> 免费获取。下载后双击 <code>.exe</code> 文件即可启动，无需安装。首次启动会自动更新到最新版本。官方提供了 <a href="https://shimo.im/docs/qKPttVvXKqPD8YDC" target="_blank" rel="noopener noreferrer" class="ext-link">
+  <img class="ext-link-icon" src="https://icons.duckduckgo.com/ip3/shimo.im.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
+  使用说明文档
+</a>。</p>
+<h4 id="用-pcl2-下载游戏版本">用 PCL2 下载游戏版本<a class="anchor" href="#%e7%94%a8-pcl2-%e4%b8%8b%e8%bd%bd%e6%b8%b8%e6%88%8f%e7%89%88%e6%9c%ac">#</a></h4>
+<p>打开 PCL2 后，点击顶部的「下载」标签页，版本列表会显示所有可用的游戏版本。选择你想要的版本，点击「开始下载」，等待自动完成即可。PCL2 会自动处理 Java 运行环境、游戏文件和资源包的下载。</p>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch01/7.png"
+    alt="PCL2 下载界面" title="PCL2 版本下载界面" width="750" 
+    data-lightbox data-lightbox-caption="PCL2 版本下载界面"
+  />
+  <figcaption>PCL2 版本下载界面</figcaption>
+</figure>
+
+<blockquote class='book-hint note'>
+<p>Mod 和整合包的安装将在第六章统一介绍。</p></blockquote><h3 id="hmclhello-minecraft-launcher">HMCL（Hello Minecraft! Launcher）<a class="anchor" href="#hmclhello-minecraft-launcher">#</a></h3>
+<p><span class="badge">
+  <span class="badge-text">开源老牌</span></span> 历史最悠久的国产开源启动器，由 huanghongxun 于 2015 年创建。代码完全开放，十余年持续维护至今，社区活跃。</p>
+<div class="card-list" style="--card-columns: 2;">
+  <ul>
+<li><strong>跨平台</strong>
+支持 Windows / macOS / Linux，三大操作系统通用。</li>
+<li><strong>自动 Java 管理</strong>
+HMCL 会自动检测和下载所需的 Java 版本，新手无需手动折腾 Java 环境——启动器帮你搞定一切。</li>
+<li><strong>版本隔离</strong>
+不同游戏版本的 Mod、资源包、存档可以完全分开，互不干扰。装 Mod 和整合包必备。</li>
+<li><strong>内置模组下载</strong>
+直接搜索和安装 CurseForge 与 Modrinth 上的模组，自动检测前置依赖。</li>
+</ul>
+
+</div>
+
+<p><strong>下载方式</strong>：在 <a href="https://hmcl.huangyuhui.net" target="_blank" rel="noopener noreferrer" class="ext-link">
+  <img class="ext-link-icon" src="https://icons.duckduckgo.com/ip3/hmcl.huangyuhui.net.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
+  HMCL 官网
+</a> 或 <a href="https://github.com/HMCL-dev/HMCL" target="_blank" rel="noopener noreferrer" class="ext-link">
+  <img class="ext-link-icon" src="https://api.iconify.design/ri/github-fill.svg?height=1em" alt="" loading="lazy" onerror="this.style.display='none'" />
+  GitHub
+</a> 免费获取。官方还提供了详尽的 <a href="https://docs.hmcl.net/" target="_blank" rel="noopener noreferrer" class="ext-link">
+  <img class="ext-link-icon" src="https://icons.duckduckgo.com/ip3/docs.hmcl.net.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
+  使用文档
+</a>。</p>
+<h4 id="用-hmcl-下载游戏版本">用 HMCL 下载游戏版本<a class="anchor" href="#%e7%94%a8-hmcl-%e4%b8%8b%e8%bd%bd%e6%b8%b8%e6%88%8f%e7%89%88%e6%9c%ac">#</a></h4>
+<p>点击左侧「下载」→「游戏」选项卡，版本列表会按从新到旧的顺序显示。选择你想要的版本，点击右下角「安装」，等待自动完成即可。</p>
+<figure class="book-image-figure">
+  <img
+    src="/images/ch01/8.png"
+    alt="HMCL 下载界面" title="HMCL 版本下载界面" width="750" 
+    data-lightbox data-lightbox-caption="HMCL 版本下载界面"
+  />
+  <figcaption>HMCL 版本下载界面</figcaption>
+</figure>
+
+<p>安装完成后回到主界面，点击「开始游戏」即可进入游戏。</p>
+<h3 id="bakaxl">BakaXL<a class="anchor" href="#bakaxl">#</a></h3>
+<p><span class="badge">
+  <span class="badge-text">颜值担当</span></span> 主打 UI 美学的启动器，以日系二次元风格著称。</p>
+<div class="card-list" style="--card-columns: 2;">
+  <ul>
+<li><strong>视觉惊艳</strong>
+Metro 风格界面，支持自定义主题、背景图和动画效果。</li>
+<li><strong>操作流畅</strong>
+高度优化的 UI 交互，启动速度极快。</li>
+<li><strong>主题商店</strong>
+内置主题市场，可以下载社区创作的美化主题。</li>
+<li><strong>整合包友好</strong>
+支持 CurseForge / Modrinth 整合包一键导入。</li>
+</ul>
+
+</div>
+
+<p>下载方式：在 <a href="https://www.bakaxl.com" target="_blank" rel="noopener noreferrer" class="ext-link">
+  <img class="ext-link-icon" src="https://icons.duckduckgo.com/ip3/www.bakaxl.com.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
+  BakaXL 官网
+</a> 获取。官方提供了 <a href="https://help.bakaxl.com/v3/" target="_blank" rel="noopener noreferrer" class="ext-link">
+  <img class="ext-link-icon" src="https://icons.duckduckgo.com/ip3/help.bakaxl.com.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
+  使用文档
+</a>。</p>
+<h3 id="启动器对比">启动器对比<a class="anchor" href="#%e5%90%af%e5%8a%a8%e5%99%a8%e5%af%b9%e6%af%94">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>启动器</th>
+					<th>平台</th>
+					<th>界面</th>
+					<th>模组支持</th>
+					<th>适合人群</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><span class="badge">
+  <span class="badge-text">PCL2</span></span></td>
+					<td>Windows</td>
+					<td>现代 Material</td>
+					<td>Forge / Fabric / OptiFine</td>
+					<td>大多数玩家</td>
+			</tr>
+			<tr>
+					<td><span class="badge">
+  <span class="badge-text">HMCL</span></span></td>
+					<td>Win/Mac/Linux</td>
+					<td>简洁实用</td>
+					<td>Forge / Fabric / OptiFine</td>
+					<td>跨平台用户</td>
+			</tr>
+			<tr>
+					<td><span class="badge">
+  <span class="badge-text">BakaXL</span></span></td>
+					<td>Windows</td>
+					<td>二次元华丽</td>
+					<td>Forge / Fabric</td>
+					<td>外观党</td>
+			</tr>
+	</tbody>
+</table>
+<p>三款都是免费软件，你可以都下载下来试试，看哪个最顺手就用哪个。个人推荐新手从 <strong>PCL2</strong> 入手，功能全面且上手难度最低。</p>
+<h2 id="版本体系说明">版本体系说明<a class="anchor" href="#%e7%89%88%e6%9c%ac%e4%bd%93%e7%b3%bb%e8%af%b4%e6%98%8e">#</a></h2>
+<p>Minecraft 的版本号看起来复杂，但只要掌握规律就很简单。</p>
+<h3 id="大版本号">大版本号<a class="anchor" href="#%e5%a4%a7%e7%89%88%e6%9c%ac%e5%8f%b7">#</a></h3>
+<p>Minecraft 采用 <code>主版本.次版本</code> 的命名方式，每个大版本都有对应的中文名称。以下是主要大版本一览（数据来源：<a href="https://zh.minecraft.wiki" target="_blank" rel="noopener noreferrer" class="ext-link">
+  <img class="ext-link-icon" src="https://icons.duckduckgo.com/ip3/zh.minecraft.wiki.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
+  Minecraft Wiki
+</a>）：</p>
+<table>
+	<thead>
+			<tr>
+					<th>版本</th>
+					<th>名称</th>
+					<th>发布日期</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>26.3（开发中）</td>
+					<td>尚未公布</td>
+					<td>2026 年 6 月（快照）</td>
+			</tr>
+			<tr>
+					<td><strong>26.2</strong></td>
+					<td><strong>混沌立方</strong></td>
+					<td><strong>2026 年 6 月</strong>（正式版）</td>
+			</tr>
+			<tr>
+					<td>26.1</td>
+					<td>小鬼当家</td>
+					<td>2026 年 3 月</td>
+			</tr>
+			<tr>
+					<td>1.21.5</td>
+					<td>春意盎然</td>
+					<td>2025 年 3 月</td>
+			</tr>
+			<tr>
+					<td>1.21.4</td>
+					<td>苍园觉醒</td>
+					<td>2024 年 12 月</td>
+			</tr>
+			<tr>
+					<td>1.21</td>
+					<td>棘巧试炼</td>
+					<td>2024 年 6 月</td>
+			</tr>
+			<tr>
+					<td>1.20</td>
+					<td>足迹与故事</td>
+					<td>2023 年 6 月</td>
+			</tr>
+			<tr>
+					<td>1.19</td>
+					<td>荒野更新</td>
+					<td>2022 年 6 月</td>
+			</tr>
+			<tr>
+					<td>1.18</td>
+					<td>洞穴与山崖（第二部）</td>
+					<td>2021 年 11 月</td>
+			</tr>
+			<tr>
+					<td>1.17</td>
+					<td>洞穴与山崖（第一部）</td>
+					<td>2021 年 6 月</td>
+			</tr>
+			<tr>
+					<td>1.16</td>
+					<td>下界更新</td>
+					<td>2020 年 6 月</td>
+			</tr>
+			<tr>
+					<td>1.15</td>
+					<td>嗡嗡蜂群</td>
+					<td>2019 年 12 月</td>
+			</tr>
+			<tr>
+					<td>1.14</td>
+					<td>村庄与掠夺</td>
+					<td>2019 年 4 月</td>
+			</tr>
+			<tr>
+					<td>1.13</td>
+					<td>水域更新</td>
+					<td>2018 年 7 月</td>
+			</tr>
+			<tr>
+					<td>1.12</td>
+					<td>多彩世界更新</td>
+					<td>2017 年 6 月</td>
+			</tr>
+			<tr>
+					<td>1.11</td>
+					<td>探险更新</td>
+					<td>2016 年 11 月</td>
+			</tr>
+			<tr>
+					<td>1.10</td>
+					<td>霜炙更新</td>
+					<td>2016 年 6 月</td>
+			</tr>
+			<tr>
+					<td>1.9</td>
+					<td>战斗更新</td>
+					<td>2016 年 2 月</td>
+			</tr>
+			<tr>
+					<td>1.8</td>
+					<td>缤纷更新</td>
+					<td>2014 年 9 月</td>
+			</tr>
+			<tr>
+					<td>1.7</td>
+					<td>改变世界的更新</td>
+					<td>2013 年 10 月</td>
+			</tr>
+	</tbody>
+</table>
+<p>Mojang 每年夏季发布一个大版本更新，中间穿插数次小版本迭代。自 2025 年底起，版本号跳至 <strong>26.x</strong> 系列，游戏进入了全新的开发周期。</p>
+<blockquote class='book-hint tip'>
+<p><strong>我该玩哪个版本？</strong></p>
+<ul>
+<li>纯原版体验 → <strong>最新正式版</strong>（目前是 26.2）</li>
+<li>大型模组整合包 → <strong>1.20.1</strong>（Fabric 生态最成熟）或 <strong>1.16.5</strong>（Forge 生态最成熟）</li>
+<li>经典老牌整合包（GTNH 等）→ <strong>1.7.10 / 1.12.2</strong></li>
+<li>PvP 小游戏 → <strong>1.8.9</strong>（1.9 战斗机制改版前的经典版本）</li>
+</ul></blockquote><h3 id="版本类型">版本类型<a class="anchor" href="#%e7%89%88%e6%9c%ac%e7%b1%bb%e5%9e%8b">#</a></h3>
+<p>在启动器的版本列表中，你会看到不同类型的版本标识：</p>
+<div class="card-list" style="--card-columns: 3;">
+  <ul>
+<li><strong>正式版（Release）</strong>
+经过充分测试的稳定版本，推荐所有玩家使用。没有任何特殊的后缀标识。</li>
+<li><strong>快照版（Snapshot）</strong>
+开发中的预览版本，包含新特性但可能不稳定。版本号类似 <code>24w33a</code>。</li>
+<li><strong>预发布版（Pre-release）</strong>
+正式版发布前的候选版本，稳定性介于快照和正式版之间。</li>
+<li><strong>远古版（Old Alpha/Beta）</strong>
+2010-2011 年的古老测试版本，怀旧玩家专用。</li>
+</ul>
+
+</div>
+
+<blockquote class='book-hint warning'>
+<p><strong>新手提示</strong>：安装启动器后，直接选择最新的<strong>正式版</strong>即可。快照版和预发布版可能存在 Bug，不建议作为主力游玩版本。后期玩模组时需要选择特定旧版本，届时启动器会自动下载对应版本文件。</p></blockquote><h3 id="版本的典型用途">版本的典型用途<a class="anchor" href="#%e7%89%88%e6%9c%ac%e7%9a%84%e5%85%b8%e5%9e%8b%e7%94%a8%e9%80%94">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>版本</th>
+					<th>主要场景</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>最新正式版（26.2）</td>
+					<td>纯原版生存、体验最新内容</td>
+			</tr>
+			<tr>
+					<td>1.20.1</td>
+					<td>Fabric 模组生态最成熟</td>
+			</tr>
+			<tr>
+					<td>1.19.2</td>
+					<td>大量优质整合包</td>
+			</tr>
+			<tr>
+					<td>1.16.5</td>
+					<td>下界更新相关模组、老牌整合包</td>
+			</tr>
+			<tr>
+					<td>1.12.2</td>
+					<td>经典大型科技魔法模组包</td>
+			</tr>
+			<tr>
+					<td>1.8.9</td>
+					<td>小游戏服务器、PvP 对战</td>
+			</tr>
+			<tr>
+					<td>1.7.10</td>
+					<td>GTNH 等超大型经典整合包</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="如何选择启动器与版本">如何选择启动器与版本？<a class="anchor" href="#%e5%a6%82%e4%bd%95%e9%80%89%e6%8b%a9%e5%90%af%e5%8a%a8%e5%99%a8%e4%b8%8e%e7%89%88%e6%9c%ac">#</a></h2>
+<p>这里给出一个简单的决策流程：</p>
+<dl class="timeline">
+
+
+<dt class="timeline-caption">新手 &#43; 原版</dt>
+<dd class="timeline-body card">推荐<strong>官方启动器</strong>，安装简单、安全可靠。选择最新正式版即可开始游戏。</dd>
+
+
+<dt class="timeline-caption">新手 &#43; 想玩模组</dt>
+<dd class="timeline-body card">推荐 <strong>PCL2</strong>。界面友好，内置一键安装模组加载器，下载速度快。版本选择 1.20.1（Fabric）或 1.16.5（Forge）。</dd>
+
+
+<dt class="timeline-caption">Mac / Linux 用户</dt>
+<dd class="timeline-body card">推荐 <strong>HMCL</strong>，三大平台通用。版本选择和 Windows 平台一致。</dd>
+
+
+<dt class="timeline-caption">外观控 &#43; 整合包</dt>
+<dd class="timeline-body card">推荐 <strong>BakaXL</strong>，界面最华丽，主题市场丰富，整合包支持完善。</dd>
+
+
+
+</dl>
+
+<hr>
+<p>下一节将详细介绍进入游戏后的各项设置，让你的 Minecraft 获得最佳体验。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/ch01-getting-started/01-buy-and-install.html" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="上一页" />
+        <span>1.1 购买与安装</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/ch01-getting-started/03-game-settings.html" class="flex align-center">
+        <span>1.3 游戏设置</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="下一页" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#12-启动器与版本">1.2 启动器与版本</a>
+      <ul>
+        <li><a href="#什么是启动器">什么是启动器？</a></li>
+        <li><a href="#官方启动器">官方启动器</a>
+          <ul>
+            <li><a href="#minecraft-launcher">Minecraft Launcher</a></li>
+            <li><a href="#下载与安装">下载与安装</a></li>
+          </ul>
+        </li>
+        <li><a href="#第三方启动器">第三方启动器</a>
+          <ul>
+            <li><a href="#pcl2plain-craft-launcher-2">PCL2（Plain Craft Launcher 2）</a></li>
+            <li><a href="#hmclhello-minecraft-launcher">HMCL（Hello Minecraft! Launcher）</a></li>
+            <li><a href="#bakaxl">BakaXL</a></li>
+            <li><a href="#启动器对比">启动器对比</a></li>
+          </ul>
+        </li>
+        <li><a href="#版本体系说明">版本体系说明</a>
+          <ul>
+            <li><a href="#大版本号">大版本号</a></li>
+            <li><a href="#版本类型">版本类型</a></li>
+            <li><a href="#版本的典型用途">版本的典型用途</a></li>
+          </ul>
+        </li>
+        <li><a href="#如何选择启动器与版本">如何选择启动器与版本？</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

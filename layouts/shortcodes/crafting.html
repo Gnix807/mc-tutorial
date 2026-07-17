@@ -124,6 +124,14 @@
         img.src = "";
         slot.setAttribute("data-active-item", "");
       } else {
+        
+        img.onload = function() {
+          if (this.naturalWidth >= 256) {
+            this.style.setProperty("image-rendering", "auto", "important");
+          } else {
+            this.style.setProperty("image-rendering", "pixelated", "important");
+          }
+        };
         img.src = "/images/items/" + itemKey + ".png";
         img.style.opacity = 1;
         slot.setAttribute("data-active-item", itemKey);

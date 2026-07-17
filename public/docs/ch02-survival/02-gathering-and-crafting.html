@@ -1,0 +1,2649 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme · MC 教程
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="2.2 采集与合成#基于版本：Java 版 26.2 · 生存模式核心机制
+在度过了惊心动魄的第一天后，你已经建立了一个临时的庇护所。接下来，你需要正式迈入 Minecraft 的核心体验——采集（Mine）与合成（Craft）。这两大系统环环相扣，构成了游戏最基础的进度循环。
+本节将事无巨细地为你拆解物品管理、工具制作、材质等级、方块采集以及熔炉烧炼的所有细节，带你轻松度过生存前期。
+物品栏与背包管理微操指南#在游戏中按下 E 键可以打开你的个人物品栏（背包）。作为一名合格的冒险家，熟练掌握以下鼠标和键盘的快捷交互技巧，能为你节省大量的整理时间：
+1. 鼠标点击与拖拽技巧#左键单击物品：拿起这格物品的全部数量。 右键单击物品：拿起这格物品的一半数量（如果是奇数，则拿起多的一半。例如 5 个物品，右键会拿起 3 个，留下 2 个）。 手持物品时在空白格点右键：只在目标空格中放下 1 个物品。这在手动摆放合成配方时非常实用。 快速均分（左键拖拽）：手持一叠物品（如 64 个木板）时，按住左键并在多个空格上拖动，物品会被平均分配到你扫过的每一个格子里。 各放一个（右键拖拽）：手持一叠物品时，按住右键并在多个空格上拖动，则会在每个格子里各留下 1 个物品。这是制作工作台、熔炉或箱子等空心配方时的「神技」。 合并同类（双击）：双击任意一个物品，可以将散落在背包各个格子里相同的物品瞬间吸附并堆叠到这一格中（最高达到 64 个）。 2. 键盘快捷键（事半功倍）#Shift &#43; 左键单击：快速转移。如果打开了箱子或工作台，这会把物品在「背包」与「容器/工作台」之间瞬间传送；如果只是单独打开背包，这会在「快捷栏（屏幕最下方 9 格）」与「背包上方 27 格」之间快速切换。 数字键 1 - 9：鼠标悬停在背包内任意物品上，按下键盘上的数字键，该物品会瞬间与你快捷栏对应槽位的物品对调。 Q 键（丢弃）：鼠标悬停在物品上按 Q 键，可丢弃 1 个物品；按住 Ctrl &#43; Q 键，则可一次性丢弃该格的所有物品。 F 键（副手）：鼠标悬停在任意物品上按下 F 键，该物品会放置到你的副手槽中。在主手拿着盾牌或火把时，副手可以拿着食物，极大方便地底探险。 什么是堆叠上限（Stack Size）？
+背包中的方格不能无限装东西。
+64 个堆叠：绝大多数方块（如泥土、石头、原木、木板）和材料（如煤炭、铁锭）的堆叠上限是 64 个。 16 个堆叠：部分特殊的抛射物或工具（如末影珍珠、雪球、鸡蛋、桶）上限是 16 个。 不堆叠：所有的武器、工具、防具（如镐、剑、胸甲）以及药水，一格只能放 1 个。 3x3 工作台与合成逻辑#背包自带的合成格是 2x2（4 格）的，仅能合成木板、木棍、火把等基础物资。一旦做出了工作台并将其放置在地上右键打开，你就能使用 3x3（9 格）的合成栏。
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#5c9a3a">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#3a6622">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/ch02-survival/02-gathering-and-crafting.html">
+	<meta property="og:site_name" content="Minecraft 从入门到精通">
+	<meta property="og:title" content="2.2 采集与合成">
+	<meta property="og:description" content="2.2 采集与合成#基于版本：Java 版 26.2 · 生存模式核心机制
+在度过了惊心动魄的第一天后，你已经建立了一个临时的庇护所。接下来，你需要正式迈入 Minecraft 的核心体验——采集（Mine）与合成（Craft）。这两大系统环环相扣，构成了游戏最基础的进度循环。
+本节将事无巨细地为你拆解物品管理、工具制作、材质等级、方块采集以及熔炉烧炼的所有细节，带你轻松度过生存前期。
+物品栏与背包管理微操指南#在游戏中按下 E 键可以打开你的个人物品栏（背包）。作为一名合格的冒险家，熟练掌握以下鼠标和键盘的快捷交互技巧，能为你节省大量的整理时间：
+1. 鼠标点击与拖拽技巧#左键单击物品：拿起这格物品的全部数量。 右键单击物品：拿起这格物品的一半数量（如果是奇数，则拿起多的一半。例如 5 个物品，右键会拿起 3 个，留下 2 个）。 手持物品时在空白格点右键：只在目标空格中放下 1 个物品。这在手动摆放合成配方时非常实用。 快速均分（左键拖拽）：手持一叠物品（如 64 个木板）时，按住左键并在多个空格上拖动，物品会被平均分配到你扫过的每一个格子里。 各放一个（右键拖拽）：手持一叠物品时，按住右键并在多个空格上拖动，则会在每个格子里各留下 1 个物品。这是制作工作台、熔炉或箱子等空心配方时的「神技」。 合并同类（双击）：双击任意一个物品，可以将散落在背包各个格子里相同的物品瞬间吸附并堆叠到这一格中（最高达到 64 个）。 2. 键盘快捷键（事半功倍）#Shift &#43; 左键单击：快速转移。如果打开了箱子或工作台，这会把物品在「背包」与「容器/工作台」之间瞬间传送；如果只是单独打开背包，这会在「快捷栏（屏幕最下方 9 格）」与「背包上方 27 格」之间快速切换。 数字键 1 - 9：鼠标悬停在背包内任意物品上，按下键盘上的数字键，该物品会瞬间与你快捷栏对应槽位的物品对调。 Q 键（丢弃）：鼠标悬停在物品上按 Q 键，可丢弃 1 个物品；按住 Ctrl &#43; Q 键，则可一次性丢弃该格的所有物品。 F 键（副手）：鼠标悬停在任意物品上按下 F 键，该物品会放置到你的副手槽中。在主手拿着盾牌或火把时，副手可以拿着食物，极大方便地底探险。 什么是堆叠上限（Stack Size）？
+背包中的方格不能无限装东西。
+64 个堆叠：绝大多数方块（如泥土、石头、原木、木板）和材料（如煤炭、铁锭）的堆叠上限是 64 个。 16 个堆叠：部分特殊的抛射物或工具（如末影珍珠、雪球、鸡蛋、桶）上限是 16 个。 不堆叠：所有的武器、工具、防具（如镐、剑、胸甲）以及药水，一格只能放 1 个。 3x3 工作台与合成逻辑#背包自带的合成格是 2x2（4 格）的，仅能合成木板、木棍、火把等基础物资。一旦做出了工作台并将其放置在地上右键打开，你就能使用 3x3（9 格）的合成栏。">
+	<meta property="og:locale" content="zh">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="docs">
+
+
+	<meta itemprop="name" content="2.2 采集与合成">
+	<meta itemprop="description" content="2.2 采集与合成#基于版本：Java 版 26.2 · 生存模式核心机制
+在度过了惊心动魄的第一天后，你已经建立了一个临时的庇护所。接下来，你需要正式迈入 Minecraft 的核心体验——采集（Mine）与合成（Craft）。这两大系统环环相扣，构成了游戏最基础的进度循环。
+本节将事无巨细地为你拆解物品管理、工具制作、材质等级、方块采集以及熔炉烧炼的所有细节，带你轻松度过生存前期。
+物品栏与背包管理微操指南#在游戏中按下 E 键可以打开你的个人物品栏（背包）。作为一名合格的冒险家，熟练掌握以下鼠标和键盘的快捷交互技巧，能为你节省大量的整理时间：
+1. 鼠标点击与拖拽技巧#左键单击物品：拿起这格物品的全部数量。 右键单击物品：拿起这格物品的一半数量（如果是奇数，则拿起多的一半。例如 5 个物品，右键会拿起 3 个，留下 2 个）。 手持物品时在空白格点右键：只在目标空格中放下 1 个物品。这在手动摆放合成配方时非常实用。 快速均分（左键拖拽）：手持一叠物品（如 64 个木板）时，按住左键并在多个空格上拖动，物品会被平均分配到你扫过的每一个格子里。 各放一个（右键拖拽）：手持一叠物品时，按住右键并在多个空格上拖动，则会在每个格子里各留下 1 个物品。这是制作工作台、熔炉或箱子等空心配方时的「神技」。 合并同类（双击）：双击任意一个物品，可以将散落在背包各个格子里相同的物品瞬间吸附并堆叠到这一格中（最高达到 64 个）。 2. 键盘快捷键（事半功倍）#Shift &#43; 左键单击：快速转移。如果打开了箱子或工作台，这会把物品在「背包」与「容器/工作台」之间瞬间传送；如果只是单独打开背包，这会在「快捷栏（屏幕最下方 9 格）」与「背包上方 27 格」之间快速切换。 数字键 1 - 9：鼠标悬停在背包内任意物品上，按下键盘上的数字键，该物品会瞬间与你快捷栏对应槽位的物品对调。 Q 键（丢弃）：鼠标悬停在物品上按 Q 键，可丢弃 1 个物品；按住 Ctrl &#43; Q 键，则可一次性丢弃该格的所有物品。 F 键（副手）：鼠标悬停在任意物品上按下 F 键，该物品会放置到你的副手槽中。在主手拿着盾牌或火把时，副手可以拿着食物，极大方便地底探险。 什么是堆叠上限（Stack Size）？
+背包中的方格不能无限装东西。
+64 个堆叠：绝大多数方块（如泥土、石头、原木、木板）和材料（如煤炭、铁锭）的堆叠上限是 64 个。 16 个堆叠：部分特殊的抛射物或工具（如末影珍珠、雪球、鸡蛋、桶）上限是 16 个。 不堆叠：所有的武器、工具、防具（如镐、剑、胸甲）以及药水，一格只能放 1 个。 3x3 工作台与合成逻辑#背包自带的合成格是 2x2（4 格）的，仅能合成木板、木棍、火把等基础物资。一旦做出了工作台并将其放置在地上右键打开，你就能使用 3x3（9 格）的合成栏。">
+	<meta itemprop="wordCount" content="580">
+
+<title>2.2 采集与合成 • Minecraft 从入门到精通</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/ch02-survival/02-gathering-and-crafting.html">
+<link rel="stylesheet" href="/book.min.64ab3279514b7f9a7b1ec50a47d8bc6f9bed31454a6363d9f98214862cb1a617.css" integrity="sha256-ZKsyeVFLf5p7HsUKR9i8b5vtMUVKY2PZ&#43;YIUhiyxphc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/custom.min.3f5cd638c1f32a12a56266d8c96d94495778d9f77367fca14c5be51dcec060b7.css" integrity="sha256-P1zWOMHzKhKlYmbYyW2USVd42fdzZ/yhTFvlHc7AYLc=" crossorigin="anonymous">
+  <script defer type="module" src="/zh.search.min.6f7ff29a13ed67f6953cbd38ddbc62e9b7573e4092d3c8593c0bdf681417ef54.js" integrity="sha256-b3/ymhPtZ/aVPL043bxi6bdXPkCS08hZPAvfaBQX71Q=" crossorigin="anonymous"></script>
+
+<script defer src="/lightbox.min.b995837a582ada0a114699e58df354f5feb5267b8ba089b2a2c8ac21783242ad.js" integrity="sha256-uZWDelgq2goRRpnljfNU9f61JnuLoImyosisIXgyQq0=" crossorigin="anonymous"></script>
+<script defer src="/theme-toggle.min.17d2b0e14e3e210244ce5d5afaa4b7603c579da4c11f197c77f156465295c14a.js" integrity="sha256-F9Kw4U4&#43;IQJEzl1a&#43;qS3YDxXnaTBHxl8d/FWRlKVwUo=" crossorigin="anonymous"></script>
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/index.html"><span>Minecraft 从入门到精通</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="搜索"
+    aria-label="搜索"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/preamble.html" class="">
+      序</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第一章 · 基础入门</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/01-buy-and-install.html" class="">
+      1.1 购买与安装</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/02-launcher-and-versions.html" class="">
+      1.2 启动器与版本</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/03-game-settings.html" class="">
+      1.3 游戏设置</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第二章 · 生存指南</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/01-first-day.html" class="">
+      2.1 第一天</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/02-gathering-and-crafting.html" class="active">
+      2.2 采集与合成</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/03-mining.html" class="">
+      2.3 采矿技术</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/04-farming.html" class="">
+      2.4 农牧养殖</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/05-villagers.html" class="">
+      2.5 村民与交易</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/03-combat-and-exploration.html" class="">
+      2.6 战斗与探索</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/07-enchanting.html" class="">
+      2.7 附魔与药水</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/04-nether-and-end.html" class="">
+      2.8 下界与末地</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第三章 · 建造美学</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/01-basics.html" class="">
+      3.1 建筑基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/02-styles.html" class="">
+      3.2 风格与设计</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/03-terraforming.html" class="">
+      3.3 地形改造</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/04-furniture.html" class="">
+      3.4 实用家具</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/05-roofs-and-details.html" class="">
+      3.5 屋顶与细节</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/06-palette-and-materials.html" class="">
+      3.6 调色板与材料</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/07-underwater-and-special.html" class="">
+      3.7 水下与特殊环境建筑</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第四章 · 红石工程</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/01-basics.html" class="">
+      4.1 红石基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/02-logic-circuits.html" class="">
+      4.2 逻辑电路</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/03-auto-farms.html" class="">
+      4.3 自动化农场</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/04-timers-and-clocks.html" class="">
+      4.4 计时器与时钟</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/05-piston-machines.html" class="">
+      4.5 活塞机械</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/06-storage-and-sorting.html" class="">
+      4.6 存储与分类系统</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/07-advanced-projects.html" class="">
+      4.7 红石进阶项目</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第五章 · 服务器与联机</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/01-ways-to-connect.html" class="">
+      5.1 联机方式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/02-server-setup.html" class="">
+      5.2 服务器搭建</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/03-realms.html" class="">
+      5.3 领域服</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/04-server-management.html" class="">
+      5.4 服务器维护与管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/05-pvp.html" class="">
+      5.5 PvP 入门</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第六章 · 模组与资源包</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/01-mod-loaders.html" class="">
+      6.1 模组加载器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/02-shaders-and-textures.html" class="">
+      6.2 光影与材质</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/03-recommended-mods.html" class="">
+      6.3 推荐模组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/04-optimization-and-qol.html" class="">
+      6.4 优化与辅助模组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/05-modpacks.html" class="">
+      6.5 整合包入门</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第七章 · 命令与指令方块</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/01-basic-commands.html" class="">
+      7.1 基础命令</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/02-command-blocks.html" class="">
+      7.2 指令方块</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/03-datapacks.html" class="">
+      7.3 数据包</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/04-command-reference.html" class="">
+      7.4 常用命令速查表</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/05-functions-and-advanced.html" class="">
+      7.5 函数与数据包进阶</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/appendix.html" class="">
+      附录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/01-combat-and-exploration.html" class="">
+      2.1 战斗与探索</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/afterwords.html" class="">
+      后记</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>2.2 采集与合成</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#22-采集与合成">2.2 采集与合成</a>
+      <ul>
+        <li><a href="#物品栏与背包管理微操指南">物品栏与背包管理微操指南</a>
+          <ul>
+            <li><a href="#1-鼠标点击与拖拽技巧">1. 鼠标点击与拖拽技巧</a></li>
+            <li><a href="#2-键盘快捷键事半功倍">2. 键盘快捷键（事半功倍）</a></li>
+          </ul>
+        </li>
+        <li><a href="#3x3-工作台与合成逻辑">3x3 工作台与合成逻辑</a>
+          <ul>
+            <li><a href="#1-有序合成与无序合成">1. 有序合成与无序合成</a></li>
+            <li><a href="#2-配方书的进阶操作">2. 配方书的进阶操作</a></li>
+          </ul>
+        </li>
+        <li><a href="#制作第一套生存工具3x3-空间解构">制作第一套生存工具（3x3 空间解构）</a>
+          <ul>
+            <li><a href="#1-镐-pickaxe--挖掘的主宰">1. 镐 (Pickaxe) — 挖掘的主宰</a></li>
+            <li><a href="#2-斧-axe--砍伐与重击">2. 斧 (Axe) — 砍伐与重击</a></li>
+            <li><a href="#3-铲-shovel--快速清道夫">3. 铲 (Shovel) — 快速清道夫</a></li>
+            <li><a href="#4-剑-sword--斩击之刃">4. 剑 (Sword) — 斩击之刃</a></li>
+            <li><a href="#5-锄-hoe--农耕之友">5. 锄 (Hoe) — 农耕之友</a></li>
+            <li><a href="#6-下界合金升级-netherite-upgrade--终极神兵">6. 下界合金升级 (Netherite Upgrade) — 终极神兵</a></li>
+          </ul>
+        </li>
+        <li><a href="#材质等级耐久度与工具升级路线">材质等级、耐久度与「工具升级路线」</a>
+          <ul>
+            <li><a href="#1-材质等级mining-tiers硬性限制">1. 材质等级（Mining Tiers）硬性限制</a></li>
+            <li><a href="#2-生存前期的工具链进化路线">2. 生存前期的「工具链进化路线」</a></li>
+          </ul>
+        </li>
+        <li><a href="#采集机制方块变化与粗金属">采集机制：方块变化与粗金属</a>
+          <ul>
+            <li><a href="#1-物理形态改变">1. 物理形态改变</a></li>
+            <li><a href="#2-粗金属机制raw-metals">2. 粗金属机制（Raw Metals）</a></li>
+            <li><a href="#3-精准采集魔咒">3. 精准采集魔咒</a></li>
+          </ul>
+        </li>
+        <li><a href="#烧炼与熔炉系统全解密">烧炼与熔炉系统全解密</a>
+          <ul>
+            <li><a href="#1-熔炉界面与工作逻辑">1. 熔炉界面与工作逻辑</a></li>
+            <li><a href="#2-经典燃料续航与计算">2. 经典燃料续航与计算</a></li>
+            <li><a href="#3-地下无煤木炭自循环法">3. 地下无煤？「木炭自循环法」</a></li>
+            <li><a href="#4-进阶熔炉高炉与烟熏炉">4. 进阶熔炉：高炉与烟熏炉</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="22-采集与合成">2.2 采集与合成<a class="anchor" href="#22-%e9%87%87%e9%9b%86%e4%b8%8e%e5%90%88%e6%88%90">#</a></h1>
+<blockquote class='book-hint note'>
+<p><strong>基于版本</strong>：Java 版 26.2 · 生存模式核心机制</p></blockquote><p>在度过了惊心动魄的第一天后，你已经建立了一个临时的庇护所。接下来，你需要正式迈入 Minecraft 的核心体验——<strong>采集（Mine）</strong>与<strong>合成（Craft）</strong>。这两大系统环环相扣，构成了游戏最基础的进度循环。</p>
+<p>本节将事无巨细地为你拆解物品管理、工具制作、材质等级、方块采集以及熔炉烧炼的所有细节，带你轻松度过生存前期。</p>
+<hr>
+<h2 id="物品栏与背包管理微操指南">物品栏与背包管理微操指南<a class="anchor" href="#%e7%89%a9%e5%93%81%e6%a0%8f%e4%b8%8e%e8%83%8c%e5%8c%85%e7%ae%a1%e7%90%86%e5%be%ae%e6%93%8d%e6%8c%87%e5%8d%97">#</a></h2>
+<p>在游戏中按下 <kbd>E</kbd>
+ 键可以打开你的个人物品栏（背包）。作为一名合格的冒险家，熟练掌握以下鼠标和键盘的快捷交互技巧，能为你节省大量的整理时间：</p>
+<h3 id="1-鼠标点击与拖拽技巧">1. 鼠标点击与拖拽技巧<a class="anchor" href="#1-%e9%bc%a0%e6%a0%87%e7%82%b9%e5%87%bb%e4%b8%8e%e6%8b%96%e6%8b%bd%e6%8a%80%e5%b7%a7">#</a></h3>
+<ul>
+<li><strong>左键单击物品</strong>：拿起这格物品的<strong>全部</strong>数量。</li>
+<li><strong>右键单击物品</strong>：拿起这格物品的<strong>一半</strong>数量（如果是奇数，则拿起多的一半。例如 5 个物品，右键会拿起 3 个，留下 2 个）。</li>
+<li><strong>手持物品时在空白格点右键</strong>：只在目标空格中<strong>放下 1 个</strong>物品。这在手动摆放合成配方时非常实用。</li>
+<li><strong>快速均分（左键拖拽）</strong>：手持一叠物品（如 64 个木板）时，<strong>按住左键并在多个空格上拖动</strong>，物品会被<strong>平均分配</strong>到你扫过的每一个格子里。</li>
+<li><strong>各放一个（右键拖拽）</strong>：手持一叠物品时，<strong>按住右键并在多个空格上拖动</strong>，则会在每个格子里<strong>各留下 1 个</strong>物品。这是制作工作台、熔炉或箱子等空心配方时的「神技」。</li>
+<li><strong>合并同类（双击）</strong>：双击任意一个物品，可以将散落在背包各个格子里相同的物品<strong>瞬间吸附并堆叠到这一格中</strong>（最高达到 64 个）。</li>
+</ul>
+<h3 id="2-键盘快捷键事半功倍">2. 键盘快捷键（事半功倍）<a class="anchor" href="#2-%e9%94%ae%e7%9b%98%e5%bf%ab%e6%8d%b7%e9%94%ae%e4%ba%8b%e5%8d%8a%e5%8a%9f%e5%80%8d">#</a></h3>
+<ul>
+<li><strong>Shift + 左键单击</strong>：<strong>快速转移</strong>。如果打开了箱子或工作台，这会把物品在「背包」与「容器/工作台」之间瞬间传送；如果只是单独打开背包，这会在「快捷栏（屏幕最下方 9 格）」与「背包上方 27 格」之间快速切换。</li>
+<li><strong>数字键 1 - 9</strong>：鼠标悬停在背包内任意物品上，按下键盘上的数字键，该物品会<strong>瞬间与你快捷栏对应槽位的物品对调</strong>。</li>
+<li><strong>Q 键（丢弃）</strong>：鼠标悬停在物品上按 Q 键，可<strong>丢弃 1 个</strong>物品；按住 <strong>Ctrl + Q 键</strong>，则可<strong>一次性丢弃该格的所有物品</strong>。</li>
+<li><strong>F 键（副手）</strong>：鼠标悬停在任意物品上按下 F 键，该物品会放置到你的<strong>副手槽</strong>中。在主手拿着盾牌或火把时，副手可以拿着食物，极大方便地底探险。</li>
+</ul>
+<blockquote class='book-hint note'>
+<p><strong>什么是堆叠上限（Stack Size）？</strong></p>
+<p>背包中的方格不能无限装东西。</p>
+<ul>
+<li><strong>64 个堆叠</strong>：绝大多数方块（如泥土、石头、原木、木板）和材料（如煤炭、铁锭）的堆叠上限是 64 个。</li>
+<li><strong>16 个堆叠</strong>：部分特殊的抛射物或工具（如末影珍珠、雪球、鸡蛋、桶）上限是 16 个。</li>
+<li><strong>不堆叠</strong>：所有的武器、工具、防具（如镐、剑、胸甲）以及药水，一格只能放 1 个。</li>
+</ul></blockquote><hr>
+<h2 id="3x3-工作台与合成逻辑">3x3 工作台与合成逻辑<a class="anchor" href="#3x3-%e5%b7%a5%e4%bd%9c%e5%8f%b0%e4%b8%8e%e5%90%88%e6%88%90%e9%80%bb%e8%be%91">#</a></h2>
+<p>背包自带的合成格是 2x2（4 格）的，仅能合成木板、木棍、火把等基础物资。一旦做出了<strong>工作台</strong>并将其放置在地上右键打开，你就能使用 3x3（9 格）的合成栏。</p>
+<figure class="book-image-figure">
+  <img
+    src="https://zh.minecraft.wiki/images/Crafting_Table_GUI_Simplified.png?09c93"
+    alt="工作台界面" title="3x3 工作台交互界面" width="750" 
+    data-lightbox data-lightbox-caption="3x3 工作台交互界面"
+  />
+  <figcaption>3x3 工作台交互界面</figcaption>
+</figure>
+
+<h3 id="1-有序合成与无序合成">1. 有序合成与无序合成<a class="anchor" href="#1-%e6%9c%89%e5%ba%8f%e5%90%88%e6%88%90%e4%b8%8e%e6%97%a0%e5%ba%8f%e5%90%88%e6%88%90">#</a></h3>
+<p>Minecraft 中的合成公式分为两种基本逻辑：</p>
+<ul>
+<li><strong>「有序合成」</strong>：材料必须按照严格的形状和相对位置摆放。例如<strong>木剑</strong>，必须是垂直放置 2 个木板并在其正下方放置 1 根木棍。哪怕你把这个形状在 3x3 九宫格内整体平移（例如左侧一列或右侧一列），只要其「相对几何形状」没有发生改变，就可以合成；但如果将材料颠倒（如木棍放在顶部），配方就会失效。此外，<strong>火把</strong>也是有序合成（煤炭/木炭必须垂直放置在木棍的正上方）。</li>
+<li><strong>「无序合成」</strong>：不要求材料在合成栏中的摆放位置，只要放入配方所需的<strong>所有材料及其正确数量</strong>即可成功合成。例如合成<strong>打火石</strong>，只需在合成栏中任意位置放入 1 个铁锭和 1 个燧石，即可成功合成；再如合成<strong>发酵蛛眼</strong>，只需将 1 个蜘蛛眼、1 个糖和 1 个棕色蘑菇以任意顺序位置放入即可。</li>
+</ul>
+<h3 id="2-配方书的进阶操作">2. 配方书的进阶操作<a class="anchor" href="#2-%e9%85%8d%e6%96%b9%e4%b9%a6%e7%9a%84%e8%bf%9b%e9%98%b6%e6%93%8d%e4%bd%9c">#</a></h3>
+<p>在打开合成界面时，可以点击合成栏左侧的<strong>绿色书本图标</strong>来打开或收起「配方书」（Recipe Book）。配方书是探索和快速合成的强大助手：</p>
+<ul>
+<li><strong>配方解锁</strong>：在生存模式中，你需要在世界中获得新的原材料（例如首次拾起原木、圆石、铁锭）才能逐步解锁对应的合成配方，解锁时屏幕右上角会弹出配方解锁的浮窗提示。</li>
+<li><strong>状态过滤</strong>：配方书中，<strong>红框边框</strong>的配方代表你已解锁但当前背包内「材料不足」；<strong>无红框</strong>的配方代表你当前背包内「材料充足，可以立即合成」。你可以点击配方书顶部的<strong>工作台图标（仅显示可合成）</strong>来一键过滤，只展示当前能够制作的物品。</li>
+<li><strong>一键摆放与批量摆放</strong>：<strong>左键点击</strong>配方书中的配方，会自动从背包中把一份材料摆放到合成格内；如果按住 <strong>Shift 键并左键点击</strong>，系统会自动填入当前背包材料所能摆放的最大数量，实现一键批量快速合成。</li>
+<li><strong>点击并按住（替代配方菜单）</strong>：如果一个配方包含多种可用材料变体（例如制作箱子可以使用任意种类的木板，或者制作床可以使用任意颜色的羊毛），<strong>左键点击并按住</strong>该配方图标，会弹出一个悬浮菜单展示所有可用的替代配方材料，方便你选择特定的材料进行合成。</li>
+</ul>
+<hr>
+<h2 id="制作第一套生存工具3x3-空间解构">制作第一套生存工具（3x3 空间解构）<a class="anchor" href="#%e5%88%b6%e4%bd%9c%e7%ac%ac%e4%b8%80%e5%a5%97%e7%94%9f%e5%ad%98%e5%b7%a5%e5%85%b73x3-%e7%a9%ba%e9%97%b4%e8%a7%a3%e6%9e%84">#</a></h2>
+<p>为了让纯新手彻底看懂，我们将 3x3 工作台的格子从左到右、从上到下标记为 <strong>1 至 9 号位置</strong>：</p>
+<pre style="text-align:center; font-family:monospace; margin:1.2rem 0;">
+[ 1 ] [ 2 ] [ 3 ]
+[ 4 ] [ 5 ] [ 6 ]
+[ 7 ] [ 8 ] [ 9 ]
+</pre>
+<p>以下是五大生存基础工具在 3x3 网格中的几何拼装方法：</p>
+<h3 id="1-镐-pickaxe--挖掘的主宰">1. 镐 (Pickaxe) — 挖掘的主宰<a class="anchor" href="#1-%e9%95%90-pickaxe--%e6%8c%96%e6%8e%98%e7%9a%84%e4%b8%bb%e5%ae%b0">#</a></h3>
+<ul>
+<li><strong>配方摆放</strong>：在 <strong>1, 2, 3</strong> 位置各放 1 个材质材料，在 <strong>5, 8</strong> 位置各放 1 根木棍。</li>
+<li><strong>形状记忆</strong>：像一把英文字母 <strong>T</strong>，上方是水平摆放的镐头，中间是垂直的木柄。</li>
+<li><strong>使用技巧</strong>：用于开采石头、矿石、金属方块、熔炉和铁轨等。它是挖掘这些方块以获取掉落物的<strong>唯一有效工具</strong>（如果不使用镐来开采，矿石块会直接碎裂损毁，不掉落任何物品，例如用空手或铲子挖铁矿石将一无所获）。</li>
+</ul>
+<div class="mc-crafting-wrapper" id="mc-crafting-2">
+  <div class="mc-crafting-container">
+    <div class="mc-crafting-grid"><div class="mc-crafting-slot" data-items="oak_planks,cobblestone,iron_ingot,diamond">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="oak_planks,cobblestone,iron_ingot,diamond">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="oak_planks,cobblestone,iron_ingot,diamond">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="stick">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="stick">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div></div>
+    
+    <div class="mc-crafting-arrow"></div><div class="mc-crafting-result-slot" data-items="wooden_pickaxe,stone_pickaxe,iron_pickaxe,diamond_pickaxe">
+      <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" /></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  
+  const mcTooltips = {
+    
+    "oak_planks": { title: "橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "spruce_planks": { title: "云杉木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "birch_planks": { title: "白桦木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "jungle_planks": { title: "丛林木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "acacia_planks": { title: "金合欢木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "dark_oak_planks": { title: "深色橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "mangrove_planks": { title: "红树木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "cherry_planks": { title: "樱花木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "bamboo_planks": { title: "竹板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "crimson_planks": { title: "绯红木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "warped_planks": { title: "诡异木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "stick": { title: "木棍", subtitle: "材料 - 制作工具手柄、火把与梯子的基础必需品" },
+    "coal": { title: "煤炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 用于制作火把" },
+    "charcoal": { title: "木炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 通过在熔炉中烧炼木头获得" },
+    "cobblestone": { title: "圆石", subtitle: "方块 - 石器时代的核心建筑与合成材料" },
+    "raw_iron": { title: "粗铁", subtitle: "材料 - 铁矿石开采产物，可冶炼成铁锭" },
+    "iron_ingot": { title: "铁锭", subtitle: "材料 - 金属时代的核心工业与工具合成材料" },
+    "diamond": { title: "钻石", subtitle: "材料 - 极其坚硬且珍贵的高级合成材料" },
+    "netherite_ingot": { title: "下界合金锭", subtitle: "材料 - 极高强度的下界金属，具备防火防熔岩特性" },
+    "netherite_upgrade_smithing_template": { title: "下界合金升级锻造模板", subtitle: "模板 - 仅在下界荒地遗迹中发现，用于升级钻石装备" },
+
+    
+    "wooden_pickaxe": { title: "木镐", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2 | 耐久度: 59" },
+    "wooden_shovel": { title: "木铲", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2.5 | 耐久度: 59" },
+    "wooden_axe": { title: "木斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +7 | 耐久度: 59" },
+    "wooden_sword": { title: "木剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +4 | 耐久度: 59" },
+    "wooden_hoe": { title: "木锄", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +1 | 耐久度: 59" },
+
+    
+    "stone_pickaxe": { title: "石镐", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3 | 耐久度: 131" },
+    "stone_shovel": { title: "石铲", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3.5 | 耐久度: 131" },
+    "stone_axe": { title: "石斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +9 | 耐久度: 131" },
+    "stone_sword": { title: "石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +5 | 耐久度: 131" },
+    "stone_hoe": { title: "石锄", subtitle: "工具 - 攻击速度: 2.0 | 攻击伤害: +1 | 耐久度: 131" },
+
+    
+    "iron_pickaxe": { title: "铁镐", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4 | 耐久度: 250" },
+    "iron_shovel": { title: "铁铲", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4.5 | 耐久度: 250" },
+    "iron_axe": { title: "铁斧", subtitle: "工具 - 攻击速度: 0.9 | 攻击伤害: +9 | 耐久度: 250" },
+    "iron_sword": { title: "铁剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +6 | 耐久度: 250" },
+    "iron_hoe": { title: "铁锄", subtitle: "工具 - 攻击速度: 3.0 | 攻击伤害: +1 | 耐久度: 250" },
+
+    
+    "diamond_pickaxe": { title: "钻石镐", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5 | 耐久度: 1561" },
+    "diamond_shovel": { title: "钻石铲", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5.5 | 耐久度: 1561" },
+    "diamond_axe": { title: "钻石斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +9 | 耐久度: 1561" },
+    "diamond_sword": { title: "钻石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +7 | 耐久度: 1561" },
+    "diamond_hoe": { title: "钻石锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 | 耐久度: 1561" },
+
+    
+    "netherite_pickaxe": { title: "下界合金镐", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_shovel": { title: "下界合金铲", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6.5 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_axe": { title: "下界合金斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +10 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_sword": { title: "下界合金剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +8 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_hoe": { title: "下界合金锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 (防火防熔岩) | 耐久度: 2031" },
+
+    
+    "furnace": { title: "熔炉", subtitle: "方块 - 用于冶炼矿石与烹饪食物的传统加热方块" },
+    "crafting_table": { title: "工作台", subtitle: "方块 - 提供 3x3 网格的合成核心方块" },
+    "smithing_table": { title: "锻造台", subtitle: "方块 - 配合锻造模板升级高级武器装备的工作方块" }
+  };
+
+  
+  let tooltip = document.querySelector(".mc-crafting-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "mc-crafting-tooltip";
+    tooltip.innerHTML = '<span class="mc-tooltip-title"></span><span class="mc-tooltip-subtitle"></span>';
+    document.body.appendChild(tooltip);
+  }
+
+  const container = document.getElementById("mc-crafting-2");
+  const slots = container.querySelectorAll(".mc-crafting-slot, .mc-crafting-result-slot");
+
+  slots.forEach(slot => {
+    if (slot.classList.contains("empty")) return;
+    
+    const itemsData = slot.getAttribute("data-items");
+    if (!itemsData) return;
+    
+    const items = itemsData.split(",").map(i => i.trim());
+    let currentIndex = 0;
+    const img = slot.querySelector("img");
+
+    
+    function updateSlot() {
+      const itemKey = items[currentIndex];
+      if (itemKey === "empty" || !itemKey) {
+        img.style.opacity = 0;
+        img.src = "";
+        slot.setAttribute("data-active-item", "");
+      } else {
+        
+        img.onload = function() {
+          if (this.naturalWidth >= 256) {
+            this.style.setProperty("image-rendering", "auto", "important");
+          } else {
+            this.style.setProperty("image-rendering", "pixelated", "important");
+          }
+        };
+        img.src = "/images/items/" + itemKey + ".png";
+        img.style.opacity = 1;
+        slot.setAttribute("data-active-item", itemKey);
+      }
+    }
+    updateSlot();
+
+    
+    if (items.length > 1) {
+      setInterval(() => {
+        img.style.opacity = 0;
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % items.length;
+          updateSlot();
+        }, 150);
+      }, 2000);
+    }
+
+    
+    slot.addEventListener("mouseenter", (e) => {
+      const activeItem = slot.getAttribute("data-active-item");
+      if (!activeItem) return;
+
+      const translation = mcTooltips[activeItem] || { title: activeItem, subtitle: "物品" };
+      tooltip.querySelector(".mc-tooltip-title").textContent = translation.title;
+      tooltip.querySelector(".mc-tooltip-subtitle").textContent = translation.subtitle;
+      tooltip.style.display = "block";
+    });
+
+    slot.addEventListener("mousemove", (e) => {
+      
+      tooltip.style.left = (e.clientX + 12) + "px";
+      tooltip.style.top = (e.clientY - 12) + "px";
+    });
+
+    slot.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+})();
+</script>
+
+<h3 id="2-斧-axe--砍伐与重击">2. 斧 (Axe) — 砍伐与重击<a class="anchor" href="#2-%e6%96%a7-axe--%e7%a0%8d%e4%bc%90%e4%b8%8e%e9%87%8d%e5%87%bb">#</a></h3>
+<ul>
+<li><strong>配方摆放</strong>：在 <strong>1, 2, 4</strong> 位置（或者反向在 <strong>2, 3, 6</strong> 位置）各放 1 个材质材料，在 <strong>5, 8</strong> 位置各放 1 根木棍。</li>
+<li><strong>形状记忆</strong>：像一面朝向左边（或右边）的旗帜，镐头的一侧垂下一个边角。</li>
+<li><strong>使用技巧</strong>：主要用于快速破坏木质方块和相关制品（如原木、木板、围栏）。此外也是战术工具：
+<ul>
+<li><strong>剥皮原木</strong>：手持斧子对原木或木头点<strong>鼠标右键</strong>，可将其转化为「去皮原木」或「去皮木头」。</li>
+<li><strong>除锈与除蜡</strong>：在 1.17 及以上版本中，右键点击铜质方块可以刮除其表面的氧化锈蚀，或清除其表面的蜜蜡封层。</li>
+<li><strong>破盾战术</strong>：在 Java 版中，用蓄力全满的斧头物理攻击手持盾牌防守的敌人，有几率使敌人的盾牌暂时<strong>失效（禁用 5 秒）</strong>。</li>
+</ul>
+</li>
+</ul>
+<div class="mc-crafting-wrapper" id="mc-crafting-3">
+  <div class="mc-crafting-container">
+    <div class="mc-crafting-grid"><div class="mc-crafting-slot" data-items="oak_planks,cobblestone,iron_ingot,diamond">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="oak_planks,cobblestone,iron_ingot,diamond">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="oak_planks,cobblestone,iron_ingot,diamond">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="stick">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="stick">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div></div>
+    
+    <div class="mc-crafting-arrow"></div><div class="mc-crafting-result-slot" data-items="wooden_axe,stone_axe,iron_axe,diamond_axe">
+      <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" /></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  
+  const mcTooltips = {
+    
+    "oak_planks": { title: "橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "spruce_planks": { title: "云杉木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "birch_planks": { title: "白桦木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "jungle_planks": { title: "丛林木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "acacia_planks": { title: "金合欢木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "dark_oak_planks": { title: "深色橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "mangrove_planks": { title: "红树木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "cherry_planks": { title: "樱花木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "bamboo_planks": { title: "竹板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "crimson_planks": { title: "绯红木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "warped_planks": { title: "诡异木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "stick": { title: "木棍", subtitle: "材料 - 制作工具手柄、火把与梯子的基础必需品" },
+    "coal": { title: "煤炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 用于制作火把" },
+    "charcoal": { title: "木炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 通过在熔炉中烧炼木头获得" },
+    "cobblestone": { title: "圆石", subtitle: "方块 - 石器时代的核心建筑与合成材料" },
+    "raw_iron": { title: "粗铁", subtitle: "材料 - 铁矿石开采产物，可冶炼成铁锭" },
+    "iron_ingot": { title: "铁锭", subtitle: "材料 - 金属时代的核心工业与工具合成材料" },
+    "diamond": { title: "钻石", subtitle: "材料 - 极其坚硬且珍贵的高级合成材料" },
+    "netherite_ingot": { title: "下界合金锭", subtitle: "材料 - 极高强度的下界金属，具备防火防熔岩特性" },
+    "netherite_upgrade_smithing_template": { title: "下界合金升级锻造模板", subtitle: "模板 - 仅在下界荒地遗迹中发现，用于升级钻石装备" },
+
+    
+    "wooden_pickaxe": { title: "木镐", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2 | 耐久度: 59" },
+    "wooden_shovel": { title: "木铲", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2.5 | 耐久度: 59" },
+    "wooden_axe": { title: "木斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +7 | 耐久度: 59" },
+    "wooden_sword": { title: "木剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +4 | 耐久度: 59" },
+    "wooden_hoe": { title: "木锄", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +1 | 耐久度: 59" },
+
+    
+    "stone_pickaxe": { title: "石镐", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3 | 耐久度: 131" },
+    "stone_shovel": { title: "石铲", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3.5 | 耐久度: 131" },
+    "stone_axe": { title: "石斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +9 | 耐久度: 131" },
+    "stone_sword": { title: "石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +5 | 耐久度: 131" },
+    "stone_hoe": { title: "石锄", subtitle: "工具 - 攻击速度: 2.0 | 攻击伤害: +1 | 耐久度: 131" },
+
+    
+    "iron_pickaxe": { title: "铁镐", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4 | 耐久度: 250" },
+    "iron_shovel": { title: "铁铲", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4.5 | 耐久度: 250" },
+    "iron_axe": { title: "铁斧", subtitle: "工具 - 攻击速度: 0.9 | 攻击伤害: +9 | 耐久度: 250" },
+    "iron_sword": { title: "铁剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +6 | 耐久度: 250" },
+    "iron_hoe": { title: "铁锄", subtitle: "工具 - 攻击速度: 3.0 | 攻击伤害: +1 | 耐久度: 250" },
+
+    
+    "diamond_pickaxe": { title: "钻石镐", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5 | 耐久度: 1561" },
+    "diamond_shovel": { title: "钻石铲", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5.5 | 耐久度: 1561" },
+    "diamond_axe": { title: "钻石斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +9 | 耐久度: 1561" },
+    "diamond_sword": { title: "钻石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +7 | 耐久度: 1561" },
+    "diamond_hoe": { title: "钻石锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 | 耐久度: 1561" },
+
+    
+    "netherite_pickaxe": { title: "下界合金镐", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_shovel": { title: "下界合金铲", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6.5 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_axe": { title: "下界合金斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +10 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_sword": { title: "下界合金剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +8 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_hoe": { title: "下界合金锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 (防火防熔岩) | 耐久度: 2031" },
+
+    
+    "furnace": { title: "熔炉", subtitle: "方块 - 用于冶炼矿石与烹饪食物的传统加热方块" },
+    "crafting_table": { title: "工作台", subtitle: "方块 - 提供 3x3 网格的合成核心方块" },
+    "smithing_table": { title: "锻造台", subtitle: "方块 - 配合锻造模板升级高级武器装备的工作方块" }
+  };
+
+  
+  let tooltip = document.querySelector(".mc-crafting-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "mc-crafting-tooltip";
+    tooltip.innerHTML = '<span class="mc-tooltip-title"></span><span class="mc-tooltip-subtitle"></span>';
+    document.body.appendChild(tooltip);
+  }
+
+  const container = document.getElementById("mc-crafting-3");
+  const slots = container.querySelectorAll(".mc-crafting-slot, .mc-crafting-result-slot");
+
+  slots.forEach(slot => {
+    if (slot.classList.contains("empty")) return;
+    
+    const itemsData = slot.getAttribute("data-items");
+    if (!itemsData) return;
+    
+    const items = itemsData.split(",").map(i => i.trim());
+    let currentIndex = 0;
+    const img = slot.querySelector("img");
+
+    
+    function updateSlot() {
+      const itemKey = items[currentIndex];
+      if (itemKey === "empty" || !itemKey) {
+        img.style.opacity = 0;
+        img.src = "";
+        slot.setAttribute("data-active-item", "");
+      } else {
+        
+        img.onload = function() {
+          if (this.naturalWidth >= 256) {
+            this.style.setProperty("image-rendering", "auto", "important");
+          } else {
+            this.style.setProperty("image-rendering", "pixelated", "important");
+          }
+        };
+        img.src = "/images/items/" + itemKey + ".png";
+        img.style.opacity = 1;
+        slot.setAttribute("data-active-item", itemKey);
+      }
+    }
+    updateSlot();
+
+    
+    if (items.length > 1) {
+      setInterval(() => {
+        img.style.opacity = 0;
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % items.length;
+          updateSlot();
+        }, 150);
+      }, 2000);
+    }
+
+    
+    slot.addEventListener("mouseenter", (e) => {
+      const activeItem = slot.getAttribute("data-active-item");
+      if (!activeItem) return;
+
+      const translation = mcTooltips[activeItem] || { title: activeItem, subtitle: "物品" };
+      tooltip.querySelector(".mc-tooltip-title").textContent = translation.title;
+      tooltip.querySelector(".mc-tooltip-subtitle").textContent = translation.subtitle;
+      tooltip.style.display = "block";
+    });
+
+    slot.addEventListener("mousemove", (e) => {
+      
+      tooltip.style.left = (e.clientX + 12) + "px";
+      tooltip.style.top = (e.clientY - 12) + "px";
+    });
+
+    slot.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+})();
+</script>
+
+<h3 id="3-铲-shovel--快速清道夫">3. 铲 (Shovel) — 快速清道夫<a class="anchor" href="#3-%e9%93%b2-shovel--%e5%bf%ab%e9%80%9f%e6%b8%85%e9%81%93%e5%a4%ab">#</a></h3>
+<ul>
+<li><strong>配方摆放</strong>：在 <strong>2</strong> 位置放 1 个材质材料，在 <strong>5, 8</strong> 位置各放 1 根木棍。</li>
+<li><strong>形状记忆</strong>：一根长木棍顶端安装了一个铲头。</li>
+<li><strong>使用技巧</strong>：用于开采泥土、沙子、砂砾、粘土、雪和可疑的沙子/砂砾等松散方块。
+<ul>
+<li><strong>开辟土径</strong>：手持铲子对草方块、泥土、粗泥土、灰壤或菌丝点<strong>鼠标右键</strong>，可以将其转化为 15/16 像素高的「土径」方块（极度适合用于规划村庄路网）。</li>
+<li><strong>熄灭营火</strong>：在 1.14 及以上版本中，手持铲子对燃烧中的营火点<strong>鼠标右键</strong>可以将其无损安全熄灭，无需泼水。</li>
+</ul>
+</li>
+</ul>
+<div class="mc-crafting-wrapper" id="mc-crafting-4">
+  <div class="mc-crafting-container">
+    <div class="mc-crafting-grid"><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="oak_planks,cobblestone,iron_ingot,diamond">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="stick">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="stick">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div></div>
+    
+    <div class="mc-crafting-arrow"></div><div class="mc-crafting-result-slot" data-items="wooden_shovel,stone_shovel,iron_shovel,diamond_shovel">
+      <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" /></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  
+  const mcTooltips = {
+    
+    "oak_planks": { title: "橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "spruce_planks": { title: "云杉木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "birch_planks": { title: "白桦木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "jungle_planks": { title: "丛林木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "acacia_planks": { title: "金合欢木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "dark_oak_planks": { title: "深色橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "mangrove_planks": { title: "红树木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "cherry_planks": { title: "樱花木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "bamboo_planks": { title: "竹板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "crimson_planks": { title: "绯红木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "warped_planks": { title: "诡异木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "stick": { title: "木棍", subtitle: "材料 - 制作工具手柄、火把与梯子的基础必需品" },
+    "coal": { title: "煤炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 用于制作火把" },
+    "charcoal": { title: "木炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 通过在熔炉中烧炼木头获得" },
+    "cobblestone": { title: "圆石", subtitle: "方块 - 石器时代的核心建筑与合成材料" },
+    "raw_iron": { title: "粗铁", subtitle: "材料 - 铁矿石开采产物，可冶炼成铁锭" },
+    "iron_ingot": { title: "铁锭", subtitle: "材料 - 金属时代的核心工业与工具合成材料" },
+    "diamond": { title: "钻石", subtitle: "材料 - 极其坚硬且珍贵的高级合成材料" },
+    "netherite_ingot": { title: "下界合金锭", subtitle: "材料 - 极高强度的下界金属，具备防火防熔岩特性" },
+    "netherite_upgrade_smithing_template": { title: "下界合金升级锻造模板", subtitle: "模板 - 仅在下界荒地遗迹中发现，用于升级钻石装备" },
+
+    
+    "wooden_pickaxe": { title: "木镐", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2 | 耐久度: 59" },
+    "wooden_shovel": { title: "木铲", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2.5 | 耐久度: 59" },
+    "wooden_axe": { title: "木斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +7 | 耐久度: 59" },
+    "wooden_sword": { title: "木剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +4 | 耐久度: 59" },
+    "wooden_hoe": { title: "木锄", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +1 | 耐久度: 59" },
+
+    
+    "stone_pickaxe": { title: "石镐", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3 | 耐久度: 131" },
+    "stone_shovel": { title: "石铲", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3.5 | 耐久度: 131" },
+    "stone_axe": { title: "石斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +9 | 耐久度: 131" },
+    "stone_sword": { title: "石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +5 | 耐久度: 131" },
+    "stone_hoe": { title: "石锄", subtitle: "工具 - 攻击速度: 2.0 | 攻击伤害: +1 | 耐久度: 131" },
+
+    
+    "iron_pickaxe": { title: "铁镐", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4 | 耐久度: 250" },
+    "iron_shovel": { title: "铁铲", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4.5 | 耐久度: 250" },
+    "iron_axe": { title: "铁斧", subtitle: "工具 - 攻击速度: 0.9 | 攻击伤害: +9 | 耐久度: 250" },
+    "iron_sword": { title: "铁剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +6 | 耐久度: 250" },
+    "iron_hoe": { title: "铁锄", subtitle: "工具 - 攻击速度: 3.0 | 攻击伤害: +1 | 耐久度: 250" },
+
+    
+    "diamond_pickaxe": { title: "钻石镐", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5 | 耐久度: 1561" },
+    "diamond_shovel": { title: "钻石铲", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5.5 | 耐久度: 1561" },
+    "diamond_axe": { title: "钻石斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +9 | 耐久度: 1561" },
+    "diamond_sword": { title: "钻石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +7 | 耐久度: 1561" },
+    "diamond_hoe": { title: "钻石锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 | 耐久度: 1561" },
+
+    
+    "netherite_pickaxe": { title: "下界合金镐", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_shovel": { title: "下界合金铲", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6.5 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_axe": { title: "下界合金斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +10 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_sword": { title: "下界合金剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +8 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_hoe": { title: "下界合金锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 (防火防熔岩) | 耐久度: 2031" },
+
+    
+    "furnace": { title: "熔炉", subtitle: "方块 - 用于冶炼矿石与烹饪食物的传统加热方块" },
+    "crafting_table": { title: "工作台", subtitle: "方块 - 提供 3x3 网格的合成核心方块" },
+    "smithing_table": { title: "锻造台", subtitle: "方块 - 配合锻造模板升级高级武器装备的工作方块" }
+  };
+
+  
+  let tooltip = document.querySelector(".mc-crafting-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "mc-crafting-tooltip";
+    tooltip.innerHTML = '<span class="mc-tooltip-title"></span><span class="mc-tooltip-subtitle"></span>';
+    document.body.appendChild(tooltip);
+  }
+
+  const container = document.getElementById("mc-crafting-4");
+  const slots = container.querySelectorAll(".mc-crafting-slot, .mc-crafting-result-slot");
+
+  slots.forEach(slot => {
+    if (slot.classList.contains("empty")) return;
+    
+    const itemsData = slot.getAttribute("data-items");
+    if (!itemsData) return;
+    
+    const items = itemsData.split(",").map(i => i.trim());
+    let currentIndex = 0;
+    const img = slot.querySelector("img");
+
+    
+    function updateSlot() {
+      const itemKey = items[currentIndex];
+      if (itemKey === "empty" || !itemKey) {
+        img.style.opacity = 0;
+        img.src = "";
+        slot.setAttribute("data-active-item", "");
+      } else {
+        
+        img.onload = function() {
+          if (this.naturalWidth >= 256) {
+            this.style.setProperty("image-rendering", "auto", "important");
+          } else {
+            this.style.setProperty("image-rendering", "pixelated", "important");
+          }
+        };
+        img.src = "/images/items/" + itemKey + ".png";
+        img.style.opacity = 1;
+        slot.setAttribute("data-active-item", itemKey);
+      }
+    }
+    updateSlot();
+
+    
+    if (items.length > 1) {
+      setInterval(() => {
+        img.style.opacity = 0;
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % items.length;
+          updateSlot();
+        }, 150);
+      }, 2000);
+    }
+
+    
+    slot.addEventListener("mouseenter", (e) => {
+      const activeItem = slot.getAttribute("data-active-item");
+      if (!activeItem) return;
+
+      const translation = mcTooltips[activeItem] || { title: activeItem, subtitle: "物品" };
+      tooltip.querySelector(".mc-tooltip-title").textContent = translation.title;
+      tooltip.querySelector(".mc-tooltip-subtitle").textContent = translation.subtitle;
+      tooltip.style.display = "block";
+    });
+
+    slot.addEventListener("mousemove", (e) => {
+      
+      tooltip.style.left = (e.clientX + 12) + "px";
+      tooltip.style.top = (e.clientY - 12) + "px";
+    });
+
+    slot.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+})();
+</script>
+
+<h3 id="4-剑-sword--斩击之刃">4. 剑 (Sword) — 斩击之刃<a class="anchor" href="#4-%e5%89%91-sword--%e6%96%a9%e5%87%bb%e4%b9%8b%e5%88%83">#</a></h3>
+<ul>
+<li><strong>配方摆放</strong>：在 <strong>2, 5</strong> 位置各放 1 个材质材料，在 <strong>8</strong> 位置放 1 根木棍。</li>
+<li><strong>形状记忆</strong>：一条竖直的剑身，底部是木棍做的剑柄。</li>
+<li><strong>使用技巧</strong>：核心近战武器，单次伤害低于同级斧子，但拥有更快的攻击速度和极短的冷却时间。
+<ul>
+<li><strong>横扫攻击</strong>：在 Java 版中，当攻击冷却条完全充满且玩家处于站立、缓慢行走或潜行状态时，挥剑攻击活体生物会触发<strong>横扫攻击</strong>，对攻击目标附近的其它敌人造成横扫伤害和击退。</li>
+<li><strong>快速除网</strong>：剑是破坏「蜘蛛网」效率最高的工具，能够瞬间打碎蛛网并使其掉落制作弓与钓鱼竿所需的「线」。</li>
+</ul>
+</li>
+</ul>
+<div class="mc-crafting-wrapper" id="mc-crafting-5">
+  <div class="mc-crafting-container">
+    <div class="mc-crafting-grid"><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="oak_planks,cobblestone,iron_ingot,diamond">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="oak_planks,cobblestone,iron_ingot,diamond">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="stick">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div></div>
+    
+    <div class="mc-crafting-arrow"></div><div class="mc-crafting-result-slot" data-items="wooden_sword,stone_sword,iron_sword,diamond_sword">
+      <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" /></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  
+  const mcTooltips = {
+    
+    "oak_planks": { title: "橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "spruce_planks": { title: "云杉木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "birch_planks": { title: "白桦木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "jungle_planks": { title: "丛林木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "acacia_planks": { title: "金合欢木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "dark_oak_planks": { title: "深色橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "mangrove_planks": { title: "红树木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "cherry_planks": { title: "樱花木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "bamboo_planks": { title: "竹板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "crimson_planks": { title: "绯红木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "warped_planks": { title: "诡异木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "stick": { title: "木棍", subtitle: "材料 - 制作工具手柄、火把与梯子的基础必需品" },
+    "coal": { title: "煤炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 用于制作火把" },
+    "charcoal": { title: "木炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 通过在熔炉中烧炼木头获得" },
+    "cobblestone": { title: "圆石", subtitle: "方块 - 石器时代的核心建筑与合成材料" },
+    "raw_iron": { title: "粗铁", subtitle: "材料 - 铁矿石开采产物，可冶炼成铁锭" },
+    "iron_ingot": { title: "铁锭", subtitle: "材料 - 金属时代的核心工业与工具合成材料" },
+    "diamond": { title: "钻石", subtitle: "材料 - 极其坚硬且珍贵的高级合成材料" },
+    "netherite_ingot": { title: "下界合金锭", subtitle: "材料 - 极高强度的下界金属，具备防火防熔岩特性" },
+    "netherite_upgrade_smithing_template": { title: "下界合金升级锻造模板", subtitle: "模板 - 仅在下界荒地遗迹中发现，用于升级钻石装备" },
+
+    
+    "wooden_pickaxe": { title: "木镐", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2 | 耐久度: 59" },
+    "wooden_shovel": { title: "木铲", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2.5 | 耐久度: 59" },
+    "wooden_axe": { title: "木斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +7 | 耐久度: 59" },
+    "wooden_sword": { title: "木剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +4 | 耐久度: 59" },
+    "wooden_hoe": { title: "木锄", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +1 | 耐久度: 59" },
+
+    
+    "stone_pickaxe": { title: "石镐", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3 | 耐久度: 131" },
+    "stone_shovel": { title: "石铲", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3.5 | 耐久度: 131" },
+    "stone_axe": { title: "石斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +9 | 耐久度: 131" },
+    "stone_sword": { title: "石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +5 | 耐久度: 131" },
+    "stone_hoe": { title: "石锄", subtitle: "工具 - 攻击速度: 2.0 | 攻击伤害: +1 | 耐久度: 131" },
+
+    
+    "iron_pickaxe": { title: "铁镐", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4 | 耐久度: 250" },
+    "iron_shovel": { title: "铁铲", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4.5 | 耐久度: 250" },
+    "iron_axe": { title: "铁斧", subtitle: "工具 - 攻击速度: 0.9 | 攻击伤害: +9 | 耐久度: 250" },
+    "iron_sword": { title: "铁剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +6 | 耐久度: 250" },
+    "iron_hoe": { title: "铁锄", subtitle: "工具 - 攻击速度: 3.0 | 攻击伤害: +1 | 耐久度: 250" },
+
+    
+    "diamond_pickaxe": { title: "钻石镐", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5 | 耐久度: 1561" },
+    "diamond_shovel": { title: "钻石铲", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5.5 | 耐久度: 1561" },
+    "diamond_axe": { title: "钻石斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +9 | 耐久度: 1561" },
+    "diamond_sword": { title: "钻石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +7 | 耐久度: 1561" },
+    "diamond_hoe": { title: "钻石锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 | 耐久度: 1561" },
+
+    
+    "netherite_pickaxe": { title: "下界合金镐", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_shovel": { title: "下界合金铲", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6.5 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_axe": { title: "下界合金斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +10 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_sword": { title: "下界合金剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +8 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_hoe": { title: "下界合金锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 (防火防熔岩) | 耐久度: 2031" },
+
+    
+    "furnace": { title: "熔炉", subtitle: "方块 - 用于冶炼矿石与烹饪食物的传统加热方块" },
+    "crafting_table": { title: "工作台", subtitle: "方块 - 提供 3x3 网格的合成核心方块" },
+    "smithing_table": { title: "锻造台", subtitle: "方块 - 配合锻造模板升级高级武器装备的工作方块" }
+  };
+
+  
+  let tooltip = document.querySelector(".mc-crafting-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "mc-crafting-tooltip";
+    tooltip.innerHTML = '<span class="mc-tooltip-title"></span><span class="mc-tooltip-subtitle"></span>';
+    document.body.appendChild(tooltip);
+  }
+
+  const container = document.getElementById("mc-crafting-5");
+  const slots = container.querySelectorAll(".mc-crafting-slot, .mc-crafting-result-slot");
+
+  slots.forEach(slot => {
+    if (slot.classList.contains("empty")) return;
+    
+    const itemsData = slot.getAttribute("data-items");
+    if (!itemsData) return;
+    
+    const items = itemsData.split(",").map(i => i.trim());
+    let currentIndex = 0;
+    const img = slot.querySelector("img");
+
+    
+    function updateSlot() {
+      const itemKey = items[currentIndex];
+      if (itemKey === "empty" || !itemKey) {
+        img.style.opacity = 0;
+        img.src = "";
+        slot.setAttribute("data-active-item", "");
+      } else {
+        
+        img.onload = function() {
+          if (this.naturalWidth >= 256) {
+            this.style.setProperty("image-rendering", "auto", "important");
+          } else {
+            this.style.setProperty("image-rendering", "pixelated", "important");
+          }
+        };
+        img.src = "/images/items/" + itemKey + ".png";
+        img.style.opacity = 1;
+        slot.setAttribute("data-active-item", itemKey);
+      }
+    }
+    updateSlot();
+
+    
+    if (items.length > 1) {
+      setInterval(() => {
+        img.style.opacity = 0;
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % items.length;
+          updateSlot();
+        }, 150);
+      }, 2000);
+    }
+
+    
+    slot.addEventListener("mouseenter", (e) => {
+      const activeItem = slot.getAttribute("data-active-item");
+      if (!activeItem) return;
+
+      const translation = mcTooltips[activeItem] || { title: activeItem, subtitle: "物品" };
+      tooltip.querySelector(".mc-tooltip-title").textContent = translation.title;
+      tooltip.querySelector(".mc-tooltip-subtitle").textContent = translation.subtitle;
+      tooltip.style.display = "block";
+    });
+
+    slot.addEventListener("mousemove", (e) => {
+      
+      tooltip.style.left = (e.clientX + 12) + "px";
+      tooltip.style.top = (e.clientY - 12) + "px";
+    });
+
+    slot.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+})();
+</script>
+
+<h3 id="5-锄-hoe--农耕之友">5. 锄 (Hoe) — 农耕之友<a class="anchor" href="#5-%e9%94%84-hoe--%e5%86%9c%e8%80%95%e4%b9%8b%e5%8f%8b">#</a></h3>
+<ul>
+<li><strong>配方摆放</strong>：在 <strong>1, 2</strong> 位置（或 <strong>2, 3</strong> 位置）各放 1 个材质材料，在 <strong>5, 8</strong> 位置各放 1 根木棍。</li>
+<li><strong>形状记忆</strong>：一根木棍顶端向一侧探出钩状的锄头。</li>
+<li><strong>使用技巧</strong>：主要农作与采集工具：
+<ul>
+<li><strong>开垦耕地</strong>：在泥土、草方块、粗泥土或灰壤上点<strong>鼠标右键</strong>，可以将其开垦为「耕地」，耕地是种植小麦、胡萝卜、马铃薯等农作物的必需地基。</li>
+<li><strong>高效特殊收割</strong>：在 1.16 及以上版本中，锄头被赋予了高效采集特定方块的特性，是快速采集海绵、湿海绵、干草块、红树树根、树叶、下界疣块、诡异疣块、菌光体、靶子以及幽匿系列方块的专属首选工具。</li>
+</ul>
+</li>
+</ul>
+<div class="mc-crafting-wrapper" id="mc-crafting-6">
+  <div class="mc-crafting-container">
+    <div class="mc-crafting-grid"><div class="mc-crafting-slot" data-items="oak_planks,cobblestone,iron_ingot,diamond">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="oak_planks,cobblestone,iron_ingot,diamond">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="stick">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="stick">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div></div>
+    
+    <div class="mc-crafting-arrow"></div><div class="mc-crafting-result-slot" data-items="wooden_hoe,stone_hoe,iron_hoe,diamond_hoe">
+      <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" /></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  
+  const mcTooltips = {
+    
+    "oak_planks": { title: "橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "spruce_planks": { title: "云杉木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "birch_planks": { title: "白桦木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "jungle_planks": { title: "丛林木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "acacia_planks": { title: "金合欢木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "dark_oak_planks": { title: "深色橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "mangrove_planks": { title: "红树木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "cherry_planks": { title: "樱花木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "bamboo_planks": { title: "竹板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "crimson_planks": { title: "绯红木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "warped_planks": { title: "诡异木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "stick": { title: "木棍", subtitle: "材料 - 制作工具手柄、火把与梯子的基础必需品" },
+    "coal": { title: "煤炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 用于制作火把" },
+    "charcoal": { title: "木炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 通过在熔炉中烧炼木头获得" },
+    "cobblestone": { title: "圆石", subtitle: "方块 - 石器时代的核心建筑与合成材料" },
+    "raw_iron": { title: "粗铁", subtitle: "材料 - 铁矿石开采产物，可冶炼成铁锭" },
+    "iron_ingot": { title: "铁锭", subtitle: "材料 - 金属时代的核心工业与工具合成材料" },
+    "diamond": { title: "钻石", subtitle: "材料 - 极其坚硬且珍贵的高级合成材料" },
+    "netherite_ingot": { title: "下界合金锭", subtitle: "材料 - 极高强度的下界金属，具备防火防熔岩特性" },
+    "netherite_upgrade_smithing_template": { title: "下界合金升级锻造模板", subtitle: "模板 - 仅在下界荒地遗迹中发现，用于升级钻石装备" },
+
+    
+    "wooden_pickaxe": { title: "木镐", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2 | 耐久度: 59" },
+    "wooden_shovel": { title: "木铲", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2.5 | 耐久度: 59" },
+    "wooden_axe": { title: "木斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +7 | 耐久度: 59" },
+    "wooden_sword": { title: "木剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +4 | 耐久度: 59" },
+    "wooden_hoe": { title: "木锄", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +1 | 耐久度: 59" },
+
+    
+    "stone_pickaxe": { title: "石镐", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3 | 耐久度: 131" },
+    "stone_shovel": { title: "石铲", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3.5 | 耐久度: 131" },
+    "stone_axe": { title: "石斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +9 | 耐久度: 131" },
+    "stone_sword": { title: "石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +5 | 耐久度: 131" },
+    "stone_hoe": { title: "石锄", subtitle: "工具 - 攻击速度: 2.0 | 攻击伤害: +1 | 耐久度: 131" },
+
+    
+    "iron_pickaxe": { title: "铁镐", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4 | 耐久度: 250" },
+    "iron_shovel": { title: "铁铲", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4.5 | 耐久度: 250" },
+    "iron_axe": { title: "铁斧", subtitle: "工具 - 攻击速度: 0.9 | 攻击伤害: +9 | 耐久度: 250" },
+    "iron_sword": { title: "铁剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +6 | 耐久度: 250" },
+    "iron_hoe": { title: "铁锄", subtitle: "工具 - 攻击速度: 3.0 | 攻击伤害: +1 | 耐久度: 250" },
+
+    
+    "diamond_pickaxe": { title: "钻石镐", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5 | 耐久度: 1561" },
+    "diamond_shovel": { title: "钻石铲", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5.5 | 耐久度: 1561" },
+    "diamond_axe": { title: "钻石斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +9 | 耐久度: 1561" },
+    "diamond_sword": { title: "钻石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +7 | 耐久度: 1561" },
+    "diamond_hoe": { title: "钻石锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 | 耐久度: 1561" },
+
+    
+    "netherite_pickaxe": { title: "下界合金镐", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_shovel": { title: "下界合金铲", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6.5 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_axe": { title: "下界合金斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +10 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_sword": { title: "下界合金剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +8 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_hoe": { title: "下界合金锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 (防火防熔岩) | 耐久度: 2031" },
+
+    
+    "furnace": { title: "熔炉", subtitle: "方块 - 用于冶炼矿石与烹饪食物的传统加热方块" },
+    "crafting_table": { title: "工作台", subtitle: "方块 - 提供 3x3 网格的合成核心方块" },
+    "smithing_table": { title: "锻造台", subtitle: "方块 - 配合锻造模板升级高级武器装备的工作方块" }
+  };
+
+  
+  let tooltip = document.querySelector(".mc-crafting-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "mc-crafting-tooltip";
+    tooltip.innerHTML = '<span class="mc-tooltip-title"></span><span class="mc-tooltip-subtitle"></span>';
+    document.body.appendChild(tooltip);
+  }
+
+  const container = document.getElementById("mc-crafting-6");
+  const slots = container.querySelectorAll(".mc-crafting-slot, .mc-crafting-result-slot");
+
+  slots.forEach(slot => {
+    if (slot.classList.contains("empty")) return;
+    
+    const itemsData = slot.getAttribute("data-items");
+    if (!itemsData) return;
+    
+    const items = itemsData.split(",").map(i => i.trim());
+    let currentIndex = 0;
+    const img = slot.querySelector("img");
+
+    
+    function updateSlot() {
+      const itemKey = items[currentIndex];
+      if (itemKey === "empty" || !itemKey) {
+        img.style.opacity = 0;
+        img.src = "";
+        slot.setAttribute("data-active-item", "");
+      } else {
+        
+        img.onload = function() {
+          if (this.naturalWidth >= 256) {
+            this.style.setProperty("image-rendering", "auto", "important");
+          } else {
+            this.style.setProperty("image-rendering", "pixelated", "important");
+          }
+        };
+        img.src = "/images/items/" + itemKey + ".png";
+        img.style.opacity = 1;
+        slot.setAttribute("data-active-item", itemKey);
+      }
+    }
+    updateSlot();
+
+    
+    if (items.length > 1) {
+      setInterval(() => {
+        img.style.opacity = 0;
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % items.length;
+          updateSlot();
+        }, 150);
+      }, 2000);
+    }
+
+    
+    slot.addEventListener("mouseenter", (e) => {
+      const activeItem = slot.getAttribute("data-active-item");
+      if (!activeItem) return;
+
+      const translation = mcTooltips[activeItem] || { title: activeItem, subtitle: "物品" };
+      tooltip.querySelector(".mc-tooltip-title").textContent = translation.title;
+      tooltip.querySelector(".mc-tooltip-subtitle").textContent = translation.subtitle;
+      tooltip.style.display = "block";
+    });
+
+    slot.addEventListener("mousemove", (e) => {
+      
+      tooltip.style.left = (e.clientX + 12) + "px";
+      tooltip.style.top = (e.clientY - 12) + "px";
+    });
+
+    slot.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+})();
+</script>
+
+<h3 id="6-下界合金升级-netherite-upgrade--终极神兵">6. 下界合金升级 (Netherite Upgrade) — 终极神兵<a class="anchor" href="#6-%e4%b8%8b%e7%95%8c%e5%90%88%e9%87%91%e5%8d%87%e7%ba%a7-netherite-upgrade--%e7%bb%88%e6%9e%81%e7%a5%9e%e5%85%b5">#</a></h3>
+<p>与上述五类可以直接在工作台用 3x3 栏格合成的工具不同，<strong>下界合金工具无法直接在工作台合成</strong>。</p>
+<p>在游戏后期，你会获得比钻石更强力的材质——<strong>下界合金 (Netherite)</strong>。要获得下界合金工具，你需要使用<strong>锻造台 (Smithing Table)</strong>：</p>
+<ul>
+<li><strong>升级摆放</strong>：依次在锻造台的三个槽位中放置 <strong>1 个下界合金升级锻造模板 (Netherite Upgrade Smithing Template)</strong>、<strong>1 件钻石工具</strong>（如钻石剑）和 <strong>1 个下界合金锭 (Netherite Ingot)</strong>，即可升级为对应的下界合金工具。</li>
+<li><strong>升级优势</strong>：下界合金工具不仅具备比钻石更高的挖掘速度、攻击力与耐久度。更重要的是，它们<strong>具有防火防熔岩的特性</strong>（如果不慎掉落入熔岩中，它们不会被烧毁，而是会漂浮在表面，便于你重新拾回！）。</li>
+</ul>
+<div class="mc-crafting-wrapper" id="mc-smithing-7">
+  <div class="mc-crafting-container">
+    
+    <div style="display: flex; gap: 4px;"><div class="mc-crafting-slot" data-items="netherite_upgrade_smithing_template">
+        <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+      </div>
+      <div class="mc-crafting-slot" data-items="diamond_pickaxe,diamond_axe,diamond_shovel,diamond_sword,diamond_hoe">
+        <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+      </div>
+      <div class="mc-crafting-slot" data-items="netherite_ingot">
+        <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+      </div>
+    </div>
+    
+    <div class="mc-crafting-arrow"></div><div class="mc-crafting-result-slot" data-items="netherite_pickaxe,netherite_axe,netherite_shovel,netherite_sword,netherite_hoe">
+      <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  
+  const mcTooltips = {
+    
+    "oak_planks": { title: "橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "spruce_planks": { title: "云杉木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "birch_planks": { title: "白桦木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "jungle_planks": { title: "丛林木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "acacia_planks": { title: "金合欢木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "dark_oak_planks": { title: "深色橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "mangrove_planks": { title: "红树木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "cherry_planks": { title: "樱花木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "bamboo_planks": { title: "竹板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "crimson_planks": { title: "绯红木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "warped_planks": { title: "诡异木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "stick": { title: "木棍", subtitle: "材料 - 制作工具手柄、火把与梯子的基础必需品" },
+    "coal": { title: "煤炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 用于制作火把" },
+    "charcoal": { title: "木炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 通过在熔炉中烧炼木头获得" },
+    "cobblestone": { title: "圆石", subtitle: "方块 - 石器时代的核心建筑与合成材料" },
+    "raw_iron": { title: "粗铁", subtitle: "材料 - 铁矿石开采产物，可冶炼成铁锭" },
+    "iron_ingot": { title: "铁锭", subtitle: "材料 - 金属时代的核心工业与工具合成材料" },
+    "diamond": { title: "钻石", subtitle: "材料 - 极其坚硬且珍贵的高级合成材料" },
+    "netherite_ingot": { title: "下界合金锭", subtitle: "材料 - 极高强度的下界金属，具备防火防熔岩特性" },
+    "netherite_upgrade_smithing_template": { title: "下界合金升级锻造模板", subtitle: "模板 - 仅在下界荒地遗迹中发现，用于升级钻石装备" },
+
+    
+    "wooden_pickaxe": { title: "木镐", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2 | 耐久度: 59" },
+    "wooden_shovel": { title: "木铲", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2.5 | 耐久度: 59" },
+    "wooden_axe": { title: "木斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +7 | 耐久度: 59" },
+    "wooden_sword": { title: "木剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +4 | 耐久度: 59" },
+    "wooden_hoe": { title: "木锄", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +1 | 耐久度: 59" },
+
+    
+    "stone_pickaxe": { title: "石镐", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3 | 耐久度: 131" },
+    "stone_shovel": { title: "石铲", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3.5 | 耐久度: 131" },
+    "stone_axe": { title: "石斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +9 | 耐久度: 131" },
+    "stone_sword": { title: "石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +5 | 耐久度: 131" },
+    "stone_hoe": { title: "石锄", subtitle: "工具 - 攻击速度: 2.0 | 攻击伤害: +1 | 耐久度: 131" },
+
+    
+    "iron_pickaxe": { title: "铁镐", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4 | 耐久度: 250" },
+    "iron_shovel": { title: "铁铲", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4.5 | 耐久度: 250" },
+    "iron_axe": { title: "铁斧", subtitle: "工具 - 攻击速度: 0.9 | 攻击伤害: +9 | 耐久度: 250" },
+    "iron_sword": { title: "铁剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +6 | 耐久度: 250" },
+    "iron_hoe": { title: "铁锄", subtitle: "工具 - 攻击速度: 3.0 | 攻击伤害: +1 | 耐久度: 250" },
+
+    
+    "diamond_pickaxe": { title: "钻石镐", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5 | 耐久度: 1561" },
+    "diamond_shovel": { title: "钻石铲", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5.5 | 耐久度: 1561" },
+    "diamond_axe": { title: "钻石斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +9 | 耐久度: 1561" },
+    "diamond_sword": { title: "钻石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +7 | 耐久度: 1561" },
+    "diamond_hoe": { title: "钻石锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 | 耐久度: 1561" },
+
+    
+    "netherite_pickaxe": { title: "下界合金镐", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_shovel": { title: "下界合金铲", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6.5 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_axe": { title: "下界合金斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +10 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_sword": { title: "下界合金剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +8 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_hoe": { title: "下界合金锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 (防火防熔岩) | 耐久度: 2031" },
+
+    
+    "furnace": { title: "熔炉", subtitle: "方块 - 用于冶炼矿石与烹饪食物的传统加热方块" },
+    "crafting_table": { title: "工作台", subtitle: "方块 - 提供 3x3 网格的合成核心方块" },
+    "smithing_table": { title: "锻造台", subtitle: "方块 - 配合锻造模板升级高级武器装备的工作方块" }
+  };
+
+  
+  let tooltip = document.querySelector(".mc-crafting-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "mc-crafting-tooltip";
+    tooltip.innerHTML = '<span class="mc-tooltip-title"></span><span class="mc-tooltip-subtitle"></span>';
+    document.body.appendChild(tooltip);
+  }
+
+  const container = document.getElementById("mc-smithing-7");
+  const slots = container.querySelectorAll(".mc-crafting-slot, .mc-crafting-result-slot");
+
+  slots.forEach(slot => {
+    const itemsData = slot.getAttribute("data-items");
+    if (!itemsData) return;
+    
+    const items = itemsData.split(",").map(i => i.trim());
+    let currentIndex = 0;
+    const img = slot.querySelector("img");
+
+    function updateSlot() {
+      const itemKey = items[currentIndex];
+      if (itemKey === "empty" || !itemKey) {
+        img.style.opacity = 0;
+        img.src = "";
+        slot.setAttribute("data-active-item", "");
+      } else {
+        
+        img.onload = function() {
+          if (this.naturalWidth >= 256) {
+            this.style.setProperty("image-rendering", "auto", "important");
+          } else {
+            this.style.setProperty("image-rendering", "pixelated", "important");
+          }
+        };
+        img.src = "/images/items/" + itemKey + ".png";
+        img.style.opacity = 1;
+        slot.setAttribute("data-active-item", itemKey);
+      }
+    }
+    updateSlot();
+
+    
+    if (items.length > 1) {
+      setInterval(() => {
+        img.style.opacity = 0;
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % items.length;
+          updateSlot();
+        }, 150);
+      }, 2000);
+    }
+
+    slot.addEventListener("mouseenter", () => {
+      const activeItem = slot.getAttribute("data-active-item");
+      if (!activeItem) return;
+
+      const translation = mcTooltips[activeItem] || { title: activeItem, subtitle: "物品" };
+      tooltip.querySelector(".mc-tooltip-title").textContent = translation.title;
+      tooltip.querySelector(".mc-tooltip-subtitle").textContent = translation.subtitle;
+      tooltip.style.display = "block";
+    });
+
+    slot.addEventListener("mousemove", (e) => {
+      tooltip.style.left = (e.clientX + 12) + "px";
+      tooltip.style.top = (e.clientY - 12) + "px";
+    });
+
+    slot.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+})();
+</script>
+
+<hr>
+<h2 id="材质等级耐久度与工具升级路线">材质等级、耐久度与「工具升级路线」<a class="anchor" href="#%e6%9d%90%e8%b4%a8%e7%ad%89%e7%ba%a7%e8%80%90%e4%b9%85%e5%ba%a6%e4%b8%8e%e5%b7%a5%e5%85%b7%e5%8d%87%e7%ba%a7%e8%b7%af%e7%ba%bf">#</a></h2>
+<p>Minecraft 的工具会随着使用而损耗。当你看到快捷栏中工具图标下方出现一条「绿色 → 黄色 → 红色」的进度条时，代表它的<strong>耐久度（Durability）</strong>正在耗尽。当耐久度归零，工具会发出一声脆响并彻底碎裂消失。</p>
+<h3 id="1-材质等级mining-tiers硬性限制">1. 材质等级（Mining Tiers）硬性限制<a class="anchor" href="#1-%e6%9d%90%e8%b4%a8%e7%ad%89%e7%ba%a7mining-tiers%e7%a1%ac%e6%80%a7%e9%99%90%e5%88%b6">#</a></h3>
+<p>不同的矿石硬度不同，必须用<strong>达到或超过其硬度门槛的镐</strong>去挖掘，否则方块虽然会被敲碎，但<strong>不会掉落任何物品</strong>！</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">材质等级</th>
+					<th style="text-align: center">挖掘等级 (Tier)</th>
+					<th style="text-align: left">代表性可挖掘方块</th>
+					<th style="text-align: center">工具耐久度</th>
+					<th style="text-align: left">材质特色与升级建议</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>木质</strong></td>
+					<td style="text-align: center">0</td>
+					<td style="text-align: left">石头、煤矿石、铜矿石</td>
+					<td style="text-align: center">59 次</td>
+					<td style="text-align: left">最基础的材质。木镐唯一的历史使命是帮你挖到前 3 块石头以升级到石器时代。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>石质</strong></td>
+					<td style="text-align: center">1</td>
+					<td style="text-align: left">铁矿石、深层铁矿石、铜矿石、煤矿石、石头</td>
+					<td style="text-align: center">131 次</td>
+					<td style="text-align: left">性价比极高的过渡材质。圆石极易获得，因此石镐和石斧是前期日常劳作的主力。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>铁质</strong></td>
+					<td style="text-align: center">2</td>
+					<td style="text-align: left">金矿石、红石矿石、钻石矿石、青金石矿石、绿宝石矿石</td>
+					<td style="text-align: center">250 次</td>
+					<td style="text-align: left"><strong>正式步入中期的标志。</strong> 铁镐是挖掘钻石的敲门砖，必须妥善保管。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>钻石</strong></td>
+					<td style="text-align: center">3</td>
+					<td style="text-align: left">黑曜石、哭泣的黑曜石、古代残骸</td>
+					<td style="text-align: center">1561 次</td>
+					<td style="text-align: left">后期的绝对核心。高耐久、高挖掘速度，是绝大多数玩家的终极常备工具。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>下界合金</strong></td>
+					<td style="text-align: center">4</td>
+					<td style="text-align: left">黑曜石、古代残骸及所有常规方块</td>
+					<td style="text-align: center">2031 次</td>
+					<td style="text-align: left">工具的巅峰。下界合金工具<strong>不会在岩浆中被烧毁</strong>，且挖掘速度略快于钻石工具。需要使用锻造台将钻石工具升级获得。</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote class='book-hint important'>
+<p><strong>挖掘等级惩罚</strong></p>
+<p>如果你使用的工具挖掘等级低于目标方块的硬度要求（例如<strong>用木镐去挖铁矿</strong>，或者<strong>用石镐去挖钻石</strong>）：</p>
+<ol>
+<li>挖掘过程会变得异常缓慢。</li>
+<li>方块被破坏后，<strong>完全不会掉落任何物品</strong>！矿石会凭空消失，浪费你宝贵的矿脉。</li>
+</ol></blockquote><blockquote class='book-hint warning'>
+<p><strong>关于金质工具（Golden Tools）</strong></p>
+<p>尽管金质工具有着极快的挖掘/砍伐速度（甚至快于钻石），但它的<strong>挖掘等级等同于木质（Tier 0）</strong>，无法挖掘铁矿石。更致命的是，金镐的耐久度只有可怜的 <strong>32 次</strong>（甚至不如木镐）。因此在生存模式中，<strong>极其不建议制作和使用金质工具</strong>。</p></blockquote><h3 id="2-生存前期的工具链进化路线">2. 生存前期的「工具链进化路线」<a class="anchor" href="#2-%e7%94%9f%e5%ad%98%e5%89%8d%e6%9c%9f%e7%9a%84%e5%b7%a5%e5%85%b7%e9%93%be%e8%bf%9b%e5%8c%96%e8%b7%af%e7%ba%bf">#</a></h3>
+<p>纯新人在开局半小时内的标准升级步骤如下：</p>
+<ol>
+<li><strong>木器时代</strong>：徒手破坏原木，制作<strong>木镐</strong>。</li>
+<li><strong>石器时代</strong>：使用这把木镐向地下斜着挖掘，挖出 <strong>3 块圆石</strong>。</li>
+<li><strong>工具迭代</strong>：立刻打开工作台，用这 3 块圆石做一把<strong>石镐</strong>。此时<strong>果断将木镐放入熔炉当燃料或随手丢弃木镐</strong>。石镐的挖掘速度和耐久（131 次）远超木镐。</li>
+<li><strong>铁器时代</strong>：用石镐去地底或地表裸露岩壁寻找<strong>铁矿石</strong>。采集至少 3 个粗铁，用熔炉烧炼成 3 个铁锭，合成<strong>铁镐</strong>。此时你便真正拥有了开采钻石的能力。</li>
+</ol>
+<hr>
+<h2 id="采集机制方块变化与粗金属">采集机制：方块变化与粗金属<a class="anchor" href="#%e9%87%87%e9%9b%86%e6%9c%ba%e5%88%b6%e6%96%b9%e5%9d%97%e5%8f%98%e5%8c%96%e4%b8%8e%e7%b2%97%e9%87%91%e5%b1%9e">#</a></h2>
+<p>在开采世界中的方块时，你需要理解这三类不同的掉落逻辑：</p>
+<h3 id="1-物理形态改变">1. 物理形态改变<a class="anchor" href="#1-%e7%89%a9%e7%90%86%e5%bd%a2%e6%80%81%e6%94%b9%e5%8f%98">#</a></h3>
+<p>许多方块在被挖掘时会变成其他形态。例如：</p>
+<ul>
+<li><strong>石头</strong>（Stone）用镐挖掉后会变成<strong>圆石</strong>（Cobblestone）。圆石可以用来合成本质工具、熔炉。如果你以后需要美观的石头来盖房子，需要把圆石放进熔炉重新烧炼。</li>
+<li><strong>草方块</strong>（Grass Block）被挖掉后，由于草根断裂，会直接退化并掉落为<strong>泥土</strong>（Dirt）。</li>
+</ul>
+<h3 id="2-粗金属机制raw-metals">2. 粗金属机制（Raw Metals）<a class="anchor" href="#2-%e7%b2%97%e9%87%91%e5%b1%9e%e6%9c%ba%e5%88%b6raw-metals">#</a></h3>
+<blockquote class='book-hint note'>
+<p>这一机制适用于：<strong>铁矿石</strong>、<strong>铜矿石</strong> 和 <strong>金矿石</strong>。</p></blockquote><p>为了配合后续的附魔（如时运魔咒），自 1.17 版本起，开采这些金属矿石时，不再掉落矿石方块本身，而是掉落对应的 <strong>粗铁 (Raw Iron)</strong>、<strong>粗铜 (Raw Copper)</strong> 和 <strong>粗金 (Raw Gold)</strong>。</p>
+<ul>
+<li>这样做的好处是，你可以使用带有<strong>时运（Fortune）</strong>魔咒的镐来成倍增加金属产出。</li>
+<li>粗金属无法直接用来合成工具，它们必须通过下文介绍的<strong>烧炼</strong>系统转化为金属锭。</li>
+</ul>
+<h3 id="3-精准采集魔咒">3. 精准采集魔咒<a class="anchor" href="#3-%e7%b2%be%e5%87%86%e9%87%87%e9%9b%86%e9%ad%94%e5%92%92">#</a></h3>
+<p>如果你希望直接挖到方块本身（比如完好无损地挖下玻璃、草方块、冰块，或者煤矿石本身），你需要在游戏后期通过附魔台给工具附上「精准采集」魔咒。在前期你只需了解方块会有这两种不同的掉落状态即可。</p>
+<hr>
+<h2 id="烧炼与熔炉系统全解密">烧炼与熔炉系统全解密<a class="anchor" href="#%e7%83%a7%e7%82%bc%e4%b8%8e%e7%86%94%e7%82%89%e7%b3%bb%e7%bb%9f%e5%85%a8%e8%a7%a3%e5%af%86">#</a></h2>
+<p>在采集到粗铁、粗金或者生肉后，你必须通过<strong>熔炉</strong>进行「热处理」。</p>
+<h3 id="1-熔炉界面与工作逻辑">1. 熔炉界面与工作逻辑<a class="anchor" href="#1-%e7%86%94%e7%82%89%e7%95%8c%e9%9d%a2%e4%b8%8e%e5%b7%a5%e4%bd%9c%e9%80%bb%e8%be%91">#</a></h3>
+<p>在工作台的 3x3 栏中，用 <strong>8 个圆石围成一圈</strong>（中间留空）即可合成熔炉：</p>
+<div class="mc-crafting-wrapper" id="mc-crafting-8">
+  <div class="mc-crafting-container">
+    <div class="mc-crafting-grid"><div class="mc-crafting-slot" data-items="cobblestone">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="cobblestone">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="cobblestone">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="cobblestone">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="empty">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="cobblestone">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="cobblestone">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="cobblestone">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="cobblestone">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div></div>
+    
+    <div class="mc-crafting-arrow"></div><div class="mc-crafting-result-slot" data-items="furnace">
+      <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" /></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  
+  const mcTooltips = {
+    
+    "oak_planks": { title: "橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "spruce_planks": { title: "云杉木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "birch_planks": { title: "白桦木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "jungle_planks": { title: "丛林木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "acacia_planks": { title: "金合欢木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "dark_oak_planks": { title: "深色橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "mangrove_planks": { title: "红树木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "cherry_planks": { title: "樱花木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "bamboo_planks": { title: "竹板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "crimson_planks": { title: "绯红木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "warped_planks": { title: "诡异木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "stick": { title: "木棍", subtitle: "材料 - 制作工具手柄、火把与梯子的基础必需品" },
+    "coal": { title: "煤炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 用于制作火把" },
+    "charcoal": { title: "木炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 通过在熔炉中烧炼木头获得" },
+    "cobblestone": { title: "圆石", subtitle: "方块 - 石器时代的核心建筑与合成材料" },
+    "raw_iron": { title: "粗铁", subtitle: "材料 - 铁矿石开采产物，可冶炼成铁锭" },
+    "iron_ingot": { title: "铁锭", subtitle: "材料 - 金属时代的核心工业与工具合成材料" },
+    "diamond": { title: "钻石", subtitle: "材料 - 极其坚硬且珍贵的高级合成材料" },
+    "netherite_ingot": { title: "下界合金锭", subtitle: "材料 - 极高强度的下界金属，具备防火防熔岩特性" },
+    "netherite_upgrade_smithing_template": { title: "下界合金升级锻造模板", subtitle: "模板 - 仅在下界荒地遗迹中发现，用于升级钻石装备" },
+
+    
+    "wooden_pickaxe": { title: "木镐", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2 | 耐久度: 59" },
+    "wooden_shovel": { title: "木铲", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2.5 | 耐久度: 59" },
+    "wooden_axe": { title: "木斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +7 | 耐久度: 59" },
+    "wooden_sword": { title: "木剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +4 | 耐久度: 59" },
+    "wooden_hoe": { title: "木锄", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +1 | 耐久度: 59" },
+
+    
+    "stone_pickaxe": { title: "石镐", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3 | 耐久度: 131" },
+    "stone_shovel": { title: "石铲", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3.5 | 耐久度: 131" },
+    "stone_axe": { title: "石斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +9 | 耐久度: 131" },
+    "stone_sword": { title: "石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +5 | 耐久度: 131" },
+    "stone_hoe": { title: "石锄", subtitle: "工具 - 攻击速度: 2.0 | 攻击伤害: +1 | 耐久度: 131" },
+
+    
+    "iron_pickaxe": { title: "铁镐", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4 | 耐久度: 250" },
+    "iron_shovel": { title: "铁铲", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4.5 | 耐久度: 250" },
+    "iron_axe": { title: "铁斧", subtitle: "工具 - 攻击速度: 0.9 | 攻击伤害: +9 | 耐久度: 250" },
+    "iron_sword": { title: "铁剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +6 | 耐久度: 250" },
+    "iron_hoe": { title: "铁锄", subtitle: "工具 - 攻击速度: 3.0 | 攻击伤害: +1 | 耐久度: 250" },
+
+    
+    "diamond_pickaxe": { title: "钻石镐", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5 | 耐久度: 1561" },
+    "diamond_shovel": { title: "钻石铲", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5.5 | 耐久度: 1561" },
+    "diamond_axe": { title: "钻石斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +9 | 耐久度: 1561" },
+    "diamond_sword": { title: "钻石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +7 | 耐久度: 1561" },
+    "diamond_hoe": { title: "钻石锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 | 耐久度: 1561" },
+
+    
+    "netherite_pickaxe": { title: "下界合金镐", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_shovel": { title: "下界合金铲", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6.5 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_axe": { title: "下界合金斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +10 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_sword": { title: "下界合金剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +8 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_hoe": { title: "下界合金锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 (防火防熔岩) | 耐久度: 2031" },
+
+    
+    "furnace": { title: "熔炉", subtitle: "方块 - 用于冶炼矿石与烹饪食物的传统加热方块" },
+    "crafting_table": { title: "工作台", subtitle: "方块 - 提供 3x3 网格的合成核心方块" },
+    "smithing_table": { title: "锻造台", subtitle: "方块 - 配合锻造模板升级高级武器装备的工作方块" }
+  };
+
+  
+  let tooltip = document.querySelector(".mc-crafting-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "mc-crafting-tooltip";
+    tooltip.innerHTML = '<span class="mc-tooltip-title"></span><span class="mc-tooltip-subtitle"></span>';
+    document.body.appendChild(tooltip);
+  }
+
+  const container = document.getElementById("mc-crafting-8");
+  const slots = container.querySelectorAll(".mc-crafting-slot, .mc-crafting-result-slot");
+
+  slots.forEach(slot => {
+    if (slot.classList.contains("empty")) return;
+    
+    const itemsData = slot.getAttribute("data-items");
+    if (!itemsData) return;
+    
+    const items = itemsData.split(",").map(i => i.trim());
+    let currentIndex = 0;
+    const img = slot.querySelector("img");
+
+    
+    function updateSlot() {
+      const itemKey = items[currentIndex];
+      if (itemKey === "empty" || !itemKey) {
+        img.style.opacity = 0;
+        img.src = "";
+        slot.setAttribute("data-active-item", "");
+      } else {
+        
+        img.onload = function() {
+          if (this.naturalWidth >= 256) {
+            this.style.setProperty("image-rendering", "auto", "important");
+          } else {
+            this.style.setProperty("image-rendering", "pixelated", "important");
+          }
+        };
+        img.src = "/images/items/" + itemKey + ".png";
+        img.style.opacity = 1;
+        slot.setAttribute("data-active-item", itemKey);
+      }
+    }
+    updateSlot();
+
+    
+    if (items.length > 1) {
+      setInterval(() => {
+        img.style.opacity = 0;
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % items.length;
+          updateSlot();
+        }, 150);
+      }, 2000);
+    }
+
+    
+    slot.addEventListener("mouseenter", (e) => {
+      const activeItem = slot.getAttribute("data-active-item");
+      if (!activeItem) return;
+
+      const translation = mcTooltips[activeItem] || { title: activeItem, subtitle: "物品" };
+      tooltip.querySelector(".mc-tooltip-title").textContent = translation.title;
+      tooltip.querySelector(".mc-tooltip-subtitle").textContent = translation.subtitle;
+      tooltip.style.display = "block";
+    });
+
+    slot.addEventListener("mousemove", (e) => {
+      
+      tooltip.style.left = (e.clientX + 12) + "px";
+      tooltip.style.top = (e.clientY - 12) + "px";
+    });
+
+    slot.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+})();
+</script>
+
+<p>右键点击放置在地面上的熔炉，会打开如下界面：</p>
+<ul>
+<li><strong>上方输入格</strong>：放入待烧炼的原材料（如粗铁）。</li>
+<li><strong>下方燃料格</strong>：放入提供热量的燃料（如煤炭）。</li>
+<li><strong>右侧输出格</strong>：取出成品（如铁锭）。</li>
+<li><strong>火焰图标</strong>：当放入燃料和原材料后，火焰会点燃。火焰的高度代表<strong>当前这份燃料的剩余燃烧时间</strong>。如果原材料消耗完毕，火焰仍会继续燃烧直至消耗完当前燃料的额度，因此<strong>请尽量凑整烧炼，避免燃料浪费</strong>。</li>
+</ul>
+<figure class="book-image-figure">
+  <img
+    src="https://zh.minecraft.wiki/images/Furnace_GUI_Simplified.png?e6f4c&amp;20240518153953"
+    alt="熔炉界面" title="熔炉的烧炼交互界面" width="750" 
+    data-lightbox data-lightbox-caption="熔炉的烧炼交互界面"
+  />
+  <figcaption>熔炉的烧炼交互界面</figcaption>
+</figure>
+
+<h3 id="2-经典燃料续航与计算">2. 经典燃料续航与计算<a class="anchor" href="#2-%e7%bb%8f%e5%85%b8%e7%87%83%e6%96%99%e7%bb%ad%e8%88%aa%e4%b8%8e%e8%ae%a1%e7%ae%97">#</a></h3>
+<p>在熔炉中，<strong>烧炼 1 个物品需要固定消耗 10 秒钟</strong>。因此，燃料的效率可以用「能烧炼多少个物品」来量化：</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">燃料名称</th>
+					<th style="text-align: center">燃烧时间（游戏刻）</th>
+					<th style="text-align: center">可烧炼物品数量</th>
+					<th style="text-align: left">新手使用建议</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>岩浆桶 (Lava Bucket)</strong></td>
+					<td style="text-align: center">20000</td>
+					<td style="text-align: center"><strong>100 个</strong></td>
+					<td style="text-align: left">效率最高。但由于一次性要烧 100 个，适合后期有大量石头或铁矿时使用。烧完后空铁桶会留在燃料格，记得取回。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>煤炭块 (Block of Coal)</strong></td>
+					<td style="text-align: center">16000</td>
+					<td style="text-align: center"><strong>80 个</strong></td>
+					<td style="text-align: left">由 9 个煤炭合成。能够烧炼 80 个物品（比零散烧 9 个煤炭多烧 8 个物品），极度推荐中后期打包使用以节省燃料和空间。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>干海带块 (Dried Kelp Block)</strong></td>
+					<td style="text-align: center">4000</td>
+					<td style="text-align: center"><strong>20 个</strong></td>
+					<td style="text-align: left">极其优秀的可再生燃料。海带在海里大量生长，用熔炉把海带烧干后合成海带块，即可实现无限燃料。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>烈焰棒 (Blaze Rod)</strong></td>
+					<td style="text-align: center">2400</td>
+					<td style="text-align: center"><strong>12 个</strong></td>
+					<td style="text-align: left">下界烈焰人掉落。效率不错，但前期获取较难。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>煤炭 / 木炭</strong></td>
+					<td style="text-align: center">1600</td>
+					<td style="text-align: center"><strong>8 个</strong></td>
+					<td style="text-align: left"><strong>最常用的燃料。</strong> 性价比最高，前期首选。每个刚好烧炼 8 个物品。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>木板 / 原木 / 木制工具</strong></td>
+					<td style="text-align: center">300</td>
+					<td style="text-align: center"><strong>1.5 个</strong></td>
+					<td style="text-align: left">烧两个需要消耗两个木板（会有 0.5 个的浪费），适合紧急时烧制少量物品。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>木棍 / 树苗</strong></td>
+					<td style="text-align: center">100</td>
+					<td style="text-align: center"><strong>0.5 个</strong></td>
+					<td style="text-align: left">效率极低。烧 1 个物品需要消耗 2 个木棍。</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote class='book-hint tip'>
+<p><strong>熔炉的燃料「完美避坑算法」</strong></p>
+<p>既然 1 个煤炭可以烧炼 8 个物品，那么：</p>
+<ul>
+<li>如果你有 <strong>8 个粗铁</strong>，放入 <strong>1 个煤炭</strong> 刚好完美烧完。</li>
+<li>如果你有 <strong>9 个粗铁</strong>，放入 <strong>2 个煤炭</strong>，第 2 个煤炭在烧完第 9 个铁锭后，还会剩余 70 秒（可烧 7 个物品）的燃烧时间，如果此时不继续往里放物品，这部分燃料能量就会<strong>白白流失</strong>。</li>
+<li>因此，尽量以 <strong>8 的倍数</strong>（如 8, 16, 24, 64）来批量投放待烧炼的物资。</li>
+</ul></blockquote><h3 id="3-地下无煤木炭自循环法">3. 地下无煤？「木炭自循环法」<a class="anchor" href="#3-%e5%9c%b0%e4%b8%8b%e6%97%a0%e7%85%a4%e6%9c%a8%e7%82%ad%e8%87%aa%e5%be%aa%e7%8e%af%e6%b3%95">#</a></h3>
+<p>如果你在地下挖矿或者身处高山，周围没有任何煤矿，你可以通过砍树来制造<strong>木炭（Charcoal）</strong>，它的燃烧效率和火把合成配方与普通煤炭<strong>完全一样</strong>。</p>
+<ul>
+<li><strong>第一步</strong>：砍伐一些原木，并将其中一部分原木分解为木板。</li>
+<li><strong>第二步</strong>：制作一个熔炉，在<strong>下方燃料格放入木板</strong>，在<strong>上方输入格放入原木</strong>。</li>
+<li><strong>第三步</strong>：烧制出木炭后，将木炭放到燃料格。因为 <strong>1 个木炭能烧 8 个原木</strong>，你可以源源不断地把原木烧成木炭，实现「燃料的滚雪球自循环」。</li>
+</ul>
+<h3 id="4-进阶熔炉高炉与烟熏炉">4. 进阶熔炉：高炉与烟熏炉<a class="anchor" href="#4-%e8%bf%9b%e9%98%b6%e7%86%94%e7%82%89%e9%ab%98%e7%82%89%e4%b8%8e%e7%83%9f%e7%86%8f%e7%82%89">#</a></h3>
+<p>随着游戏的发展，单一的普通熔炉可能会显得力不从心。你可以在工作台上将其升级为专属的高速炉具：</p>
+<div class="card-list" style="--card-columns: 2;">
+  <ul>
+<li><strong>高炉 (Blast Furnace)</strong>
+<ul>
+<li><strong>合成配方</strong>：1 个熔炉 + 5 个铁锭 + 3 个平滑石头。</li>
+<li><strong>特点</strong>：烧炼矿石、金属盔甲和工具的速度是普通熔炉的 <strong>2 倍</strong>。但它不能烧炼食物或沙子。燃料消耗速度同样加倍，因此单个物品消耗的燃料总量不变。</li>
+</ul>
+</li>
+<li><strong>烟熏炉 (Smoker)</strong>
+<ul>
+<li><strong>合成配方</strong>：1 个熔炉 + 4 个任意原木。</li>
+<li><strong>特点</strong>：烹饪食物（如生牛肉、生鱼）的速度是普通熔炉的 <strong>2 倍</strong>。不能用来烧炼矿石或沙子。</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<blockquote class='book-hint tip'>
+<p><strong>熔炉的经验机制</strong></p>
+<p>在熔炉中烧炼矿石或烹饪食物会积累经验值。当你<strong>手动从熔炉的右侧输出格取出成品时，这些积累的经验会自动加到你的经验条上</strong>。如果是通过漏斗（Hopper）自动从熔炉底部吸取成品，经验会暂时储存在熔炉内部。此时只要你手动烧炼任意一个物品并手动取出，就能一次性结算并吸取熔炉内储存的所有历史经验。</p></blockquote></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/ch02-survival/01-first-day.html" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="上一页" />
+        <span>2.1 第一天</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/ch02-survival/03-mining.html" class="flex align-center">
+        <span>2.3 采矿技术</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="下一页" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#22-采集与合成">2.2 采集与合成</a>
+      <ul>
+        <li><a href="#物品栏与背包管理微操指南">物品栏与背包管理微操指南</a>
+          <ul>
+            <li><a href="#1-鼠标点击与拖拽技巧">1. 鼠标点击与拖拽技巧</a></li>
+            <li><a href="#2-键盘快捷键事半功倍">2. 键盘快捷键（事半功倍）</a></li>
+          </ul>
+        </li>
+        <li><a href="#3x3-工作台与合成逻辑">3x3 工作台与合成逻辑</a>
+          <ul>
+            <li><a href="#1-有序合成与无序合成">1. 有序合成与无序合成</a></li>
+            <li><a href="#2-配方书的进阶操作">2. 配方书的进阶操作</a></li>
+          </ul>
+        </li>
+        <li><a href="#制作第一套生存工具3x3-空间解构">制作第一套生存工具（3x3 空间解构）</a>
+          <ul>
+            <li><a href="#1-镐-pickaxe--挖掘的主宰">1. 镐 (Pickaxe) — 挖掘的主宰</a></li>
+            <li><a href="#2-斧-axe--砍伐与重击">2. 斧 (Axe) — 砍伐与重击</a></li>
+            <li><a href="#3-铲-shovel--快速清道夫">3. 铲 (Shovel) — 快速清道夫</a></li>
+            <li><a href="#4-剑-sword--斩击之刃">4. 剑 (Sword) — 斩击之刃</a></li>
+            <li><a href="#5-锄-hoe--农耕之友">5. 锄 (Hoe) — 农耕之友</a></li>
+            <li><a href="#6-下界合金升级-netherite-upgrade--终极神兵">6. 下界合金升级 (Netherite Upgrade) — 终极神兵</a></li>
+          </ul>
+        </li>
+        <li><a href="#材质等级耐久度与工具升级路线">材质等级、耐久度与「工具升级路线」</a>
+          <ul>
+            <li><a href="#1-材质等级mining-tiers硬性限制">1. 材质等级（Mining Tiers）硬性限制</a></li>
+            <li><a href="#2-生存前期的工具链进化路线">2. 生存前期的「工具链进化路线」</a></li>
+          </ul>
+        </li>
+        <li><a href="#采集机制方块变化与粗金属">采集机制：方块变化与粗金属</a>
+          <ul>
+            <li><a href="#1-物理形态改变">1. 物理形态改变</a></li>
+            <li><a href="#2-粗金属机制raw-metals">2. 粗金属机制（Raw Metals）</a></li>
+            <li><a href="#3-精准采集魔咒">3. 精准采集魔咒</a></li>
+          </ul>
+        </li>
+        <li><a href="#烧炼与熔炉系统全解密">烧炼与熔炉系统全解密</a>
+          <ul>
+            <li><a href="#1-熔炉界面与工作逻辑">1. 熔炉界面与工作逻辑</a></li>
+            <li><a href="#2-经典燃料续航与计算">2. 经典燃料续航与计算</a></li>
+            <li><a href="#3-地下无煤木炭自循环法">3. 地下无煤？「木炭自循环法」</a></li>
+            <li><a href="#4-进阶熔炉高炉与烟熏炉">4. 进阶熔炉：高炉与烟熏炉</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

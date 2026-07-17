@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme · MC 教程
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="2.3 采矿技术：保姆级地下勘探与生存指南#适用对象：纯新手玩家 基于版本：Java 版 1.18&#43; (包含洞穴与山崖更新后的全新地下生成机制)
+在《Minecraft》中，“挖矿（Mining）” 占据了游戏一半的名字。地表的生活固然惬意，但只有深入地下，你才能获得打造精良装备、建造红石机械的稀有资源。
+从 1.18 版本开始，游戏的地下世界迎来了史诗级扩建：从海平面的 Y=62，一路向下延伸至漆黑深邃的 Y=-64。对于纯新人而言，深邃的洞穴既是宝库，也是充满岩浆和怪物的死亡陷阱。本章将手把手教你如何安全、高效地征服地下世界。
+1. 我们为什么要下矿？（新手目标清单）#作为刚度过第一夜的新手，你进入地下的最初目标非常明确：
+寻找煤炭（Coal）：用于制作火把照明，以及在熔炉里烧制食物和矿物。 寻找铁矿（Iron）：这是你度过新手期的最核心资源！你需要用铁来打造全身的“铁盔甲”（极大地提升生存率）、“铁镐”（挖掘钻石的最低门槛），以及“水桶”（地下保命神器）。 寻找钻石（Diamond）：大后期资源。用于打造无坚不摧的钻石装备，以及制作附魔台。 新手极其容易犯的致命错误：工具等级限制！ 在 Minecraft 中，不同的矿石必须用特定材质以上的镐子才能挖出东西。如果你用低级镐子强行挖高级矿石，矿石不仅挖得极慢，而且挖碎后什么都不会掉落（直接消失）！
+木镐 / 金镐：只能挖石头、煤炭。 石镐：可以挖煤炭、铁矿、铜矿、青金石。 铁镐：可以挖钻石、金矿、红石、绿宝石。（这是新手的目标！） 钻石镐 / 下界合金镐：可以挖最坚硬的黑曜石和远古残骸。 警告：当你历经千辛万苦找到第一颗钻石时，绝对、绝对不能用石镐去挖，否则你会当场崩溃！
+2. 战前筹备：下矿前的背包与状态检查#地下没有明媚的阳光，你如果因为忘带某种东西而中途折返，会浪费大量时间。下矿前，请在家里确保你的背包和状态符合以下条件：
+必备工具与装备#充足的镐子：千万别只带一把快坏的镐子就下矿。建议携带 3 把满耐久的铁镐。如果没有铁，至少带上 4 把石镐。 铲子（Shovel）：带一把即可。地下会经常遇到烦人的大面积沙砾（Gravel）和泥土，用手挖极其痛苦，铲子能让你快速清理它们。 盾牌（Shield）：极其重要！将盾牌放在背包的副手槽（人物模型的右下角），当你遇到骷髅射手或即将爆炸的苦力怕时，长按鼠标右键即可举起盾牌，格挡 100% 的正面伤害。 武器：一把满耐久的石剑或铁剑。 续航补给（压缩背包的艺术）#地下的空间极其有限，你需要学会“高密度”携带物资：
+火把材料：不要直接带满背包的火把！带上 1 组（64个）煤炭 和 1 组（64个）原木（Log）。 1 个原木可以分解为 4 个木板，进而做成 8 个木棍。在地下，你可以随时用“原木&#43;煤炭”就地合成大量火把。带原木等于把背包空间压缩了数倍。 原木还能随时做成工作台（Crafting Table），方便你在地下随时补充工具。 食物补给：带上至少 30 个烤熟的高饱和度食物（如牛排、熟猪排、熟羊肉）。绝对不要带生肉或苹果，它们饿得太快，无法在战斗后维持你的生命自动回复。 终极保命神器：水桶（Water Bucket）#如果你刚刚挖到 3 块铁，不要先做铁镐，请立刻合成一个空桶，并在河里装满水！ ">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#5c9a3a">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#3a6622">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/ch02-general/03-mining.html">
+	<meta property="og:site_name" content="Minecraft 从入门到精通">
+	<meta property="og:title" content="2.3 采矿技术">
+	<meta property="og:description" content="2.3 采矿技术：保姆级地下勘探与生存指南#适用对象：纯新手玩家 基于版本：Java 版 1.18&#43; (包含洞穴与山崖更新后的全新地下生成机制)
+在《Minecraft》中，“挖矿（Mining）” 占据了游戏一半的名字。地表的生活固然惬意，但只有深入地下，你才能获得打造精良装备、建造红石机械的稀有资源。
+从 1.18 版本开始，游戏的地下世界迎来了史诗级扩建：从海平面的 Y=62，一路向下延伸至漆黑深邃的 Y=-64。对于纯新人而言，深邃的洞穴既是宝库，也是充满岩浆和怪物的死亡陷阱。本章将手把手教你如何安全、高效地征服地下世界。
+1. 我们为什么要下矿？（新手目标清单）#作为刚度过第一夜的新手，你进入地下的最初目标非常明确：
+寻找煤炭（Coal）：用于制作火把照明，以及在熔炉里烧制食物和矿物。 寻找铁矿（Iron）：这是你度过新手期的最核心资源！你需要用铁来打造全身的“铁盔甲”（极大地提升生存率）、“铁镐”（挖掘钻石的最低门槛），以及“水桶”（地下保命神器）。 寻找钻石（Diamond）：大后期资源。用于打造无坚不摧的钻石装备，以及制作附魔台。 新手极其容易犯的致命错误：工具等级限制！ 在 Minecraft 中，不同的矿石必须用特定材质以上的镐子才能挖出东西。如果你用低级镐子强行挖高级矿石，矿石不仅挖得极慢，而且挖碎后什么都不会掉落（直接消失）！
+木镐 / 金镐：只能挖石头、煤炭。 石镐：可以挖煤炭、铁矿、铜矿、青金石。 铁镐：可以挖钻石、金矿、红石、绿宝石。（这是新手的目标！） 钻石镐 / 下界合金镐：可以挖最坚硬的黑曜石和远古残骸。 警告：当你历经千辛万苦找到第一颗钻石时，绝对、绝对不能用石镐去挖，否则你会当场崩溃！
+2. 战前筹备：下矿前的背包与状态检查#地下没有明媚的阳光，你如果因为忘带某种东西而中途折返，会浪费大量时间。下矿前，请在家里确保你的背包和状态符合以下条件：
+必备工具与装备#充足的镐子：千万别只带一把快坏的镐子就下矿。建议携带 3 把满耐久的铁镐。如果没有铁，至少带上 4 把石镐。 铲子（Shovel）：带一把即可。地下会经常遇到烦人的大面积沙砾（Gravel）和泥土，用手挖极其痛苦，铲子能让你快速清理它们。 盾牌（Shield）：极其重要！将盾牌放在背包的副手槽（人物模型的右下角），当你遇到骷髅射手或即将爆炸的苦力怕时，长按鼠标右键即可举起盾牌，格挡 100% 的正面伤害。 武器：一把满耐久的石剑或铁剑。 续航补给（压缩背包的艺术）#地下的空间极其有限，你需要学会“高密度”携带物资：
+火把材料：不要直接带满背包的火把！带上 1 组（64个）煤炭 和 1 组（64个）原木（Log）。 1 个原木可以分解为 4 个木板，进而做成 8 个木棍。在地下，你可以随时用“原木&#43;煤炭”就地合成大量火把。带原木等于把背包空间压缩了数倍。 原木还能随时做成工作台（Crafting Table），方便你在地下随时补充工具。 食物补给：带上至少 30 个烤熟的高饱和度食物（如牛排、熟猪排、熟羊肉）。绝对不要带生肉或苹果，它们饿得太快，无法在战斗后维持你的生命自动回复。 终极保命神器：水桶（Water Bucket）#如果你刚刚挖到 3 块铁，不要先做铁镐，请立刻合成一个空桶，并在河里装满水！">
+	<meta property="og:locale" content="zh">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="docs">
+
+
+	<meta itemprop="name" content="2.3 采矿技术">
+	<meta itemprop="description" content="2.3 采矿技术：保姆级地下勘探与生存指南#适用对象：纯新手玩家 基于版本：Java 版 1.18&#43; (包含洞穴与山崖更新后的全新地下生成机制)
+在《Minecraft》中，“挖矿（Mining）” 占据了游戏一半的名字。地表的生活固然惬意，但只有深入地下，你才能获得打造精良装备、建造红石机械的稀有资源。
+从 1.18 版本开始，游戏的地下世界迎来了史诗级扩建：从海平面的 Y=62，一路向下延伸至漆黑深邃的 Y=-64。对于纯新人而言，深邃的洞穴既是宝库，也是充满岩浆和怪物的死亡陷阱。本章将手把手教你如何安全、高效地征服地下世界。
+1. 我们为什么要下矿？（新手目标清单）#作为刚度过第一夜的新手，你进入地下的最初目标非常明确：
+寻找煤炭（Coal）：用于制作火把照明，以及在熔炉里烧制食物和矿物。 寻找铁矿（Iron）：这是你度过新手期的最核心资源！你需要用铁来打造全身的“铁盔甲”（极大地提升生存率）、“铁镐”（挖掘钻石的最低门槛），以及“水桶”（地下保命神器）。 寻找钻石（Diamond）：大后期资源。用于打造无坚不摧的钻石装备，以及制作附魔台。 新手极其容易犯的致命错误：工具等级限制！ 在 Minecraft 中，不同的矿石必须用特定材质以上的镐子才能挖出东西。如果你用低级镐子强行挖高级矿石，矿石不仅挖得极慢，而且挖碎后什么都不会掉落（直接消失）！
+木镐 / 金镐：只能挖石头、煤炭。 石镐：可以挖煤炭、铁矿、铜矿、青金石。 铁镐：可以挖钻石、金矿、红石、绿宝石。（这是新手的目标！） 钻石镐 / 下界合金镐：可以挖最坚硬的黑曜石和远古残骸。 警告：当你历经千辛万苦找到第一颗钻石时，绝对、绝对不能用石镐去挖，否则你会当场崩溃！
+2. 战前筹备：下矿前的背包与状态检查#地下没有明媚的阳光，你如果因为忘带某种东西而中途折返，会浪费大量时间。下矿前，请在家里确保你的背包和状态符合以下条件：
+必备工具与装备#充足的镐子：千万别只带一把快坏的镐子就下矿。建议携带 3 把满耐久的铁镐。如果没有铁，至少带上 4 把石镐。 铲子（Shovel）：带一把即可。地下会经常遇到烦人的大面积沙砾（Gravel）和泥土，用手挖极其痛苦，铲子能让你快速清理它们。 盾牌（Shield）：极其重要！将盾牌放在背包的副手槽（人物模型的右下角），当你遇到骷髅射手或即将爆炸的苦力怕时，长按鼠标右键即可举起盾牌，格挡 100% 的正面伤害。 武器：一把满耐久的石剑或铁剑。 续航补给（压缩背包的艺术）#地下的空间极其有限，你需要学会“高密度”携带物资：
+火把材料：不要直接带满背包的火把！带上 1 组（64个）煤炭 和 1 组（64个）原木（Log）。 1 个原木可以分解为 4 个木板，进而做成 8 个木棍。在地下，你可以随时用“原木&#43;煤炭”就地合成大量火把。带原木等于把背包空间压缩了数倍。 原木还能随时做成工作台（Crafting Table），方便你在地下随时补充工具。 食物补给：带上至少 30 个烤熟的高饱和度食物（如牛排、熟猪排、熟羊肉）。绝对不要带生肉或苹果，它们饿得太快，无法在战斗后维持你的生命自动回复。 终极保命神器：水桶（Water Bucket）#如果你刚刚挖到 3 块铁，不要先做铁镐，请立刻合成一个空桶，并在河里装满水！">
+	<meta itemprop="wordCount" content="232">
+
+<title>2.3 采矿技术 • Minecraft 从入门到精通</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/ch02-general/03-mining.html">
+<link rel="stylesheet" href="/book.min.64ab3279514b7f9a7b1ec50a47d8bc6f9bed31454a6363d9f98214862cb1a617.css" integrity="sha256-ZKsyeVFLf5p7HsUKR9i8b5vtMUVKY2PZ&#43;YIUhiyxphc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/custom.min.1731f01c43a90743cd5534762b58fff15b57edb81ce6d42c8217ba4d9d15b63d.css" integrity="sha256-FzHwHEOpB0PNVTR2K1j/8VtX7bgc5tQsghe6TZ0Vtj0=" crossorigin="anonymous">
+  <script defer type="module" src="/zh.search.min.ac81a26b5196db01a2ff1572a7610eb260597b3537fb14305d981b941b36e7cc.js" integrity="sha256-rIGia1GW2wGi/xVyp2EOsmBZezU3&#43;xQwXZgblBs258w=" crossorigin="anonymous"></script>
+
+<script defer src="/lightbox.min.b995837a582ada0a114699e58df354f5feb5267b8ba089b2a2c8ac21783242ad.js" integrity="sha256-uZWDelgq2goRRpnljfNU9f61JnuLoImyosisIXgyQq0=" crossorigin="anonymous"></script>
+<script defer src="/theme-toggle.min.17d2b0e14e3e210244ce5d5afaa4b7603c579da4c11f197c77f156465295c14a.js" integrity="sha256-F9Kw4U4&#43;IQJEzl1a&#43;qS3YDxXnaTBHxl8d/FWRlKVwUo=" crossorigin="anonymous"></script>
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/index.html"><span>Minecraft 从入门到精通</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="搜索"
+    aria-label="搜索"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第一章 新手教程</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-newcomer/04-first-day.html" class="">
+      2.1 第一天</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-newcomer/02-launcher-and-versions.html" class="">
+      1.2 启动器与版本</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-newcomer/05-gathering-and-crafting.html" class="">
+      2.2 采集与合成</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-newcomer/03-game-settings.html" class="">
+      1.3 游戏设置</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-newcomer/01-buy-and-install.html" class="">
+      1.1 购买与安装</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/preamble.html" class="">
+      序</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第二章 · 生存指南</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/03-mining.html" class="active">
+      2.3 采矿技术</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/05-villagers.html" class="">
+      2.5 村民与交易</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/03-combat-and-exploration.html" class="">
+      2.6 战斗与探索</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/07-enchanting.html" class="">
+      2.7 附魔与药水</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/04-nether-and-end.html" class="">
+      2.8 下界与末地</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第三章 建筑艺术</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/01-basics.html" class="">
+      3.1 建筑基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/02-styles.html" class="">
+      3.2 风格与设计</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/03-terraforming.html" class="">
+      3.3 地形改造</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/04-furniture.html" class="">
+      3.4 实用家具</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/05-roofs-and-details.html" class="">
+      3.5 屋顶与细节</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/06-palette-and-materials.html" class="">
+      3.6 调色板与材料</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/07-underwater-and-special.html" class="">
+      3.7 水下与特殊环境建筑</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第四章 资源再生</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-farming/01-farming.html" class="">
+      2.4 农牧养殖</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第五章 红石电路</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/01-basics.html" class="">
+      4.1 红石基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/02-logic-circuits.html" class="">
+      4.2 逻辑电路</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/03-auto-farms.html" class="">
+      4.3 自动化农场</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/04-timers-and-clocks.html" class="">
+      4.4 计时器与时钟</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/05-piston-machines.html" class="">
+      4.5 活塞机械</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/06-storage-and-sorting.html" class="">
+      4.6 存储与分类系统</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-redstone/07-advanced-projects.html" class="">
+      4.7 红石进阶项目</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第六章 多人游戏</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-multiplayer/01-ways-to-connect.html" class="">
+      5.1 联机方式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-multiplayer/02-server-setup.html" class="">
+      5.2 服务器搭建</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-multiplayer/03-realms.html" class="">
+      5.3 领域服</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-multiplayer/04-server-management.html" class="">
+      5.4 服务器维护与管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-multiplayer/05-pvp.html" class="">
+      5.5 PvP 入门</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第七章 技术性与模组</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/01-basic-commands.html" class="">
+      7.1 基础命令</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/02-mod-loaders.html" class="">
+      6.1 模组加载器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/03-command-blocks.html" class="">
+      7.2 指令方块</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/04-shaders-and-textures.html" class="">
+      6.2 光影与材质</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/05-datapacks.html" class="">
+      7.3 数据包</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/06-recommended-mods.html" class="">
+      6.3 推荐模组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/07-command-reference.html" class="">
+      7.4 常用命令速查表</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/08-optimization-and-qol.html" class="">
+      6.4 优化与辅助模组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/09-functions-and-advanced.html" class="">
+      7.5 函数与数据包进阶</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-technical/10-modpacks.html" class="">
+      6.5 整合包入门</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/appendix.html" class="">
+      附录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/afterwords.html" class="">
+      后记</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>2.3 采矿技术</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#23-采矿技术保姆级地下勘探与生存指南">2.3 采矿技术：保姆级地下勘探与生存指南</a>
+      <ul>
+        <li><a href="#1-我们为什么要下矿新手目标清单">1. 我们为什么要下矿？（新手目标清单）</a></li>
+        <li><a href="#2-战前筹备下矿前的背包与状态检查">2. 战前筹备：下矿前的背包与状态检查</a>
+          <ul>
+            <li><a href="#必备工具与装备">必备工具与装备</a></li>
+            <li><a href="#续航补给压缩背包的艺术">续航补给（压缩背包的艺术）</a></li>
+            <li><a href="#终极保命神器水桶water-bucket">终极保命神器：水桶（Water Bucket）</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-看懂坐标系用-f3-定位你的深度">3. 看懂坐标系：用 F3 定位你的深度</a>
+          <ul>
+            <li><a href="#118-矿物高度分布速查表新手精简版">1.18+ 矿物高度分布速查表（新手精简版）</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-采矿流派一天然洞穴探险spelunking">4. 采矿流派一：天然洞穴探险（Spelunking）</a>
+          <ul>
+            <li><a href="#探洞生存指南">探洞生存指南：</a></li>
+          </ul>
+        </li>
+        <li><a href="#5-采矿流派二安全下潜法则-the-safe-descent">5. 采矿流派二：安全下潜法则 (The Safe Descent)</a>
+          <ul>
+            <li><a href="#正确的下潜姿势">正确的下潜姿势：</a></li>
+          </ul>
+        </li>
+        <li><a href="#6-采矿流派三终极鱼骨分支采矿branch-mining">6. 采矿流派三：终极鱼骨分支采矿（Branch Mining）</a>
+          <ul>
+            <li><a href="#为什么不能在深层洞穴里找钻石">为什么不能在深层洞穴里找钻石？</a></li>
+            <li><a href="#鱼骨挖矿详细教学">鱼骨挖矿详细教学：</a></li>
+            <li><a href="#为什么分支之间必须间隔-3-格">为什么分支之间必须“间隔 3 格”？</a></li>
+            <li><a href="#突发情况处理">突发情况处理</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="23-采矿技术保姆级地下勘探与生存指南">2.3 采矿技术：保姆级地下勘探与生存指南<a class="anchor" href="#23-%e9%87%87%e7%9f%bf%e6%8a%80%e6%9c%af%e4%bf%9d%e5%a7%86%e7%ba%a7%e5%9c%b0%e4%b8%8b%e5%8b%98%e6%8e%a2%e4%b8%8e%e7%94%9f%e5%ad%98%e6%8c%87%e5%8d%97">#</a></h1>
+<blockquote class='book-hint note'>
+<p><strong>适用对象</strong>：纯新手玩家
+<strong>基于版本</strong>：Java 版 1.18+ (包含洞穴与山崖更新后的全新地下生成机制)</p></blockquote><p>在《Minecraft》中，<strong>“挖矿（Mining）”</strong> 占据了游戏一半的名字。地表的生活固然惬意，但只有深入地下，你才能获得打造精良装备、建造红石机械的稀有资源。</p>
+<p>从 1.18 版本开始，游戏的地下世界迎来了史诗级扩建：从海平面的 Y=62，一路向下延伸至漆黑深邃的 Y=-64。对于纯新人而言，深邃的洞穴既是宝库，也是充满岩浆和怪物的死亡陷阱。本章将手把手教你如何安全、高效地征服地下世界。</p>
+<hr>
+<h2 id="1-我们为什么要下矿新手目标清单">1. 我们为什么要下矿？（新手目标清单）<a class="anchor" href="#1-%e6%88%91%e4%bb%ac%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e4%b8%8b%e7%9f%bf%e6%96%b0%e6%89%8b%e7%9b%ae%e6%a0%87%e6%b8%85%e5%8d%95">#</a></h2>
+<p>作为刚度过第一夜的新手，你进入地下的最初目标非常明确：</p>
+<ol>
+<li><strong>寻找煤炭（Coal）</strong>：用于制作火把照明，以及在熔炉里烧制食物和矿物。</li>
+<li><strong>寻找铁矿（Iron）</strong>：这是你度过新手期的<strong>最核心资源</strong>！你需要用铁来打造全身的“铁盔甲”（极大地提升生存率）、“铁镐”（挖掘钻石的最低门槛），以及“水桶”（地下保命神器）。</li>
+<li><strong>寻找钻石（Diamond）</strong>：大后期资源。用于打造无坚不摧的钻石装备，以及制作附魔台。</li>
+</ol>
+<blockquote class='book-hint caution'>
+<p><strong>新手极其容易犯的致命错误：工具等级限制！</strong>
+在 Minecraft 中，<strong>不同的矿石必须用特定材质以上的镐子才能挖出东西</strong>。如果你用低级镐子强行挖高级矿石，矿石不仅挖得极慢，而且挖碎后<strong>什么都不会掉落（直接消失）</strong>！</p>
+<ul>
+<li><strong>木镐 / 金镐</strong>：只能挖石头、煤炭。</li>
+<li><strong>石镐</strong>：可以挖煤炭、铁矿、铜矿、青金石。</li>
+<li><strong>铁镐</strong>：<strong>可以挖钻石</strong>、金矿、红石、绿宝石。（这是新手的目标！）</li>
+<li><strong>钻石镐 / 下界合金镐</strong>：可以挖最坚硬的黑曜石和远古残骸。</li>
+</ul>
+<p><strong>警告</strong>：当你历经千辛万苦找到第一颗钻石时，<strong>绝对、绝对不能用石镐去挖</strong>，否则你会当场崩溃！</p></blockquote><hr>
+<h2 id="2-战前筹备下矿前的背包与状态检查">2. 战前筹备：下矿前的背包与状态检查<a class="anchor" href="#2-%e6%88%98%e5%89%8d%e7%ad%b9%e5%a4%87%e4%b8%8b%e7%9f%bf%e5%89%8d%e7%9a%84%e8%83%8c%e5%8c%85%e4%b8%8e%e7%8a%b6%e6%80%81%e6%a3%80%e6%9f%a5">#</a></h2>
+<p>地下没有明媚的阳光，你如果因为忘带某种东西而中途折返，会浪费大量时间。下矿前，请在家里确保你的背包和状态符合以下条件：</p>
+<h3 id="必备工具与装备">必备工具与装备<a class="anchor" href="#%e5%bf%85%e5%a4%87%e5%b7%a5%e5%85%b7%e4%b8%8e%e8%a3%85%e5%a4%87">#</a></h3>
+<ol>
+<li><strong>充足的镐子</strong>：千万别只带一把快坏的镐子就下矿。建议携带 <strong>3 把满耐久的铁镐</strong>。如果没有铁，至少带上 4 把石镐。</li>
+<li><strong>铲子（Shovel）</strong>：带一把即可。地下会经常遇到烦人的大面积沙砾（Gravel）和泥土，用手挖极其痛苦，铲子能让你快速清理它们。</li>
+<li><strong>盾牌（Shield）</strong>：极其重要！将盾牌放在背包的<strong>副手槽</strong>（人物模型的右下角），当你遇到骷髅射手或即将爆炸的苦力怕时，<strong>长按鼠标右键</strong>即可举起盾牌，格挡 100% 的正面伤害。</li>
+<li><strong>武器</strong>：一把满耐久的石剑或铁剑。</li>
+</ol>
+<h3 id="续航补给压缩背包的艺术">续航补给（压缩背包的艺术）<a class="anchor" href="#%e7%bb%ad%e8%88%aa%e8%a1%a5%e7%bb%99%e5%8e%8b%e7%bc%a9%e8%83%8c%e5%8c%85%e7%9a%84%e8%89%ba%e6%9c%af">#</a></h3>
+<p>地下的空间极其有限，你需要学会“高密度”携带物资：</p>
+<ol>
+<li><strong>火把材料</strong>：不要直接带满背包的火把！带上 <strong>1 组（64个）煤炭</strong> 和 <strong>1 组（64个）原木（Log）</strong>。
+<ul>
+<li>1 个原木可以分解为 4 个木板，进而做成 8 个木棍。在地下，你可以随时用“原木+煤炭”就地合成大量火把。带原木等于把背包空间压缩了数倍。</li>
+<li>原木还能随时做成<strong>工作台（Crafting Table）</strong>，方便你在地下随时补充工具。</li>
+</ul>
+</li>
+<li><strong>食物补给</strong>：带上至少 30 个<strong>烤熟的高饱和度食物</strong>（如牛排、熟猪排、熟羊肉）。绝对不要带生肉或苹果，它们饿得太快，无法在战斗后维持你的生命自动回复。</li>
+</ol>
+<h3 id="终极保命神器水桶water-bucket">终极保命神器：水桶（Water Bucket）<a class="anchor" href="#%e7%bb%88%e6%9e%81%e4%bf%9d%e5%91%bd%e7%a5%9e%e5%99%a8%e6%b0%b4%e6%a1%b6water-bucket">#</a></h3>
+<p>如果你刚刚挖到 3 块铁，<strong>不要先做铁镐，请立刻合成一个空桶，并在河里装满水</strong>！
+<div class="mc-crafting-wrapper" id="mc-crafting-0">
+  <div class="mc-crafting-container">
+    <div class="mc-crafting-grid"><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="iron_ingot">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+            <div class="mc-durability-container"><div class="mc-durability-fill"></div></div>
+          </div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="iron_ingot">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+            <div class="mc-durability-container"><div class="mc-durability-fill"></div></div>
+          </div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="iron_ingot">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+            <div class="mc-durability-container"><div class="mc-durability-fill"></div></div>
+          </div><div class="mc-crafting-slot empty"></div></div>
+    
+    <div class="mc-crafting-arrow"></div><div class="mc-crafting-result-slot" data-items="bucket">
+      <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+      <div class="mc-durability-container"><div class="mc-durability-fill"></div></div></div>
+  </div>
+</div>
+
+<style>
+.mc-durability-container {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  width: 52px;
+  height: 8px;
+  background-color: #000000;
+  pointer-events: none;  
+  display: none;  
+}
+.mc-durability-fill {
+  height: 4px;
+  width: 100%;
+  background-color: #00ff00;
+  transition: width 0.15s, background-color 0.15s;
+}
+
+ 
+.mc-crafting-result-slot .mc-durability-container {
+  left: 12px;
+  bottom: 12px;
+  width: 78px;
+  height: 12px;
+}
+.mc-crafting-result-slot .mc-durability-fill {
+  height: 6px;
+}
+</style>
+
+<script>
+(function() {
+  
+  const mcTooltips = {
+    
+    "oak_planks": { title: "橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "spruce_planks": { title: "云杉木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "birch_planks": { title: "白桦木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "jungle_planks": { title: "丛林木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "acacia_planks": { title: "金合欢木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "dark_oak_planks": { title: "深色橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "mangrove_planks": { title: "红树木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "cherry_planks": { title: "樱花木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "bamboo_planks": { title: "竹板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "crimson_planks": { title: "绯红木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "warped_planks": { title: "诡异木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "stick": { title: "木棍", subtitle: "材料 - 制作工具手柄、火把与梯子的基础必需品" },
+    "coal": { title: "煤炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 用于制作火把" },
+    "charcoal": { title: "木炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 通过在熔炉中烧炼木头获得" },
+    "cobblestone": { title: "圆石", subtitle: "方块 - 石器时代的核心建筑与合成材料" },
+    "raw_iron": { title: "粗铁", subtitle: "材料 - 铁矿石开采产物，可冶炼成铁锭" },
+    "iron_ingot": { title: "铁锭", subtitle: "材料 - 金属时代的核心工业与工具合成材料" },
+    "diamond": { title: "钻石", subtitle: "材料 - 极其坚硬且珍贵的高级合成材料" },
+    "netherite_ingot": { title: "下界合金锭", subtitle: "材料 - 极高强度的下界金属，具备防火防熔岩特性" },
+    "netherite_upgrade_smithing_template": { title: "下界合金升级锻造模板", subtitle: "模板 - 仅在下界荒地遗迹中发现，用于升级钻石装备" },
+
+    
+    "wooden_pickaxe": { title: "木镐", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2 | 耐久度: 59" },
+    "wooden_shovel": { title: "木铲", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2.5 | 耐久度: 59" },
+    "wooden_axe": { title: "木斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +7 | 耐久度: 59" },
+    "wooden_sword": { title: "木剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +4 | 耐久度: 59" },
+    "wooden_hoe": { title: "木锄", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +1 | 耐久度: 59" },
+
+    
+    "stone_pickaxe": { title: "石镐", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3 | 耐久度: 131" },
+    "stone_shovel": { title: "石铲", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3.5 | 耐久度: 131" },
+    "stone_axe": { title: "石斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +9 | 耐久度: 131" },
+    "stone_sword": { title: "石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +5 | 耐久度: 131" },
+    "stone_hoe": { title: "石锄", subtitle: "工具 - 攻击速度: 2.0 | 攻击伤害: +1 | 耐久度: 131" },
+
+    
+    "iron_pickaxe": { title: "铁镐", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4 | 耐久度: 250" },
+    "iron_shovel": { title: "铁铲", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4.5 | 耐久度: 250" },
+    "iron_axe": { title: "铁斧", subtitle: "工具 - 攻击速度: 0.9 | 攻击伤害: +9 | 耐久度: 250" },
+    "iron_sword": { title: "铁剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +6 | 耐久度: 250" },
+    "iron_hoe": { title: "铁锄", subtitle: "工具 - 攻击速度: 3.0 | 攻击伤害: +1 | 耐久度: 250" },
+
+    
+    "diamond_pickaxe": { title: "钻石镐", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5 | 耐久度: 1561" },
+    "diamond_shovel": { title: "钻石铲", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5.5 | 耐久度: 1561" },
+    "diamond_axe": { title: "钻石斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +9 | 耐久度: 1561" },
+    "diamond_sword": { title: "钻石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +7 | 耐久度: 1561" },
+    "diamond_hoe": { title: "钻石锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 | 耐久度: 1561" },
+
+    
+    "netherite_pickaxe": { title: "下界合金镐", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_shovel": { title: "下界合金铲", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6.5 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_axe": { title: "下界合金斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +10 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_sword": { title: "下界合金剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +8 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_hoe": { title: "下界合金锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 (防火防熔岩) | 耐久度: 2031" },
+
+    
+    "furnace": { title: "熔炉", subtitle: "方块 - 用于冶炼矿石与烹饪食物的传统加热方块" },
+    "crafting_table": { title: "工作台", subtitle: "方块 - 提供 3x3 网格的合成核心方块" },
+    "smithing_table": { title: "锻造台", subtitle: "方块 - 配合锻造模板升级高级武器装备的工作方块" }
+  };
+
+  
+  let tooltip = document.querySelector(".mc-crafting-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "mc-crafting-tooltip";
+    tooltip.innerHTML = '<span class="mc-tooltip-title"></span><span class="mc-tooltip-subtitle"></span>';
+    document.body.appendChild(tooltip);
+  }
+
+  const container = document.getElementById("mc-crafting-0");
+  const slots = container.querySelectorAll(".mc-crafting-slot, .mc-crafting-result-slot");
+
+  slots.forEach(slot => {
+    if (slot.classList.contains("empty")) return;
+    
+    const itemsData = slot.getAttribute("data-items");
+    const durabilityData = slot.getAttribute("data-durability");
+    if (!itemsData) return;
+    
+    const items = itemsData.split(",").map(i => i.trim());
+    const durVals = durabilityData ? durabilityData.split(",").map(d => parseFloat(d.trim())) : [];
+    let currentIndex = 0;
+    const img = slot.querySelector("img");
+    const durContainer = slot.querySelector(".mc-durability-container");
+    const durFill = slot.querySelector(".mc-durability-fill");
+
+    
+    img.onload = function() {
+      
+      if (this.naturalWidth <= 32) {
+        this.style.imageRendering = "pixelated";
+      } else {
+        this.style.imageRendering = "auto";
+      }
+    };
+
+    
+    function updateSlot() {
+      const itemKey = items[currentIndex];
+      if (itemKey === "empty" || !itemKey) {
+        img.style.opacity = 0;
+        img.src = "";
+        slot.setAttribute("data-active-item", "");
+        if (durContainer) durContainer.style.display = "none";
+      } else {
+        img.src = "/images/items/" + itemKey + ".png";
+        img.style.opacity = 1;
+        slot.setAttribute("data-active-item", itemKey);
+        
+        
+        if (durContainer && durVals[currentIndex] !== undefined && !isNaN(durVals[currentIndex])) {
+          const val = durVals[currentIndex];
+          durContainer.style.display = "block";
+          durFill.style.width = (val * 100) + "%";
+          
+          const hue = Math.max(0, val * 120);
+          durFill.style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
+        } else if (durContainer) {
+          durContainer.style.display = "none";
+        }
+      }
+    }
+    updateSlot();
+
+    
+    if (items.length > 1) {
+      setInterval(() => {
+        img.style.opacity = 0;
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % items.length;
+          updateSlot();
+        }, 150);
+      }, 2000);
+    }
+
+    
+    slot.addEventListener("mouseenter", (e) => {
+      const activeItem = slot.getAttribute("data-active-item");
+      if (!activeItem) return;
+
+      const translation = mcTooltips[activeItem] || { title: activeItem, subtitle: "物品" };
+      tooltip.querySelector(".mc-tooltip-title").textContent = translation.title;
+      tooltip.querySelector(".mc-tooltip-subtitle").textContent = translation.subtitle;
+      tooltip.style.display = "block";
+    });
+
+    slot.addEventListener("mousemove", (e) => {
+      
+      tooltip.style.left = (e.clientX + 12) + "px";
+      tooltip.style.top = (e.clientY - 12) + "px";
+    });
+
+    slot.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+})();
+</script>
+</p>
+<p>在地下，<strong>一桶水是你最强大的护身符</strong>：</p>
+<ul>
+<li><strong>扑灭岩浆</strong>：如果你不慎挖空脚下掉入岩浆，或者身上着火，立刻将视角对准脚下或身边的方块<strong>右键倒水</strong>。水流会瞬间将危险的岩浆源转化为安全的<strong>黑曜石（Obsidian）</strong> 或原石，并扑灭你身上的火焰。</li>
+<li><strong>驱逐末影人</strong>：遇到长手长脚、浑身冒紫光的末影人（Enderman），如果不小心看了它的眼睛激怒了它，只需在脚下倒水并站在水里。末影人怕水，碰到水就会受伤并瞬移走。</li>
+<li><strong>深渊电梯</strong>：遇到极深的大峡谷，将水倒在边缘，你可以顺着水流瀑布安全地游下去，毫发无伤。</li>
+</ul>
+<hr>
+<h2 id="3-看懂坐标系用-f3-定位你的深度">3. 看懂坐标系：用 F3 定位你的深度<a class="anchor" href="#3-%e7%9c%8b%e6%87%82%e5%9d%90%e6%a0%87%e7%b3%bb%e7%94%a8-f3-%e5%ae%9a%e4%bd%8d%e4%bd%a0%e7%9a%84%e6%b7%b1%e5%ba%a6">#</a></h2>
+<p>在 1.18 版本之后，根据高度寻找矿石成了必修课。如何知道自己在多深的地方？</p>
+<ul>
+<li><strong>按键操作</strong>：在游戏中按下键盘上的 <strong><code>F3</code></strong> 键（部分笔记本电脑需要按 <code>Fn + F3</code>）。</li>
+<li><strong>查看坐标</strong>：屏幕左侧会弹出一大串代码，寻找以 <code>XYZ:</code> 开头的那一行。
+<ul>
+<li><strong>X 和 Z</strong>：代表你在地图平面上的东南西北位置。</li>
+<li><strong>Y</strong>：<strong>这就是你的高度！</strong> 海平面通常是 Y=62，而地下的最低点基岩层是 Y=-64。</li>
+</ul>
+</li>
+</ul>
+<h3 id="118-矿物高度分布速查表新手精简版">1.18+ 矿物高度分布速查表（新手精简版）<a class="anchor" href="#118-%e7%9f%bf%e7%89%a9%e9%ab%98%e5%ba%a6%e5%88%86%e5%b8%83%e9%80%9f%e6%9f%a5%e8%a1%a8%e6%96%b0%e6%89%8b%e7%b2%be%e7%ae%80%e7%89%88">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">你的目标</th>
+					<th style="text-align: left">去哪里找（Y轴高度）</th>
+					<th style="text-align: left">详细指引与注意事项</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>煤炭</strong></td>
+					<td style="text-align: left">Y=136 (高山)<br>Y=96 (浅层地下)</td>
+					<td style="text-align: left">煤炭现在<strong>越往高处走越多</strong>。在 Y=0 以下（周围的石头变成黑色的“深板岩”时），煤炭会彻底绝迹！缺煤请去爬山或挖浅层洞穴。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>铁矿</strong></td>
+					<td style="text-align: left">Y=16 (地下)<br>Y=232 (极高山)</td>
+					<td style="text-align: left">铁矿在 Y=16 附近非常密集。如果你的出生点有极高的山脉，直接在山体表面也能发现海量的铁矿。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>铜矿</strong></td>
+					<td style="text-align: left">Y=48</td>
+					<td style="text-align: left">铜通常成大片出现。如果你遇到挂满尖刺的“滴水石洞穴”，里面会有极其夸张的巨型铜矿脉。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>黄金</strong></td>
+					<td style="text-align: left">Y=-16</td>
+					<td style="text-align: left">黄金越深越多，但在“恶地（满是红沙的群系）”会在浅层大量生成。</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>钻石 / 红石</strong></td>
+					<td style="text-align: left"><strong>Y=-59</strong></td>
+					<td style="text-align: left"><strong>越深越多！</strong> 请直接下潜到 Y=-59（避开底部的基岩）。由于系统机制（见下文），<strong>想挖钻石必须在实心的深层石头里盲挖</strong>。</td>
+			</tr>
+	</tbody>
+</table>
+<hr>
+<h2 id="4-采矿流派一天然洞穴探险spelunking">4. 采矿流派一：天然洞穴探险（Spelunking）<a class="anchor" href="#4-%e9%87%87%e7%9f%bf%e6%b5%81%e6%b4%be%e4%b8%80%e5%a4%a9%e7%84%b6%e6%b4%9e%e7%a9%b4%e6%8e%a2%e9%99%a9spelunking">#</a></h2>
+<p><strong>适合阶段</strong>：游戏开局第一天，极度缺煤和铁，且没有好镐子。
+<strong>操作方法</strong>：直接在野外寻找巨大的地表裂缝、天然洞穴入口，拿着火把走进去。</p>
+<h3 id="探洞生存指南">探洞生存指南：<a class="anchor" href="#%e6%8e%a2%e6%b4%9e%e7%94%9f%e5%ad%98%e6%8c%87%e5%8d%97">#</a></h3>
+<ol>
+<li><strong>先插火把，后挖矿</strong>：进入一个黑暗的洞室，第一件事<strong>绝对不是</strong>去挖墙上的矿，而是拿着火把绕场一周，把周围照得灯火通明！<strong>光照等级高了，怪物才不会生成</strong>。如果不插火把就低头挖矿，苦力怕很容易悄无声息地从阴影里走到你背后。</li>
+<li><strong>抬头看天花板</strong>：洞穴往往是立体的，注意头顶是否有暗处，防止怪物上演“天降正义”。</li>
+<li><strong>老玩家的防迷路神技：火把右手法则（Right-hand Rule）</strong>
+<ul>
+<li>洞穴里错综复杂，极易迷失方向。</li>
+<li><strong>进入洞穴时</strong>：无论你怎么拐弯，<strong>始终、永远将火把插在你前进方向的右侧墙壁上</strong>。</li>
+<li><strong>想要回家时</strong>：转过身，沿着来时的路走。只要你确保<strong>火把始终在你的左侧墙壁</strong>，你就绝对是在朝着洞口的方向前进！如果看到火把在右边，说明你又往深处走了。</li>
+</ul>
+</li>
+<li><strong>人工封路</strong>：如果你探索完了一条死胡同，或者这条岔路太深你不想去，用泥土或圆石把岔路口彻底堵死，这样可以防止那里的怪物游荡过来，也省去了你重复探索的时间。</li>
+</ol>
+<hr>
+<h2 id="5-采矿流派二安全下潜法则-the-safe-descent">5. 采矿流派二：安全下潜法则 (The Safe Descent)<a class="anchor" href="#5-%e9%87%87%e7%9f%bf%e6%b5%81%e6%b4%be%e4%ba%8c%e5%ae%89%e5%85%a8%e4%b8%8b%e6%bd%9c%e6%b3%95%e5%88%99-the-safe-descent">#</a></h2>
+<p>当你觉得洞穴里的铁已经满足不了你，想要去最深处的 Y=-59 寻找钻石时，你需要自己开辟一条通往地心的隧道。</p>
+<blockquote class='book-hint caution'>
+<p><strong>《Minecraft》最高生存法则：永远不要垂直向下挖（Never Dig Straight Down）！</strong></p>
+<p>新手最爱犯的错就是低着头，把自己脚下的方块一个一个敲掉。这么做有 99% 的概率会突然挖穿天花板，让你从几十米的高空摔死在巨大洞穴里，或者<strong>直接“噗通”一声掉进翻滚的岩浆湖</strong>，让你包里所有的珍贵物品瞬间化为乌有。</p></blockquote><h3 id="正确的下潜姿势">正确的下潜姿势：<a class="anchor" href="#%e6%ad%a3%e7%a1%ae%e7%9a%84%e4%b8%8b%e6%bd%9c%e5%a7%bf%e5%8a%bf">#</a></h3>
+<ol>
+<li><strong>阶梯式下潜（Staircase Mining）</strong>
+<ul>
+<li>向前挖三格，然后向下一格，挖出一个像楼梯一样的通道。</li>
+<li>优点：非常安全，可以在台阶上跳跃上来。后期如果你想搞工业化，还能在楼梯上铺设铁轨开矿车。</li>
+<li>缺点：挖出的废石非常多，耗时极长。</li>
+</ul>
+</li>
+<li><strong>2x1 垂直下潜法（老手最爱）</strong>
+<ul>
+<li>如果你想垂直下潜，正确的做法是：<strong>将脚下的洞挖成两个方块宽（2x1）</strong>。</li>
+<li>站在两个方块的<strong>交界缝隙处</strong>。</li>
+<li>先把左边那一格一直往下挖 3-4 层。因为你还踩在右边的方块上，所以哪怕左边挖出了岩浆，你也掉不下去。</li>
+<li>确认左边洞底安全（是坚硬的石头）后，再把右边的方块挖空，与左边齐平。</li>
+<li>如此交替挖掘，就能以极快的速度、100% 的安全性直达地底！</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="6-采矿流派三终极鱼骨分支采矿branch-mining">6. 采矿流派三：终极鱼骨分支采矿（Branch Mining）<a class="anchor" href="#6-%e9%87%87%e7%9f%bf%e6%b5%81%e6%b4%be%e4%b8%89%e7%bb%88%e6%9e%81%e9%b1%bc%e9%aa%a8%e5%88%86%e6%94%af%e9%87%87%e7%9f%bfbranch-mining">#</a></h2>
+<p><strong>适合阶段</strong>：拥有多把铁镐，目标是快速获取大量钻石和红石。</p>
+<h3 id="为什么不能在深层洞穴里找钻石">为什么不能在深层洞穴里找钻石？<a class="anchor" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e8%83%bd%e5%9c%a8%e6%b7%b1%e5%b1%82%e6%b4%9e%e7%a9%b4%e9%87%8c%e6%89%be%e9%92%bb%e7%9f%b3">#</a></h3>
+<p>在 1.18 更新后，系统加入了一个叫**“空气暴露惩罚（Reduced Air Exposure）”**的机制。当系统在地下生成钻石时，如果这颗钻石刚好贴着洞穴的空气（能被人直接看见），它会有极高的概率被系统“吃掉”取消生成。
+因此，<strong>真正成片的钻石，全部深埋在那些完全实心、没有任何空气的岩石缝里！</strong> 分支矿道法就是为了剖开这些实心岩层而诞生的。</p>
+<h3 id="鱼骨挖矿详细教学">鱼骨挖矿详细教学：<a class="anchor" href="#%e9%b1%bc%e9%aa%a8%e6%8c%96%e7%9f%bf%e8%af%a6%e7%bb%86%e6%95%99%e5%ad%a6">#</a></h3>
+<ol>
+<li><strong>直达地心</strong>：使用上文的安全下潜法，一路来到 <strong>Y=-59</strong> 深度。</li>
+<li><strong>挖掘脊椎干道</strong>：在这个高度，水平朝一个方向挖一条<strong>高 2 格、宽 1 格</strong>的超长笔直隧道。这是你的主干道。每隔一段距离插一个火把防止刷怪。</li>
+<li><strong>挖掘盲扫分支</strong>：
+<ul>
+<li>站在主干道里，面向左侧墙壁，向内挖出一条同样是 2x1 规格的细长分支隧道（大概挖进深处 10-20 格）。</li>
+<li>挖完一条分支后，退回主干道。向前走，<strong>空出 3 个方块的间隔</strong>，再挖第二条分支。</li>
+<li>两侧交替进行，最后在小地图上看起来，你的矿道就像一根鱼骨头。</li>
+</ul>
+</li>
+</ol>
+<figure class="book-image-figure">
+  <img
+    src="https://zh.minecraft.wiki/images/Branch_mining.png?61bd6&amp;20240409054321"
+    alt="分支矿道平面示意图" title="经典的鱼骨分支矿道平面图（注意分支之间留有间隔）" width="600" 
+    data-lightbox data-lightbox-caption="经典的鱼骨分支矿道平面图（注意分支之间留有间隔）"
+  />
+  <figcaption>经典的鱼骨分支矿道平面图（注意分支之间留有间隔）</figcaption>
+</figure>
+
+<h3 id="为什么分支之间必须间隔-3-格">为什么分支之间必须“间隔 3 格”？<a class="anchor" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e5%88%86%e6%94%af%e4%b9%8b%e9%97%b4%e5%bf%85%e9%a1%bb%e9%97%b4%e9%9a%94-3-%e6%a0%bc">#</a></h3>
+<p>这涉及到 Minecraft 矿脉生成的几何学。
+如果是煤炭或铁矿，随便你怎么挖；但钻石非常稀有，且通常是以 2x2 左右的团块生成的。</p>
+<ul>
+<li>如果间隔 1 格，你虽然能扫清每一寸土地，但挖掘了太多毫无意义的废石，浪费了镐子的耐久。</li>
+<li><strong>间隔 3 格</strong>：这是数学上的最佳平衡点！由于钻石矿脉有一定的体积，只要它生成在这 3 格厚实的石墙内，就有极大的概率有一角会露出在隧道侧壁上被你看见。这种方法能在消耗最少镐子耐久的情况下，搜刮最大面积的钻石区。</li>
+</ul>
+<h3 id="突发情况处理">突发情况处理<a class="anchor" href="#%e7%aa%81%e5%8f%91%e6%83%85%e5%86%b5%e5%a4%84%e7%90%86">#</a></h3>
+<p>如果在挖分支时，前方突然涌出岩浆怎么办？</p>
+<ul>
+<li>不要惊慌，迅速向后退。</li>
+<li>使用水桶将岩浆浇灭；或者直接拿出一块石头，把那个破洞堵死。</li>
+<li>这条分支就此作废，直接走到主干道，挖下一条分支即可。这比在巨型洞穴里被岩浆湖包围要安全一万倍！</li>
+</ul>
+<p>掌握了这些，你不仅能活着满载而归，更能成为主世界最富有的矿产大亨。带上你的铁镐，向着深邃的地下进发吧！</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/preamble.html" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="上一页" />
+        <span>序</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/ch02-general/05-villagers.html" class="flex align-center">
+        <span>2.5 村民与交易</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="下一页" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#23-采矿技术保姆级地下勘探与生存指南">2.3 采矿技术：保姆级地下勘探与生存指南</a>
+      <ul>
+        <li><a href="#1-我们为什么要下矿新手目标清单">1. 我们为什么要下矿？（新手目标清单）</a></li>
+        <li><a href="#2-战前筹备下矿前的背包与状态检查">2. 战前筹备：下矿前的背包与状态检查</a>
+          <ul>
+            <li><a href="#必备工具与装备">必备工具与装备</a></li>
+            <li><a href="#续航补给压缩背包的艺术">续航补给（压缩背包的艺术）</a></li>
+            <li><a href="#终极保命神器水桶water-bucket">终极保命神器：水桶（Water Bucket）</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-看懂坐标系用-f3-定位你的深度">3. 看懂坐标系：用 F3 定位你的深度</a>
+          <ul>
+            <li><a href="#118-矿物高度分布速查表新手精简版">1.18+ 矿物高度分布速查表（新手精简版）</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-采矿流派一天然洞穴探险spelunking">4. 采矿流派一：天然洞穴探险（Spelunking）</a>
+          <ul>
+            <li><a href="#探洞生存指南">探洞生存指南：</a></li>
+          </ul>
+        </li>
+        <li><a href="#5-采矿流派二安全下潜法则-the-safe-descent">5. 采矿流派二：安全下潜法则 (The Safe Descent)</a>
+          <ul>
+            <li><a href="#正确的下潜姿势">正确的下潜姿势：</a></li>
+          </ul>
+        </li>
+        <li><a href="#6-采矿流派三终极鱼骨分支采矿branch-mining">6. 采矿流派三：终极鱼骨分支采矿（Branch Mining）</a>
+          <ul>
+            <li><a href="#为什么不能在深层洞穴里找钻石">为什么不能在深层洞穴里找钻石？</a></li>
+            <li><a href="#鱼骨挖矿详细教学">鱼骨挖矿详细教学：</a></li>
+            <li><a href="#为什么分支之间必须间隔-3-格">为什么分支之间必须“间隔 3 格”？</a></li>
+            <li><a href="#突发情况处理">突发情况处理</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

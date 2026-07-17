@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme · MC 教程
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="2.1 战斗与探索#基于版本：Java 版 26.2 · 生存模式
+关于 PvP 的说明：本节专门针对 PvE（玩家对战环境 / 怪物） 的生存战斗技巧。玩家之间的对战（PvP）进阶内容将在后续章节中深入探讨。
+无论是为了在漆黑的矿洞中存活，还是为了保卫村庄、探索下界，战斗都是 Minecraft 生存中不可或缺的一环。掌握战斗技巧，你将不再惧怕黑夜。
+1. 战斗机制基础#如果你曾玩过早期 Minecraft（1.8 以前版本），你可能会习惯疯狂点击鼠标来输出伤害。但在现代 Java 版中，战斗系统已经彻底重做——不再是无脑连点的时代。
+攻击指示器（冷却槽）#挥动武器后，屏幕准星下方（或快捷栏旁边）会出现一个剑形图标，它代表武器的攻击冷却。
+满蓄力攻击：等待图标完全充满后挥动武器，造成 100% 面板伤害，并可触发横扫等特殊效果。 未蓄力攻击：冷却未满时强行攻击，伤害大幅降低（俗称「刮痧」），对僵尸可能只有微弱的 1 点伤害。 核心准则：掌握攻击节奏。满蓄力砍一刀 → 后撤半步等待冷却 → 再砍第二刀。节奏感是生存战斗的第一课。
+暴击（跳劈）#当你在跳跃下落过程中击中目标时，会触发暴击（Critical Hit），造成 150% 的巨额伤害。
+标志：怪物身上爆出「星星」状魔法粒子，伴随沉闷的打击音效。 连招：疾跑接近 → 跳起 → 下落时挥砍 → 迅速后退。石斧跳劈可直接秒杀大部分无甲生物。 如果攻击速度低于 1.5（如斧），第二次跳起时冷却来不及恢复，因此跳劈更适合剑。
+疾跑击退#处于疾跑状态（双击 W 或按住 Ctrl）时击中怪物，会产生极强击退效果，将目标打飞数格远。苦力怕靠近时，若来不及秒杀，疾跑一剑将其击飞可打断自爆倒计时。
+受击无敌帧#怪物被击中后会全身发红约 0.5 秒，在此期间无敌，任何攻击都不会造成额外伤害。不要在怪物发红时连点鼠标浪费武器耐久。
+2. 武器与装备#剑还是斧？#剑（Sword） 斧（Axe） 攻速 快（1.6 次/秒） 慢（约 1 次/秒） 单次伤害 中等 高（同级最高） 特殊效果 横扫之刃（群体击退&#43;伤害） 破盾（PvP）、剥皮原木、除锈 适合场景 被围攻、日常清怪 秒杀高威胁单体 推荐人群 新手首选 有一定走位基础后尝试 盾牌：新手的「免死金牌」#只需要 1 块铁锭和 6 块木板即可合成盾牌。它的合成配方如下：
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#5c9a3a">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#3a6622">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/ch02-general/01-combat-and-exploration.html">
+	<meta property="og:site_name" content="Minecraft 从入门到精通">
+	<meta property="og:title" content="2.1 战斗与探索">
+	<meta property="og:description" content="2.1 战斗与探索#基于版本：Java 版 26.2 · 生存模式
+关于 PvP 的说明：本节专门针对 PvE（玩家对战环境 / 怪物） 的生存战斗技巧。玩家之间的对战（PvP）进阶内容将在后续章节中深入探讨。
+无论是为了在漆黑的矿洞中存活，还是为了保卫村庄、探索下界，战斗都是 Minecraft 生存中不可或缺的一环。掌握战斗技巧，你将不再惧怕黑夜。
+1. 战斗机制基础#如果你曾玩过早期 Minecraft（1.8 以前版本），你可能会习惯疯狂点击鼠标来输出伤害。但在现代 Java 版中，战斗系统已经彻底重做——不再是无脑连点的时代。
+攻击指示器（冷却槽）#挥动武器后，屏幕准星下方（或快捷栏旁边）会出现一个剑形图标，它代表武器的攻击冷却。
+满蓄力攻击：等待图标完全充满后挥动武器，造成 100% 面板伤害，并可触发横扫等特殊效果。 未蓄力攻击：冷却未满时强行攻击，伤害大幅降低（俗称「刮痧」），对僵尸可能只有微弱的 1 点伤害。 核心准则：掌握攻击节奏。满蓄力砍一刀 → 后撤半步等待冷却 → 再砍第二刀。节奏感是生存战斗的第一课。
+暴击（跳劈）#当你在跳跃下落过程中击中目标时，会触发暴击（Critical Hit），造成 150% 的巨额伤害。
+标志：怪物身上爆出「星星」状魔法粒子，伴随沉闷的打击音效。 连招：疾跑接近 → 跳起 → 下落时挥砍 → 迅速后退。石斧跳劈可直接秒杀大部分无甲生物。 如果攻击速度低于 1.5（如斧），第二次跳起时冷却来不及恢复，因此跳劈更适合剑。
+疾跑击退#处于疾跑状态（双击 W 或按住 Ctrl）时击中怪物，会产生极强击退效果，将目标打飞数格远。苦力怕靠近时，若来不及秒杀，疾跑一剑将其击飞可打断自爆倒计时。
+受击无敌帧#怪物被击中后会全身发红约 0.5 秒，在此期间无敌，任何攻击都不会造成额外伤害。不要在怪物发红时连点鼠标浪费武器耐久。
+2. 武器与装备#剑还是斧？#剑（Sword） 斧（Axe） 攻速 快（1.6 次/秒） 慢（约 1 次/秒） 单次伤害 中等 高（同级最高） 特殊效果 横扫之刃（群体击退&#43;伤害） 破盾（PvP）、剥皮原木、除锈 适合场景 被围攻、日常清怪 秒杀高威胁单体 推荐人群 新手首选 有一定走位基础后尝试 盾牌：新手的「免死金牌」#只需要 1 块铁锭和 6 块木板即可合成盾牌。它的合成配方如下：">
+	<meta property="og:locale" content="zh">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="docs">
+
+
+	<meta itemprop="name" content="2.1 战斗与探索">
+	<meta itemprop="description" content="2.1 战斗与探索#基于版本：Java 版 26.2 · 生存模式
+关于 PvP 的说明：本节专门针对 PvE（玩家对战环境 / 怪物） 的生存战斗技巧。玩家之间的对战（PvP）进阶内容将在后续章节中深入探讨。
+无论是为了在漆黑的矿洞中存活，还是为了保卫村庄、探索下界，战斗都是 Minecraft 生存中不可或缺的一环。掌握战斗技巧，你将不再惧怕黑夜。
+1. 战斗机制基础#如果你曾玩过早期 Minecraft（1.8 以前版本），你可能会习惯疯狂点击鼠标来输出伤害。但在现代 Java 版中，战斗系统已经彻底重做——不再是无脑连点的时代。
+攻击指示器（冷却槽）#挥动武器后，屏幕准星下方（或快捷栏旁边）会出现一个剑形图标，它代表武器的攻击冷却。
+满蓄力攻击：等待图标完全充满后挥动武器，造成 100% 面板伤害，并可触发横扫等特殊效果。 未蓄力攻击：冷却未满时强行攻击，伤害大幅降低（俗称「刮痧」），对僵尸可能只有微弱的 1 点伤害。 核心准则：掌握攻击节奏。满蓄力砍一刀 → 后撤半步等待冷却 → 再砍第二刀。节奏感是生存战斗的第一课。
+暴击（跳劈）#当你在跳跃下落过程中击中目标时，会触发暴击（Critical Hit），造成 150% 的巨额伤害。
+标志：怪物身上爆出「星星」状魔法粒子，伴随沉闷的打击音效。 连招：疾跑接近 → 跳起 → 下落时挥砍 → 迅速后退。石斧跳劈可直接秒杀大部分无甲生物。 如果攻击速度低于 1.5（如斧），第二次跳起时冷却来不及恢复，因此跳劈更适合剑。
+疾跑击退#处于疾跑状态（双击 W 或按住 Ctrl）时击中怪物，会产生极强击退效果，将目标打飞数格远。苦力怕靠近时，若来不及秒杀，疾跑一剑将其击飞可打断自爆倒计时。
+受击无敌帧#怪物被击中后会全身发红约 0.5 秒，在此期间无敌，任何攻击都不会造成额外伤害。不要在怪物发红时连点鼠标浪费武器耐久。
+2. 武器与装备#剑还是斧？#剑（Sword） 斧（Axe） 攻速 快（1.6 次/秒） 慢（约 1 次/秒） 单次伤害 中等 高（同级最高） 特殊效果 横扫之刃（群体击退&#43;伤害） 破盾（PvP）、剥皮原木、除锈 适合场景 被围攻、日常清怪 秒杀高威胁单体 推荐人群 新手首选 有一定走位基础后尝试 盾牌：新手的「免死金牌」#只需要 1 块铁锭和 6 块木板即可合成盾牌。它的合成配方如下：">
+	<meta itemprop="wordCount" content="446">
+
+<title>2.1 战斗与探索 • Minecraft 从入门到精通</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/ch02-general/01-combat-and-exploration.html">
+<link rel="stylesheet" href="/book.min.64ab3279514b7f9a7b1ec50a47d8bc6f9bed31454a6363d9f98214862cb1a617.css" integrity="sha256-ZKsyeVFLf5p7HsUKR9i8b5vtMUVKY2PZ&#43;YIUhiyxphc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/custom.min.3f5cd638c1f32a12a56266d8c96d94495778d9f77367fca14c5be51dcec060b7.css" integrity="sha256-P1zWOMHzKhKlYmbYyW2USVd42fdzZ/yhTFvlHc7AYLc=" crossorigin="anonymous">
+  <script defer type="module" src="/zh.search.min.6f7ff29a13ed67f6953cbd38ddbc62e9b7573e4092d3c8593c0bdf681417ef54.js" integrity="sha256-b3/ymhPtZ/aVPL043bxi6bdXPkCS08hZPAvfaBQX71Q=" crossorigin="anonymous"></script>
+
+<script defer src="/lightbox.min.b995837a582ada0a114699e58df354f5feb5267b8ba089b2a2c8ac21783242ad.js" integrity="sha256-uZWDelgq2goRRpnljfNU9f61JnuLoImyosisIXgyQq0=" crossorigin="anonymous"></script>
+<script defer src="/theme-toggle.min.17d2b0e14e3e210244ce5d5afaa4b7603c579da4c11f197c77f156465295c14a.js" integrity="sha256-F9Kw4U4&#43;IQJEzl1a&#43;qS3YDxXnaTBHxl8d/FWRlKVwUo=" crossorigin="anonymous"></script>
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/index.html"><span>Minecraft 从入门到精通</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="搜索"
+    aria-label="搜索"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/preamble.html" class="">
+      序</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第一章 · 基础入门</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/01-buy-and-install.html" class="">
+      1.1 购买与安装</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/02-launcher-and-versions.html" class="">
+      1.2 启动器与版本</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch01-getting-started/03-game-settings.html" class="">
+      1.3 游戏设置</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第二章 · 生存指南</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/01-first-day.html" class="">
+      2.1 第一天</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/02-gathering-and-crafting.html" class="">
+      2.2 采集与合成</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/03-mining.html" class="">
+      2.3 采矿技术</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/04-farming.html" class="">
+      2.4 农牧养殖</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/05-villagers.html" class="">
+      2.5 村民与交易</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/03-combat-and-exploration.html" class="">
+      2.6 战斗与探索</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/07-enchanting.html" class="">
+      2.7 附魔与药水</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-survival/04-nether-and-end.html" class="">
+      2.8 下界与末地</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第三章 · 建造美学</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/01-basics.html" class="">
+      3.1 建筑基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/02-styles.html" class="">
+      3.2 风格与设计</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/03-terraforming.html" class="">
+      3.3 地形改造</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/04-furniture.html" class="">
+      3.4 实用家具</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/05-roofs-and-details.html" class="">
+      3.5 屋顶与细节</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/06-palette-and-materials.html" class="">
+      3.6 调色板与材料</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch03-building/07-underwater-and-special.html" class="">
+      3.7 水下与特殊环境建筑</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第四章 · 红石工程</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/01-basics.html" class="">
+      4.1 红石基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/02-logic-circuits.html" class="">
+      4.2 逻辑电路</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/03-auto-farms.html" class="">
+      4.3 自动化农场</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/04-timers-and-clocks.html" class="">
+      4.4 计时器与时钟</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/05-piston-machines.html" class="">
+      4.5 活塞机械</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/06-storage-and-sorting.html" class="">
+      4.6 存储与分类系统</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch04-redstone/07-advanced-projects.html" class="">
+      4.7 红石进阶项目</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第五章 · 服务器与联机</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/01-ways-to-connect.html" class="">
+      5.1 联机方式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/02-server-setup.html" class="">
+      5.2 服务器搭建</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/03-realms.html" class="">
+      5.3 领域服</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/04-server-management.html" class="">
+      5.4 服务器维护与管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch05-multiplayer/05-pvp.html" class="">
+      5.5 PvP 入门</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第六章 · 模组与资源包</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/01-mod-loaders.html" class="">
+      6.1 模组加载器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/02-shaders-and-textures.html" class="">
+      6.2 光影与材质</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/03-recommended-mods.html" class="">
+      6.3 推荐模组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/04-optimization-and-qol.html" class="">
+      6.4 优化与辅助模组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch06-mods/05-modpacks.html" class="">
+      6.5 整合包入门</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+  
+
+  
+    <span class="">
+      第七章 · 命令与指令方块</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/01-basic-commands.html" class="">
+      7.1 基础命令</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/02-command-blocks.html" class="">
+      7.2 指令方块</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/03-datapacks.html" class="">
+      7.3 数据包</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/04-command-reference.html" class="">
+      7.4 常用命令速查表</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch07-commands/05-functions-and-advanced.html" class="">
+      7.5 函数与数据包进阶</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/appendix.html" class="">
+      附录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/ch02-general/01-combat-and-exploration.html" class="active">
+      2.1 战斗与探索</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+  
+
+  
+    <a href="/docs/afterwords.html" class="">
+      后记</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>2.1 战斗与探索</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#21-战斗与探索">2.1 战斗与探索</a>
+      <ul>
+        <li><a href="#1-战斗机制基础">1. 战斗机制基础</a>
+          <ul>
+            <li><a href="#攻击指示器冷却槽">攻击指示器（冷却槽）</a></li>
+            <li><a href="#暴击跳劈">暴击（跳劈）</a></li>
+            <li><a href="#疾跑击退">疾跑击退</a></li>
+            <li><a href="#受击无敌帧">受击无敌帧</a></li>
+          </ul>
+        </li>
+        <li><a href="#2-武器与装备">2. 武器与装备</a>
+          <ul>
+            <li><a href="#剑还是斧">剑还是斧？</a></li>
+            <li><a href="#盾牌新手的免死金牌">盾牌：新手的「免死金牌」</a></li>
+            <li><a href="#盔甲速览">盔甲速览</a></li>
+            <li><a href="#后勤补给">后勤补给</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-近战实战技巧">3. 近战实战技巧</a>
+          <ul>
+            <li><a href="#基础步法打一退一">基础步法：打一退一</a></li>
+            <li><a href="#修脚战术针对末影人等-2-格高以上的生物">修脚战术（针对末影人等 2 格高以上的生物）</a></li>
+            <li><a href="#环境杀手">环境杀手</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-远程战斗入门">4. 远程战斗入门</a>
+          <ul>
+            <li><a href="#弓的基础">弓的基础</a></li>
+            <li><a href="#狙击战术">狙击战术</a></li>
+            <li><a href="#风筝流边打边退">风筝流（边打边退）</a></li>
+            <li><a href="#弩简介">弩简介</a></li>
+          </ul>
+        </li>
+        <li><a href="#5-四大常见怪物图鉴">5. 四大常见怪物图鉴</a>
+          <ul>
+            <li><a href="#1-僵尸">1. 僵尸</a></li>
+            <li><a href="#2-骷髅小白">2. 骷髅（小白）</a></li>
+            <li><a href="#3-苦力怕">3. 苦力怕</a></li>
+            <li><a href="#4-蜘蛛">4. 蜘蛛</a></li>
+          </ul>
+        </li>
+        <li><a href="#6-进阶战术简介">6. 进阶战术简介</a>
+          <ul>
+            <li><a href="#陷阱入门">陷阱入门</a></li>
+            <li><a href="#tnt-陷阱">TNT 陷阱</a></li>
+            <li><a href="#隐身突袭">隐身突袭</a></li>
+            <li><a href="#空战基础后期">空战基础（后期）</a></li>
+          </ul>
+        </li>
+        <li><a href="#7-探索准备">7. 探索准备</a>
+          <ul>
+            <li><a href="#必备物品清单">必备物品清单</a></li>
+            <li><a href="#离开基地前">离开基地前</a></li>
+          </ul>
+        </li>
+        <li><a href="#8-探险中的注意事项">8. 探险中的注意事项</a>
+          <ul>
+            <li><a href="#移动与旅行">移动与旅行</a></li>
+            <li><a href="#食物管理">食物管理</a></li>
+            <li><a href="#避免摔落">避免摔落</a></li>
+            <li><a href="#亮度与视野">亮度与视野</a></li>
+            <li><a href="#下界探险特别提醒">下界探险特别提醒</a></li>
+            <li><a href="#雷暴天气">雷暴天气</a></li>
+          </ul>
+        </li>
+        <li><a href="#9-紧急避难与夜间生存">9. 紧急避难与夜间生存</a>
+          <ul>
+            <li><a href="#挖三填一">挖三填一</a></li>
+            <li><a href="#支柱跳跃避难">支柱跳跃避难</a></li>
+            <li><a href="#单人暂停">单人暂停</a></li>
+          </ul>
+        </li>
+        <li><a href="#10-寻找结构与生物群系">10. 寻找结构与生物群系</a>
+          <ul>
+            <li><a href="#利用村民和地图">利用村民和地图</a></li>
+            <li><a href="#顺着方向探索">顺着方向探索</a></li>
+            <li><a href="#快速定位高级技巧">快速定位（高级技巧）</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="21-战斗与探索">2.1 战斗与探索<a class="anchor" href="#21-%e6%88%98%e6%96%97%e4%b8%8e%e6%8e%a2%e7%b4%a2">#</a></h1>
+<blockquote class='book-hint note'>
+<p><strong>基于版本</strong>：Java 版 26.2 · 生存模式</p></blockquote><blockquote class='book-hint tip'>
+<p><strong>关于 PvP 的说明</strong>：本节专门针对 <strong>PvE（玩家对战环境 / 怪物）</strong> 的生存战斗技巧。玩家之间的对战（PvP）进阶内容将在后续章节中深入探讨。</p></blockquote><p>无论是为了在漆黑的矿洞中存活，还是为了保卫村庄、探索下界，战斗都是 Minecraft 生存中不可或缺的一环。掌握战斗技巧，你将不再惧怕黑夜。</p>
+<hr>
+<h2 id="1-战斗机制基础">1. 战斗机制基础<a class="anchor" href="#1-%e6%88%98%e6%96%97%e6%9c%ba%e5%88%b6%e5%9f%ba%e7%a1%80">#</a></h2>
+<p>如果你曾玩过早期 Minecraft（1.8 以前版本），你可能会习惯疯狂点击鼠标来输出伤害。但在现代 Java 版中，战斗系统已经彻底重做——不再是无脑连点的时代。</p>
+<h3 id="攻击指示器冷却槽">攻击指示器（冷却槽）<a class="anchor" href="#%e6%94%bb%e5%87%bb%e6%8c%87%e7%a4%ba%e5%99%a8%e5%86%b7%e5%8d%b4%e6%a7%bd">#</a></h3>
+<p>挥动武器后，屏幕准星下方（或快捷栏旁边）会出现一个<strong>剑形图标</strong>，它代表武器的攻击冷却。</p>
+<ul>
+<li><strong>满蓄力攻击</strong>：等待图标完全充满后挥动武器，造成 100% 面板伤害，并可触发横扫等特殊效果。</li>
+<li><strong>未蓄力攻击</strong>：冷却未满时强行攻击，伤害大幅降低（俗称「刮痧」），对僵尸可能只有微弱的 1 点伤害。</li>
+</ul>
+<blockquote class='book-hint important'>
+<p><strong>核心准则</strong>：掌握攻击节奏。满蓄力砍一刀 → 后撤半步等待冷却 → 再砍第二刀。节奏感是生存战斗的第一课。</p></blockquote><h3 id="暴击跳劈">暴击（跳劈）<a class="anchor" href="#%e6%9a%b4%e5%87%bb%e8%b7%b3%e5%8a%88">#</a></h3>
+<p>当你<strong>在跳跃下落过程中</strong>击中目标时，会触发暴击（Critical Hit），造成 <strong>150%</strong> 的巨额伤害。</p>
+<ul>
+<li><strong>标志</strong>：怪物身上爆出「星星」状魔法粒子，伴随沉闷的打击音效。</li>
+<li><strong>连招</strong>：疾跑接近 → 跳起 → 下落时挥砍 → 迅速后退。石斧跳劈可直接秒杀大部分无甲生物。</li>
+</ul>
+<blockquote class='book-hint tip'>
+<p>如果攻击速度低于 1.5（如斧），第二次跳起时冷却来不及恢复，因此跳劈更适合剑。</p></blockquote><h3 id="疾跑击退">疾跑击退<a class="anchor" href="#%e7%96%be%e8%b7%91%e5%87%bb%e9%80%80">#</a></h3>
+<p>处于<strong>疾跑状态</strong>（双击 W 或按住 Ctrl）时击中怪物，会产生极强击退效果，将目标打飞数格远。苦力怕靠近时，若来不及秒杀，疾跑一剑将其击飞可打断自爆倒计时。</p>
+<h3 id="受击无敌帧">受击无敌帧<a class="anchor" href="#%e5%8f%97%e5%87%bb%e6%97%a0%e6%95%8c%e5%b8%a7">#</a></h3>
+<p>怪物被击中后会全身发红约 0.5 秒，在此期间<strong>无敌</strong>，任何攻击都不会造成额外伤害。不要在怪物发红时连点鼠标浪费武器耐久。</p>
+<hr>
+<h2 id="2-武器与装备">2. 武器与装备<a class="anchor" href="#2-%e6%ad%a6%e5%99%a8%e4%b8%8e%e8%a3%85%e5%a4%87">#</a></h2>
+<h3 id="剑还是斧">剑还是斧？<a class="anchor" href="#%e5%89%91%e8%bf%98%e6%98%af%e6%96%a7">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th></th>
+					<th>剑（Sword）</th>
+					<th>斧（Axe）</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>攻速</strong></td>
+					<td>快（1.6 次/秒）</td>
+					<td>慢（约 1 次/秒）</td>
+			</tr>
+			<tr>
+					<td><strong>单次伤害</strong></td>
+					<td>中等</td>
+					<td>高（同级最高）</td>
+			</tr>
+			<tr>
+					<td><strong>特殊效果</strong></td>
+					<td>横扫之刃（群体击退+伤害）</td>
+					<td>破盾（PvP）、剥皮原木、除锈</td>
+			</tr>
+			<tr>
+					<td><strong>适合场景</strong></td>
+					<td>被围攻、日常清怪</td>
+					<td>秒杀高威胁单体</td>
+			</tr>
+			<tr>
+					<td><strong>推荐人群</strong></td>
+					<td><strong>新手首选</strong></td>
+					<td>有一定走位基础后尝试</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="盾牌新手的免死金牌">盾牌：新手的「免死金牌」<a class="anchor" href="#%e7%9b%be%e7%89%8c%e6%96%b0%e6%89%8b%e7%9a%84%e5%85%8d%e6%ad%bb%e9%87%91%e7%89%8c">#</a></h3>
+<p>只需要 1 块铁锭和 6 块木板即可合成盾牌。它的合成配方如下：</p>
+<div class="mc-crafting-wrapper" id="mc-crafting-0">
+  <div class="mc-crafting-container">
+    <div class="mc-crafting-grid"><div class="mc-crafting-slot" data-items="oak_planks,spruce_planks,birch_planks,jungle_planks,acacia_planks,dark_oak_planks">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="iron_ingot">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="oak_planks,spruce_planks,birch_planks,jungle_planks,acacia_planks,dark_oak_planks">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="oak_planks,spruce_planks,birch_planks,jungle_planks,acacia_planks,dark_oak_planks">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="oak_planks,spruce_planks,birch_planks,jungle_planks,acacia_planks,dark_oak_planks">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot" data-items="oak_planks,spruce_planks,birch_planks,jungle_planks,acacia_planks,dark_oak_planks">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div><div class="mc-crafting-slot" data-items="oak_planks,spruce_planks,birch_planks,jungle_planks,acacia_planks,dark_oak_planks">
+            <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" />
+          </div><div class="mc-crafting-slot empty"></div></div>
+    
+    <div class="mc-crafting-arrow"></div><div class="mc-crafting-result-slot" data-items="shield">
+      <img class="mc-item-img" src="/images/items/empty.png" style="opacity: 0;" /></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  
+  const mcTooltips = {
+    
+    "oak_planks": { title: "橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "spruce_planks": { title: "云杉木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "birch_planks": { title: "白桦木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "jungle_planks": { title: "丛林木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "acacia_planks": { title: "金合欢木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "dark_oak_planks": { title: "深色橡木木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "mangrove_planks": { title: "红树木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "cherry_planks": { title: "樱花木板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "bamboo_planks": { title: "竹板", subtitle: "方块 - 基础的建筑与合成材料" },
+    "crimson_planks": { title: "绯红木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "warped_planks": { title: "诡异木板", subtitle: "方块 - 来自下界，具有防火特性" },
+    "stick": { title: "木棍", subtitle: "材料 - 制作工具手柄、火把与梯子的基础必需品" },
+    "coal": { title: "煤炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 用于制作火把" },
+    "charcoal": { title: "木炭", subtitle: "材料 - 燃料 (可燃烧 80 秒) | 通过在熔炉中烧炼木头获得" },
+    "cobblestone": { title: "圆石", subtitle: "方块 - 石器时代的核心建筑与合成材料" },
+    "raw_iron": { title: "粗铁", subtitle: "材料 - 铁矿石开采产物，可冶炼成铁锭" },
+    "iron_ingot": { title: "铁锭", subtitle: "材料 - 金属时代的核心工业与工具合成材料" },
+    "diamond": { title: "钻石", subtitle: "材料 - 极其坚硬且珍贵的高级合成材料" },
+    "netherite_ingot": { title: "下界合金锭", subtitle: "材料 - 极高强度的下界金属，具备防火防熔岩特性" },
+    "netherite_upgrade_smithing_template": { title: "下界合金升级锻造模板", subtitle: "模板 - 仅在下界荒地遗迹中发现，用于升级钻石装备" },
+
+    
+    "wooden_pickaxe": { title: "木镐", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2 | 耐久度: 59" },
+    "wooden_shovel": { title: "木铲", subtitle: "工具 - 挖掘等级: 0 (木质) | 攻击伤害: +2.5 | 耐久度: 59" },
+    "wooden_axe": { title: "木斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +7 | 耐久度: 59" },
+    "wooden_sword": { title: "木剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +4 | 耐久度: 59" },
+    "wooden_hoe": { title: "木锄", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +1 | 耐久度: 59" },
+
+    
+    "stone_pickaxe": { title: "石镐", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3 | 耐久度: 131" },
+    "stone_shovel": { title: "石铲", subtitle: "工具 - 挖掘等级: 1 (石质) | 攻击伤害: +3.5 | 耐久度: 131" },
+    "stone_axe": { title: "石斧", subtitle: "工具 - 攻击速度: 0.8 | 攻击伤害: +9 | 耐久度: 131" },
+    "stone_sword": { title: "石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +5 | 耐久度: 131" },
+    "stone_hoe": { title: "石锄", subtitle: "工具 - 攻击速度: 2.0 | 攻击伤害: +1 | 耐久度: 131" },
+
+    
+    "iron_pickaxe": { title: "铁镐", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4 | 耐久度: 250" },
+    "iron_shovel": { title: "铁铲", subtitle: "工具 - 挖掘等级: 2 (铁质) | 攻击伤害: +4.5 | 耐久度: 250" },
+    "iron_axe": { title: "铁斧", subtitle: "工具 - 攻击速度: 0.9 | 攻击伤害: +9 | 耐久度: 250" },
+    "iron_sword": { title: "铁剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +6 | 耐久度: 250" },
+    "iron_hoe": { title: "铁锄", subtitle: "工具 - 攻击速度: 3.0 | 攻击伤害: +1 | 耐久度: 250" },
+
+    
+    "diamond_pickaxe": { title: "钻石镐", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5 | 耐久度: 1561" },
+    "diamond_shovel": { title: "钻石铲", subtitle: "工具 - 挖掘等级: 3 (钻石) | 攻击伤害: +5.5 | 耐久度: 1561" },
+    "diamond_axe": { title: "钻石斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +9 | 耐久度: 1561" },
+    "diamond_sword": { title: "钻石剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +7 | 耐久度: 1561" },
+    "diamond_hoe": { title: "钻石锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 | 耐久度: 1561" },
+
+    
+    "netherite_pickaxe": { title: "下界合金镐", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_shovel": { title: "下界合金铲", subtitle: "工具 - 挖掘等级: 4 (终极) | 攻击伤害: +6.5 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_axe": { title: "下界合金斧", subtitle: "工具 - 攻击速度: 1.0 | 攻击伤害: +10 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_sword": { title: "下界合金剑", subtitle: "武器 - 攻击速度: 1.6 | 攻击伤害: +8 (防火防熔岩) | 耐久度: 2031" },
+    "netherite_hoe": { title: "下界合金锄", subtitle: "工具 - 攻击速度: 4.0 | 攻击伤害: +1 (防火防熔岩) | 耐久度: 2031" },
+
+    
+    "furnace": { title: "熔炉", subtitle: "方块 - 用于冶炼矿石与烹饪食物的传统加热方块" },
+    "crafting_table": { title: "工作台", subtitle: "方块 - 提供 3x3 网格的合成核心方块" },
+    "smithing_table": { title: "锻造台", subtitle: "方块 - 配合锻造模板升级高级武器装备的工作方块" }
+  };
+
+  
+  let tooltip = document.querySelector(".mc-crafting-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "mc-crafting-tooltip";
+    tooltip.innerHTML = '<span class="mc-tooltip-title"></span><span class="mc-tooltip-subtitle"></span>';
+    document.body.appendChild(tooltip);
+  }
+
+  const container = document.getElementById("mc-crafting-0");
+  const slots = container.querySelectorAll(".mc-crafting-slot, .mc-crafting-result-slot");
+
+  slots.forEach(slot => {
+    if (slot.classList.contains("empty")) return;
+    
+    const itemsData = slot.getAttribute("data-items");
+    if (!itemsData) return;
+    
+    const items = itemsData.split(",").map(i => i.trim());
+    let currentIndex = 0;
+    const img = slot.querySelector("img");
+
+    
+    function updateSlot() {
+      const itemKey = items[currentIndex];
+      if (itemKey === "empty" || !itemKey) {
+        img.style.opacity = 0;
+        img.src = "";
+        slot.setAttribute("data-active-item", "");
+      } else {
+        
+        img.onload = function() {
+          if (this.naturalWidth >= 256) {
+            this.style.setProperty("image-rendering", "auto", "important");
+          } else {
+            this.style.setProperty("image-rendering", "pixelated", "important");
+          }
+        };
+        img.src = "/images/items/" + itemKey + ".png";
+        img.style.opacity = 1;
+        slot.setAttribute("data-active-item", itemKey);
+      }
+    }
+    updateSlot();
+
+    
+    if (items.length > 1) {
+      setInterval(() => {
+        img.style.opacity = 0;
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % items.length;
+          updateSlot();
+        }, 150);
+      }, 2000);
+    }
+
+    
+    slot.addEventListener("mouseenter", (e) => {
+      const activeItem = slot.getAttribute("data-active-item");
+      if (!activeItem) return;
+
+      const translation = mcTooltips[activeItem] || { title: activeItem, subtitle: "物品" };
+      tooltip.querySelector(".mc-tooltip-title").textContent = translation.title;
+      tooltip.querySelector(".mc-tooltip-subtitle").textContent = translation.subtitle;
+      tooltip.style.display = "block";
+    });
+
+    slot.addEventListener("mousemove", (e) => {
+      
+      tooltip.style.left = (e.clientX + 12) + "px";
+      tooltip.style.top = (e.clientY - 12) + "px";
+    });
+
+    slot.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+})();
+</script>
+
+<p>它能为你挡下：</p>
+<ul>
+<li>骷髅的箭矢（甚至可以弹反回去）</li>
+<li>苦力怕的爆炸（100% 吸收正面爆炸伤害）</li>
+<li>绝大多数近战攻击</li>
+</ul>
+<p>将盾牌放在副手槽（按 F 键切换），遭遇危险时<strong>长按鼠标右键</strong>举盾。注意举盾时移速降至潜行速度，且只防御正前方。</p>
+<h3 id="盔甲速览">盔甲速览<a class="anchor" href="#%e7%9b%94%e7%94%b2%e9%80%9f%e8%a7%88">#</a></h3>
+<p>要想在战斗中存活，一套可靠的盔甲必不可少。以下是生存模式中最常用的四套盔甲：</p>
+<h4 id="1-皮革盔甲-leather-armor">1. 皮革盔甲 (Leather Armor)<a class="anchor" href="#1-%e7%9a%ae%e9%9d%a9%e7%9b%94%e7%94%b2-leather-armor">#</a></h4>
+<div class="mc-gui-panel">
+<div class="mc-crafting-slot" data-tooltip-title="皮革帽子" data-tooltip-subtitle="护甲值: +1"><img src="/images/items/leather_helmet_default.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="皮革外套" data-tooltip-subtitle="护甲值: +3"><img src="/images/items/leather_chestplate_default.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="皮革裤子" data-tooltip-subtitle="护甲值: +2"><img src="/images/items/leather_leggings_default.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="皮革靴子" data-tooltip-subtitle="护甲值: +1"><img src="/images/items/leather_boots_default.png"  /></div>
+</div>
+- **护甲值（全套）**：7 点（护甲条 3.5 格）
+- **获取难度**：低（杀牛或马获取皮革）
+- **介绍**：防御力极低，主要用于前期过渡，或者通过炼药锅染色进行外观装饰。值得一提的是，穿戴皮革靴子可以防止你陷入雪山的细雪方块中。
+<h4 id="2-铁盔甲-iron-armor">2. 铁盔甲 (Iron Armor)<a class="anchor" href="#2-%e9%93%81%e7%9b%94%e7%94%b2-iron-armor">#</a></h4>
+<div class="mc-gui-panel">
+<div class="mc-crafting-slot" data-tooltip-title="铁头盔" data-tooltip-subtitle="护甲值: +2"><img src="/images/items/iron_helmet.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="铁胸甲" data-tooltip-subtitle="护甲值: +6"><img src="/images/items/iron_chestplate.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="铁护腿" data-tooltip-subtitle="护甲值: +5"><img src="/images/items/iron_leggings.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="铁靴子" data-tooltip-subtitle="护甲值: +2"><img src="/images/items/iron_boots.png"  /></div>
+</div>
+- **护甲值（全套）**：15 点（护甲条 7.5 格）
+- **获取难度**：中等（挖铁矿并烧炼，需要 24 块铁锭）
+- **介绍**：**新手最具性价比的防御保障！** 强烈建议在下大型深层矿洞之前先凑齐一套铁甲，它能大幅度降低僵尸、骷髅的普攻伤害，极大提高容错率。
+<h4 id="3-钻石盔甲-diamond-armor">3. 钻石盔甲 (Diamond Armor)<a class="anchor" href="#3-%e9%92%bb%e7%9f%b3%e7%9b%94%e7%94%b2-diamond-armor">#</a></h4>
+<div class="mc-gui-panel">
+<div class="mc-crafting-slot" data-tooltip-title="钻石头盔" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +2"><img src="/images/items/diamond_helmet.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="钻石胸甲" data-tooltip-subtitle="护甲值: +8 | 盔甲韧性: +2"><img src="/images/items/diamond_chestplate.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="钻石护腿" data-tooltip-subtitle="护甲值: +6 | 盔甲韧性: +2"><img src="/images/items/diamond_leggings.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="钻石靴子" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +2"><img src="/images/items/diamond_boots.png"  /></div>
+</div>
+- **护甲值（全套）**：20 点（满格 10 格），并提供额外的“盔甲韧性”
+- **获取难度**：高（在深层地下 Y=-59 附近挖矿，或通过盔甲匠村民交易）
+- **介绍**：中后期的标准神装。配合附魔（例如“保护 IV”），即使苦力怕在你脸前爆炸也能强行保住一命。
+<h4 id="4-下界合金盔甲-netherite-armor">4. 下界合金盔甲 (Netherite Armor)<a class="anchor" href="#4-%e4%b8%8b%e7%95%8c%e5%90%88%e9%87%91%e7%9b%94%e7%94%b2-netherite-armor">#</a></h4>
+<div class="mc-gui-panel">
+<div class="mc-crafting-slot" data-tooltip-title="下界合金头盔" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_helmet.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="下界合金胸甲" data-tooltip-subtitle="护甲值: +8 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_chestplate.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="下界合金护腿" data-tooltip-subtitle="护甲值: +6 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_leggings.png"  /></div> <div class="mc-crafting-slot" data-tooltip-title="下界合金靴子" data-tooltip-subtitle="护甲值: +3 | 盔甲韧性: +3 | 击退抗性: +1"><img src="/images/items/netherite_boots.png"  /></div>
+</div>
+- **护甲值（全套）**：20 点，提供全游戏最高的韧性和独有的“击退抗性”
+- **获取难度**：极高（需要钻石甲作为底子，并在极度危险的下界深处寻找远古残骸，用锻造台升级）
+- **介绍**：Minecraft 中的终极盔甲。不仅坚不可摧，被攻击时极难被打飞（防岩浆击落神技）。更神奇的是，下界合金装备是不怕火烧的——如果不慎掉入岩浆死亡，装备会漂浮在岩浆表面不会被烧毁！
+<blockquote class='book-hint note'>
+<p>除了上述常规盔甲，游戏中还有一些具有特殊功能的防具，例如能提供水下呼吸的<strong>海龟壳</strong>（<span class="mc-crafting-slot" data-tooltip-title="海龟壳" data-tooltip-subtitle="护甲值: +2 | 赋予水下呼吸效果" style="display: inline-flex; vertical-align: middle; width: 48px; height: 48px; margin: 0 4px;"><img src="/images/items/turtle_helmet.png" style="image-rendering: pixelated; width: 40px; height: 40px;" /></span>），以及后期能用来在空中滑翔的<strong>鞘翅</strong>，我们将在后续章节详细讲解。</p></blockquote><h3 id="后勤补给">后勤补给<a class="anchor" href="#%e5%90%8e%e5%8b%a4%e8%a1%a5%e7%bb%99">#</a></h3>
+<ul>
+<li><strong>食物</strong>：随身携带高饱和度食物（熟牛排、熟猪排、金胡萝卜）。饥饿值全满时生命会自动恢复。残血时第一件事是找安全角落进食，不是反击。</li>
+<li><strong>水桶</strong>：被岩浆烫到或被火焰点燃时，脚下立刻倒水可救命；怪物追击时倒水可减缓其移速。</li>
+</ul>
+<hr>
+<h2 id="3-近战实战技巧">3. 近战实战技巧<a class="anchor" href="#3-%e8%bf%91%e6%88%98%e5%ae%9e%e6%88%98%e6%8a%80%e5%b7%a7">#</a></h2>
+<h3 id="基础步法打一退一">基础步法：打一退一<a class="anchor" href="#%e5%9f%ba%e7%a1%80%e6%ad%a5%e6%b3%95%e6%89%93%e4%b8%80%e9%80%80%e4%b8%80">#</a></h3>
+<p>面对单个近战怪物：</p>
+<ol>
+<li>持盾逼近（如有盾牌）</li>
+<li>进入攻击范围后放下盾牌，打出一次满蓄力攻击</li>
+<li>立刻<strong>向后撤退</strong>或重新举盾</li>
+<li>利用武器的击退效果保持安全距离，等待冷却</li>
+<li>重复上述步骤</li>
+</ol>
+<h3 id="修脚战术针对末影人等-2-格高以上的生物">修脚战术（针对末影人等 2 格高以上的生物）<a class="anchor" href="#%e4%bf%ae%e8%84%9a%e6%88%98%e6%9c%af%e9%92%88%e5%af%b9%e6%9c%ab%e5%bd%b1%e4%ba%ba%e7%ad%89-2-%e6%a0%bc%e9%ab%98%e4%bb%a5%e4%b8%8a%e7%9a%84%e7%94%9f%e7%89%a9">#</a></h3>
+<p>末影人攻击力极高且会瞬移，但它有 3 格高。利用这个特性：</p>
+<ol>
+<li>搭一个 2 格高的庇护所（在自己头顶放置方块）</li>
+<li>末影人无法钻入 2 格高的空间</li>
+<li>你可以在安全的遮蔽物下攻击它的下半身（俗称「修脚」）</li>
+<li>它只能在外面无能狂怒</li>
+</ol>
+<p>此战术同样适用于铁傀儡、劫掠兽等高大生物。</p>
+<h3 id="环境杀手">环境杀手<a class="anchor" href="#%e7%8e%af%e5%a2%83%e6%9d%80%e6%89%8b">#</a></h3>
+<p>利用地形优势消灭敌人：</p>
+<ul>
+<li><strong>悬崖击落</strong>：用击退效果的攻击将怪物打入深渊或熔岩中。</li>
+<li><strong>高处狙击</strong>：爬上树顶或土柱，居高临下攻击，近战怪物无可奈何。</li>
+<li><strong>岩浆块 / 营火</strong>：在脚下放置，烫死追击的近战怪物（注意别烫到自己）。</li>
+<li><strong>1 格通道</strong>：躲进 1 格宽的通道，蜘蛛和劫掠兽等宽体怪物无法进入。</li>
+</ul>
+<hr>
+<h2 id="4-远程战斗入门">4. 远程战斗入门<a class="anchor" href="#4-%e8%bf%9c%e7%a8%8b%e6%88%98%e6%96%97%e5%85%a5%e9%97%a8">#</a></h2>
+<h3 id="弓的基础">弓的基础<a class="anchor" href="#%e5%bc%93%e7%9a%84%e5%9f%ba%e7%a1%80">#</a></h3>
+<p>弓是 Minecraft 中最基础的远程武器。使用弓的要点：</p>
+<ul>
+<li><strong>蓄力</strong>：长按右键拉弓，拉满时箭矢轨迹最直、伤害最高。未拉满的箭不仅伤害低，轨迹也会明显下垂。</li>
+<li><strong>提前量</strong>：箭矢有飞行轨迹和重力下坠，射击移动目标时需预判其走位。</li>
+<li><strong>高处优势</strong>：站在高处向下射箭，重力会帮你提高命中率。</li>
+</ul>
+<p>弓的附魔推荐：<strong>力量 V</strong>（增伤）、<strong>冲击 II</strong>（击退）、<strong>火矢</strong>（点燃）、<strong>无限</strong>（省箭）。</p>
+<h3 id="狙击战术">狙击战术<a class="anchor" href="#%e7%8b%99%e5%87%bb%e6%88%98%e6%9c%af">#</a></h3>
+<ul>
+<li>藏在隐蔽处或高处，利用地形优势逐一射杀怪物。</li>
+<li>攻击前确认身边安全——专注瞄准时容易被背后偷袭。</li>
+<li>尽量从<strong>背后</strong>发起攻击，怪物转身需要时间。</li>
+<li>对苦力怕、僵尸、蠹虫等近战怪物效果极佳。</li>
+</ul>
+<blockquote class='book-hint warning'>
+<p>狙击时容易忽视身边环境，先清空周围再开镜。</p></blockquote><h3 id="风筝流边打边退">风筝流（边打边退）<a class="anchor" href="#%e9%a3%8e%e7%ad%9d%e6%b5%81%e8%be%b9%e6%89%93%e8%be%b9%e9%80%80">#</a></h3>
+<p>对付移动缓慢的怪物（如僵尸）或远程敌人（如骷髅）：</p>
+<ol>
+<li>拉开距离后射一箭</li>
+<li>边后退边蓄力下一箭</li>
+<li>让敌人始终摸不到你</li>
+<li>配合盾牌防御骷髅的反击箭矢</li>
+</ol>
+<h3 id="弩简介">弩简介<a class="anchor" href="#%e5%bc%a9%e7%ae%80%e4%bb%8b">#</a></h3>
+<p>弩可以提前装填并储存，适合「预先准备、瞬间发射」的玩法：</p>
+<ul>
+<li><strong>优点</strong>：装填后可放入背包，需要时瞬间射出；可附魔多重射击（一次射 3 箭）或穿透（穿透多个目标）。</li>
+<li><strong>缺点</strong>：无法附魔无限和力量，单发伤害上限低于满附魔弓。</li>
+<li><strong>烟花弩</strong>：将烟花火箭装入弩，可造成范围爆炸伤害——后期强力 AOE 手段。</li>
+</ul>
+<hr>
+<h2 id="5-四大常见怪物图鉴">5. 四大常见怪物图鉴<a class="anchor" href="#5-%e5%9b%9b%e5%a4%a7%e5%b8%b8%e8%a7%81%e6%80%aa%e7%89%a9%e5%9b%be%e9%89%b4">#</a></h2>
+<h3 id="1-僵尸">1. 僵尸<a class="anchor" href="#1-%e5%83%b5%e5%b0%b8">#</a></h3>
+<ul>
+<li><strong>特点</strong>：移速缓慢，纯近战。偶尔穿戴盔甲或手持武器，水中会转化为溺尸。</li>
+<li><strong>应对</strong>：最易对付。打一退一即可。成群的僵尸用剑横扫一次性击退。小僵尸移速快但血量低，跳劈可秒杀。</li>
+</ul>
+<h3 id="2-骷髅小白">2. 骷髅（小白）<a class="anchor" href="#2-%e9%aa%b7%e9%ab%85%e5%b0%8f%e7%99%bd">#</a></h3>
+<ul>
+<li><strong>特点</strong>：远程射手，射速和精准度不低，水中也能射击。</li>
+<li><strong>应对</strong>：新手噩梦！<strong>不要在空旷地带直线冲</strong>。
+<ul>
+<li><strong>有盾牌</strong>：举盾挡一箭 → 趁拉弓间隔逼近 → 砍一刀 → 继续举盾。</li>
+<li><strong>无盾牌</strong>：利用树木、墙角等掩体，走 Z 字蛇形走位逼近。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-苦力怕">3. 苦力怕<a class="anchor" href="#3-%e8%8b%a6%e5%8a%9b%e6%80%95">#</a></h3>
+<ul>
+<li><strong>特点</strong>：全身绿色，走路无声。靠近玩家后嘶嘶作响，约 1.5 秒后剧烈爆炸，破坏地形且伤害极高。</li>
+<li><strong>应对</strong>：
+<ul>
+<li><strong>疾跑击退</strong>：听到嘶嘶声立刻疾跑向前砍一剑，将它打飞打断自爆。</li>
+<li><strong>举盾硬扛</strong>：跑不掉时原地举盾面对苦力怕，盾牌 100% 吸收爆炸伤害。</li>
+<li><strong>垫高打法</strong>：脚下垫 3 格方块，苦力怕无法爆炸。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-蜘蛛">4. 蜘蛛<a class="anchor" href="#4-%e8%9c%98%e8%9b%9b">#</a></h3>
+<ul>
+<li><strong>特点</strong>：2×1 格体型，速度极快，会爬墙，会跳跃扑击。白天阴凉处中立，晚上主动攻击。</li>
+<li><strong>应对</strong>：剑横扫可轻松命中。蜘蛛跳扑时在空中击中可将其打飞。躲进 1 格宽通道，蜘蛛进不来。</li>
+</ul>
+<hr>
+<h2 id="6-进阶战术简介">6. 进阶战术简介<a class="anchor" href="#6-%e8%bf%9b%e9%98%b6%e6%88%98%e6%9c%af%e7%ae%80%e4%bb%8b">#</a></h2>
+<p>以下战术需要一定资源和游戏理解，初学者了解即可，后期可返回查阅。</p>
+<h3 id="陷阱入门">陷阱入门<a class="anchor" href="#%e9%99%b7%e9%98%b1%e5%85%a5%e9%97%a8">#</a></h3>
+<p>在家周围挖掘 2 格深的坑，底部铺岩浆块或营火，顶部用活板门遮盖。夜晚怪物踩上活板门掉入坑中，被持续烫伤直至死亡。记住：<strong>岩浆块和营火也会伤害你</strong>，坑边做好围栏。</p>
+<h3 id="tnt-陷阱">TNT 陷阱<a class="anchor" href="#tnt-%e9%99%b7%e9%98%b1">#</a></h3>
+<p>在空地埋设 TNT，用木质压力板覆盖。用弓箭射击吸引怪物踩上陷阱，引爆 TNT 造成巨大伤害。缺点：会破坏地形和掉落物，不适合在家附近使用。</p>
+<h3 id="隐身突袭">隐身突袭<a class="anchor" href="#%e9%9a%90%e8%ba%ab%e7%aa%81%e8%a2%ad">#</a></h3>
+<p>饮下隐身药水后脱掉全部盔甲（隐身不会隐藏盔甲），持高伤害武器潜入怪物背后发动突袭。配合暴击可秒杀大部分普通怪物。</p>
+<h3 id="空战基础后期">空战基础（后期）<a class="anchor" href="#%e7%a9%ba%e6%88%98%e5%9f%ba%e7%a1%80%e5%90%8e%e6%9c%9f">#</a></h3>
+<p>获得鞘翅和烟花火箭后，你可以从空中俯冲攻击地面目标。用弩或弓箭轰炸掠夺者前哨站等露天结构，打完后拉高脱离——怪物无法反击空中的你。</p>
+<hr>
+<h2 id="7-探索准备">7. 探索准备<a class="anchor" href="#7-%e6%8e%a2%e7%b4%a2%e5%87%86%e5%a4%87">#</a></h2>
+<p>外出探险前，做好充分准备能极大提高生存率和效率。</p>
+<h3 id="必备物品清单">必备物品清单<a class="anchor" href="#%e5%bf%85%e5%a4%87%e7%89%a9%e5%93%81%e6%b8%85%e5%8d%95">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>类别</th>
+					<th>物品</th>
+					<th>建议数量</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>武器</td>
+					<td>剑 / 斧</td>
+					<td>1-2 把</td>
+					<td>铁质或以上；推荐副手配盾牌</td>
+			</tr>
+			<tr>
+					<td>工具</td>
+					<td>镐、斧、锹</td>
+					<td>各 1 把</td>
+					<td>铁质即可，便宜高效</td>
+			</tr>
+			<tr>
+					<td>光源</td>
+					<td>火把</td>
+					<td>至少 2 组（128 个）</td>
+					<td>洞穴中边走边插，既防刷怪又标记来路</td>
+			</tr>
+			<tr>
+					<td>食物</td>
+					<td>熟牛排 / 熟猪排</td>
+					<td>至少 1 组（64 个）</td>
+					<td>高恢复量；初期可用面包或烤马铃薯代替</td>
+			</tr>
+			<tr>
+					<td>方块</td>
+					<td>圆石 + 原木</td>
+					<td>各 1 组</td>
+					<td>搭桥、垫高、临时庇护所、补充工具</td>
+			</tr>
+			<tr>
+					<td>水桶</td>
+					<td>水桶</td>
+					<td>1 个</td>
+					<td>灭岩浆、灭火、免摔伤、推怪——无数用途</td>
+			</tr>
+			<tr>
+					<td>床</td>
+					<td>任意颜色</td>
+					<td>1 张</td>
+					<td>黄昏就地放置睡觉，跳过夜晚怪物潮；设置重生点</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="离开基地前">离开基地前<a class="anchor" href="#%e7%a6%bb%e5%bc%80%e5%9f%ba%e5%9c%b0%e5%89%8d">#</a></h3>
+<ul>
+<li><strong>存放贵重物品</strong>：把暂时不需要的贵重物品（如额外的钻石、绿宝石）存入基地箱子。外出时你总会需要更多背包空间。</li>
+<li><strong>确保基地安全</strong>：关好门，确保内部光线充足（防止怪物在内部生成），把驯服的狼、猫等安置在安全位置。</li>
+<li><strong>记下基地坐标</strong>：按 F3 查看 XYZ 坐标，用书与笔记下来，或用截图保存。迷路时这就是你的回家路。</li>
+</ul>
+<hr>
+<h2 id="8-探险中的注意事项">8. 探险中的注意事项<a class="anchor" href="#8-%e6%8e%a2%e9%99%a9%e4%b8%ad%e7%9a%84%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9">#</a></h2>
+<h3 id="移动与旅行">移动与旅行<a class="anchor" href="#%e7%a7%bb%e5%8a%a8%e4%b8%8e%e6%97%85%e8%a1%8c">#</a></h3>
+<ul>
+<li><strong>疾跑跳跃</strong>：双击 W 或按住 Ctrl 疾跑，同时跳跃可移动得更快，但会额外消耗饥饿值。</li>
+<li><strong>下界快速旅行</strong>：下界坐标与主世界是 1:8 的比例，利用下界传送门可大幅缩短长途旅行时间。</li>
+<li><strong>搭乘生物</strong>：驯服马、驴或骆驼可快速在陆地移动且不消耗饥饿值。乘船是水面旅行最便捷的方式，运输船还能提供额外存储空间。</li>
+<li><strong>末影珍珠</strong>：可瞬间传送至远处，但每次使用造成 2.5 颗心的摔落伤害。建议配合摔落缓冲附魔的靴子使用。</li>
+</ul>
+<h3 id="食物管理">食物管理<a class="anchor" href="#%e9%a3%9f%e7%89%a9%e7%ae%a1%e7%90%86">#</a></h3>
+<ul>
+<li>优先携带高饱和度食物（熟牛排 &gt; 熟猪排 &gt; 面包 &gt; 烤马铃薯）。</li>
+<li>不建议吃蜘蛛眼或河豚——中毒效果会让你得不偿失。</li>
+<li><strong>腐肉</strong>：虽然可能带来饥饿效果，但打僵尸就能大量获取，是危急时刻的救急食品。</li>
+<li>用附带火焰附加魔咒的剑或火矢弓猎杀动物，直接掉落熟肉，省去烧炼。</li>
+</ul>
+<h3 id="避免摔落">避免摔落<a class="anchor" href="#%e9%81%bf%e5%85%8d%e6%91%94%e8%90%bd">#</a></h3>
+<ul>
+<li>在悬崖边缘按住 Shift <strong>潜行</strong>行进，绝不会主动摔落。</li>
+<li>不慎坠落时，迅速向脚下放置水桶（不在下界）或投掷末影珍珠，可免除摔落伤害。</li>
+<li>干草捆可将摔落伤害降低至 20%，紧急时在脚下放置可保命。</li>
+</ul>
+<h3 id="亮度与视野">亮度与视野<a class="anchor" href="#%e4%ba%ae%e5%ba%a6%e4%b8%8e%e8%a7%86%e9%87%8e">#</a></h3>
+<ul>
+<li>怪物只在亮度为 0 的方块上生成。按 F3 查看调试屏幕中的 <code>light</code> 值，确认哪些区域亮度为 0。</li>
+<li>沿途每隔约 26 格放置一个火把（火把亮度为 14），确保整条路线不会刷怪。</li>
+<li>将游戏亮度设置调至「明亮」（默认 50%），既保护视力又减少对火把的依赖。</li>
+</ul>
+<h3 id="下界探险特别提醒">下界探险特别提醒<a class="anchor" href="#%e4%b8%8b%e7%95%8c%e6%8e%a2%e9%99%a9%e7%89%b9%e5%88%ab%e6%8f%90%e9%86%92">#</a></h3>
+<ul>
+<li>不要把最珍贵的装备带入下界——在熔岩中死亡会连物品一起烧毁。</li>
+<li>建造下界传送门时，推荐在主世界 Y≥20 的高度搭建，避免出现在熔岩海上。</li>
+<li><strong>必带打火石</strong>：恶魂的火球可能意外摧毁传送门方块，打火石可重新点燃传送门。</li>
+<li>下界无法倒水，但可用炼药锅盛水灭火，或用细雪桶替代水桶。</li>
+<li>穿一件金质装备（推荐靴子），防止猪灵主动攻击你。</li>
+</ul>
+<h3 id="雷暴天气">雷暴天气<a class="anchor" href="#%e9%9b%b7%e6%9a%b4%e5%a4%a9%e6%b0%94">#</a></h3>
+<p>雷暴时即使白天也暗到会刷怪。闪电可点燃树木和建筑，还会将猪变为僵尸猪灵、村民变为女巫、苦力怕变为闪电苦力怕（爆炸威力翻倍）。遇到雷暴最好睡觉跳过，不要外出。</p>
+<hr>
+<h2 id="9-紧急避难与夜间生存">9. 紧急避难与夜间生存<a class="anchor" href="#9-%e7%b4%a7%e6%80%a5%e9%81%bf%e9%9a%be%e4%b8%8e%e5%a4%9c%e9%97%b4%e7%94%9f%e5%ad%98">#</a></h2>
+<h3 id="挖三填一">挖三填一<a class="anchor" href="#%e6%8c%96%e4%b8%89%e5%a1%ab%e4%b8%80">#</a></h3>
+<p>最简单的紧急避难法——向下挖掘 3 格，在头顶放置 1 格方块。数秒内即可完成，足以安全等待天亮。</p>
+<h3 id="支柱跳跃避难">支柱跳跃避难<a class="anchor" href="#%e6%94%af%e6%9f%b1%e8%b7%b3%e8%b7%83%e9%81%bf%e9%9a%be">#</a></h3>
+<p>搭一根至少 12 格高的柱子，顶端建 3×3 平台。骷髅无法射击高度落差超过 12 格的目标，蜘蛛无法爬上 3×3 以上的平台边缘。</p>
+<h3 id="单人暂停">单人暂停<a class="anchor" href="#%e5%8d%95%e4%ba%ba%e6%9a%82%e5%81%9c">#</a></h3>
+<p>单人游戏中按 Esc 打开菜单可暂停时间流逝。遇到突发危险需要思考对策时，先暂停再决定。</p>
+<hr>
+<h2 id="10-寻找结构与生物群系">10. 寻找结构与生物群系<a class="anchor" href="#10-%e5%af%bb%e6%89%be%e7%bb%93%e6%9e%84%e4%b8%8e%e7%94%9f%e7%89%a9%e7%be%a4%e7%b3%bb">#</a></h2>
+<h3 id="利用村民和地图">利用村民和地图<a class="anchor" href="#%e5%88%a9%e7%94%a8%e6%9d%91%e6%b0%91%e5%92%8c%e5%9c%b0%e5%9b%be">#</a></h3>
+<ul>
+<li>制图师村民出售<strong>林地探险家地图</strong>和<strong>海洋探险家地图</strong>，可快速定位林地府邸和海底神殿。</li>
+<li>沉船中的<strong>藏宝图</strong>可引导你找到埋藏的宝藏。</li>
+</ul>
+<h3 id="顺着方向探索">顺着方向探索<a class="anchor" href="#%e9%a1%ba%e7%9d%80%e6%96%b9%e5%90%91%e6%8e%a2%e7%b4%a2">#</a></h3>
+<p>如果不想寻找特定目标，选择一个方向一直走，沿途征服所有遇到的结构和生物群系。用火把或告示牌在岔路口做标记，防止迷路。</p>
+<h3 id="快速定位高级技巧">快速定位（高级技巧）<a class="anchor" href="#%e5%bf%ab%e9%80%9f%e5%ae%9a%e4%bd%8d%e9%ab%98%e7%ba%a7%e6%8a%80%e5%b7%a7">#</a></h3>
+<p>在允许使用命令的世界中，可用 <code>/locate structure &lt;结构名&gt;</code> 或 <code>/locate biome &lt;生物群系名&gt;</code> 直接获取最近目标的坐标。不过依赖命令可能会削弱探索本身的乐趣。</p>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  let tooltip = document.querySelector(".mc-crafting-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "mc-crafting-tooltip";
+    tooltip.innerHTML = '<span class="mc-tooltip-title"></span><span class="mc-tooltip-subtitle"></span>';
+    document.body.appendChild(tooltip);
+  }
+
+  const slots = document.querySelectorAll('.mc-crafting-slot[data-tooltip-title]');
+  slots.forEach(slot => {
+    slot.addEventListener("mouseenter", (e) => {
+      tooltip.querySelector(".mc-tooltip-title").textContent = slot.getAttribute("data-tooltip-title");
+      tooltip.querySelector(".mc-tooltip-subtitle").textContent = slot.getAttribute("data-tooltip-subtitle");
+      tooltip.style.display = "block";
+    });
+
+    slot.addEventListener("mousemove", (e) => {
+      tooltip.style.left = (e.clientX + 12) + "px";
+      tooltip.style.top = (e.clientY - 12) + "px";
+    });
+
+    slot.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+});
+</script>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/appendix.html" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="上一页" />
+        <span>附录</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/afterwords.html" class="flex align-center">
+        <span>后记</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="下一页" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#21-战斗与探索">2.1 战斗与探索</a>
+      <ul>
+        <li><a href="#1-战斗机制基础">1. 战斗机制基础</a>
+          <ul>
+            <li><a href="#攻击指示器冷却槽">攻击指示器（冷却槽）</a></li>
+            <li><a href="#暴击跳劈">暴击（跳劈）</a></li>
+            <li><a href="#疾跑击退">疾跑击退</a></li>
+            <li><a href="#受击无敌帧">受击无敌帧</a></li>
+          </ul>
+        </li>
+        <li><a href="#2-武器与装备">2. 武器与装备</a>
+          <ul>
+            <li><a href="#剑还是斧">剑还是斧？</a></li>
+            <li><a href="#盾牌新手的免死金牌">盾牌：新手的「免死金牌」</a></li>
+            <li><a href="#盔甲速览">盔甲速览</a></li>
+            <li><a href="#后勤补给">后勤补给</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-近战实战技巧">3. 近战实战技巧</a>
+          <ul>
+            <li><a href="#基础步法打一退一">基础步法：打一退一</a></li>
+            <li><a href="#修脚战术针对末影人等-2-格高以上的生物">修脚战术（针对末影人等 2 格高以上的生物）</a></li>
+            <li><a href="#环境杀手">环境杀手</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-远程战斗入门">4. 远程战斗入门</a>
+          <ul>
+            <li><a href="#弓的基础">弓的基础</a></li>
+            <li><a href="#狙击战术">狙击战术</a></li>
+            <li><a href="#风筝流边打边退">风筝流（边打边退）</a></li>
+            <li><a href="#弩简介">弩简介</a></li>
+          </ul>
+        </li>
+        <li><a href="#5-四大常见怪物图鉴">5. 四大常见怪物图鉴</a>
+          <ul>
+            <li><a href="#1-僵尸">1. 僵尸</a></li>
+            <li><a href="#2-骷髅小白">2. 骷髅（小白）</a></li>
+            <li><a href="#3-苦力怕">3. 苦力怕</a></li>
+            <li><a href="#4-蜘蛛">4. 蜘蛛</a></li>
+          </ul>
+        </li>
+        <li><a href="#6-进阶战术简介">6. 进阶战术简介</a>
+          <ul>
+            <li><a href="#陷阱入门">陷阱入门</a></li>
+            <li><a href="#tnt-陷阱">TNT 陷阱</a></li>
+            <li><a href="#隐身突袭">隐身突袭</a></li>
+            <li><a href="#空战基础后期">空战基础（后期）</a></li>
+          </ul>
+        </li>
+        <li><a href="#7-探索准备">7. 探索准备</a>
+          <ul>
+            <li><a href="#必备物品清单">必备物品清单</a></li>
+            <li><a href="#离开基地前">离开基地前</a></li>
+          </ul>
+        </li>
+        <li><a href="#8-探险中的注意事项">8. 探险中的注意事项</a>
+          <ul>
+            <li><a href="#移动与旅行">移动与旅行</a></li>
+            <li><a href="#食物管理">食物管理</a></li>
+            <li><a href="#避免摔落">避免摔落</a></li>
+            <li><a href="#亮度与视野">亮度与视野</a></li>
+            <li><a href="#下界探险特别提醒">下界探险特别提醒</a></li>
+            <li><a href="#雷暴天气">雷暴天气</a></li>
+          </ul>
+        </li>
+        <li><a href="#9-紧急避难与夜间生存">9. 紧急避难与夜间生存</a>
+          <ul>
+            <li><a href="#挖三填一">挖三填一</a></li>
+            <li><a href="#支柱跳跃避难">支柱跳跃避难</a></li>
+            <li><a href="#单人暂停">单人暂停</a></li>
+          </ul>
+        </li>
+        <li><a href="#10-寻找结构与生物群系">10. 寻找结构与生物群系</a>
+          <ul>
+            <li><a href="#利用村民和地图">利用村民和地图</a></li>
+            <li><a href="#顺着方向探索">顺着方向探索</a></li>
+            <li><a href="#快速定位高级技巧">快速定位（高级技巧）</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="book-theme-toggle">
+  <div class="book-theme-toggle-buttons" aria-label="切换主题">
+    <button data-theme-value="light" title="浅色"><img src="/svg/light_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="auto" title="自动"><img src="/svg/auto_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+    <button data-theme-value="dark" title="深色"><img src="/svg/dark_mode.svg" alt="" width="18" height="18" aria-hidden="true"></button>
+  </div>
+</div>
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
